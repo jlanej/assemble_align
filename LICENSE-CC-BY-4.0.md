@@ -2,7 +2,7 @@
 
 Copyright (c) 2026 the assemble_align contributors.
 
-The report (`report/`), the literature reviews (`reviews/`), the fact-check write-up (`factcheck/`), all figures, and the result tables and write-ups under `data/` and `litmus/` are licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit <https://creativecommons.org/licenses/by/4.0/>.
+The report (`report/`), the landing page (`docs/`), the literature reviews (`reviews/`), the fact-check write-up (`factcheck/`), all figures, and the result tables and write-ups under `data/` and `litmus/` are licensed under the Creative Commons Attribution 4.0 International License. To view a copy of this license, visit <https://creativecommons.org/licenses/by/4.0/>.
 
 You may share and adapt this material for any purpose, including commercially, provided that you give appropriate credit, link to the license, and indicate if changes were made.
 

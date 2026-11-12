@@ -4,6 +4,8 @@
 
 The main deliverable is the report: [`report/assemble_align_review.pdf`](report/assemble_align_review.pdf). Its markdown source is [`report/assemble_align_review.md`](report/assemble_align_review.md).
 
+A one-page summary of the main findings is in [`docs/index.html`](docs/index.html), served at <https://jlanej.github.io/assemble_align/> once GitHub Pages is enabled for the `docs/` folder.
+
 ## Bottom line
 
 Speed and contiguity are no longer the binding constraints. The remaining errors sit in segmental duplications, satellites and structurally variable loci, and they are increasingly silent: aligners give wrong placements their top mapping quality, and assemblies carry misplaced copies and cell-line rearrangements that pass coverage-based QC. The highest-impact opportunity is **calibrated placement** of reads and contigs, trained and tested against the HPRC release-2 and HGSVC3 haplotypes of 1kG samples.
@@ -20,6 +22,7 @@ The recommended order of work:
 
 | Path | Contents |
 |---|---|
+| `docs/` | One-page landing summary (`index.html`) with five figures generated from the pilot tables (`assets/`) |
 | `report/` | Report PDF and markdown, figures, `ranked_proposals.tsv`, and the build script (`build_pdf.sh`: pandoc → HTML → weasyprint) |
 | `references/` | `references.bib` (369 cited works) and `references.json` (452 verified records, with a `cited_in_report` flag); `tracks/` holds each review track's own bibliography |
 | `reviews/` | Full literature reviews: alignment, assembly, transferable ideas (`ideas_matrix.tsv`); verified tool versions as of 2026-11-11; the HPRC release-2 QC baseline script and tables |
