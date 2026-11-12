@@ -1,0 +1,290 @@
+[
+ {
+  "doi": "10.1093/bioinformatics/bth408",
+  "ok": true,
+  "year": 2004,
+  "authors": "Roberts; Hayes; Hunt et al.",
+  "title": "Reducing storage requirements for biological sequence comparison",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1145/872757.872770",
+  "ok": true,
+  "year": 2003,
+  "authors": "Schleimer; Wilkerson; Aiken",
+  "title": "Winnowing",
+  "journal": "Proceedings of the 2003 ACM SIGMOD international conference on Management of data",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/bty191",
+  "ok": true,
+  "year": 2018,
+  "authors": "Li",
+  "title": "Minimap2: pairwise alignment for nucleotide sequences",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/btab705",
+  "ok": true,
+  "year": 2021,
+  "authors": "Li",
+  "title": "New strategies to improve minimap2 alignment accuracy",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/btx235",
+  "ok": true,
+  "year": 2017,
+  "authors": "Mar\u00e7ais; Pellow; Bork et al.",
+  "title": "Improving the performance of minimizers and winnowing schemes",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/bty258",
+  "ok": true,
+  "year": 2018,
+  "authors": "Mar\u00e7ais; DeBlasio; Kingsford",
+  "title": "Asymptotically optimal minimizers schemes",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/btaa472",
+  "ok": true,
+  "year": 2020,
+  "authors": "Zheng; Kingsford; Mar\u00e7ais",
+  "title": "Improved design and analysis of practical minimizers",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/gr.277644.123",
+  "ok": true,
+  "year": 2023,
+  "authors": "Pellow; Pu; Ekim et al.",
+  "title": "Efficient minimizer orders for large values of                     <i>k</i>                     using minimum decycling sets",
+  "journal": "Genome Research",
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/2024.05.25.595898",
+  "ok": true,
+  "year": 2024,
+  "authors": "Groot Koerkamp; Pibiri",
+  "title": "The mod-minimizer: a simple and efficient sampling algorithm for long                   <i>k</i>                   -mers",
+  "journal": "",
+  "retracted": false
+ },
+ {
+  "doi": "10.1186/s13015-025-00270-0",
+  "ok": true,
+  "year": 2025,
+  "authors": "Groot Koerkamp; Liu; Pibiri",
+  "title": "The open-closed mod-minimizer algorithm",
+  "journal": "Algorithms for Molecular Biology",
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/2024.09.06.611668",
+  "ok": true,
+  "year": 2024,
+  "authors": "Kille; Koerkamp; McAdams et al.",
+  "title": "A near-tight lower bound on the density of forward sampling schemes",
+  "journal": "",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/btaf251",
+  "ok": true,
+  "year": 2025,
+  "authors": "Golan; Tziony; Kraus et al.",
+  "title": "GreedyMini: generating low-density DNA minimizers",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1007/978-3-032-42866-0_20",
+  "ok": true,
+  "year": 2026,
+  "authors": "Shur; Tziony; Orenstein",
+  "title": "Generating Minimum-Density Minimizers",
+  "journal": "Lecture Notes in Computer Science",
+  "retracted": false
+ },
+ {
+  "doi": "10.64898/2026.03.16.712052",
+  "ok": true,
+  "year": 2026,
+  "authors": "Shur; Tziony; Orenstein",
+  "title": "10-minimizers: a promising class of constant-space minimizers",
+  "journal": "",
+  "retracted": false
+ },
+ {
+  "doi": "10.7717/peerj.10805",
+  "ok": true,
+  "year": 2021,
+  "authors": "Edgar",
+  "title": "Syncmers are more sensitive than minimizers for selecting conserved                     <i>k</i>                     \u2011mers in biological sequences",
+  "journal": "PeerJ",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/btab790",
+  "ok": true,
+  "year": 2021,
+  "authors": "Shaw; Yu",
+  "title": "Theory of local k-mer selection with applications to long-read alignment",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1371/journal.pcbi.1010638",
+  "ok": true,
+  "year": 2022,
+  "authors": "Dutta; Pellow; Shamir",
+  "title": "Parameterized syncmer schemes improve long-read mapping",
+  "journal": "PLOS Computational Biology",
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/gr.275648.121",
+  "ok": true,
+  "year": 2021,
+  "authors": "Sahlin",
+  "title": "Effective sequence similarity detection with strobemers",
+  "journal": "Genome Research",
+  "retracted": false
+ },
+ {
+  "doi": "10.1186/s13059-022-02831-7",
+  "ok": true,
+  "year": 2022,
+  "authors": "Sahlin",
+  "title": "Strobealign: flexible seed size enables ultra-fast and accurate read alignment",
+  "journal": "Genome Biology",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/btaa435",
+  "ok": true,
+  "year": 2020,
+  "authors": "Jain; Rhie; Zhang et al.",
+  "title": "Weighted minimizer sampling improves long read mapping",
+  "journal": "Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41592-022-01457-8",
+  "ok": true,
+  "year": 2022,
+  "authors": "Jain; Rhie; Hansen et al.",
+  "title": "Long-read mapping to repetitive reference sequences using Winnowmap2",
+  "journal": "Nature Methods",
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/gr.277637.122",
+  "ok": true,
+  "year": 2023,
+  "authors": "Shaw; Yu",
+  "title": "Proving sequence aligners can guarantee accuracy in almost                     <i>O</i>                     (                     <i>m</i>                     log                     <i>n</i>                     ) time through an average-case analysis of the seed-chain-extend heuristic",
+  "journal": "Genome Research",
+  "retracted": false
+ },
+ {
+  "doi": "10.1089/cmb.2023.0094",
+  "ok": true,
+  "year": 2023,
+  "authors": "Zheng; Mar\u00e7ais; Kingsford",
+  "title": "Creating and Using Minimizer Sketches in Computational Genomics",
+  "journal": "Journal of Computational Biology",
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/2025.01.27.634998",
+  "ok": true,
+  "year": 2025,
+  "authors": "Groot Koerkamp; Martayan",
+  "title": "SimdMinimizers: Computing random minimizers,                   <i>fast</i>",
+  "journal": "",
+  "retracted": false
+ },
+ {
+  "doi": "10.1126/science.abj6987",
+  "ok": true,
+  "year": 2022,
+  "authors": "Nurk; Koren; Rhie et al.",
+  "title": "The complete sequence of a human genome",
+  "journal": "Science",
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41586-023-05896-x",
+  "ok": true,
+  "year": 2023,
+  "authors": "Liao; Asri; Ebler et al.",
+  "title": "A draft human pangenome reference",
+  "journal": "Nature",
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41586-025-09140-6",
+  "ok": true,
+  "year": 2025,
+  "authors": "Logsdon; Ebert; Audano et al.",
+  "title": "Complex genetic variation in nearly complete human genomes",
+  "journal": "Nature",
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/gr.279273.124",
+  "ok": true,
+  "year": 2024,
+  "authors": "Gustafson; Gibson; Damaraju et al.",
+  "title": "High-coverage nanopore sequencing of samples from the 1000 Genomes Project to build a comprehensive catalog of human genetic variation",
+  "journal": "Genome Research",
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41587-019-0217-9",
+  "ok": true,
+  "year": 2019,
+  "authors": "Wenger; Peluso; Rowell et al.",
+  "title": "Accurate circular consensus long-read sequencing improves variant detection and assembly of a human genome",
+  "journal": "Nature Biotechnology",
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41592-022-01539-7",
+  "ok": true,
+  "year": 2022,
+  "authors": "Sereika; Kirkegaard; Karst et al.",
+  "title": "Oxford Nanopore R10.4 long-read sequencing enables the generation of near-finished bacterial genomes from pure cultures and metagenomes without short-read or reference polishing",
+  "journal": "Nature Methods",
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/nargab/lqac092",
+  "ok": true,
+  "year": 2022,
+  "authors": "Ono; Hamada; Asai",
+  "title": "PBSIM3: a simulator for all types of PacBio and ONT long reads",
+  "journal": "NAR Genomics and Bioinformatics",
+  "retracted": false
+ },
+ {
+  "doi": "10.4230/LIPIcs.WABI.2024.11",
+  "ok": true,
+  "year": null,
+  "authors": null,
+  "title": "",
+  "journal": null,
+  "retracted": null
+ }
+]

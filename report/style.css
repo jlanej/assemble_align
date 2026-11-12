@@ -1,0 +1,41 @@
+@page { size: Letter; margin: 0.85in 0.8in 0.9in 0.8in;
+  @bottom-center { content: counter(page); font: 9pt "Helvetica Neue", Helvetica, Arial, sans-serif; color: #555; }
+  @top-right { content: string(doctitle); font: 8pt "Helvetica Neue", Helvetica, Arial, sans-serif; color: #888; } }
+@page :first { @top-right { content: none; } }
+html { font-family: Charter, Georgia, "Times New Roman", serif; font-size: 10.2pt; line-height: 1.38; color: #1a1a1a; }
+h1, h2, h3, h4 { font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; color: #12324a; line-height: 1.2; page-break-after: avoid; }
+h1.title { font-size: 21pt; margin: 0 0 4pt 0; string-set: doctitle content(); }
+p.subtitle { font: 12pt "Helvetica Neue", Helvetica, Arial, sans-serif; color: #44627a; margin-top: 0; }
+p.author, p.date { font: 9.5pt "Helvetica Neue", Helvetica, Arial, sans-serif; color: #555; margin: 2pt 0; }
+h1 { font-size: 16pt; margin-top: 18pt; border-bottom: 1.2pt solid #12324a; padding-bottom: 2pt; }
+h2 { font-size: 12.5pt; margin-top: 14pt; }
+h3 { font-size: 11pt; margin-top: 10pt; color: #2a4d66; }
+h4 { font-size: 10.2pt; margin-top: 8pt; color: #2a4d66; }
+p { margin: 4pt 0 6pt 0; text-align: justify; hyphens: auto; orphans: 2; widows: 2; }
+a { color: #1f5f8b; text-decoration: none; }
+ul, ol { margin: 3pt 0 6pt 0; padding-left: 18pt; } li { margin: 1.5pt 0; }
+table { border-collapse: collapse; width: 100%; margin: 6pt 0 10pt 0; font: 8.1pt/1.25 "Helvetica Neue", Helvetica, Arial, sans-serif; page-break-inside: auto; }
+thead { display: table-header-group; } tr { page-break-inside: avoid; }
+th { background: #e8eef3; color: #12324a; text-align: left; padding: 3pt 4pt; border-bottom: 0.8pt solid #12324a; vertical-align: bottom; }
+td { padding: 2.5pt 4pt; border-bottom: 0.4pt solid #cfd8df; vertical-align: top; }
+caption, .table-caption { font: italic 8.6pt "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; caption-side: top; text-align: left; margin-bottom: 3pt; }
+figure { margin: 8pt 0 10pt 0; page-break-inside: avoid; text-align: center; }
+figure img { max-width: 100%; max-height: 6.6in; }
+figcaption { font: 8.6pt/1.3 "Helvetica Neue", Helvetica, Arial, sans-serif; color: #333; text-align: justify; margin-top: 4pt; }
+code { font: 8.4pt Menlo, Monaco, monospace; background: #f3f5f7; padding: 0 1.5pt; border-radius: 2pt; }
+pre { font: 7.8pt/1.3 Menlo, Monaco, monospace; background: #f5f7f9; border-left: 2pt solid #9fb6c8; padding: 5pt 7pt; white-space: pre-wrap; page-break-inside: avoid; }
+pre code { background: none; padding: 0; }
+blockquote { margin: 6pt 0 8pt 0; padding: 4pt 9pt; border-left: 3pt solid #c9a227; background: #fbf8ee; font-size: 9.6pt; }
+.box { border: 0.8pt solid #9fb6c8; background: #f4f8fb; padding: 5pt 8pt; margin: 6pt 0 8pt 0; page-break-inside: avoid; }
+nav#TOC { font: 9pt/1.35 "Helvetica Neue", Helvetica, Arial, sans-serif; page-break-after: always; }
+nav#TOC ul { list-style: none; padding-left: 12pt; } nav#TOC > ul { padding-left: 0; }
+.refs p, #refs div, .references li { font-size: 8.4pt; line-height: 1.25; text-align: left; margin: 1.5pt 0; }
+div.part { page-break-before: always; page-break-after: avoid; margin: 1.6in 0 0.4in 0; font: 600 24pt "Helvetica Neue", Helvetica, Arial, sans-serif; color: #12324a; border-bottom: 2pt solid #12324a; padding-bottom: 6pt; }
+div.part .partno { font-size: 12pt; letter-spacing: 1.5pt; text-transform: uppercase; color: #44627a; }
+h1 { page-break-before: auto; }
+h1.title + p.subtitle { margin-bottom: 14pt; }
+.refs p { padding-left: 14pt; text-indent: -14pt; }
+
+div.smalltable table { font-size: 7.1pt; line-height: 1.2; }
+div.smalltable td, div.smalltable th { padding: 2pt 3pt; }
+sup { font-size: 70%; line-height: 0; }

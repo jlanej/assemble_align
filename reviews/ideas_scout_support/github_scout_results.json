@@ -1,0 +1,2413 @@
+{
+ "searched_at": "2026-11-11T18:13:57Z",
+ "search": {
+  "mapq": [
+   {
+    "query": "mapping quality prediction machine learning",
+    "total": 9,
+    "items": [
+     {
+      "full_name": "Nelvinebi/Soil-Quality-Mapping-Using-Geostatistics-ML",
+      "html_url": "https://github.com/Nelvinebi/Soil-Quality-Mapping-Using-Geostatistics-ML",
+      "description": "This project uses geostatistics and machine learning to predict soil quality from synthetic environmental and soil data. It models a Soil Quality Index (SQI), evaluates prediction accuracy, and highlights key variables influencing soil health, offering insights for sustainable land and agricultural management.",
+      "stargazers_count": 11,
+      "pushed_at": "2026-02-19T19:33:46Z",
+      "created_at": "2025-04-04T07:53:35Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "jf261260-cmd/water-quality-model",
+      "html_url": "https://github.com/jf261260-cmd/water-quality-model",
+      "description": "Machine-learning-based water quality prediction, spatial mapping, SSP scenario projection, and SHAP-based driving factor analysis.",
+      "stargazers_count": 2,
+      "pushed_at": "2026-01-10T07:58:19Z",
+      "created_at": "2026-01-10T07:04:31Z",
+      "language": null
+     },
+     {
+      "full_name": "visha3351/444-Air-Quality-Prediction-GIS-Dashboard",
+      "html_url": "https://github.com/visha3351/444-Air-Quality-Prediction-GIS-Dashboard",
+      "description": "Air Quality Prediction and GIS Mapping Dashboard for Pune using Machine Learning, QGIS and Streamlit.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-06-04T17:55:56Z",
+      "created_at": "2026-06-04T16:11:11Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "vinutha53305/AI-Smart-Air-Quality-Monitoring-System",
+      "html_url": "https://github.com/vinutha53305/AI-Smart-Air-Quality-Monitoring-System",
+      "description": "AI-powered air quality monitoring and prediction system built with Python and Streamlit, featuring AQI analysis, data visualization, machine learning prediction, health analysis, AQI mapping, PDF reports, and voice alerts.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-09-06T05:56:09Z",
+      "created_at": "2026-09-05T17:51:57Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "Aryia-Behroziuan/neurons",
+      "html_url": "https://github.com/Aryia-Behroziuan/neurons",
+      "description": "An ANN is a model based on a collection of connected units or nodes called \"artificial neurons\", which loosely model the neurons in a biological brain. Each connection, like the synapses in a biological brain, can transmit information, a \"signal\", from one artificial neuron to another. An artificial neuron that receives a signal can process it and then signal additional artificial neurons connected to it. In common ANN implementations, the signal at a connection between artificial neurons is a real number, and the output of each artificial neuron is computed by some non-linear function of the sum of its inputs. The connections between artificial neurons are called \"edges\". Artificial neurons and edges typically have a weight that adjusts as learning proceeds. The weight increases or decreases the strength of the signal at a connection. Artificial neurons may have a threshold such that the signal is only sent if the aggregate signal crosses that threshold. Typically, artificial neurons are aggregated into layers. Different layers may perform different kinds of transformations on their inputs. Signals travel from the first layer (the input layer) to the last layer (the output layer), possibly after traversing the layers multiple times.  The original goal of the ANN approach was to solve problems in the same way that a human brain would. However, over time, attention moved to performing specific tasks, leading to deviations from biology. Artificial neural networks have been used on a variety of tasks, including computer vision, speech recognition, machine translation, social network filtering, playing board and video games and medical diagnosis.  Deep learning consists of multiple hidden layers in an artificial neural network. This approach tries to model the way the human brain processes light and sound into vision and hearing. Some successful applications of deep learning are computer vision and speech recognition.[68]  Decision trees Main article: Decision tree learning Decision tree learning uses a decision tree as a predictive model to go from observations about an item (represented in the branches) to conclusions about the item's target value (represented in the leaves). It is one of the predictive modeling approaches used in statistics, data mining, and machine learning. Tree models where the target variable can take a discrete set of values are called classification trees; in these tree structures, leaves represent class labels and branches represent conjunctions of features that lead to those class labels. Decision trees where the target variable can take continuous values (typically real numbers) are called regression trees. In decision analysis, a decision tree can be used to visually and explicitly represent decisions and decision making. In data mining, a decision tree describes data, but the resulting classification tree can be an input for decision making.  Support vector machines Main article: Support vector machines Support vector machines (SVMs), also known as support vector networks, are a set of related supervised learning methods used for classification and regression. Given a set of training examples, each marked as belonging to one of two categories, an SVM training algorithm builds a model that predicts whether a new example falls into one category or the other.[69] An SVM training algorithm is a non-probabilistic, binary, linear classifier, although methods such as Platt scaling exist to use SVM in a probabilistic classification setting. In addition to performing linear classification, SVMs can efficiently perform a non-linear classification using what is called the kernel trick, implicitly mapping their inputs into high-dimensional feature spaces.   Illustration of linear regression on a data set. Regression analysis Main article: Regression analysis Regression analysis encompasses a large variety of statistical methods to estimate the relationship between input variables and their associated features. Its most common form is linear regression, where a single line is drawn to best fit the given data according to a mathematical criterion such as ordinary least squares. The latter is often extended by regularization (mathematics) methods to mitigate overfitting and bias, as in ridge regression. When dealing with non-linear problems, go-to models include polynomial regression (for example, used for trendline fitting in Microsoft Excel[70]), logistic regression (often used in statistical classification) or even kernel regression, which introduces non-linearity by taking advantage of the kernel trick to implicitly map input variables to higher-dimensional space.  Bayesian networks Main article: Bayesian network  A simple Bayesian network. Rain influences whether the sprinkler is activated, and both rain and the sprinkler influence whether the grass is wet. A Bayesian network, belief network, or directed acyclic graphical model is a probabilistic graphical model that represents a set of random variables and their conditional independence with a directed acyclic graph (DAG). For example, a Bayesian network could represent the probabilistic relationships between diseases and symptoms. Given symptoms, the network can be used to compute the probabilities of the presence of various diseases. Efficient algorithms exist that perform inference and learning. Bayesian networks that model sequences of variables, like speech signals or protein sequences, are called dynamic Bayesian networks. Generalizations of Bayesian networks that can represent and solve decision problems under uncertainty are called influence diagrams.  Genetic algorithms Main article: Genetic algorithm A genetic algorithm (GA) is a search algorithm and heuristic technique that mimics the process of natural selection, using methods such as mutation and crossover to generate new genotypes in the hope of finding good solutions to a given problem. In machine learning, genetic algorithms were used in the 1980s and 1990s.[71][72] Conversely, machine learning techniques have been used to improve the performance of genetic and evolutionary algorithms.[73]  Training models Usually, machine learning models require a lot of data in order for them to perform well. Usually, when training a machine learning model, one needs to collect a large, representative sample of data from a training set. Data from the training set can be as varied as a corpus of text, a collection of images, and data collected from individual users of a service. Overfitting is something to watch out for when training a machine learning model.  Federated learning Main article: Federated learning Federated learning is an adapted form of distributed artificial intelligence to training machine learning models that decentralizes the training process, allowing for users' privacy to be maintained by not needing to send their data to a centralized server. This also increases efficiency by decentralizing the training process to many devices. For example, Gboard uses federated machine learning to train search query prediction models on users' mobile phones without having to send individual searches back to Google.[74]  Applications There are many applications for machine learning, including:  Agriculture Anatomy Adaptive websites Affective computing Banking Bioinformatics Brain\u2013machine interfaces Cheminformatics Citizen science Computer networks Computer vision Credit-card fraud detection Data quality DNA sequence classification Economics Financial market analysis[75] General game playing Handwriting recognition Information retrieval Insurance Internet fraud detection Linguistics Machine learning control Machine perception Machine translation Marketing Medical diagnosis Natural language processing Natural language understanding Online advertising Optimization Recommender systems Robot locomotion Search engines Sentiment analysis Sequence mining Software engineering Speech recognition Structural health monitoring Syntactic pattern recognition Telecommunication Theorem proving Time series forecasting User behavior analytics In 2006, the media-services provider Netflix held the first \"Netflix Prize\" competition to find a program to better predict user preferences and improve the accuracy of its existing Cinematch movie recommendation algorithm by at least 10%. A joint team made up of researchers from AT&T Labs-Research in collaboration with the teams Big Chaos and Pragmatic Theory built an ensemble model to win the Grand Prize in 2009 for $1 million.[76] Shortly after the prize was awarded, Netflix realized that viewers' ratings were not the best indicators of their viewing patterns (\"everything is a recommendation\") and they changed their recommendation engine accordingly.[77] In 2010 The Wall Street Journal wrote about the firm Rebellion Research and their use of machine learning to predict the financial crisis.[78] In 2012, co-founder of Sun Microsystems, Vinod Khosla, predicted that 80% of medical doctors' jobs would be lost in the next two decades to automated machine learning medical diagnostic software.[79] In 2014, it was reported that a machine learning algorithm had been applied in the field of art history to study fine art paintings and that it may have revealed previously unrecognized influences among artists.[80] In 2019 Springer Nature published the first research book created using machine learning.[81]  Limitations Although machine learning has been transformative in some fields, machine-learning programs often fail to deliver expected results.[82][83][84] Reasons for this are numerous: lack of (suitable) data, lack of access to the data, data bias, privacy problems, badly chosen tasks and algorithms, wrong tools and people, lack of resources, and evaluation problems.[85]  In 2018, a self-driving car from Uber failed to detect a pedestrian, who was killed after a collision.[86] Attempts to use machine learning in healthcare with the IBM Watson system failed to deliver even after years of time and billions of dollars invested.[87][88]  Bias Main article: Algorithmic bias Machine learning approaches in particular can suffer from different data biases. A machine learning system trained on current customers only may not be able to predict the needs of new customer groups that are not represented in the training data. When trained on man-made data, machine learning is likely to pick up the same constitutional and unconscious biases already present in society.[89] Language models learned from data have been shown to contain human-like biases.[90][91] Machine learning systems used for criminal risk assessment have been found to be biased against black people.[92][93] In 2015, Google photos would often tag black people as gorillas,[94] and in 2018 this still was not well resolved, but Google reportedly was still using the workaround to remove all gorillas from the training data, and thus was not able to recognize real gorillas at all.[95] Similar issues with recognizing non-white people have been found in many other systems.[96] In 2016, Microsoft tested a chatbot that learned from Twitter, and it quickly picked up racist and sexist language.[97] Because of such challenges, the effective use of machine learning may take longer to be adopted in other domains.[98] Concern for fairness in machine learning, that is, reducing bias in machine learning and propelling its use for human good is increasingly expressed by artificial intelligence scientists, including Fei-Fei Li, who reminds engineers that \"There\u2019s nothing artificial about AI...It\u2019s inspired by people, it\u2019s created by people, and\u2014most importantly\u2014it impacts people. It is a powerful tool we are only just beginning to understand, and that is a profound responsibility.\u201d[99]  Model assessments Classification of machine learning models can be validated by accuracy estimation techniques like the holdout method, which splits the data in a training and test set (conventionally 2/3 training set and 1/3 test set designation) and evaluates the performance of the training model on the test set. In comparison, the K-fold-cross-validation method randomly partitions the data into K subsets and then K experiments are performed each respectively considering 1 subset for evaluation and the remaining K-1 subsets for training the model. In addition to the holdout and cross-validation methods, bootstrap, which samples n instances with replacement from the dataset, can be used to assess model accuracy.[100]  In addition to overall accuracy, investigators frequently report sensitivity and specificity meaning True Positive Rate (TPR) and True Negative Rate (TNR) respectively. Similarly, investigators sometimes report the false positive rate (FPR) as well as the false negative rate (FNR). However, these rates are ratios that fail to reveal their numerators and denominators. The total operating characteristic (TOC) is an effective method to express a model's diagnostic ability. TOC shows the numerators and denominators of the previously mentioned rates, thus TOC provides more information than the commonly used receiver operating characteristic (ROC) and ROC's associated area under the curve (AUC).[101]  Ethics Machine learning poses a host of ethical questions. Systems which are trained on datasets collected with biases may exhibit these biases upon use (algorithmic bias), thus digitizing cultural prejudices.[102] For example, using job hiring data from a firm with racist hiring policies may lead to a machine learning system duplicating the bias by scoring job applicants against similarity to previous successful applicants.[103][104] Responsible collection of data and documentation of algorithmic rules used by a system thus is a critical part of machine learning.  Because human languages contain biases, machines trained on language corpora will necessarily also learn these biases.[105][106]  Other forms of ethical challenges, not related to personal biases, are more seen in health care. There are concerns among health care professionals that these systems might not be designed in the public's interest but as income-generating machines. This is especially true in the United States where there is a long-standing ethical dilemma of improving health care, but also increasing profits. For example, the algorithms could be designed to provide patients with unnecessary tests or medication in which the algorithm's proprietary owners hold stakes. There is huge potential for machine learning in health care to provide professionals a great tool to diagnose, medicate, and even plan recovery paths for patients, but this will not happen until the personal biases mentioned previously, and these \"greed\" biases are addressed.[107]  Hardware Since the 2010s, advances in both machine learning algorithms and computer hardware have led to more efficient methods for training deep neural networks (a particular narrow subdomain of machine learning) that contain many layers of non-linear hidden units.[108] By 2019, graphic processing units (GPUs), often with AI-specific enhancements, had displaced CPUs as the dominant method of training large-scale commercial cloud AI.[109] OpenAI estimated the hardware compute used in the largest deep learning projects from AlexNet (2012) to AlphaZero (2017), and found a 300,000-fold increase in the amount of compute required, with a doubling-time trendline of 3.4 months.[110][111]  Software Software suites containing a variety of machine learning algorithms include the following:  Free and open-source so",
+      "stargazers_count": 97,
+      "pushed_at": "2023-11-15T09:30:37Z",
+      "created_at": "2020-11-07T12:17:04Z",
+      "language": null
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "qtip mapping quality",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "BenLangmead/qtip",
+      "html_url": "https://github.com/BenLangmead/qtip",
+      "description": "Qtip: a tandem simulation approach for accurately predicting read alignment mapping qualities",
+      "stargazers_count": 25,
+      "pushed_at": "2019-10-31T18:04:15Z",
+      "created_at": "2016-03-06T03:57:46Z",
+      "language": "C++"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "learned_index": [
+   {
+    "query": "BWA-MEME learned index",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "kaist-ina/BWA-MEME",
+      "html_url": "https://github.com/kaist-ina/BWA-MEME",
+      "description": "BWA-MEME: Faster BWA-MEM2 using learned-index",
+      "stargazers_count": 138,
+      "pushed_at": "2026-06-03T06:05:34Z",
+      "created_at": "2021-09-01T05:40:38Z",
+      "language": "C++"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "learned index suffix array genome",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "learned_seed": [
+   {
+    "query": "DeepMinimizer",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "Kingsford-Group/deepminimizer",
+      "html_url": "https://github.com/Kingsford-Group/deepminimizer",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2021-12-10T20:34:39Z",
+      "created_at": "2021-11-12T01:51:06Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "learned_chain": [
+   {
+    "query": "chaining score long read alignment learning",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "transformer_corr": [
+   {
+    "query": "deepconsensus",
+    "total": 9,
+    "items": [
+     {
+      "full_name": "google/deepconsensus",
+      "html_url": "https://github.com/google/deepconsensus",
+      "description": "DeepConsensus uses gap-aware sequence transformers to correct errors in Pacific Biosciences (PacBio) Circular Consensus Sequencing (CCS) data.",
+      "stargazers_count": 264,
+      "pushed_at": "2026-04-07T04:29:47Z",
+      "created_at": "2021-08-04T00:00:37Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "jianshu93/deepconsensus-rs",
+      "html_url": "https://github.com/jianshu93/deepconsensus-rs",
+      "description": "Consensus sequence generation with a gap-aware sequence transformer for PacBio CCS",
+      "stargazers_count": 2,
+      "pushed_at": "2026-10-25T00:58:12Z",
+      "created_at": "2026-10-25T00:57:10Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "WestGermanGenomeCenter/deep_snake",
+      "html_url": "https://github.com/WestGermanGenomeCenter/deep_snake",
+      "description": "deep_snake - snakemake-based deepconsensus (Pacbio SequelII subreads - to deepconsensus.fastq)",
+      "stargazers_count": 0,
+      "pushed_at": "2024-07-11T12:49:33Z",
+      "created_at": "2023-06-22T08:06:40Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "suddenabnormalsecrets/deepconsensus",
+      "html_url": "https://github.com/suddenabnormalsecrets/deepconsensus",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2025-05-15T05:46:54Z",
+      "created_at": "2025-05-15T05:46:46Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "ZhenyanLuo/Run_deepconsensus",
+      "html_url": "https://github.com/ZhenyanLuo/Run_deepconsensus",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2023-04-21T00:35:53Z",
+      "created_at": "2023-03-21T02:34:49Z",
+      "language": "Makefile"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "herro nanopore read correction",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "lbcb-sci/herro",
+      "html_url": "https://github.com/lbcb-sci/herro",
+      "description": "HERRO is a highly-accurate, haplotype-aware, deep-learning tool for error correction of Nanopore R10.4.1 or R9.4.1 reads (read length of >= 10 kbps is recommended).",
+      "stargazers_count": 268,
+      "pushed_at": "2026-09-16T04:43:37Z",
+      "created_at": "2022-12-01T02:58:51Z",
+      "language": "Rust"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "deeppolisher",
+    "total": 4,
+    "items": [
+     {
+      "full_name": "google/deeppolisher",
+      "html_url": "https://github.com/google/deeppolisher",
+      "description": "Transformer-based sequence correction method for genome assembly polishing",
+      "stargazers_count": 111,
+      "pushed_at": "2025-03-11T16:18:02Z",
+      "created_at": "2023-12-11T18:32:49Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "miramastoras/DeepPolisher_manuscript",
+      "html_url": "https://github.com/miramastoras/DeepPolisher_manuscript",
+      "description": null,
+      "stargazers_count": 2,
+      "pushed_at": "2026-03-31T21:42:21Z",
+      "created_at": "2024-02-22T21:56:55Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "suddenabnormalsecrets/deeppolisher",
+      "html_url": "https://github.com/suddenabnormalsecrets/deeppolisher",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2025-05-15T06:44:23Z",
+      "created_at": "2025-05-15T06:44:16Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "hmkim/hpp-healthomics-pipeline",
+      "html_url": "https://github.com/hmkim/hpp-healthomics-pipeline",
+      "description": "End-to-end human genome assembly pipeline (hifiasm + DeepPolisher + YaHS + RepeatMasker + Flagger) on AWS HealthOmics, orchestrated by AWS Step Functions",
+      "stargazers_count": 1,
+      "pushed_at": "2026-06-02T02:26:56Z",
+      "created_at": "2026-05-29T05:46:16Z",
+      "language": "WDL"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "gnn_asm": [
+   {
+    "query": "GNNome",
+    "total": 6,
+    "items": [
+     {
+      "full_name": "lvrcek/GNNome-assembly",
+      "html_url": "https://github.com/lvrcek/GNNome-assembly",
+      "description": "Learning to untangle genome assembly with graph neural networks.",
+      "stargazers_count": 72,
+      "pushed_at": "2024-11-17T12:47:54Z",
+      "created_at": "2020-12-04T03:38:21Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "lbcb-sci/GNNome",
+      "html_url": "https://github.com/lbcb-sci/GNNome",
+      "description": "A framework for training graph neural networks to untangle assembly graphs obtained from OLC-based de novo genome assemblers.",
+      "stargazers_count": 52,
+      "pushed_at": "2025-12-09T03:17:46Z",
+      "created_at": "2023-12-08T04:45:45Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "lbcb-sci/DipGNNome",
+      "html_url": "https://github.com/lbcb-sci/DipGNNome",
+      "description": null,
+      "stargazers_count": 4,
+      "pushed_at": "2025-09-15T06:47:42Z",
+      "created_at": "2025-09-04T09:52:08Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "jetrz/GNNOME2",
+      "html_url": "https://github.com/jetrz/GNNOME2",
+      "description": "let's see if this works",
+      "stargazers_count": 0,
+      "pushed_at": "2025-10-09T05:24:35Z",
+      "created_at": "2025-08-18T04:34:56Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "abhiraj-arya2006/GNNome-v2",
+      "html_url": "https://github.com/abhiraj-arya2006/GNNome-v2",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2026-07-08T22:35:16Z",
+      "created_at": "2026-07-08T22:30:05Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "graph neural network genome assembly",
+    "total": 3,
+    "items": [
+     {
+      "full_name": "lvrcek/GNNome-assembly",
+      "html_url": "https://github.com/lvrcek/GNNome-assembly",
+      "description": "Learning to untangle genome assembly with graph neural networks.",
+      "stargazers_count": 72,
+      "pushed_at": "2024-11-17T12:47:54Z",
+      "created_at": "2020-12-04T03:38:21Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "lbcb-sci/GNNome",
+      "html_url": "https://github.com/lbcb-sci/GNNome",
+      "description": "A framework for training graph neural networks to untangle assembly graphs obtained from OLC-based de novo genome assemblers.",
+      "stargazers_count": 52,
+      "pushed_at": "2025-12-09T03:17:46Z",
+      "created_at": "2023-12-08T04:45:45Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "orisnas/strandweaver",
+      "html_url": "https://github.com/orisnas/strandweaver",
+      "description": "StrandWeaver is an AI/ML-powered genome assembler that combines multi-technology sequencing data (Illumina, ONT, PacBio HiFi, ultra-long reads, and Hi-C) in a unified graph framework with neural network-guided path resolution, haplotype-aware phasing, and assembly-time structural variant detection.",
+      "stargazers_count": 1,
+      "pushed_at": "2026-04-07T14:48:01Z",
+      "created_at": "2026-04-14T06:16:31Z",
+      "language": null
+     }
+    ],
+    "error": null
+   }
+  ],
+  "rl_asm": [
+   {
+    "query": "reinforcement learning genome assembly",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "glm": [
+   {
+    "query": "evo2 genome language model",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "caduceus DNA",
+    "total": 7,
+    "items": [
+     {
+      "full_name": "kuleshov-group/caduceus",
+      "html_url": "https://github.com/kuleshov-group/caduceus",
+      "description": "Bi-Directional Equivariant Long-Range DNA Sequence Modeling",
+      "stargazers_count": 254,
+      "pushed_at": "2026-03-18T20:09:28Z",
+      "created_at": "2024-02-26T14:53:53Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "chengzhimin/PoultryCaduceus",
+      "html_url": "https://github.com/chengzhimin/PoultryCaduceus",
+      "description": "PoultryCaduceus is the DNA foundation model specifically pre-trained on the chicken genome. Built upon the Caduceus architecture, it features:  \ud83e\uddec Chicken-specific pre-training on GRCg6a reference genome (~1.1 Gb) \ud83d\udd04 Bidirectional Mamba architecture with reverse complement equivariance \ud83d\udccf Long-range modeling up to 65,536 bp context ",
+      "stargazers_count": 2,
+      "pushed_at": "2026-01-28T01:10:18Z",
+      "created_at": "2026-01-17T13:35:37Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "caduceus-dna/caduceus-dna.github.io",
+      "html_url": "https://github.com/caduceus-dna/caduceus-dna.github.io",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2026-10-13T17:25:33Z",
+      "created_at": "2024-02-26T14:42:00Z",
+      "language": "JavaScript"
+     },
+     {
+      "full_name": "electricsheephq/caduceus",
+      "html_url": "https://github.com/electricsheephq/caduceus",
+      "description": "Health answers that cite your own DNA, Apple Health and records, plus new research, from a vault on your machine.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-11-11T05:45:57Z",
+      "created_at": "2026-11-08T05:32:45Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "bioinfoihb/FishCaduceus-Overview",
+      "html_url": "https://github.com/bioinfoihb/FishCaduceus-Overview",
+      "description": "Pre-release overview of FishCaduceus, a single-nucleotide DNA language model for cyprinid genomics.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-07-22T14:23:02Z",
+      "created_at": "2026-07-22T14:18:03Z",
+      "language": null
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "nucleotide-transformer",
+    "total": 62,
+    "items": [
+     {
+      "full_name": "instadeepai/nucleotide-transformer",
+      "html_url": "https://github.com/instadeepai/nucleotide-transformer",
+      "description": "Foundation Models for Genomics & Transcriptomics",
+      "stargazers_count": 942,
+      "pushed_at": "2026-11-02T11:08:40Z",
+      "created_at": "2023-01-24T17:13:51Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "ronghanli2002/nucleotide-transformer-implementation",
+      "html_url": "https://github.com/ronghanli2002/nucleotide-transformer-implementation",
+      "description": "Implement nucleotide transformer (NT-v2). Make predictions on unseen datasets and conduct unsupervised clustering",
+      "stargazers_count": 3,
+      "pushed_at": "2024-11-12T22:19:35Z",
+      "created_at": "2024-10-02T17:17:38Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "Rishabh1925/OceanEYE-TaxaFormer",
+      "html_url": "https://github.com/Rishabh1925/OceanEYE-TaxaFormer",
+      "description": "AI-powered eDNA classification platform using Nucleotide Transformer for marine biodiversity analysis - taxonomic classification, novelty detection, interactive mapping & rich analytics",
+      "stargazers_count": 6,
+      "pushed_at": "2026-04-25T17:54:38Z",
+      "created_at": "2025-12-11T18:59:53Z",
+      "language": "TypeScript"
+     },
+     {
+      "full_name": "isaacmujuni/NucleotideTransformer",
+      "html_url": "https://github.com/isaacmujuni/NucleotideTransformer",
+      "description": "Fine-tune NTv3 to score crop genes for abiotic stress and disease resistance.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-08-21T05:31:03Z",
+      "created_at": "2026-08-20T10:29:29Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "hemmati-mo/Nucleotide_Transformer",
+      "html_url": "https://github.com/hemmati-mo/Nucleotide_Transformer",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2026-05-11T19:38:31Z",
+      "created_at": "2025-04-17T19:09:40Z",
+      "language": "Jupyter Notebook"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "dna sequence alignment transformer embedding",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "SpoorthyBB/DNA-Sequence-Similarity-Search",
+      "html_url": "https://github.com/SpoorthyBB/DNA-Sequence-Similarity-Search",
+      "description": "A Transformer-based (BERT) approach for O(1) DNA sequence similarity search. Uses Triplet Loss to generate embeddings, achieving 84% Recall@10 and outperforming traditional alignment-based methods.",
+      "stargazers_count": 0,
+      "pushed_at": "2025-12-18T11:06:51Z",
+      "created_at": "2025-07-15T16:21:53Z",
+      "language": "Jupyter Notebook"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "li_stephens": [
+   {
+    "query": "haplotype-aware chaining pangenome",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "li stephens haplotype copying model",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "locityper",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "tprodanov/locityper",
+      "html_url": "https://github.com/tprodanov/locityper",
+      "description": "Targeted genotyper for complex polymorphic genes",
+      "stargazers_count": 51,
+      "pushed_at": "2026-11-09T11:47:08Z",
+      "created_at": "2022-12-20T10:48:29Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "tprodanov/locityper-bench",
+      "html_url": "https://github.com/tprodanov/locityper-bench",
+      "description": null,
+      "stargazers_count": 3,
+      "pushed_at": "2025-02-12T19:49:19Z",
+      "created_at": "2023-12-05T10:57:42Z",
+      "language": "R"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "pangenie genotyping",
+    "total": 4,
+    "items": [
+     {
+      "full_name": "Da-Blessed/pangenie-genotyping",
+      "html_url": "https://github.com/Da-Blessed/pangenie-genotyping",
+      "description": "Snakemake workflow for PanGenie panel-based short-read genotyping",
+      "stargazers_count": 0,
+      "pushed_at": "2026-09-24T11:16:02Z",
+      "created_at": "2026-09-24T11:14:33Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "yutong1007/MaskedPangenie-v2",
+      "html_url": "https://github.com/yutong1007/MaskedPangenie-v2",
+      "description": "Optimized version of MaskedPanGenie, which extends PanGenie with spaced seeds for alignment-free genotyping.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-11-04T07:45:47Z",
+      "created_at": "2026-09-22T10:06:14Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "aaronbriantran/pangenie-te",
+      "html_url": "https://github.com/aaronbriantran/pangenie-te",
+      "description": "Pipeline using Pangenie, RepeatMasker/LIME-A1D, and SHAPEIT5 to genotype, identify, and phase TEs from the pangenome for ASE analyses",
+      "stargazers_count": 0,
+      "pushed_at": "2026-10-27T02:47:29Z",
+      "created_at": "2026-05-26T03:04:00Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "andrew010417/pangenome_graph_pipeline",
+      "html_url": "https://github.com/andrew010417/pangenome_graph_pipeline",
+      "description": "Long-read assembly \uae30\ubc18 pangenome \uadf8\ub798\ud504 \uad6c\ucd95(Minigraph-Cactus/PGGB) \ubc0f long-read genotyping(vg/PanGenie) \ud30c\uc774\ud504\ub77c\uc778",
+      "stargazers_count": 0,
+      "pushed_at": "2026-08-04T04:50:51Z",
+      "created_at": "2026-07-31T07:17:02Z",
+      "language": "Shell"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "multimap": [
+   {
+    "query": "parascopy paralog",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "paraphase paralog",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "asm_qc": [
+   {
+    "query": "flagger assembly",
+    "total": 131,
+    "items": [
+     {
+      "full_name": "mobinasri/flagger",
+      "html_url": "https://github.com/mobinasri/flagger",
+      "description": "Evaluating genome assemblies",
+      "stargazers_count": 132,
+      "pushed_at": "2026-11-09T04:12:24Z",
+      "created_at": "2022-05-11T23:34:51Z",
+      "language": "C"
+     },
+     {
+      "full_name": "Amey-Thakur/8086-ASSEMBLY-LANGUAGE-PROGRAMS",
+      "html_url": "https://github.com/Amey-Thakur/8086-ASSEMBLY-LANGUAGE-PROGRAMS",
+      "description": "525 documented Intel 8086 assembly programs, with a browser simulator that assembles and runs every one of them: full instruction set, nine flags, macros, DOS and BIOS services, and step-by-step debugging. Verified by 2010 tests.",
+      "stargazers_count": 131,
+      "pushed_at": "2026-09-05T21:33:15Z",
+      "created_at": "2022-02-17T10:34:01Z",
+      "language": "Assembly"
+     },
+     {
+      "full_name": "lunasorcery/cga-trans-flag",
+      "html_url": "https://github.com/lunasorcery/cga-trans-flag",
+      "description": "Sizecoding a trans pride flag in x86 DOS assembly.",
+      "stargazers_count": 34,
+      "pushed_at": "2025-03-31T13:51:24Z",
+      "created_at": "2018-12-14T01:57:29Z",
+      "language": "Assembly"
+     },
+     {
+      "full_name": "sha0coder/predator",
+      "html_url": "https://github.com/sha0coder/predator",
+      "description": "Genetic Algorithm in C++ to evolve assembly opcodes to harm the linux system in order to identify red flags or vulnerabilities",
+      "stargazers_count": 6,
+      "pushed_at": "2021-04-25T17:14:13Z",
+      "created_at": "2018-04-24T20:08:12Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "seanpm2001/Flag-Simulator_WebApp_WebAssembly",
+      "html_url": "https://github.com/seanpm2001/Flag-Simulator_WebApp_WebAssembly",
+      "description": "\ud83c\udff3\ufe0f\ud83d\udcbe\ufe0f\ud83c\udf10\ufe0f The official source repository for the WebAssembly web application variant of the Flag Simulator project.",
+      "stargazers_count": 5,
+      "pushed_at": "2025-05-08T01:50:30Z",
+      "created_at": "2025-05-07T05:04:27Z",
+      "language": "WebAssembly"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "nucflag",
+    "total": 7,
+    "items": [
+     {
+      "full_name": "logsdon-lab/NucFlag",
+      "html_url": "https://github.com/logsdon-lab/NucFlag",
+      "description": "Misassembly Identifier",
+      "stargazers_count": 29,
+      "pushed_at": "2026-10-29T05:52:56Z",
+      "created_at": "2024-06-28T07:50:31Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "logsdon-lab/rs-nucflag",
+      "html_url": "https://github.com/logsdon-lab/rs-nucflag",
+      "description": "NucFlag library",
+      "stargazers_count": 0,
+      "pushed_at": "2026-07-19T13:09:01Z",
+      "created_at": "2025-02-16T11:46:40Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "koisland/NucFlagPaper",
+      "html_url": "https://github.com/koisland/NucFlagPaper",
+      "description": "NucFlag paper and assembly and validation tool benchmarking",
+      "stargazers_count": 0,
+      "pushed_at": "2026-08-05T00:16:48Z",
+      "created_at": "2024-12-19T05:55:10Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "koisland/NucFlag-chrY",
+      "html_url": "https://github.com/koisland/NucFlag-chrY",
+      "description": "Assembly QC for chrY assemblies in Hallast et al.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-09-22T16:04:11Z",
+      "created_at": "2026-09-22T15:56:01Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "logsdon-lab/Snakemake-NucFlag",
+      "html_url": "https://github.com/logsdon-lab/Snakemake-NucFlag",
+      "description": "Workflow to map PacBio HiFi reads back to an assembly and check for misassemblies at specific regions via NucFlag.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-11-02T00:18:12Z",
+      "created_at": "2024-05-10T19:59:27Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "conformal prediction genomics",
+    "total": 5,
+    "items": [
+     {
+      "full_name": "Joshua-Anojulu/phylo-weighted-conformal-ast",
+      "html_url": "https://github.com/Joshua-Anojulu/phylo-weighted-conformal-ast",
+      "description": "Code and result tables for \"Phylogeny-weighted conformal prediction for genomic antibiotic susceptibility testing: four failures of a natural idea\" (ICBINB workshop, NeurIPS 2026)",
+      "stargazers_count": 0,
+      "pushed_at": "2026-10-22T15:21:59Z",
+      "created_at": "2026-10-22T15:21:12Z",
+      "language": null
+     },
+     {
+      "full_name": "Yogarajan12/conformal-drug-response",
+      "html_url": "https://github.com/Yogarajan12/conformal-drug-response",
+      "description": "Distribution-free uncertainty for cancer drug response: a GNN predictor with split conformal prediction on GDSC1.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-09-21T05:31:01Z",
+      "created_at": "2026-07-04T09:58:52Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "227182038-rgb/lacuna-amr",
+      "html_url": "https://github.com/227182038-rgb/lacuna-amr",
+      "description": "Open-core audit & trust platform for genomic AMR prediction, featuring conformal uncertainty sets and MCP server for AI agent workflows.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-11-10T09:42:18Z",
+      "created_at": "2026-11-10T09:41:51Z",
+      "language": "HTML"
+     },
+     {
+      "full_name": "gurjant088/rice-gp-reliability-1kRiCA",
+      "html_url": "https://github.com/gurjant088/rice-gp-reliability-1kRiCA",
+      "description": "Code and data for \"How reliable is genomic prediction within a rice breeding programme?\" \u2013 across-family (LOFO) validation, SHAP explainable AI and conformal prediction intervals with 1k-RiCA SNP data (353 indica lines, 24 families).",
+      "stargazers_count": 0,
+      "pushed_at": "2026-11-01T12:38:22Z",
+      "created_at": "2026-11-01T12:28:33Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "VahsirRush/crispr-ontarget-efficiency",
+      "html_url": "https://github.com/VahsirRush/crispr-ontarget-efficiency",
+      "description": "CNN + attention for CRISPR/Cas9 sgRNA on-target efficiency, benchmarked against a reproduced Rule Set 2 GBT baseline, with attention interpretability, conformal prediction intervals, and 39 adversarial validation checks.",
+      "stargazers_count": 1,
+      "pushed_at": "2026-09-19T23:18:16Z",
+      "created_at": "2026-09-19T23:18:10Z",
+      "language": "HTML"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "CRAQ assembly quality",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "JiaoLaboratory/CRAQ",
+      "html_url": "https://github.com/JiaoLaboratory/CRAQ",
+      "description": "Identification of errors in draft genome assemblies with single-base pair resolution for quality assessment and improvement",
+      "stargazers_count": 99,
+      "pushed_at": "2025-12-03T01:10:58Z",
+      "created_at": "2022-03-30T12:33:58Z",
+      "language": "Perl"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "rindex": [
+   {
+    "query": "movi pangenome index",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "ropebwt3",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "lh3/ropebwt3",
+      "html_url": "https://github.com/lh3/ropebwt3",
+      "description": "BWT construction and search",
+      "stargazers_count": 134,
+      "pushed_at": "2026-08-30T03:28:18Z",
+      "created_at": "2024-06-04T14:54:32Z",
+      "language": "C"
+     },
+     {
+      "full_name": "meidanis-lab/ropebwt3",
+      "html_url": "https://github.com/meidanis-lab/ropebwt3",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2025-06-30T12:52:25Z",
+      "created_at": "2025-06-27T14:35:52Z",
+      "language": "C"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "b-move bidirectional",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "biointec/b-move",
+      "html_url": "https://github.com/biointec/b-move",
+      "description": "Bidirectional move structure",
+      "stargazers_count": 7,
+      "pushed_at": "2025-04-07T17:46:49Z",
+      "created_at": "2024-05-21T12:47:07Z",
+      "language": "C++"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "spumoni",
+    "total": 9,
+    "items": [
+     {
+      "full_name": "oma219/spumoni",
+      "html_url": "https://github.com/oma219/spumoni",
+      "description": "Pan-Genomic Matching Statistics",
+      "stargazers_count": 59,
+      "pushed_at": "2024-04-03T18:44:02Z",
+      "created_at": "2021-03-20T03:52:15Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "StevenMeara/SpumoniWine",
+      "html_url": "https://github.com/StevenMeara/SpumoniWine",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2021-01-21T22:52:07Z",
+      "created_at": "2020-12-01T01:45:13Z",
+      "language": "JavaScript"
+     },
+     {
+      "full_name": "software-mariodiana/spumoni",
+      "html_url": "https://github.com/software-mariodiana/spumoni",
+      "description": "iOS project demonstrating Auto Layout in code.",
+      "stargazers_count": 0,
+      "pushed_at": "2016-12-16T19:22:43Z",
+      "created_at": "2016-12-15T20:06:10Z",
+      "language": "Objective-C"
+     },
+     {
+      "full_name": "agateau/spumoni",
+      "html_url": "https://github.com/agateau/spumoni",
+      "description": "Quickly create StatusNotifierItems aka Indicators",
+      "stargazers_count": 0,
+      "pushed_at": "2022-10-31T17:50:36Z",
+      "created_at": "2022-01-06T15:45:27Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "oma219/spumoni-experiments",
+      "html_url": "https://github.com/oma219/spumoni-experiments",
+      "description": "Experiments related to SPUMONI",
+      "stargazers_count": 0,
+      "pushed_at": "2024-02-24T01:40:10Z",
+      "created_at": "2022-02-02T05:13:38Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "mumemto",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "vikshiv/mumemto",
+      "html_url": "https://github.com/vikshiv/mumemto",
+      "description": "Mumemto: multi-MUM and MEM finding across pangenomes",
+      "stargazers_count": 141,
+      "pushed_at": "2026-11-03T13:49:09Z",
+      "created_at": "2024-01-05T02:03:15Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "vikshiv/mumemto-reproducibility-scripts",
+      "html_url": "https://github.com/vikshiv/mumemto-reproducibility-scripts",
+      "description": "Scripts to reproduce the results and figures in the Mumemto paper",
+      "stargazers_count": 1,
+      "pushed_at": "2025-05-28T19:09:13Z",
+      "created_at": "2025-01-13T23:46:15Z",
+      "language": "Jupyter Notebook"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "dbg": [
+   {
+    "query": "ggcat de bruijn",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "algbio/ggcat",
+      "html_url": "https://github.com/algbio/ggcat",
+      "description": "Compacted and colored de Bruijn graph construction and querying",
+      "stargazers_count": 101,
+      "pushed_at": "2026-11-03T16:29:17Z",
+      "created_at": "2019-11-20T11:03:17Z",
+      "language": "Rust"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "cuttlefish de bruijn graph",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "COMBINE-lab/cuttlefish",
+      "html_url": "https://github.com/COMBINE-lab/cuttlefish",
+      "description": "Building the compacted de Bruijn graph efficiently from references or reads.",
+      "stargazers_count": 101,
+      "pushed_at": "2026-10-01T00:19:50Z",
+      "created_at": "2020-04-08T18:32:57Z",
+      "language": "Rust"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "sshash k-mer dictionary",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "jermp/sshash",
+      "html_url": "https://github.com/jermp/sshash",
+      "description": "\ud83d\udcd6 \ud83e\uddec SSHash is a compressed, associative, exact, and weighted dictionary for k-mers.",
+      "stargazers_count": 108,
+      "pushed_at": "2026-11-08T07:38:52Z",
+      "created_at": "2022-01-13T09:38:46Z",
+      "language": "C++"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "gbwt": [
+   {
+    "query": "gbwt haplotype",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "ucfcbb/GBWT-Query",
+      "html_url": "https://github.com/ucfcbb/GBWT-Query",
+      "description": "Haplotype matching capabilities on the GBWT",
+      "stargazers_count": 3,
+      "pushed_at": "2026-08-28T02:28:41Z",
+      "created_at": "2024-05-29T20:20:51Z",
+      "language": "C++"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "mdbg": [
+   {
+    "query": "mapquik",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "ekimb/mapquik",
+      "html_url": "https://github.com/ekimb/mapquik",
+      "description": "Efficient low-divergence mapping of long reads in minimizer space",
+      "stargazers_count": 70,
+      "pushed_at": "2023-10-07T13:58:03Z",
+      "created_at": "2021-07-04T16:21:01Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "BoyuanS813/mapquik_PLUS",
+      "html_url": "https://github.com/BoyuanS813/mapquik_PLUS",
+      "description": null,
+      "stargazers_count": 1,
+      "pushed_at": "2023-12-04T08:23:17Z",
+      "created_at": "2023-11-10T00:52:35Z",
+      "language": "JavaScript"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "rust-mdbg",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "ekimb/rust-mdbg",
+      "html_url": "https://github.com/ekimb/rust-mdbg",
+      "description": "minimizer-space de Bruijn graphs (mdBG) for whole genome assembly",
+      "stargazers_count": 181,
+      "pushed_at": "2024-09-19T16:08:59Z",
+      "created_at": "2020-11-06T14:29:44Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "rbartelme/rust-mdbg-docker",
+      "html_url": "https://github.com/rbartelme/rust-mdbg-docker",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2021-09-16T19:34:43Z",
+      "created_at": "2021-09-16T17:40:22Z",
+      "language": "Dockerfile"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "align_exact": [
+   {
+    "query": "astar-pairwise-aligner",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "RagnarGrootKoerkamp/astar-pairwise-aligner",
+      "html_url": "https://github.com/RagnarGrootKoerkamp/astar-pairwise-aligner",
+      "description": "A pairwise sequence aligner written in Rust",
+      "stargazers_count": 152,
+      "pushed_at": "2026-05-22T18:23:24Z",
+      "created_at": "2021-12-05T19:46:47Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "BigBuildBench/RagnarGrootKoerkamp_astar-pairwise-aligner",
+      "html_url": "https://github.com/BigBuildBench/RagnarGrootKoerkamp_astar-pairwise-aligner",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2024-11-21T07:35:10Z",
+      "created_at": "2024-11-21T07:35:07Z",
+      "language": "Rust"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "WFA2-lib wavefront",
+    "total": 4,
+    "items": [
+     {
+      "full_name": "Marco-Sola-Lab/WFA2-lib",
+      "html_url": "https://github.com/Marco-Sola-Lab/WFA2-lib",
+      "description": "WFA-lib: Wavefront alignment algorithm library v2",
+      "stargazers_count": 232,
+      "pushed_at": "2026-10-25T15:37:14Z",
+      "created_at": "2021-06-13T13:32:11Z",
+      "language": "C"
+     },
+     {
+      "full_name": "kcleal/pywfa",
+      "html_url": "https://github.com/kcleal/pywfa",
+      "description": "Python wrapper for wavefront alignment using WFA2-lib",
+      "stargazers_count": 40,
+      "pushed_at": "2026-10-16T07:55:44Z",
+      "created_at": "2022-03-16T15:38:45Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "sounkou-bioinfo/WavefrontAlignR",
+      "html_url": "https://github.com/sounkou-bioinfo/WavefrontAlignR",
+      "description": "R bindings to WFA2-lib",
+      "stargazers_count": 0,
+      "pushed_at": "2023-08-08T17:38:18Z",
+      "created_at": "2025-01-26T22:20:02Z",
+      "language": null
+     },
+     {
+      "full_name": "suhas-r/WFA2-lib",
+      "html_url": "https://github.com/suhas-r/WFA2-lib",
+      "description": "WFA-lib: Wavefront alignment algorithm library v2",
+      "stargazers_count": 0,
+      "pushed_at": "2026-08-25T00:00:06Z",
+      "created_at": "2025-09-03T21:15:57Z",
+      "language": "C"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "block aligner",
+    "total": 522,
+    "items": [
+     {
+      "full_name": "Daniel-Liu-c0deb0t/block-aligner",
+      "html_url": "https://github.com/Daniel-Liu-c0deb0t/block-aligner",
+      "description": "SIMD-accelerated library for computing global and X-drop affine gap penalty sequence-to-sequence or sequence-to-profile alignments using an adaptive block-based algorithm.",
+      "stargazers_count": 141,
+      "pushed_at": "2024-06-23T05:21:50Z",
+      "created_at": "2020-11-07T05:08:02Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "CrocoDillon/JustifyGrid",
+      "html_url": "https://github.com/CrocoDillon/JustifyGrid",
+      "description": "A new way to create layouts featuring text-align: justify and inline-blocks.",
+      "stargazers_count": 86,
+      "pushed_at": "2026-10-22T00:22:07Z",
+      "created_at": "2013-06-04T09:53:09Z",
+      "language": "HTML"
+     },
+     {
+      "full_name": "flumedb/aligned-block-file",
+      "html_url": "https://github.com/flumedb/aligned-block-file",
+      "description": "read and write to a file in a cache-friendly way by using aligned blocks",
+      "stargazers_count": 8,
+      "pushed_at": "2020-10-09T23:47:41Z",
+      "created_at": "2016-10-22T15:39:44Z",
+      "language": "JavaScript"
+     },
+     {
+      "full_name": "alemuntoni/HeightFieldDecomposition",
+      "html_url": "https://github.com/alemuntoni/HeightFieldDecomposition",
+      "description": " Source code for Transaction on Graphics 2018 paper \"Axis-Aligned Height-Field Block Decomposition of 3D Shapes\"",
+      "stargazers_count": 22,
+      "pushed_at": "2020-01-16T15:39:51Z",
+      "created_at": "2017-04-20T10:16:50Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "manateelazycat/smart-align",
+      "html_url": "https://github.com/manateelazycat/smart-align",
+      "description": "Smart align block around cursor",
+      "stargazers_count": 11,
+      "pushed_at": "2019-06-23T14:51:09Z",
+      "created_at": "2019-06-23T14:50:38Z",
+      "language": "Emacs Lisp"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "chain": [
+   {
+    "query": "chainx colinear chaining",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "minichain",
+    "total": 130,
+    "items": [
+     {
+      "full_name": "srush/MiniChain",
+      "html_url": "https://github.com/srush/MiniChain",
+      "description": "A tiny library for coding with large language models.",
+      "stargazers_count": 1229,
+      "pushed_at": "2024-07-10T14:59:50Z",
+      "created_at": "2023-02-10T16:07:11Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "StabilityNexus/MiniChain",
+      "html_url": "https://github.com/StabilityNexus/MiniChain",
+      "description": "A minimal blockchain for education, research and innovation",
+      "stargazers_count": 11,
+      "pushed_at": "2026-10-25T03:15:21Z",
+      "created_at": "2026-02-11T15:10:03Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "kigawas/minichain",
+      "html_url": "https://github.com/kigawas/minichain",
+      "description": "Mini blockchain in Python",
+      "stargazers_count": 13,
+      "pushed_at": "2023-03-07T20:58:55Z",
+      "created_at": "2018-04-27T12:04:23Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "qpakzk/minichain",
+      "html_url": "https://github.com/qpakzk/minichain",
+      "description": "A PoC cryptocurrency implementation written to illustrate the basic components of a Proof-of-Work based, public blockchain technology.",
+      "stargazers_count": 2,
+      "pushed_at": "2017-12-04T03:04:50Z",
+      "created_at": "2017-12-04T12:24:22Z",
+      "language": "TypeScript"
+     },
+     {
+      "full_name": "at-cg/minichain",
+      "html_url": "https://github.com/at-cg/minichain",
+      "description": "Long-read aligner to pangenome graphs",
+      "stargazers_count": 29,
+      "pushed_at": "2024-05-20T09:56:45Z",
+      "created_at": "2022-07-14T05:22:31Z",
+      "language": "C"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "diffdp": [
+   {
+    "query": "differentiable smith-waterman",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "avitai/DiffBio",
+      "html_url": "https://github.com/avitai/DiffBio",
+      "description": "End-to-end differentiable bioinformatics for JAX/Flax NNX: soft Smith-Waterman alignment, read mapping and assembly, variant calling, RNA-seq, single-cell, epigenomics, CRISPR, metabolomics, multi-omics, protein and RNA structure, molecular dynamics and drug-discovery operators composed into trainable pipelines on the Avitai stack.",
+      "stargazers_count": 2,
+      "pushed_at": "2026-11-08T22:43:09Z",
+      "created_at": "2026-01-07T20:13:25Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "SMURF multiple sequence alignment differentiable",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "fracmin": [
+   {
+    "query": "sourmash",
+    "total": 253,
+    "items": [
+     {
+      "full_name": "sourmash-bio/sourmash",
+      "html_url": "https://github.com/sourmash-bio/sourmash",
+      "description": "Quickly search, compare, and analyze genomic and metagenomic data sets.",
+      "stargazers_count": 565,
+      "pushed_at": "2026-11-10T13:21:28Z",
+      "created_at": "2016-04-09T17:35:30Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "sourmash-bio/sourmash_plugin_branchwater",
+      "html_url": "https://github.com/sourmash-bio/sourmash_plugin_branchwater",
+      "description": "fast, multithreaded sourmash operations: search, compare, and gather.",
+      "stargazers_count": 25,
+      "pushed_at": "2026-11-10T13:24:22Z",
+      "created_at": "2022-10-17T14:06:39Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "Arcadia-Science/sourmashconsumr",
+      "html_url": "https://github.com/Arcadia-Science/sourmashconsumr",
+      "description": "Working with the outputs of sourmash in R",
+      "stargazers_count": 29,
+      "pushed_at": "2026-01-15T22:30:27Z",
+      "created_at": "2022-10-05T16:16:05Z",
+      "language": "Standard ML"
+     },
+     {
+      "full_name": "ngs-docs/2023-ggg298-sourmash-compare",
+      "html_url": "https://github.com/ngs-docs/2023-ggg298-sourmash-compare",
+      "description": "A simple example snakemake workflow",
+      "stargazers_count": 1,
+      "pushed_at": "2023-03-15T20:12:42Z",
+      "created_at": "2023-01-10T15:53:20Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "dib-lab/genome-grist",
+      "html_url": "https://github.com/dib-lab/genome-grist",
+      "description": "map Illumina metagenomes to genomes!",
+      "stargazers_count": 38,
+      "pushed_at": "2026-01-22T01:53:00Z",
+      "created_at": "2020-10-13T14:57:06Z",
+      "language": "Jupyter Notebook"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "sylph metagenome",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "gregcaporaso/mosh-sylph",
+      "html_url": "https://github.com/gregcaporaso/mosh-sylph",
+      "description": "rachis plugin wrapping the sylph metagenome profiler and sylph-tax",
+      "stargazers_count": 0,
+      "pushed_at": "2026-10-30T21:15:15Z",
+      "created_at": "2026-10-16T11:24:07Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "MicrocosmFoods/metagenome-containment-profiler",
+      "html_url": "https://github.com/MicrocosmFoods/metagenome-containment-profiler",
+      "description": "Workflow for profiling containment of reference genomes in metagenomic samples using sylph",
+      "stargazers_count": 0,
+      "pushed_at": "2026-01-20T22:54:02Z",
+      "created_at": "2025-04-01T01:12:13Z",
+      "language": "R"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "embed": [
+   {
+    "query": "NeuroSEED",
+    "total": 13,
+    "items": [
+     {
+      "full_name": "gcorso/NeuroSEED",
+      "html_url": "https://github.com/gcorso/NeuroSEED",
+      "description": "Implementation of Neural Distance Embeddings for Biological Sequences (NeuroSEED) in PyTorch (NeurIPS 2021) ",
+      "stargazers_count": 76,
+      "pushed_at": "2023-10-14T01:15:09Z",
+      "created_at": "2021-04-27T14:11:39Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "Neuroseed/neuroseed-mvp",
+      "html_url": "https://github.com/Neuroseed/neuroseed-mvp",
+      "description": "For testing MVP is available on ",
+      "stargazers_count": 4,
+      "pushed_at": "2018-07-05T10:19:00Z",
+      "created_at": "2018-07-03T10:58:21Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "schultzlab/neuroSEE",
+      "html_url": "https://github.com/schultzlab/neuroSEE",
+      "description": "Main working repository for the MATLAB version of the neuroSEE pipeline",
+      "stargazers_count": 2,
+      "pushed_at": "2022-08-19T06:54:40Z",
+      "created_at": "2019-05-21T17:05:29Z",
+      "language": "MATLAB"
+     },
+     {
+      "full_name": "HitoshiFTW/Ikigai---Project-Neuroseed",
+      "html_url": "https://github.com/HitoshiFTW/Ikigai---Project-Neuroseed",
+      "description": "Biologically inspired neural simulation modeling excitation\u2013inhibition balance, neuromodulators, and emergent cognitive traits.",
+      "stargazers_count": 2,
+      "pushed_at": "2026-06-27T17:47:09Z",
+      "created_at": "2026-03-04T05:13:23Z",
+      "language": null
+     },
+     {
+      "full_name": "SanOld/neuroseed",
+      "html_url": "https://github.com/SanOld/neuroseed",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2017-12-01T20:14:12Z",
+      "created_at": "2017-11-22T11:13:58Z",
+      "language": "JavaScript"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "tensor sketch sequence",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "ratschlab/tensor-sketch-alignment",
+      "html_url": "https://github.com/ratschlab/tensor-sketch-alignment",
+      "description": "Code for the paper Aligning Distant Sequences to Graphs using Long Seed Sketches.",
+      "stargazers_count": 13,
+      "pushed_at": "2022-11-01T00:46:52Z",
+      "created_at": "2022-10-26T17:04:49Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "ati405/learnable-tensor-sketching",
+      "html_url": "https://github.com/ati405/learnable-tensor-sketching",
+      "description": "Hierarchical tensor sketching framework for genomic sequence similarity estimation",
+      "stargazers_count": 0,
+      "pushed_at": "2025-08-06T05:46:21Z",
+      "created_at": "2025-08-06T05:22:31Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "CGK embedding edit distance",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "lsh": [
+   {
+    "query": "BLEND fuzzy seed matches",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "CMU-SAFARI/BLEND",
+      "html_url": "https://github.com/CMU-SAFARI/BLEND",
+      "description": "BLEND is a mechanism that can efficiently find fuzzy seed matches between sequences to significantly improve the performance and accuracy while reducing the memory space usage of two important applications: 1) finding overlapping reads and 2) read mapping. Described by Firtina et al. (published in NARGAB https://doi.org/10.1093/nargab/lqad004)",
+      "stargazers_count": 47,
+      "pushed_at": "2023-05-10T14:10:43Z",
+      "created_at": "2021-12-12T15:43:24Z",
+      "language": "C"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "MashMap",
+    "total": 8,
+    "items": [
+     {
+      "full_name": "marbl/MashMap",
+      "html_url": "https://github.com/marbl/MashMap",
+      "description": "A fast approximate aligner for long DNA sequences",
+      "stargazers_count": 292,
+      "pushed_at": "2024-10-11T18:36:40Z",
+      "created_at": "2017-01-13T15:24:22Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "imartayan/mashmap",
+      "html_url": "https://github.com/imartayan/mashmap",
+      "description": "A flat HashMap that supports multiple entries per key",
+      "stargazers_count": 13,
+      "pushed_at": "2025-06-24T15:48:50Z",
+      "created_at": "2024-05-02T10:30:53Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "bkille/mashmap3-evaluation",
+      "html_url": "https://github.com/bkille/mashmap3-evaluation",
+      "description": "Evaluation scripts for MashMap3",
+      "stargazers_count": 0,
+      "pushed_at": "2023-04-09T17:29:59Z",
+      "created_at": "2023-04-09T17:04:40Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "gvaleriano/mashmap",
+      "html_url": "https://github.com/gvaleriano/mashmap",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2025-02-25T16:39:04Z",
+      "created_at": "2025-02-21T19:31:26Z",
+      "language": "TypeScript"
+     },
+     {
+      "full_name": "ewre112/MashMap",
+      "html_url": "https://github.com/ewre112/MashMap",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2023-05-23T23:59:42Z",
+      "created_at": "2023-05-23T23:59:32Z",
+      "language": "C++"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "seed": [
+   {
+    "query": "strobealign",
+    "total": 6,
+    "items": [
+     {
+      "full_name": "ksahlin/strobealign",
+      "html_url": "https://github.com/ksahlin/strobealign",
+      "description": "Aligns short reads using dynamic seed size with strobemers",
+      "stargazers_count": 213,
+      "pushed_at": "2026-11-11T13:29:32Z",
+      "created_at": "2021-05-23T15:18:06Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "NBISweden/strobealign-evaluation",
+      "html_url": "https://github.com/NBISweden/strobealign-evaluation",
+      "description": null,
+      "stargazers_count": 3,
+      "pushed_at": "2026-10-27T17:20:10Z",
+      "created_at": "2023-10-17T13:13:41Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "marcelm/rstrobes",
+      "html_url": "https://github.com/marcelm/rstrobes",
+      "description": "Rust port of strobealign (WIP)",
+      "stargazers_count": 2,
+      "pushed_at": "2026-01-12T19:19:48Z",
+      "created_at": "2025-02-19T08:39:42Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "remiolsen/strobealign-docker",
+      "html_url": "https://github.com/remiolsen/strobealign-docker",
+      "description": "Code dump",
+      "stargazers_count": 0,
+      "pushed_at": "2023-02-09T09:57:16Z",
+      "created_at": "2023-02-09T09:52:39Z",
+      "language": "Dockerfile"
+     },
+     {
+      "full_name": "JuliaBinaryWrappers/strobealign_jll.jl",
+      "html_url": "https://github.com/JuliaBinaryWrappers/strobealign_jll.jl",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2024-06-22T21:35:32Z",
+      "created_at": "2024-06-22T21:35:21Z",
+      "language": "Julia"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "subseqhash",
+    "total": 3,
+    "items": [
+     {
+      "full_name": "Shao-Group/subseqhash",
+      "html_url": "https://github.com/Shao-Group/subseqhash",
+      "description": null,
+      "stargazers_count": 9,
+      "pushed_at": "2023-02-10T22:49:48Z",
+      "created_at": "2022-12-14T03:05:16Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "Shao-Group/SubseqHash2",
+      "html_url": "https://github.com/Shao-Group/SubseqHash2",
+      "description": "Fast, SIMD-accelerated, multi-set seeding algorithm for error-prone sequences ",
+      "stargazers_count": 8,
+      "pushed_at": "2025-04-22T21:01:23Z",
+      "created_at": "2023-05-14T20:04:15Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "Shao-Group/subseqhash3",
+      "html_url": "https://github.com/Shao-Group/subseqhash3",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2026-11-11T16:24:48Z",
+      "created_at": "2026-11-09T21:03:32Z",
+      "language": "C"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "mod-minimizer",
+    "total": 40,
+    "items": [
+     {
+      "full_name": "RagnarGrootKoerkamp/minimizers",
+      "html_url": "https://github.com/RagnarGrootKoerkamp/minimizers",
+      "description": "Reference implementations of minimizer schemes to go with the mod-minimizers paper.",
+      "stargazers_count": 29,
+      "pushed_at": "2026-07-12T17:28:53Z",
+      "created_at": "2024-01-16T21:57:32Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "shaggyze/uotiara",
+      "html_url": "https://github.com/shaggyze/uotiara",
+      "description": "Unofficial Tiara's Moonshine Mod is a simple client-side modification package aimed at assisting players who have difficulty or wish to minimize concentration during the game.",
+      "stargazers_count": 37,
+      "pushed_at": "2026-11-02T03:18:37Z",
+      "created_at": "2021-04-02T07:00:17Z",
+      "language": "NSIS"
+     },
+     {
+      "full_name": "wheaton5/distinguishing_kmers",
+      "html_url": "https://github.com/wheaton5/distinguishing_kmers",
+      "description": "Memory efficient (approximate) thresholded kmer set subtraction using mod hash minimizer.",
+      "stargazers_count": 5,
+      "pushed_at": "2019-01-31T18:13:03Z",
+      "created_at": "2019-01-16T16:06:52Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "Ildourol/mod-radio-3.3.5",
+      "html_url": "https://github.com/Ildourol/mod-radio-3.3.5",
+      "description": "Crash-safe client-side live audio streaming mod and in-game radio player for WoW 3.3.5a with Turtle WoW relays,   web streams, and auto-pause on minimize.",
+      "stargazers_count": 4,
+      "pushed_at": "2026-11-01T10:50:12Z",
+      "created_at": "2026-09-14T14:51:07Z",
+      "language": "Lua"
+     },
+     {
+      "full_name": "KnisterPeter/node-modules-minimizer",
+      "html_url": "https://github.com/KnisterPeter/node-modules-minimizer",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2026-02-12T15:12:13Z",
+      "created_at": "2024-09-30T07:45:06Z",
+      "language": "TypeScript"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "greedymini minimizer",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "raw": [
+   {
+    "query": "rawhash nanopore",
+    "total": 4,
+    "items": [
+     {
+      "full_name": "CMU-SAFARI/RawHash",
+      "html_url": "https://github.com/CMU-SAFARI/RawHash",
+      "description": "RawHash can accurately and efficiently map raw nanopore signals to reference genomes of varying sizes (e.g., from viral to a human genomes) in real-time without basecalling. Described by Firtina et al. (published at https://academic.oup.com/bioinformatics/article/39/Supplement_1/i297/7210440).",
+      "stargazers_count": 71,
+      "pushed_at": "2026-01-01T12:24:04Z",
+      "created_at": "2023-01-20T19:00:21Z",
+      "language": "C"
+     },
+     {
+      "full_name": "STORMgroup/RawHash2",
+      "html_url": "https://github.com/STORMgroup/RawHash2",
+      "description": "RawHash2 can accurately map raw nanopore signals to small and large reference genomes without basecalling in real-time. Described by Firtina et al. (published at https://academic.oup.com/bioinformatics/article/40/8/btae478/7723993).",
+      "stargazers_count": 5,
+      "pushed_at": "2026-05-04T19:40:43Z",
+      "created_at": "2026-02-16T00:07:54Z",
+      "language": "C"
+     },
+     {
+      "full_name": "m-lacher/RawHash2",
+      "html_url": "https://github.com/m-lacher/RawHash2",
+      "description": "RawHash2 is an algorithm designed by ETH for realtime nanopore sequencing.",
+      "stargazers_count": 0,
+      "pushed_at": "2024-04-19T08:41:21Z",
+      "created_at": "2024-04-19T08:33:28Z",
+      "language": null
+     },
+     {
+      "full_name": "umcconnell/rawhash-rust",
+      "html_url": "https://github.com/umcconnell/rawhash-rust",
+      "description": "A pure Rust port of RawHash, a hash-based mechanism to map raw nanopore signals to a reference genome in real-time.",
+      "stargazers_count": 0,
+      "pushed_at": "2025-12-22T09:34:55Z",
+      "created_at": "2025-12-22T09:34:42Z",
+      "language": "Rust"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "uncalled nanopore",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "skovaka/UNCALLED",
+      "html_url": "https://github.com/skovaka/UNCALLED",
+      "description": "Raw nanopore signal mapper that enables real-time targeted sequencing",
+      "stargazers_count": 531,
+      "pushed_at": "2024-03-05T15:22:30Z",
+      "created_at": "2017-07-19T16:26:02Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "HKU-BAL/UNCALLED",
+      "html_url": "https://github.com/HKU-BAL/UNCALLED",
+      "description": "Raw nanopore signal mapper that enables real-time targeted sequencing",
+      "stargazers_count": 4,
+      "pushed_at": "2020-09-07T04:34:12Z",
+      "created_at": "2020-08-03T08:34:36Z",
+      "language": "C++"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "sigmoni",
+    "total": 6,
+    "items": [
+     {
+      "full_name": "vikshiv/sigmoni",
+      "html_url": "https://github.com/vikshiv/sigmoni",
+      "description": "Nanopore signal-based classification using compressed indexing and matching statistics",
+      "stargazers_count": 7,
+      "pushed_at": "2024-08-21T19:20:32Z",
+      "created_at": "2022-12-12T19:57:00Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "sigmonidly/sigmonidly",
+      "html_url": "https://github.com/sigmonidly/sigmonidly",
+      "description": "Config files for my GitHub profile.",
+      "stargazers_count": 0,
+      "pushed_at": "2024-09-14T08:30:00Z",
+      "created_at": "2024-09-14T08:30:00Z",
+      "language": null
+     },
+     {
+      "full_name": "Bhanuprakashvallepu/Sigmonitoring",
+      "html_url": "https://github.com/Bhanuprakashvallepu/Sigmonitoring",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2026-06-26T02:14:09Z",
+      "created_at": "2026-06-26T02:08:41Z",
+      "language": "TypeScript"
+     },
+     {
+      "full_name": "filipegmedeiros/sigmonio-bot",
+      "html_url": "https://github.com/filipegmedeiros/sigmonio-bot",
+      "description": "A bot wrriten in java for management of property ",
+      "stargazers_count": 0,
+      "pushed_at": "2019-11-13T17:10:24Z",
+      "created_at": "2019-10-14T18:48:13Z",
+      "language": "Java"
+     },
+     {
+      "full_name": "jhurst5/SigmonInflorGWAS",
+      "html_url": "https://github.com/jhurst5/SigmonInflorGWAS",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2021-03-13T15:38:07Z",
+      "created_at": "2021-03-13T15:38:07Z",
+      "language": null
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "rawsamble",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "methphase": [
+   {
+    "query": "methphaser",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "treangenlab/methphaser",
+      "html_url": "https://github.com/treangenlab/methphaser",
+      "description": "MethPhaser: methylation-based haplotype phasing of human genomes",
+      "stargazers_count": 58,
+      "pushed_at": "2025-03-05T01:04:03Z",
+      "created_at": "2023-04-19T12:16:29Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "proximity": [
+   {
+    "query": "linked-read alignment barcode",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "illumina constellation",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "flow": [
+   {
+    "query": "ultima genomics",
+    "total": 18,
+    "items": [
+     {
+      "full_name": "Ultimagen/ugbio-utils",
+      "html_url": "https://github.com/Ultimagen/ugbio-utils",
+      "description": "Ultima Genomics bioinfo-utils",
+      "stargazers_count": 4,
+      "pushed_at": "2026-11-11T18:11:02Z",
+      "created_at": "2024-06-24T10:49:42Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "lsantuari/ug100-eval",
+      "html_url": "https://github.com/lsantuari/ug100-eval",
+      "description": "Evaluation of the Ultima Genomics UG 100\u2122 sequencing platform for clinical services",
+      "stargazers_count": 5,
+      "pushed_at": "2025-12-14T07:42:11Z",
+      "created_at": "2025-12-03T14:20:38Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "oicr-gsi/efficient_dv",
+      "html_url": "https://github.com/oicr-gsi/efficient_dv",
+      "description": "Ultima Genomics efficient_dv fork",
+      "stargazers_count": 0,
+      "pushed_at": "2026-10-29T18:58:15Z",
+      "created_at": "2026-05-25T17:32:55Z",
+      "language": "WDL"
+     },
+     {
+      "full_name": "oicr-gsi/mrd_featuremap",
+      "html_url": "https://github.com/oicr-gsi/mrd_featuremap",
+      "description": "Ultima Genomics mrd_featuremap fork",
+      "stargazers_count": 0,
+      "pushed_at": "2026-10-21T20:56:21Z",
+      "created_at": "2026-09-09T16:14:26Z",
+      "language": "WDL"
+     },
+     {
+      "full_name": "api-evangelist/ultima-genomics",
+      "html_url": "https://github.com/api-evangelist/ultima-genomics",
+      "description": "Ultima Genomics is a genomics technology company that develops high-throughput, cost-effective DNA sequencing platforms and solutions, led by its UG200 Series sequencer aimed at population-scale genomics.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-08-08T01:54:06Z",
+      "created_at": "2026-07-17T19:30:56Z",
+      "language": null
+     }
+    ],
+    "error": null
+   }
+  ],
+  "strandseq": [
+   {
+    "query": "graphasing",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "AntonioVillegas01/project_nextjs13_flexibble-main",
+      "html_url": "https://github.com/AntonioVillegas01/project_nextjs13_flexibble-main",
+      "description": "Next JS flexibble (dribble clone) from Javascript Mastery courses using graphase",
+      "stargazers_count": 0,
+      "pushed_at": "2024-10-07T23:56:23Z",
+      "created_at": "2023-09-17T23:12:10Z",
+      "language": "TypeScript"
+     },
+     {
+      "full_name": "rcorne/graphase",
+      "html_url": "https://github.com/rcorne/graphase",
+      "description": "Graphase: Simulador Econ\u00f3mico Pro | Una herramienta web interactiva para aprender y ense\u00f1ar micro y macroeconom\u00eda. Arrastra curvas en tiempo real para simular shocks de mercado, impuestos, p\u00e9rdida de peso muerto y pol\u00edticas fiscales/monetarias mediante el modelo IS-LM.",
+      "stargazers_count": 1,
+      "pushed_at": "2026-07-31T03:47:03Z",
+      "created_at": "2026-07-18T08:22:12Z",
+      "language": "HTML"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "strand-seq assembly phasing",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "ptrebert/project-diploid-assembly",
+      "html_url": "https://github.com/ptrebert/project-diploid-assembly",
+      "description": "Pipeline code for creating a fully haplotype-resolved assembly from a combination of PacBio/ONT long reads and Illumina Strand-seq data",
+      "stargazers_count": 16,
+      "pushed_at": "2026-09-28T13:05:55Z",
+      "created_at": "2019-04-09T16:01:38Z",
+      "language": "Jupyter Notebook"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "hic": [
+   {
+    "query": "yahs scaffolding",
+    "total": 4,
+    "items": [
+     {
+      "full_name": "c-zhou/yahs",
+      "html_url": "https://github.com/c-zhou/yahs",
+      "description": "Yet another Hi-C scaffolding tool",
+      "stargazers_count": 186,
+      "pushed_at": "2024-11-04T19:25:13Z",
+      "created_at": "2021-09-27T21:10:26Z",
+      "language": "C"
+     },
+     {
+      "full_name": "zengxiaofei/HapHiC",
+      "html_url": "https://github.com/zengxiaofei/HapHiC",
+      "description": "HapHiC: a fast, reference-independent, allele-aware scaffolding tool based on Hi-C data",
+      "stargazers_count": 288,
+      "pushed_at": "2026-08-10T02:14:07Z",
+      "created_at": "2023-11-09T10:54:31Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "ZexuanZhao/yahs_scaffolding",
+      "html_url": "https://github.com/ZexuanZhao/yahs_scaffolding",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2024-09-24T15:06:49Z",
+      "created_at": "2024-09-24T14:59:47Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "zilov/hic-scaffolder",
+      "html_url": "https://github.com/zilov/hic-scaffolder",
+      "description": "YaHS scaffolder snakemake wrapper for HiC reads mapping and scaffolding",
+      "stargazers_count": 1,
+      "pushed_at": "2024-04-24T10:37:27Z",
+      "created_at": "2023-02-10T15:35:32Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "pore-c",
+    "total": 293,
+    "items": [
+     {
+      "full_name": "nanoporetech/pore-c",
+      "html_url": "https://github.com/nanoporetech/pore-c",
+      "description": "Pore-C support",
+      "stargazers_count": 54,
+      "pushed_at": "2023-02-22T15:55:34Z",
+      "created_at": "2018-12-06T17:12:27Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "replikation/poreCov",
+      "html_url": "https://github.com/replikation/poreCov",
+      "description": "SARS-CoV-2 workflow for nanopore sequence data",
+      "stargazers_count": 42,
+      "pushed_at": "2026-11-04T15:49:38Z",
+      "created_at": "2020-03-25T11:34:55Z",
+      "language": "Nextflow"
+     },
+     {
+      "full_name": "nanoporetech/Pore-C-Snakemake",
+      "html_url": "https://github.com/nanoporetech/Pore-C-Snakemake",
+      "description": null,
+      "stargazers_count": 36,
+      "pushed_at": "2023-02-22T15:56:20Z",
+      "created_at": "2019-09-18T14:35:25Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "epi2me-labs/wf-pore-c",
+      "html_url": "https://github.com/epi2me-labs/wf-pore-c",
+      "description": null,
+      "stargazers_count": 54,
+      "pushed_at": "2025-11-24T15:06:03Z",
+      "created_at": "2023-02-22T12:05:59Z",
+      "language": "Nextflow"
+     },
+     {
+      "full_name": "wangyibin/CPhasing",
+      "html_url": "https://github.com/wangyibin/CPhasing",
+      "description": "C-Phasing/CPhasing: Phasing and scaffolding polyploid genomes based on 3C-based data (Pore-C, CiFi, Hi-C, Omni-C).",
+      "stargazers_count": 116,
+      "pushed_at": "2026-07-23T10:07:21Z",
+      "created_at": "2022-07-07T08:46:18Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "fiber": [
+   {
+    "query": "fibertools",
+    "total": 8,
+    "items": [
+     {
+      "full_name": "fiberseq/fibertools-rs",
+      "html_url": "https://github.com/fiberseq/fibertools-rs",
+      "description": "Tools for fiberseq data written in rust. ",
+      "stargazers_count": 74,
+      "pushed_at": "2026-11-05T22:49:33Z",
+      "created_at": "2022-07-24T13:57:47Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "mrvollger/fibertools",
+      "html_url": "https://github.com/mrvollger/fibertools",
+      "description": null,
+      "stargazers_count": 7,
+      "pushed_at": "2024-07-25T15:31:40Z",
+      "created_at": "2022-05-01T17:18:57Z",
+      "language": "Jupyter Notebook"
+     },
+     {
+      "full_name": "incizzle/fibertools",
+      "html_url": "https://github.com/incizzle/fibertools",
+      "description": "Simple package with small tools to make fiber even nice then it already is.",
+      "stargazers_count": 4,
+      "pushed_at": "2020-12-15T18:59:16Z",
+      "created_at": "2020-12-15T18:29:06Z",
+      "language": "Go"
+     },
+     {
+      "full_name": "wagnergoulart/fibertools",
+      "html_url": "https://github.com/wagnergoulart/fibertools",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2026-02-01T08:58:38Z",
+      "created_at": "2026-02-01T08:55:43Z",
+      "language": "CSS"
+     },
+     {
+      "full_name": "jiangjiane/FiberTools",
+      "html_url": "https://github.com/jiangjiane/FiberTools",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2017-09-08T05:13:41Z",
+      "created_at": "2017-06-02T14:40:15Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "gpu": [
+   {
+    "query": "minimap2 gpu",
+    "total": 2,
+    "items": [
+     {
+      "full_name": "CMU-SAFARI/SneakySnake",
+      "html_url": "https://github.com/CMU-SAFARI/SneakySnake",
+      "description": "SneakySnake:snake: is the first and the only pre-alignment filtering algorithm that works efficiently and fast on modern CPU, FPGA, and GPU architectures. It greatly (by more than two orders of magnitude) expedites sequence alignment calculation for both short and long reads. Described in the Bioinformatics (2020) by Alser et al. https://arxiv.org/abs/1910.09020.",
+      "stargazers_count": 57,
+      "pushed_at": "2023-03-31T10:26:44Z",
+      "created_at": "2019-09-22T09:09:19Z",
+      "language": "VHDL"
+     },
+     {
+      "full_name": "haotianmichael/TurboMap",
+      "html_url": "https://github.com/haotianmichael/TurboMap",
+      "description": "GPU-accelerated Minimap2 Pipeline",
+      "stargazers_count": 0,
+      "pushed_at": "2026-10-10T08:04:01Z",
+      "created_at": "2026-09-26T01:46:41Z",
+      "language": "C"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "wfa gpu",
+    "total": 8,
+    "items": [
+     {
+      "full_name": "Marco-Sola-Lab/WFA-GPU",
+      "html_url": "https://github.com/Marco-Sola-Lab/WFA-GPU",
+      "description": "GPU implementation of the Wavefront Alignment Algorithm for global, gap-affine, pairwise sequence alginment",
+      "stargazers_count": 42,
+      "pushed_at": "2026-11-11T10:24:26Z",
+      "created_at": "2021-03-24T16:24:09Z",
+      "language": "C"
+     },
+     {
+      "full_name": "Marco-Sola-Lab/eWFA-GPU",
+      "html_url": "https://github.com/Marco-Sola-Lab/eWFA-GPU",
+      "description": "GPU implementation of the WFA algorithm for the edit distance",
+      "stargazers_count": 7,
+      "pushed_at": "2021-12-15T16:26:43Z",
+      "created_at": "2021-10-18T14:09:02Z",
+      "language": "Cuda"
+     },
+     {
+      "full_name": "simobevilacqua/BiWFA-GPU",
+      "html_url": "https://github.com/simobevilacqua/BiWFA-GPU",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2024-09-10T16:36:35Z",
+      "created_at": "2024-06-28T09:25:18Z",
+      "language": "C++"
+     },
+     {
+      "full_name": "gretaseveri04/biWFA_GPU_PII2025",
+      "html_url": "https://github.com/gretaseveri04/biWFA_GPU_PII2025",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2025-05-23T05:01:53Z",
+      "created_at": "2025-05-12T09:24:27Z",
+      "language": "C"
+     },
+     {
+      "full_name": "herocharge/wfa-baselines",
+      "html_url": "https://github.com/herocharge/wfa-baselines",
+      "description": "A collection of baselines - CPU, OpenMP, GPU for the WFA algorithm",
+      "stargazers_count": 0,
+      "pushed_at": "2024-11-09T05:37:34Z",
+      "created_at": "2024-11-09T04:04:34Z",
+      "language": "Shell"
+     }
+    ],
+    "error": null
+   },
+   {
+    "query": "metal apple silicon sequence alignment",
+    "total": 0,
+    "items": [],
+    "error": null
+   },
+   {
+    "query": "minimap2 arm neon",
+    "total": 0,
+    "items": [],
+    "error": null
+   }
+  ],
+  "stream": [
+   {
+    "query": "readfish",
+    "total": 15,
+    "items": [
+     {
+      "full_name": "LooseLab/readfish",
+      "html_url": "https://github.com/LooseLab/readfish",
+      "description": "CLI tool for flexible and fast adaptive sampling on ONT sequencers",
+      "stargazers_count": 198,
+      "pushed_at": "2026-10-29T07:56:47Z",
+      "created_at": "2019-11-08T15:15:08Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "esteinig/Streamfish",
+      "html_url": "https://github.com/esteinig/Streamfish",
+      "description": "Adaptive sampling client for nanopore devices; a streamy relative of Readfish",
+      "stargazers_count": 6,
+      "pushed_at": "2025-03-13T07:35:04Z",
+      "created_at": "2023-06-17T07:07:51Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "Adoni5/ReadfishSummarise",
+      "html_url": "https://github.com/Adoni5/ReadfishSummarise",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2024-08-20T15:38:17Z",
+      "created_at": "2023-09-06T11:13:39Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "RaniBlack/readfish",
+      "html_url": "https://github.com/RaniBlack/readfish",
+      "description": null,
+      "stargazers_count": 0,
+      "pushed_at": "2025-12-03T05:26:56Z",
+      "created_at": "2025-12-03T05:26:55Z",
+      "language": null
+     },
+     {
+      "full_name": "LooseLab/readfish-tools",
+      "html_url": "https://github.com/LooseLab/readfish-tools",
+      "description": "Utility command line tools for helping run readfish",
+      "stargazers_count": 0,
+      "pushed_at": "2021-11-10T10:51:28Z",
+      "created_at": "2021-11-10T10:34:48Z",
+      "language": "Python"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "cloud": [
+   {
+    "query": "htsget",
+    "total": 32,
+    "items": [
+     {
+      "full_name": "googlegenomics/htsget",
+      "html_url": "https://github.com/googlegenomics/htsget",
+      "description": "Open Source implementation of the GA4GH htsget protocol for objects stored in Google Cloud Storage",
+      "stargazers_count": 25,
+      "pushed_at": "2019-11-19T19:58:43Z",
+      "created_at": "2017-10-12T16:07:32Z",
+      "language": "Go"
+     },
+     {
+      "full_name": "umccr/htsget-rs",
+      "html_url": "https://github.com/umccr/htsget-rs",
+      "description": "A server implementation of the htsget protocol for bioinformatics in Rust",
+      "stargazers_count": 59,
+      "pushed_at": "2026-08-03T01:25:15Z",
+      "created_at": "2021-03-31T00:30:34Z",
+      "language": "Rust"
+     },
+     {
+      "full_name": "ga4gh/htsget",
+      "html_url": "https://github.com/ga4gh/htsget",
+      "description": "Python client for GA4GH htsget protocol",
+      "stargazers_count": 15,
+      "pushed_at": "2022-11-07T13:22:35Z",
+      "created_at": "2016-11-20T15:08:43Z",
+      "language": "Python"
+     },
+     {
+      "full_name": "ga4gh/htsget-refserver",
+      "html_url": "https://github.com/ga4gh/htsget-refserver",
+      "description": "Reference server implementation for the GA4GH HTSget API standard.",
+      "stargazers_count": 12,
+      "pushed_at": "2026-04-08T01:49:51Z",
+      "created_at": "2019-09-13T16:19:12Z",
+      "language": "Go"
+     },
+     {
+      "full_name": "dnanexus-rnd/DeepVariant-GLnexus-WDL",
+      "html_url": "https://github.com/dnanexus-rnd/DeepVariant-GLnexus-WDL",
+      "description": "WDL workflow for population variant calling using htsget, DeepVariant, and GLnexus",
+      "stargazers_count": 10,
+      "pushed_at": "2018-08-29T23:03:33Z",
+      "created_at": "2018-03-01T05:53:55Z",
+      "language": "wdl"
+     }
+    ],
+    "error": null
+   }
+  ],
+  "pgdv": [
+   {
+    "query": "pangenome-aware deepvariant",
+    "total": 1,
+    "items": [
+     {
+      "full_name": "haastigecode/GRF-DV",
+      "html_url": "https://github.com/haastigecode/GRF-DV",
+      "description": "A pangenome-aware variant calling pipeline with model tuning and variant interpretation.",
+      "stargazers_count": 0,
+      "pushed_at": "2026-05-14T14:58:01Z",
+      "created_at": "2025-06-25T15:06:40Z",
+      "language": "Nextflow"
+     }
+    ],
+    "error": null
+   }
+  ]
+ },
+ "releases": {
+  "lh3/minimap2": {
+   "status": 302,
+   "tag": "v2.31"
+  },
+  "bwa-mem2/bwa-mem2": {
+   "status": 302,
+   "tag": "v2.3"
+  },
+  "lh3/bwa": {
+   "status": 302,
+   "tag": "v0.7.19"
+  },
+  "ksahlin/strobealign": {
+   "status": 302,
+   "tag": "v0.20.0"
+  },
+  "chhylp123/hifiasm": {
+   "status": 302,
+   "tag": "0.25.0"
+  },
+  "marbl/verkko": {
+   "status": 302,
+   "tag": "v2.3.2"
+  },
+  "vgteam/vg": {
+   "status": 302,
+   "tag": "v1.78.0"
+  },
+  "jltsiren/gbwt": {
+   "status": 302,
+   "tag": "v1.6"
+  },
+  "nanoporetech/dorado": {
+   "status": 302,
+   "tag": "v2.1.2"
+  },
+  "google/deepconsensus": {
+   "status": 302,
+   "tag": "v1.2.0"
+  },
+  "google/deepvariant": {
+   "status": 302,
+   "tag": "v1.10.0"
+  },
+  "lbcb-sci/herro": {
+   "status": 302,
+   "tag": "v0.1.1"
+  },
+  "lbcb-sci/GNNome": {
+   "status": 302,
+   "tag": "0.4.0"
+  },
+  "RagnarGrootKoerkamp/astar-pairwise-aligner": {
+   "status": 302,
+   "tag": null,
+   "location": "https://github.com/RagnarGrootKoerkamp/astar-pairwise-aligner/releases"
+  },
+  "smarco/WFA2-lib": {
+   "status": 301,
+   "tag": null,
+   "location": "https://github.com/Marco-Sola-Lab/WFA2-lib/releases/latest"
+  },
+  "lh3/ropebwt3": {
+   "status": 302,
+   "tag": "v3.10"
+  },
+  "mohsenzakeri/Movi": {
+   "status": 302,
+   "tag": "v2.0.0"
+  },
+  "at-cg/minichain": {
+   "status": 302,
+   "tag": "v1.3"
+  },
+  "CMU-SAFARI/RawHash": {
+   "status": 302,
+   "tag": "v2.1"
+  },
+  "ekimb/mapquik": {
+   "status": 302,
+   "tag": null,
+   "location": "https://github.com/ekimb/mapquik/releases"
+  },
+  "ekimb/rust-mdbg": {
+   "status": 302,
+   "tag": "v1.0.1"
+  },
+  "maickrau/MBG": {
+   "status": 302,
+   "tag": "v1.0.17"
+  },
+  "algbio/ggcat": {
+   "status": 302,
+   "tag": "v2.2.0"
+  },
+  "COMBINE-lab/cuttlefish": {
+   "status": 302,
+   "tag": "v3.1.0"
+  },
+  "jermp/sshash": {
+   "status": 302,
+   "tag": "v6.0.0"
+  },
+  "sourmash-bio/sourmash": {
+   "status": 302,
+   "tag": "v4.9.4"
+  },
+  "bluenote-1577/sylph": {
+   "status": 302,
+   "tag": "latest"
+  },
+  "bluenote-1577/skani": {
+   "status": 302,
+   "tag": "latest"
+  },
+  "gcorso/NeuroSEED": {
+   "status": 302,
+   "tag": null,
+   "location": "https://github.com/gcorso/NeuroSEED/releases"
+  },
+  "ArcInstitute/evo2": {
+   "status": 302,
+   "tag": "v0.5.0"
+  },
+  "kuleshov-group/caduceus": {
+   "status": 302,
+   "tag": "v0.1.0"
+  },
+  "instadeepai/nucleotide-transformer": {
+   "status": 302,
+   "tag": null,
+   "location": "https://github.com/instadeepai/nucleotide-transformer/releases"
+  },
+  "eblerjana/pangenie": {
+   "status": 302,
+   "tag": "v4.2.2"
+  },
+  "tprodanov/locityper": {
+   "status": 302,
+   "tag": "v1.8.1"
+  },
+  "tprodanov/parascopy": {
+   "status": 302,
+   "tag": "v1.19.0"
+  },
+  "PacificBiosciences/paraphase": {
+   "status": 302,
+   "tag": "v4.1.0"
+  },
+  "mobinasri/flagger": {
+   "status": 302,
+   "tag": "v1.2.1"
+  },
+  "marbl/merqury": {
+   "status": 302,
+   "tag": "v1.4.1"
+  },
+  "logsdon-lab/NucFlag": {
+   "status": 302,
+   "tag": "v1.0.2"
+  },
+  "fiberseq/fibertools-rs": {
+   "status": 302,
+   "tag": "v0.13.1"
+  },
+  "c-zhou/yahs": {
+   "status": 302,
+   "tag": "v1.2.2"
+  },
+  "LooseLab/readfish": {
+   "status": 302,
+   "tag": "v2026.1.0"
+  },
+  "waveygang/wfmash": {
+   "status": 302,
+   "tag": "v0.24.2"
+  },
+  "pangenome/impg": {
+   "status": 302,
+   "tag": "v0.5.0"
+  },
+  "pangenome/pggb": {
+   "status": 302,
+   "tag": "v0.7.4"
+  },
+  "ComparativeGenomicsToolkit/cactus": {
+   "status": 302,
+   "tag": "v4.0.0"
+  },
+  "lh3/minigraph": {
+   "status": 302,
+   "tag": "v0.21"
+  },
+  "maickrau/GraphAligner": {
+   "status": 302,
+   "tag": "v1.0.20"
+  },
+  "kaist-ina/BWA-MEME": {
+   "status": 302,
+   "tag": "v1.0.6"
+  },
+  "mkirsche/sapling": {
+   "status": 302,
+   "tag": null,
+   "location": "https://github.com/mkirsche/sapling/releases"
+  },
+  "CMU-SAFARI/BLEND": {
+   "status": 302,
+   "tag": "v.1.0.0"
+  },
+  "marbl/MashMap": {
+   "status": 302,
+   "tag": "v3.1.3"
+  },
+  "BenLangmead/qtip": {
+   "status": 302,
+   "tag": "v1.6.2"
+  },
+  "google/deeppolisher": {
+   "status": 302,
+   "tag": "r0.1.0"
+  }
+ }
+}

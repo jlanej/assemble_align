@@ -1,0 +1,8 @@
+piece	haplotype	contig_start	contig_end	grch38_start	grch38_end	mother_only_snv_alleles_in_segment	father_only_snv_alleles_in_segment	maternal_inherited_hapmers	paternal_inherited_hapmers	identity_to_M	hifi_depth_median	hifi_depth_maternal_reads	hifi_depth_paternal_reads	frac_mapq0_median
+A	hap1 (paternal) CM089354.1	44643737	47396431	44588993	47340307	0	367	0	10698	623 SNV + 141 indels over 946 kb	34.7	0.0	31.5	0.0
+B	hap1 (paternal) CM089354.1	47396532	47765590	46971835	47340686	291	0	5638	0	0 differences over 369,059 bp	35.8	30.9	0.0	1.0
+C	hap1 (paternal) CM089354.1	47765691	48221141	47319800	47774341	0	132	0	2291	283 SNV + 90 indels over 455 kb	36.2	0.0	14.4	0.0
+D	hap1 (paternal) CM089354.1	48221250	48522660	47755434	48055872	3	2	50	23	0 differences over 301,419 bp	32.8	0.0	0.0	1.0
+E	hap1 (paternal) CM089354.1	48522761	49322940	47756575	48555799	0	8	0	1062	80 SNV + 31 indels over 896 kb	34.5	0.0	0.0	0.42
+M	hap2 (maternal) CM089362.1	44613400	48584116	44588649	48555799	436	2	12419	26	(reference piece)	35.6	14.7	0.0	1.0
+U	hap2 unplaced JBHIIL010000075.1	1	230135	47426809	47656968	27	0	522	8	101 SNV + 24 indels over 230 kb	31.1	0.0	0.0	0.05

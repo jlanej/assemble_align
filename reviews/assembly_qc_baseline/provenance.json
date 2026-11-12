@@ -1,0 +1,21 @@
+{
+ "repo_raw_base": "https://raw.githubusercontent.com/human-pangenomics/hprc_intermediate_assembly/main/",
+ "index_md5": {
+  "data_tables/annotation/chrom_assignment/t2t_sequences_hprc_r2_v1.0.index.csv": "bc728b74852346276165a16150a0119a",
+  "data_tables/annotation/chrom_assignment/gaps_hprc_r2_v1.0.index.csv": "b608a33685248c3105b2b525cca284c7",
+  "data_tables/assembly_qc/flagger/flagger_hifi_v0.1.csv": "2b4f72e49135d9b63c94e80ac0b5f5b9",
+  "data_tables/assembly_qc/flagger/flagger_ont_v0.1.1.csv": "3748636214b16271aa35b1d2cdb88b78",
+  "data_tables/assembly_qc/nucflag/nucflag_pre_release_v0.2.index.csv": "cc2169d6aad4cae076713647a28dd0db",
+  "data_tables/sequencing_data/data_sample_level_summary_release2_v1.0.csv": "02fe8f17c0451dd9f0e644483c97e141"
+ },
+ "n_assemblies_summarised": 462,
+ "n_fetch_failures": 0,
+ "fetch_failures": [],
+ "nucflag_class_bp_total": {
+  "MISJOIN": 9603929737,
+  "HET": 14168512834,
+  "COLLAPSE_OTHER": 1250788861,
+  "COLLAPSE": 87472095,
+  "COLLAPSE_VAR": 381441230
+ }
+}

@@ -1,0 +1,2723 @@
+{
+ "generated_utc": "2026-11-11T19:08:06Z",
+ "verification": "DOIs resolved against Crossref (title/author/year copied from the Crossref record) or doi.org for DataCite DOIs; arXiv IDs resolved through the arXiv API; LIPIcs/Zenodo metadata from OpenAlex, PubMed or the author repository as noted in 'venue'.",
+ "n_entries": 184,
+ "entries": [
+  {
+   "key": "Abrar2024_plaindex",
+   "doi_or_id": "10.4230/LIPIcs.WABI.2024.13",
+   "url": "https://doi.org/10.4230/LIPIcs.WABI.2024.13",
+   "authors": "Abrar; Medvedev",
+   "year": 2024,
+   "title": "PLA-index: A k-mer Index Exploiting Rank Curve Linearity",
+   "venue": "WABI 2024, LIPIcs (metadata from PubMed record 40297743)",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Abrar2025_learnedspectra",
+   "doi_or_id": "10.1101/2025.07.10.664199",
+   "url": "https://doi.org/10.1101/2025.07.10.664199",
+   "authors": "Abrar; Medvedev; Vinciguerra",
+   "year": 2025,
+   "title": "Efficiency of Learned Indexes on Genome Spectra",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML3"
+   ]
+  },
+  {
+   "key": "AguadoPuig2023_wfagpu",
+   "doi_or_id": "10.1093/bioinformatics/btad701",
+   "url": "https://doi.org/10.1093/bioinformatics/btad701",
+   "authors": "Aguado-Puig; Doblas; Matzoros et al.",
+   "year": 2023,
+   "title": "WFA-GPU: gap-affine pairwise read-alignment using GPUs",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1",
+    "SY1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Ahmed2023_spumoni2",
+   "doi_or_id": "10.1186/s13059-023-02958-1",
+   "url": "https://doi.org/10.1186/s13059-023-02958-1",
+   "authors": "Ahmed; Rossi; Gagie et al.",
+   "year": 2023,
+   "title": "SPUMONI 2: improved classification using a pangenome index of minimizer digests",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Almogy2022_ultima",
+   "doi_or_id": "10.1101/2022.05.29.493900",
+   "url": "https://doi.org/10.1101/2022.05.29.493900",
+   "authors": "Almogy; Pratt; Oberstrass et al.",
+   "year": 2022,
+   "title": "Cost-efficient whole genome-sequencing using novel mostly natural sequencing-by-synthesis chemistry and open fluidics platform",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DM4"
+   ]
+  },
+  {
+   "key": "Angelopoulos2021_conformal",
+   "doi_or_id": "arXiv:2107.07511",
+   "url": "https://arxiv.org/abs/2107.07511",
+   "authors": "Anastasios N. Angelopoulos; Stephen Bates",
+   "year": 2021,
+   "title": "A Gentle Introduction to Conformal Prediction and Distribution-Free Uncertainty Quantification",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML1",
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Antipov2025_verkko2",
+   "doi_or_id": "10.1101/gr.280383.124",
+   "url": "https://doi.org/10.1101/gr.280383.124",
+   "authors": "Antipov; Rautiainen; Nurk et al.",
+   "year": 2025,
+   "title": "Verkko2 integrates proximity-ligation data with long-read De Bruijn graphs for efficient telomere-to-telomere genome assembly, phasing, and scaffolding",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM6",
+    "DS4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Arslan2023_aviti",
+   "doi_or_id": "10.1038/s41587-023-01750-7",
+   "url": "https://doi.org/10.1038/s41587-023-01750-7",
+   "authors": "Arslan; Garcia; Guo et al.",
+   "year": 2023,
+   "title": "Sequencing by avidity enables high accuracy with low reagent consumption",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Asri2025_pgdv",
+   "doi_or_id": "10.1101/2025.06.05.657102",
+   "url": "https://doi.org/10.1101/2025.06.05.657102",
+   "authors": "Asri; Chang; Mier et al.",
+   "year": 2025,
+   "title": "Pangenome-aware DeepVariant",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DM4",
+    "DS2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Asri2026_hmmflagger",
+   "doi_or_id": "10.64898/2026.02.27.708355",
+   "url": "https://doi.org/10.64898/2026.02.27.708355",
+   "authors": "Asri; Eizenga; Hebbar et al.",
+   "year": 2026,
+   "title": "Evaluating genome assemblies with HMM-Flagger",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "P4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Ayad2023_seedability",
+   "doi_or_id": "10.1093/bioadv/vbad108",
+   "url": "https://doi.org/10.1093/bioadv/vbad108",
+   "authors": "Ayad; Chikhi; Pissis",
+   "year": 2023,
+   "title": "Seedability: optimizing alignment parameters for sensitive sequence comparison",
+   "venue": "Bioinformatics Advances",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML2"
+   ]
+  },
+  {
+   "key": "Baid2022_deepconsensus",
+   "doi_or_id": "10.1038/s41587-022-01435-7",
+   "url": "https://doi.org/10.1038/s41587-022-01435-7",
+   "authors": "Baid; Cook; Shafin et al.",
+   "year": 2022,
+   "title": "DeepConsensus improves the accuracy of sequences with a gap-aware sequence transformer",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Baker2023_dashing2",
+   "doi_or_id": "10.1101/gr.277655.123",
+   "url": "https://doi.org/10.1101/gr.277655.123",
+   "authors": "Baker; Langmead",
+   "year": 2023,
+   "title": "Genomic sketching with multiplicities and locality-sensitive hashing using Dashing 2",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL4",
+    "AL5"
+   ]
+  },
+  {
+   "key": "Bankevich2022_lja",
+   "doi_or_id": "10.1038/s41587-022-01220-6",
+   "url": "https://doi.org/10.1038/s41587-022-01220-6",
+   "authors": "Bankevich; Bzikadze; Kolmogorov et al.",
+   "year": 2022,
+   "title": "Multiplex de Bruijn graphs enable genome assembly from long, high-fidelity reads",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS4"
+   ]
+  },
+  {
+   "key": "Barak2026_hale",
+   "doi_or_id": "10.1186/s13015-026-00302-3",
+   "url": "https://doi.org/10.1186/s13015-026-00302-3",
+   "authors": "Barak; Gibney; Jain",
+   "year": 2026,
+   "title": "Haplotype-aware long-read error correction",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Behera2024_dragen",
+   "doi_or_id": "10.1038/s41587-024-02382-1",
+   "url": "https://doi.org/10.1038/s41587-024-02382-1",
+   "authors": "Behera; Catreux; Rossi et al.",
+   "year": 2024,
+   "title": "Comprehensive genome analysis and variant detection at scale using DRAGEN",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM3",
+    "P2",
+    "SY3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Benegas2023_gpn",
+   "doi_or_id": "10.1073/pnas.2311219120",
+   "url": "https://doi.org/10.1073/pnas.2311219120",
+   "authors": "Benegas; Batra; Song",
+   "year": 2023,
+   "title": "DNA language models are powerful predictors of genome-wide variant effects",
+   "venue": "Proceedings of the National Academy of Sciences",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML7"
+   ]
+  },
+  {
+   "key": "Benegas2025_glmreview",
+   "doi_or_id": "10.1016/j.tig.2024.11.013",
+   "url": "https://doi.org/10.1016/j.tig.2024.11.013",
+   "authors": "Benegas; Ye; Albors et al.",
+   "year": 2025,
+   "title": "Genomic language models: opportunities and challenges",
+   "venue": "Trends in Genetics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML7"
+   ]
+  },
+  {
+   "key": "Benoit2024_metamdbg",
+   "doi_or_id": "10.1038/s41587-023-01983-6",
+   "url": "https://doi.org/10.1038/s41587-023-01983-6",
+   "authors": "Benoit; Raguideau; James et al.",
+   "year": 2024,
+   "title": "High-quality metagenome assembly from long accurate reads with metaMDBG",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Benoit2026_nanomdbg",
+   "doi_or_id": "10.1038/s41467-026-69760-y",
+   "url": "https://doi.org/10.1038/s41467-026-69760-y",
+   "authors": "Benoit; James; Raguideau et al.",
+   "year": 2026,
+   "title": "High-quality metagenome assembly from nanopore reads with nanoMDBG",
+   "venue": "Nature Communications",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Berlin2015_mhap",
+   "doi_or_id": "10.1038/nbt.3238",
+   "url": "https://doi.org/10.1038/nbt.3238",
+   "authors": "Berlin; Koren; Chin et al.",
+   "year": 2015,
+   "title": "Assembling large genomes with single-molecule sequencing and locality-sensitive hashing",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL5"
+   ]
+  },
+  {
+   "key": "Boucher2019_pfp",
+   "doi_or_id": "10.1186/s13015-019-0148-5",
+   "url": "https://doi.org/10.1186/s13015-019-0148-5",
+   "authors": "Boucher; Gagie; Kuhnle et al.",
+   "year": 2019,
+   "title": "Prefix-free parsing for building big BWTs",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1"
+   ]
+  },
+  {
+   "key": "Brixi2026_evo2",
+   "doi_or_id": "10.1038/s41586-026-10176-5",
+   "url": "https://doi.org/10.1038/s41586-026-10176-5",
+   "authors": "Brixi; Durrant; Ku et al.",
+   "year": 2026,
+   "title": "Genome modelling and design across all domains of life with Evo 2",
+   "venue": "Nature",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML7",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "ByrskaBishop2022_kg1000hc",
+   "doi_or_id": "10.1016/j.cell.2022.08.004",
+   "url": "https://doi.org/10.1016/j.cell.2022.08.004",
+   "authors": "Byrska-Bishop; Evani; Zhao et al.",
+   "year": 2022,
+   "title": "High-coverage whole-genome sequencing of the expanded 1000 Genomes Project cohort including 602 trios",
+   "venue": "Cell",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Chakraborty2016_cgk",
+   "doi_or_id": "10.1145/2897518.2897577",
+   "url": "https://doi.org/10.1145/2897518.2897577",
+   "authors": "Chakraborty; Goldenberg; Koucký",
+   "year": 2016,
+   "title": "Streaming algorithms for embedding and computing edit distance in the low distance regime",
+   "venue": "Proceedings of the forty-eighth annual ACM symposium on Theory of Computing",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML8"
+   ]
+  },
+  {
+   "key": "Chandra2023_gapsensitive",
+   "doi_or_id": "10.1089/cmb.2023.0186",
+   "url": "https://doi.org/10.1089/cmb.2023.0186",
+   "authors": "Chandra; Jain",
+   "year": 2023,
+   "title": "Gap-Sensitive Colinear Chaining Algorithms for Acyclic Pangenome Graphs",
+   "venue": "Journal of Computational Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Chandra2024_minichain",
+   "doi_or_id": "10.1101/gr.279143.124",
+   "url": "https://doi.org/10.1101/gr.279143.124",
+   "authors": "Chandra; Gibney; Jain",
+   "year": 2024,
+   "title": "Haplotype-aware sequence alignment to pangenome graphs",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Chandra2024_phi",
+   "doi_or_id": "10.1101/2024.10.27.620212",
+   "url": "https://doi.org/10.1101/2024.10.27.620212",
+   "authors": "Chandra; Hossen; Scholz et al.",
+   "year": 2024,
+   "title": "Integer programming framework for pangenome-based genome inference",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Chang2025_giraffelr",
+   "doi_or_id": "10.1101/2025.09.29.678807",
+   "url": "https://doi.org/10.1101/2025.09.29.678807",
+   "authors": "Chang; Novak; Eizenga et al.",
+   "year": 2025,
+   "title": "Rapid, accurate long- and short-read mapping to large pangenome graphs with vg Giraffe",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DS2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Chen2021_inspector",
+   "doi_or_id": "10.1186/s13059-021-02527-4",
+   "url": "https://doi.org/10.1186/s13059-021-02527-4",
+   "authors": "Chen; Zhang; Wang et al.",
+   "year": 2021,
+   "title": "Accurate long-read de novo assembly evaluation with Inspector",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Chen2021_refflow",
+   "doi_or_id": "10.1186/s13059-020-02229-3",
+   "url": "https://doi.org/10.1186/s13059-020-02229-3",
+   "authors": "Chen; Solomon; Mun et al.",
+   "year": 2021,
+   "title": "Reference flow: reducing reference bias using multiple population genomes",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1"
+   ]
+  },
+  {
+   "key": "Chen2023_lsb",
+   "doi_or_id": "10.1186/s13015-023-00234-2",
+   "url": "https://doi.org/10.1186/s13015-023-00234-2",
+   "authors": "Chen; Shao",
+   "year": 2023,
+   "title": "Locality-sensitive bucketing functions for the edit distance",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML8"
+   ]
+  },
+  {
+   "key": "Chen2025_paraphase",
+   "doi_or_id": "10.1038/s41467-025-57505-2",
+   "url": "https://doi.org/10.1038/s41467-025-57505-2",
+   "authors": "Chen; Baker; Dolzhenko et al.",
+   "year": 2025,
+   "title": "Genome-wide profiling of highly similar paralogous genes using HiFi sequencing",
+   "venue": "Nature Communications",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Cheng2022_hifiasmhic",
+   "doi_or_id": "10.1038/s41587-022-01261-x",
+   "url": "https://doi.org/10.1038/s41587-022-01261-x",
+   "authors": "Cheng; Jarvis; Fedrigo et al.",
+   "year": 2022,
+   "title": "Haplotype-resolved assembly of diploid genomes without parental data",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM6",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Cheng2025_ultimaec",
+   "doi_or_id": "10.1038/s41592-025-02648-9",
+   "url": "https://doi.org/10.1038/s41592-025-02648-9",
+   "authors": "Cheng; Widman; Arora et al.",
+   "year": 2025,
+   "title": "Error-corrected flow-based sequencing at whole-genome scale and its application to circulating cell-free DNA profiling",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Cheng2026_hifiasmont",
+   "doi_or_id": "10.1038/s41586-026-10105-6",
+   "url": "https://doi.org/10.1038/s41586-026-10105-6",
+   "authors": "Cheng; Qu; McKenzie et al.",
+   "year": 2026,
+   "title": "Efficient near-telomere-to-telomere assembly of nanopore simplex reads",
+   "venue": "Nature",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Chikhi2024_logan",
+   "doi_or_id": "10.1101/2024.07.30.605881",
+   "url": "https://doi.org/10.1101/2024.07.30.605881",
+   "authors": "Chikhi; Lemane; Loll-Krippleber et al.",
+   "year": 2024,
+   "title": "Logan: Planetary-Scale Genome Assembly Surveys Life’s Diversity",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DS3",
+    "SY3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Cline2020_mapqrecal",
+   "doi_or_id": "10.7717/peerj.10501",
+   "url": "https://doi.org/10.7717/peerj.10501",
+   "authors": "Cline; Wisittipanit; Boongoen et al.",
+   "year": 2020,
+   "title": "Recalibration of mapping quality scores in Illumina short-read alignments improves SNP detection results in low-coverage sequencing data",
+   "venue": "PeerJ",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Corso2021_neuroseed",
+   "doi_or_id": "arXiv:2109.09740",
+   "url": "https://arxiv.org/abs/2109.09740",
+   "authors": "Gabriele Corso; Rex Ying; Michal Pándy; Petar Veličković; Jure Leskovec; Pietro Liò",
+   "year": 2021,
+   "title": "Neural Distance Embeddings for Biological Sequences",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML8"
+   ]
+  },
+  {
+   "key": "Cracco2023_ggcat",
+   "doi_or_id": "10.1101/gr.277615.122",
+   "url": "https://doi.org/10.1101/gr.277615.122",
+   "authors": "Cracco; Tomescu",
+   "year": 2023,
+   "title": "Extremely fast construction and querying of compacted and colored de Bruijn graphs with GGCAT",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "DallaTorre2024_nt",
+   "doi_or_id": "10.1038/s41592-024-02523-z",
+   "url": "https://doi.org/10.1038/s41592-024-02523-z",
+   "authors": "Dalla-Torre; Gonzalez; Mendoza-Revilla et al.",
+   "year": 2024,
+   "title": "Nucleotide Transformer: building and evaluating robust foundation models for human genomics",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML7",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Depuydt2025_bmove",
+   "doi_or_id": "10.1186/s13015-025-00281-x",
+   "url": "https://doi.org/10.1186/s13015-025-00281-x",
+   "authors": "Depuydt; Renders; Van de Vyver et al.",
+   "year": 2025,
+   "title": "b-move: faster lossless approximate pattern matching in a run-length compressed index",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Deshpande2022_porec",
+   "doi_or_id": "10.1038/s41587-022-01289-z",
+   "url": "https://doi.org/10.1038/s41587-022-01289-z",
+   "authors": "Deshpande; Ulahannan; Pendleton et al.",
+   "year": 2022,
+   "title": "Identifying synergistic high-order 3D chromatin conformations from genome-scale nanopore concatemer sequencing",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM6"
+   ]
+  },
+  {
+   "key": "Dong2024_mm2gb",
+   "doi_or_id": "10.1101/2024.03.23.586366",
+   "url": "https://doi.org/10.1101/2024.03.23.586366",
+   "authors": "Dong; Liu; Sadasivan et al.",
+   "year": 2024,
+   "title": "mm2-gb: GPU Accelerated Minimap2 for Long Read DNA Mapping",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "SY1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Durbin2014_pbwt",
+   "doi_or_id": "10.1093/bioinformatics/btu014",
+   "url": "https://doi.org/10.1093/bioinformatics/btu014",
+   "authors": "Durbin",
+   "year": 2014,
+   "title": "Efficient haplotype matching and storage using the positional Burrows–Wheeler transform (PBWT)",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Ebbert2019_darkgenes",
+   "doi_or_id": "10.1186/s13059-019-1707-2",
+   "url": "https://doi.org/10.1186/s13059-019-1707-2",
+   "authors": "Ebbert; Jensen; Jansen-West et al.",
+   "year": 2019,
+   "title": "Systematic analysis of dark and camouflaged genes reveals disease-relevant genes hiding in plain sight",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML1",
+    "P2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Ebler2022_pangenie",
+   "doi_or_id": "10.1038/s41588-022-01043-w",
+   "url": "https://doi.org/10.1038/s41588-022-01043-w",
+   "authors": "Ebler; Ebert; Clarke et al.",
+   "year": 2022,
+   "title": "Pangenome-based genome inference allows efficient and accurate genotyping across a wide spectrum of variant classes",
+   "venue": "Nature Genetics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1"
+   ]
+  },
+  {
+   "key": "Edgar2021_syncmers",
+   "doi_or_id": "10.7717/peerj.10805",
+   "url": "https://doi.org/10.7717/peerj.10805",
+   "authors": "Edgar",
+   "year": 2021,
+   "title": "Syncmers are more sensitive than minimizers for selecting conserved <i>k</i> ‑mers in biological sequences",
+   "venue": "PeerJ",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS6"
+   ]
+  },
+  {
+   "key": "Ekim2021_mdbg",
+   "doi_or_id": "10.1016/j.cels.2021.08.009",
+   "url": "https://doi.org/10.1016/j.cels.2021.08.009",
+   "authors": "Ekim; Berger; Chikhi",
+   "year": 2021,
+   "title": "Minimizer-space de Bruijn graphs: Whole-genome assembly of long reads in minutes on a personal computer",
+   "venue": "Cell Systems",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS4"
+   ]
+  },
+  {
+   "key": "Ekim2023_mapquik",
+   "doi_or_id": "10.1101/gr.277679.123",
+   "url": "https://doi.org/10.1101/gr.277679.123",
+   "authors": "Ekim; Sahlin; Medvedev et al.",
+   "year": 2023,
+   "title": "Efficient mapping of accurate long reads in minimizer space with mapquik",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Fan2024_fulgor",
+   "doi_or_id": "10.1186/s13015-024-00251-9",
+   "url": "https://doi.org/10.1186/s13015-024-00251-9",
+   "authors": "Fan; Khan; Singh et al.",
+   "year": 2024,
+   "title": "Fulgor: a fast and compact k-mer index for large-scale matching and color queries",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Feng2025_dnafmbench",
+   "doi_or_id": "10.1038/s41467-025-65823-8",
+   "url": "https://doi.org/10.1038/s41467-025-65823-8",
+   "authors": "Feng; Wu; Zhao et al.",
+   "year": 2025,
+   "title": "Benchmarking DNA foundation models for genomic and genetic tasks",
+   "venue": "Nature Communications",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML7",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Firtina2023_blend",
+   "doi_or_id": "10.1093/nargab/lqad004",
+   "url": "https://doi.org/10.1093/nargab/lqad004",
+   "authors": "Firtina; Park; Alser et al.",
+   "year": 2023,
+   "title": "BLEND: a fast, memory-efficient and accurate mechanism to find fuzzy seed matches in genome analysis",
+   "venue": "NAR Genomics and Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL5",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Firtina2023_rawhash",
+   "doi_or_id": "10.1093/bioinformatics/btad272",
+   "url": "https://doi.org/10.1093/bioinformatics/btad272",
+   "authors": "Firtina; Mansouri Ghiasi; Lindegger et al.",
+   "year": 2023,
+   "title": "RawHash: enabling fast and accurate real-time analysis of raw nanopore signals for large genomes",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1"
+   ]
+  },
+  {
+   "key": "Firtina2024_rawhash2",
+   "doi_or_id": "10.1093/bioinformatics/btae478",
+   "url": "https://doi.org/10.1093/bioinformatics/btae478",
+   "authors": "Firtina; Soysal; Lindegger et al.",
+   "year": 2024,
+   "title": "RawHash2: mapping raw nanopore signals using hash-based seeding and adaptive quantization",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Firtina2026_rawsamble",
+   "doi_or_id": "10.1093/bioinformatics/btag087",
+   "url": "https://doi.org/10.1093/bioinformatics/btag087",
+   "authors": "Firtina; Mordig; Mustafa et al.",
+   "year": 2026,
+   "title": "Rawsamble: overlapping raw nanopore signals using a hash-based seeding mechanism",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Formenti2022_merfin",
+   "doi_or_id": "10.1038/s41592-022-01445-y",
+   "url": "https://doi.org/10.1038/s41592-022-01445-y",
+   "authors": "Formenti; Rhie; Walenz et al.",
+   "year": 2022,
+   "title": "Merfin: improved variant filtering, assembly evaluation and polishing via k-mer validation",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Frith2023_optsampling",
+   "doi_or_id": "10.1093/bioinformatics/btad057",
+   "url": "https://doi.org/10.1093/bioinformatics/btad057",
+   "authors": "Frith; Shaw; Spouge",
+   "year": 2023,
+   "title": "How to optimally sample a sequence for rapid analysis",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS5"
+   ]
+  },
+  {
+   "key": "Fu2024_methphaser",
+   "doi_or_id": "10.1038/s41467-024-49588-0",
+   "url": "https://doi.org/10.1038/s41467-024-49588-0",
+   "authors": "Fu; Aganezov; Mahmoud et al.",
+   "year": 2024,
+   "title": "MethPhaser: methylation-based long-read haplotype phasing of human genomes",
+   "venue": "Nature Communications",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Gagie2020_rindex",
+   "doi_or_id": "10.1145/3375890",
+   "url": "https://doi.org/10.1145/3375890",
+   "authors": "Gagie; Navarro; Prezza",
+   "year": 2020,
+   "title": "Fully Functional Suffix Trees and Optimal Text Searching in BWT-Runs Bounded Space",
+   "venue": "Journal of the ACM",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Garrison2024_pggb",
+   "doi_or_id": "10.1038/s41592-024-02430-3",
+   "url": "https://doi.org/10.1038/s41592-024-02430-3",
+   "authors": "Garrison; Guarracino; Heumos et al.",
+   "year": 2024,
+   "title": "Building pangenome graphs",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P4"
+   ]
+  },
+  {
+   "key": "Golan2025_greedymini",
+   "doi_or_id": "10.1093/bioinformatics/btaf251",
+   "url": "https://doi.org/10.1093/bioinformatics/btaf251",
+   "authors": "Golan; Tziony; Kraus et al.",
+   "year": 2025,
+   "title": "GreedyMini: generating low-density DNA minimizers",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS5",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "GrootKoerkamp2024_apa",
+   "doi_or_id": "10.1093/bioinformatics/btae032",
+   "url": "https://doi.org/10.1093/bioinformatics/btae032",
+   "authors": "Groot Koerkamp; Ivanov",
+   "year": 2024,
+   "title": "Exact global alignment using A* with chaining seed heuristic and match pruning",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "GrootKoerkamp2024_apa2",
+   "doi_or_id": "10.4230/LIPIcs.WABI.2024.17",
+   "url": "https://doi.org/10.4230/LIPIcs.WABI.2024.17",
+   "authors": "Groot Koerkamp",
+   "year": 2024,
+   "title": "A*PA2: up to 19x faster exact global alignment",
+   "venue": "WABI 2024, LIPIcs (metadata from the author's repository README)",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "GrootKoerkamp2024_apa2biorxiv",
+   "doi_or_id": "10.1101/2024.03.24.586481",
+   "url": "https://doi.org/10.1101/2024.03.24.586481",
+   "authors": "Groot Koerkamp",
+   "year": 2024,
+   "title": "A*PA2: up to 20 times faster exact global alignment",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "AL1"
+   ]
+  },
+  {
+   "key": "GrootKoerkamp2024_modmini",
+   "doi_or_id": "10.1101/2024.05.25.595898",
+   "url": "https://doi.org/10.1101/2024.05.25.595898",
+   "authors": "Groot Koerkamp; Pibiri",
+   "year": 2024,
+   "title": "The mod-minimizer: a simple and efficient sampling algorithm for long <i>k</i> -mers",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DS5",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "GrootKoerkamp2025_ocmodmini",
+   "doi_or_id": "10.1186/s13015-025-00270-0",
+   "url": "https://doi.org/10.1186/s13015-025-00270-0",
+   "authors": "Groot Koerkamp; Liu; Pibiri",
+   "year": 2025,
+   "title": "The open-closed mod-minimizer algorithm",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS5",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Guo2023_hifieval",
+   "doi_or_id": "10.1093/bioinformatics/btad631",
+   "url": "https://doi.org/10.1093/bioinformatics/btad631",
+   "authors": "Guo; Feng; Li",
+   "year": 2023,
+   "title": "Evaluation of haplotype-aware long-read error correction with hifieval",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Gustafson2024_kgont",
+   "doi_or_id": "10.1101/gr.279273.124",
+   "url": "https://doi.org/10.1101/gr.279273.124",
+   "authors": "Gustafson; Gibson; Damaraju et al.",
+   "year": 2024,
+   "title": "High-coverage nanopore sequencing of samples from the 1000 Genomes Project to build a comprehensive catalog of human genetic variation",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Hamada2016_lasttrain",
+   "doi_or_id": "10.1093/bioinformatics/btw742",
+   "url": "https://doi.org/10.1093/bioinformatics/btw742",
+   "authors": "Hamada; Ono; Asai et al.",
+   "year": 2016,
+   "title": "Training alignment parameters for arbitrary sequencers with LAST-TRAIN",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL3",
+    "DM4",
+    "ML2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "He2025_memristor",
+   "doi_or_id": "10.1038/s43588-025-00867-w",
+   "url": "https://doi.org/10.1038/s43588-025-00867-w",
+   "authors": "He; Wang; Mao et al.",
+   "year": 2025,
+   "title": "Real-time raw signal genomic analysis using fully integrated memristor hardware",
+   "venue": "Nature Computational Science",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1"
+   ]
+  },
+  {
+   "key": "Henglin2024_graphasing",
+   "doi_or_id": "10.1186/s13059-024-03409-1",
+   "url": "https://doi.org/10.1186/s13059-024-03409-1",
+   "authors": "Henglin; Ghareghani; Harvey et al.",
+   "year": 2024,
+   "title": "Graphasing: phasing diploid genome assembly graphs with single-cell strand sequencing",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM5",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Hickey2023_mc",
+   "doi_or_id": "10.1038/s41587-023-01793-w",
+   "url": "https://doi.org/10.1038/s41587-023-01793-w",
+   "authors": "Hickey; Monlong; Ebler et al.",
+   "year": 2023,
+   "title": "Pangenome graph construction from genome alignments with Minigraph-Cactus",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS2"
+   ]
+  },
+  {
+   "key": "Ho2020_lisa",
+   "doi_or_id": "10.1101/2020.12.22.423964",
+   "url": "https://doi.org/10.1101/2020.12.22.423964",
+   "authors": "Ho; Kalikar; Misra et al.",
+   "year": 2020,
+   "title": "LISA: A Case For Learned Index based Acceleration of Biological Sequence Analysis",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML3"
+   ]
+  },
+  {
+   "key": "Hoang2022_deepminimizer",
+   "doi_or_id": "10.1089/cmb.2022.0275",
+   "url": "https://doi.org/10.1089/cmb.2022.0275",
+   "authors": "Hoang; Zheng; Kingsford",
+   "year": 2022,
+   "title": "Differentiable Learning of Sequence-Specific Minimizer Schemes with DeepMinimizer",
+   "venue": "Journal of Computational Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Holur2023_esa",
+   "doi_or_id": "arXiv:2309.11087",
+   "url": "https://arxiv.org/abs/2309.11087",
+   "authors": "Pavan Holur; K. C. Enevoldsen; Shreyas Rajesh; Lajoyce Mboning; Thalia Georgiou; Louis-S. Bouchard; Matteo Pellegrini; Vwani Roychowdhury",
+   "year": 2023,
+   "title": "Embed-Search-Align: DNA Sequence Alignment using Transformer Models",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML7",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "HumanGenomeStructuralVariationConsortium2020_pgas",
+   "doi_or_id": "10.1038/s41587-020-0719-5",
+   "url": "https://doi.org/10.1038/s41587-020-0719-5",
+   "authors": "Human Genome Structural Variation Consortium; Porubsky; Ebert et al.",
+   "year": 2020,
+   "title": "Fully phased human genome assembly without parental data using single-cell strand sequencing and long reads",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM5"
+   ]
+  },
+  {
+   "key": "Irber2022_fracminhash",
+   "doi_or_id": "10.1101/2022.01.11.475838",
+   "url": "https://doi.org/10.1101/2022.01.11.475838",
+   "authors": "Irber; Brooks; Reiter et al.",
+   "year": 2022,
+   "title": "Lightweight compositional analysis of metagenomes with FracMinHash and minimum metagenome covers",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "AL4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Jain2022_chainx",
+   "doi_or_id": "10.1089/cmb.2022.0266",
+   "url": "https://doi.org/10.1089/cmb.2022.0266",
+   "authors": "Jain; Gibney; Thankachan",
+   "year": 2022,
+   "title": "Algorithms for Colinear Chaining with Overlaps and Gap Costs",
+   "venue": "Journal of Computational Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Jha2024_fibertools",
+   "doi_or_id": "10.1101/gr.279095.124",
+   "url": "https://doi.org/10.1101/gr.279095.124",
+   "authors": "Jha; Bohaczuk; Mao et al.",
+   "year": 2024,
+   "title": "DNA-m6A calling and integrated long-read epigenetic and genetic analysis with <i>fibertools</i>",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM7",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Jin2023_lssurface",
+   "doi_or_id": "10.1186/s13015-023-00237-z",
+   "url": "https://doi.org/10.1186/s13015-023-00237-z",
+   "authors": "Jin; Terhorst",
+   "year": 2023,
+   "title": "The solution surface of the Li-Stephens haplotype copying model",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Joshi2023_hqalign",
+   "doi_or_id": "10.1093/bioinformatics/btad580",
+   "url": "https://doi.org/10.1093/bioinformatics/btad580",
+   "authors": "Joshi; Diggavi; Chaisson et al.",
+   "year": 2023,
+   "title": "HQAlign: aligning nanopore reads for SV detection using current-level modeling",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Joudaki2020_tensorsketch",
+   "doi_or_id": "10.1101/2020.11.13.381814",
+   "url": "https://doi.org/10.1101/2020.11.13.381814",
+   "authors": "Joudaki; Rätsch; Kahles",
+   "year": 2020,
+   "title": "Fast Alignment-Free Similarity Estimation By Tensor Sketching",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML8"
+   ]
+  },
+  {
+   "key": "Jung2022_bwameme",
+   "doi_or_id": "10.1093/bioinformatics/btac137",
+   "url": "https://doi.org/10.1093/bioinformatics/btac137",
+   "authors": "Jung; Han",
+   "year": 2022,
+   "title": "BWA-MEME: BWA-MEM emulated with a machine learning approach",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Kalikar2022_mm2fast",
+   "doi_or_id": "10.1038/s43588-022-00201-8",
+   "url": "https://doi.org/10.1038/s43588-022-00201-8",
+   "authors": "Kalikar; Jain; Vasimuddin et al.",
+   "year": 2022,
+   "title": "Accelerating minimap2 for long-read sequencing applications on modern CPUs",
+   "venue": "Nature Computational Science",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY1"
+   ]
+  },
+  {
+   "key": "Karami2024_randstrobes",
+   "doi_or_id": "10.1093/bioinformatics/btae187",
+   "url": "https://doi.org/10.1093/bioinformatics/btae187",
+   "authors": "Karami; Soltani Mohammadi; Martin et al.",
+   "year": 2024,
+   "title": "Designing efficient randstrobes for sequence similarity analyses",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS6"
+   ]
+  },
+  {
+   "key": "Karasikov2025_metagraph",
+   "doi_or_id": "10.1038/s41586-025-09603-w",
+   "url": "https://doi.org/10.1038/s41586-025-09603-w",
+   "authors": "Karasikov; Mustafa; Danciu et al.",
+   "year": 2025,
+   "title": "Efficient and accurate search in petabase-scale sequence repositories",
+   "venue": "Nature",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Kelleher2018_htsget",
+   "doi_or_id": "10.1093/bioinformatics/bty492",
+   "url": "https://doi.org/10.1093/bioinformatics/bty492",
+   "authors": "Kelleher; Lin; Albach et al.",
+   "year": 2018,
+   "title": "htsget: a protocol for securely streaming genomic data",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Khan2022_cuttlefish2",
+   "doi_or_id": "10.1186/s13059-022-02743-6",
+   "url": "https://doi.org/10.1186/s13059-022-02743-6",
+   "authors": "Khan; Kokot; Deorowicz et al.",
+   "year": 2022,
+   "title": "Scalable, ultra-fast, and low-memory construction of compacted de Bruijn graphs with Cuttlefish 2",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS3"
+   ]
+  },
+  {
+   "key": "Khan2025_cuttlefishext",
+   "doi_or_id": "10.1101/2025.02.02.636161",
+   "url": "https://doi.org/10.1101/2025.02.02.636161",
+   "authors": "Khan; Dhulipala; Pandey et al.",
+   "year": 2025,
+   "title": "Faster and Scalable Parallel External-Memory Construction of Colored Compacted de Bruijn Graphs with Cuttlefish 3",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DS3"
+   ]
+  },
+  {
+   "key": "Kille2023_minmers",
+   "doi_or_id": "10.1093/bioinformatics/btad512",
+   "url": "https://doi.org/10.1093/bioinformatics/btad512",
+   "authors": "Kille; Garrison; Treangen et al.",
+   "year": 2023,
+   "title": "Minmers are a generalization of minimizers that enable unbiased local Jaccard estimation",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL5",
+    "P4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Kirsche2020_sapling",
+   "doi_or_id": "10.1093/bioinformatics/btaa911",
+   "url": "https://doi.org/10.1093/bioinformatics/btaa911",
+   "authors": "Kirsche; Das; Schatz",
+   "year": 2020,
+   "title": "Sapling: accelerating suffix array queries with learned data models",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Kovaka2020_uncalled",
+   "doi_or_id": "10.1038/s41587-020-0731-9",
+   "url": "https://doi.org/10.1038/s41587-020-0731-9",
+   "authors": "Kovaka; Fan; Ni et al.",
+   "year": 2020,
+   "title": "Targeted nanopore sequencing by real-time mapping of raw electrical signal with UNCALLED",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1",
+    "SY2"
+   ]
+  },
+  {
+   "key": "Langarita2023_a64fx",
+   "doi_or_id": "10.1109/TCBB.2023.3264514",
+   "url": "https://doi.org/10.1109/TCBB.2023.3264514",
+   "authors": "Langarita; Armejach; Ibáñez et al.",
+   "year": 2023,
+   "title": "Porting and Optimizing BWA-MEM2 Using the Fujitsu A64FX Processor",
+   "venue": "IEEE/ACM Transactions on Computational Biology and Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Langmead2017_qtip",
+   "doi_or_id": "10.1186/s13059-017-1290-3",
+   "url": "https://doi.org/10.1186/s13059-017-1290-3",
+   "authors": "Langmead",
+   "year": 2017,
+   "title": "A tandem simulation framework for predicting mapping quality",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2003_listephens",
+   "doi_or_id": "10.1093/genetics/165.4.2213",
+   "url": "https://doi.org/10.1093/genetics/165.4.2213",
+   "authors": "Li; Stephens",
+   "year": 2003,
+   "title": "Modeling Linkage Disequilibrium and Identifying Recombination Hotspots Using Single-Nucleotide Polymorphism Data",
+   "venue": "Genetics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2008_maq",
+   "doi_or_id": "10.1101/gr.078212.108",
+   "url": "https://doi.org/10.1101/gr.078212.108",
+   "authors": "Li; Ruan; Durbin",
+   "year": 2008,
+   "title": "Mapping short DNA sequencing reads and calling variants using mapping quality scores",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2013_bwamem",
+   "doi_or_id": "arXiv:1303.3997",
+   "url": "https://arxiv.org/abs/1303.3997",
+   "authors": "Heng Li",
+   "year": 2013,
+   "title": "Aligning sequence reads, clone sequences and assembly contigs with BWA-MEM",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2018_minimap2",
+   "doi_or_id": "10.1093/bioinformatics/bty191",
+   "url": "https://doi.org/10.1093/bioinformatics/bty191",
+   "authors": "Li",
+   "year": 2018,
+   "title": "Minimap2: pairwise alignment for nucleotide sequences",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL2",
+    "DS5",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2020_minigraph",
+   "doi_or_id": "10.1186/s13059-020-02168-z",
+   "url": "https://doi.org/10.1186/s13059-020-02168-z",
+   "authors": "Li; Feng; Chu",
+   "year": 2020,
+   "title": "The design and construction of reference pangenome graphs with minigraph",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS2"
+   ]
+  },
+  {
+   "key": "Li2021_mm2new",
+   "doi_or_id": "10.1093/bioinformatics/btab705",
+   "url": "https://doi.org/10.1093/bioinformatics/btab705",
+   "authors": "Li",
+   "year": 2021,
+   "title": "New strategies to improve minimap2 alignment accuracy",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2023_craq",
+   "doi_or_id": "10.1038/s41467-023-42336-w",
+   "url": "https://doi.org/10.1038/s41467-023-42336-w",
+   "authors": "Li; Xu; Wang et al.",
+   "year": 2023,
+   "title": "Identification of errors in draft genome assemblies at single-nucleotide resolution for quality assessment and improvement",
+   "venue": "Nature Communications",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2023_subseqhash",
+   "doi_or_id": "10.1093/bioinformatics/btad218",
+   "url": "https://doi.org/10.1093/bioinformatics/btad218",
+   "authors": "Li; Shi; Chen et al.",
+   "year": 2023,
+   "title": "Seeding with minimized subsequence",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS6"
+   ]
+  },
+  {
+   "key": "Li2024_ropebwt3",
+   "doi_or_id": "10.1093/bioinformatics/btae717",
+   "url": "https://doi.org/10.1093/bioinformatics/btae717",
+   "authors": "Li",
+   "year": 2024,
+   "title": "BWT construction and search at the terabase scale",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2024_subseqhash2",
+   "doi_or_id": "10.1101/2024.05.30.596711",
+   "url": "https://doi.org/10.1101/2024.05.30.596711",
+   "authors": "Li; Chen; Shao",
+   "year": 2024,
+   "title": "Efficient Seeding for Error-Prone Sequences with SubseqHash2",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DS6"
+   ]
+  },
+  {
+   "key": "Li2025_conformalclock",
+   "doi_or_id": "10.1002/gepi.70008",
+   "url": "https://doi.org/10.1002/gepi.70008",
+   "authors": "Li; Goodrich; Peterson et al.",
+   "year": 2025,
+   "title": "Uncertainty Quantification in Epigenetic Clocks via Conformalized Quantile Regression",
+   "venue": "Genetic Epidemiology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Li2025_llmed",
+   "doi_or_id": "10.1101/2025.09.25.678635",
+   "url": "https://doi.org/10.1101/2025.09.25.678635",
+   "authors": "Li; Chen; Zhang et al.",
+   "year": 2025,
+   "title": "Edit Distance Embedding with Genomic Large Language Model",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML7",
+    "ML8",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Liao2023_hprc1",
+   "doi_or_id": "10.1038/s41586-023-05896-x",
+   "url": "https://doi.org/10.1038/s41586-023-05896-x",
+   "authors": "Liao; Asri; Ebler et al.",
+   "year": 2023,
+   "title": "A draft human pangenome reference",
+   "venue": "Nature",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Liu2023_blockaligner",
+   "doi_or_id": "10.1093/bioinformatics/btad487",
+   "url": "https://doi.org/10.1093/bioinformatics/btad487",
+   "authors": "Liu; Steinegger",
+   "year": 2023,
+   "title": "Block Aligner: an adaptive SIMD-accelerated aligner for sequences and position-specific scoring matrices",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1"
+   ]
+  },
+  {
+   "key": "Liu2024_avitiutil",
+   "doi_or_id": "10.1186/s12864-024-10686-4",
+   "url": "https://doi.org/10.1186/s12864-024-10686-4",
+   "authors": "Liu; Obert; Yu et al.",
+   "year": 2024,
+   "title": "Utility analyses of AVITI sequencing chemistry",
+   "venue": "BMC Genomics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM4"
+   ]
+  },
+  {
+   "key": "LlinaresLopez2022_dedal",
+   "doi_or_id": "10.1038/s41592-022-01700-2",
+   "url": "https://doi.org/10.1038/s41592-022-01700-2",
+   "authors": "Llinares-López; Berthet; Blondel et al.",
+   "year": 2022,
+   "title": "Deep embedding and alignment of protein sequences",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Logsdon2025_hgsvc3",
+   "doi_or_id": "10.1038/s41586-025-09140-6",
+   "url": "https://doi.org/10.1038/s41586-025-09140-6",
+   "authors": "Logsdon; Ebert; Audano et al.",
+   "year": 2025,
+   "title": "Complex genetic variation in nearly complete human genomes",
+   "venue": "Nature",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Lucas2026_hprc2",
+   "doi_or_id": "10.64898/2026.07.21.739710",
+   "url": "https://doi.org/10.64898/2026.07.21.739710",
+   "authors": "Lucas; Hebbar; Liao et al.",
+   "year": 2026,
+   "title": "HPRC2: A human pangenome reference with near-complete coverage of common genetic variation",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "P4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Lupken2026_molemap",
+   "doi_or_id": "10.1186/s12859-026-06709-4",
+   "url": "https://doi.org/10.1186/s12859-026-06709-4",
+   "authors": "Lüpken; Krannich; Schuelke et al.",
+   "year": 2026,
+   "title": "MoleMap: fast alignment-free molecule mapping for long-read and linked-read sequencing data",
+   "venue": "BMC Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Ma2023_vgchaining",
+   "doi_or_id": "10.1093/bioinformatics/btad460",
+   "url": "https://doi.org/10.1093/bioinformatics/btad460",
+   "authors": "Ma; Cáceres; Salmela et al.",
+   "year": 2023,
+   "title": "Chaining for accurate alignment of erroneous long reads to acyclic variation graphs",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Makinen2020_chainoverlap",
+   "doi_or_id": "10.4230/LIPIcs.CPM.2020.25",
+   "url": "https://doi.org/10.4230/LIPIcs.CPM.2020.25",
+   "authors": "Mäkinen; Sahlin",
+   "year": 2020,
+   "title": "Chaining with Overlaps Revisited",
+   "venue": "CPM 2020, LIPIcs (metadata from OpenAlex)",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Mao2022_genpip",
+   "doi_or_id": "10.1109/micro56248.2022.00056",
+   "url": "https://doi.org/10.1109/micro56248.2022.00056",
+   "authors": "Mao; Alser; Sadrosadati et al.",
+   "year": 2022,
+   "title": "GenPIP: In-Memory Acceleration of Genome Analysis via Tight Integration of Basecalling and Read Mapping",
+   "venue": "2022 55th IEEE/ACM International Symposium on Microarchitecture (MICRO)",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1"
+   ]
+  },
+  {
+   "key": "MarcoSola2020_wfa",
+   "doi_or_id": "10.1093/bioinformatics/btaa777",
+   "url": "https://doi.org/10.1093/bioinformatics/btaa777",
+   "authors": "Marco-Sola; Moure; Moreto et al.",
+   "year": 2020,
+   "title": "Fast gap-affine pairwise alignment using the wavefront algorithm",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "MarcoSola2023_biwfa",
+   "doi_or_id": "10.1093/bioinformatics/btad074",
+   "url": "https://doi.org/10.1093/bioinformatics/btad074",
+   "authors": "Marco-Sola; Eizenga; Guarracino et al.",
+   "year": 2023,
+   "title": "Optimal gap-affine alignment in <i>O</i> ( <i>s</i> ) space",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Marks2019_linkedreads",
+   "doi_or_id": "10.1101/gr.234443.118",
+   "url": "https://doi.org/10.1101/gr.234443.118",
+   "authors": "Marks; Garcia; Barrio et al.",
+   "year": 2019,
+   "title": "Resolving the full spectrum of human genome variation using Linked-Reads",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Mastoras2025_deeppolisher",
+   "doi_or_id": "10.1101/gr.280149.124",
+   "url": "https://doi.org/10.1101/gr.280149.124",
+   "authors": "Mastoras; Asri; Brambrink et al.",
+   "year": 2025,
+   "title": "Highly accurate assembly polishing with DeepPolisher",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML4",
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "McGee2026_donorasm",
+   "doi_or_id": "10.64898/2026.06.24.734333",
+   "url": "https://doi.org/10.64898/2026.06.24.734333",
+   "authors": "McGee; Smith; Frazar et al.",
+   "year": 2026,
+   "title": "Short-Read Sequencing Benchmarking with Donor-Specific Assemblies",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "DM4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "McGinty2025_cifi",
+   "doi_or_id": "10.1038/s41467-025-66918-y",
+   "url": "https://doi.org/10.1038/s41467-025-66918-y",
+   "authors": "McGinty; Kaya; Sim et al.",
+   "year": 2025,
+   "title": "CiFi: accurate long-read chromosome conformation capture with low-input requirements",
+   "venue": "Nature Communications",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM6",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Mensch2018_diffdp",
+   "doi_or_id": "arXiv:1802.03676",
+   "url": "https://arxiv.org/abs/1802.03676",
+   "authors": "Arthur Mensch; Mathieu Blondel",
+   "year": 2018,
+   "title": "Differentiable Dynamic Programming for Structured Prediction and Attention",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "AL3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Morrissey2024_allo",
+   "doi_or_id": "10.1101/gr.278638.123",
+   "url": "https://doi.org/10.1101/gr.278638.123",
+   "authors": "Morrissey; Shi; James et al.",
+   "year": 2024,
+   "title": "Accurate allocation of multimapped reads enables regulatory element analysis at repeats",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P2"
+   ]
+  },
+  {
+   "key": "Ndiaye2024_sketchreview",
+   "doi_or_id": "10.1186/s13059-024-03414-4",
+   "url": "https://doi.org/10.1186/s13059-024-03414-4",
+   "authors": "Ndiaye; Prieto-Baños; Fitzgerald et al.",
+   "year": 2024,
+   "title": "When less is more: sketching with minimizers in genomics",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS5"
+   ]
+  },
+  {
+   "key": "Nguyen2023_hyenadna",
+   "doi_or_id": "arXiv:2306.15794",
+   "url": "https://arxiv.org/abs/2306.15794",
+   "authors": "Eric Nguyen; Michael Poli; Marjan Faizi; Armin Thomas; Callum Birch-Sykes; Michael Wornow; Aman Patel; Clayton Rabideau; Stefano Massaroli; Yoshua Bengio; Stefano Ermon; Stephen A. Baccus; Chris Ré",
+   "year": 2023,
+   "title": "HyenaDNA: Long-Range Genomic Sequence Modeling at Single Nucleotide Resolution",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML7"
+   ]
+  },
+  {
+   "key": "Nishimoto2021_move",
+   "doi_or_id": "10.4230/LIPIcs.ICALP.2021.101",
+   "url": "https://doi.org/10.4230/LIPIcs.ICALP.2021.101",
+   "authors": "Nishimoto; Tabei",
+   "year": 2021,
+   "title": "Optimal-Time Queries on BWT-Runs Compressed Indexes",
+   "venue": "ICALP 2021, LIPIcs (metadata from OpenAlex, which lists 2020)",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Novak2017_gpbwt",
+   "doi_or_id": "10.1186/s13015-017-0109-9",
+   "url": "https://doi.org/10.1186/s13015-017-0109-9",
+   "authors": "Novak; Garrison; Paten",
+   "year": 2017,
+   "title": "A graph extension of the positional Burrows–Wheeler transform and its applications",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1"
+   ]
+  },
+  {
+   "key": "Ondov2016_mash",
+   "doi_or_id": "10.1186/s13059-016-0997-x",
+   "url": "https://doi.org/10.1186/s13059-016-0997-x",
+   "authors": "Ondov; Treangen; Melsted et al.",
+   "year": 2016,
+   "title": "Mash: fast genome and metagenome distance estimation using MinHash",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL4"
+   ]
+  },
+  {
+   "key": "Oshima2025_nucflag",
+   "doi_or_id": "10.5281/zenodo.17902823",
+   "url": "https://doi.org/10.5281/zenodo.17902823",
+   "authors": "Oshima",
+   "year": 2025,
+   "title": "logsdon-lab/NucFlag: v0.3.3.1",
+   "venue": "Zenodo (software release; metadata from OpenAlex)",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Padovani2021_rlasm",
+   "doi_or_id": "arXiv:2102.02649",
+   "url": "https://arxiv.org/abs/2102.02649",
+   "authors": "Kleber Padovani; Roberto Xavier; Rafael Cabral Borges; Andre Carvalho; Anna Reali; Annie Chateau; Ronnie Alves",
+   "year": 2021,
+   "title": "A step toward a reinforcement learning de novo genome assembler",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML6",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Padovani2025_rlasm2",
+   "doi_or_id": "10.3389/fbinf.2025.1633623",
+   "url": "https://doi.org/10.3389/fbinf.2025.1633623",
+   "authors": "Padovani; Borges; Xavier et al.",
+   "year": 2025,
+   "title": "Using reinforcement learning in genome assembly: in-depth analysis of a Q-learning assembler",
+   "venue": "Frontiers in Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML6",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Park2024_agatha",
+   "doi_or_id": "10.1145/3627535.3638474",
+   "url": "https://doi.org/10.1145/3627535.3638474",
+   "authors": "Park; Hong; Song et al.",
+   "year": 2024,
+   "title": "AGAThA: Fast and Efficient GPU Acceleration of Guided Sequence Alignment for Long Read Mapping",
+   "venue": "Proceedings of the 29th ACM SIGPLAN Annual Symposium on Principles and Practice of Parallel Programming",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Patel2024_darteval",
+   "doi_or_id": "arXiv:2412.05430",
+   "url": "https://arxiv.org/abs/2412.05430",
+   "authors": "Aman Patel; Arpita Singhal; Austin Wang; Anusri Pampari; Maya Kasowski; Anshul Kundaje",
+   "year": 2024,
+   "title": "DART-Eval: A Comprehensive DNA Language Model Evaluation Benchmark on Regulatory DNA",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML7",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Patro2017_salmon",
+   "doi_or_id": "10.1038/nmeth.4197",
+   "url": "https://doi.org/10.1038/nmeth.4197",
+   "authors": "Patro; Duggal; Love et al.",
+   "year": 2017,
+   "title": "Salmon provides fast and bias-aware quantification of transcript expression",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Payne2020_readfish",
+   "doi_or_id": "10.1038/s41587-020-00746-x",
+   "url": "https://doi.org/10.1038/s41587-020-00746-x",
+   "authors": "Payne; Holmes; Clarke et al.",
+   "year": 2020,
+   "title": "Readfish enables targeted nanopore sequencing of gigabase-sized genomes",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Petti2022_smurf",
+   "doi_or_id": "10.1093/bioinformatics/btac724",
+   "url": "https://doi.org/10.1093/bioinformatics/btac724",
+   "authors": "Petti; Bhattacharya; Rao et al.",
+   "year": 2022,
+   "title": "End-to-end learning of multiple sequence alignments with differentiable Smith–Waterman",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Pham2023_bwagpu",
+   "doi_or_id": "10.1145/3577193.3593703",
+   "url": "https://doi.org/10.1145/3577193.3593703",
+   "authors": "Pham; Tu; Lv",
+   "year": 2023,
+   "title": "Accelerating BWA-MEM Read Mapping on GPUs",
+   "venue": "Proceedings of the 37th International Conference on Supercomputing",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Pibiri2022_sshash",
+   "doi_or_id": "10.1093/bioinformatics/btac245",
+   "url": "https://doi.org/10.1093/bioinformatics/btac245",
+   "authors": "Pibiri",
+   "year": 2022,
+   "title": "Sparse and skew hashing of K-mers",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS3"
+   ]
+  },
+  {
+   "key": "Prodanov2022_parascopy",
+   "doi_or_id": "10.1038/s41467-022-30930-3",
+   "url": "https://doi.org/10.1038/s41467-022-30930-3",
+   "authors": "Prodanov; Bansal",
+   "year": 2022,
+   "title": "Robust and accurate estimation of paralog-specific copy number for duplicated genes using whole-genome sequencing",
+   "venue": "Nature Communications",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Prodanov2023_parascopyvc",
+   "doi_or_id": "10.1093/bioinformatics/btad268",
+   "url": "https://doi.org/10.1093/bioinformatics/btad268",
+   "authors": "Prodanov; Bansal",
+   "year": 2023,
+   "title": "A multilocus approach for accurate variant calling in low-copy repeats using whole-genome sequencing",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Prodanov2025_locityper",
+   "doi_or_id": "10.1038/s41588-025-02362-4",
+   "url": "https://doi.org/10.1038/s41588-025-02362-4",
+   "authors": "Prodanov; Plender; Seebohm et al.",
+   "year": 2025,
+   "title": "Locityper enables targeted genotyping of complex polymorphic genes",
+   "venue": "Nature Genetics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "RahmanHera2023_fracminhashci",
+   "doi_or_id": "10.1101/gr.277651.123",
+   "url": "https://doi.org/10.1101/gr.277651.123",
+   "authors": "Rahman Hera; Pierce-Ward; Koslicki",
+   "year": 2023,
+   "title": "Deriving confidence intervals for mutation rates across a wide range of evolutionary distances using FracMinHash",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Rajput2024_cochaining",
+   "doi_or_id": "10.1186/s13015-024-00250-w",
+   "url": "https://doi.org/10.1186/s13015-024-00250-w",
+   "authors": "Rajput; Chandra; Jain",
+   "year": 2024,
+   "title": "Co-linear chaining on pangenome graphs",
+   "venue": "Algorithms for Molecular Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Rautiainen2020_graphaligner",
+   "doi_or_id": "10.1186/s13059-020-02157-2",
+   "url": "https://doi.org/10.1186/s13059-020-02157-2",
+   "authors": "Rautiainen; Marschall",
+   "year": 2020,
+   "title": "GraphAligner: rapid and versatile sequence-to-graph alignment",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS2"
+   ]
+  },
+  {
+   "key": "Rautiainen2021_mbg",
+   "doi_or_id": "10.1093/bioinformatics/btab004",
+   "url": "https://doi.org/10.1093/bioinformatics/btab004",
+   "authors": "Rautiainen; Marschall",
+   "year": 2021,
+   "title": "MBG: Minimizer-based sparse de Bruijn Graph construction",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Rautiainen2023_verkko",
+   "doi_or_id": "10.1038/s41587-023-01662-6",
+   "url": "https://doi.org/10.1038/s41587-023-01662-6",
+   "authors": "Rautiainen; Nurk; Walenz et al.",
+   "year": 2023,
+   "title": "Telomere-to-telomere assembly of diploid chromosomes with Verkko",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Rhie2020_merqury",
+   "doi_or_id": "10.1186/s13059-020-02134-9",
+   "url": "https://doi.org/10.1186/s13059-020-02134-9",
+   "authors": "Rhie; Walenz; Koren et al.",
+   "year": 2020,
+   "title": "Merqury: reference-free quality, completeness, and phasing assessment for genome assemblies",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Rossi2022_moni",
+   "doi_or_id": "10.1089/cmb.2021.0290",
+   "url": "https://doi.org/10.1089/cmb.2021.0290",
+   "authors": "Rossi; Oliva; Langmead et al.",
+   "year": 2022,
+   "title": "MONI: A Pangenomic Index for Finding Maximal Exact Matches",
+   "venue": "Journal of Computational Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1"
+   ]
+  },
+  {
+   "key": "Sadasivan2023_mm2gpu",
+   "doi_or_id": "10.26502/jbb.2642-91280067",
+   "url": "https://doi.org/10.26502/jbb.2642-91280067",
+   "authors": "Sadasivan; Maric; Dawson et al.",
+   "year": 2023,
+   "title": "Accelerating Minimap2 for Accurate Long Read Alignment on GPUs",
+   "venue": "Journal of Biotechnology and Biomedicine",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY1"
+   ]
+  },
+  {
+   "key": "Sahlin2021_strobemers",
+   "doi_or_id": "10.1101/gr.275648.121",
+   "url": "https://doi.org/10.1101/gr.275648.121",
+   "authors": "Sahlin",
+   "year": 2021,
+   "title": "Effective sequence similarity detection with strobemers",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS6"
+   ]
+  },
+  {
+   "key": "Sahlin2022_strobealign",
+   "doi_or_id": "10.1186/s13059-022-02831-7",
+   "url": "https://doi.org/10.1186/s13059-022-02831-7",
+   "authors": "Sahlin",
+   "year": 2022,
+   "title": "Strobealign: flexible seed size enables ultra-fast and accurate read alignment",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS6",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Sahlin2023_lrsurvey",
+   "doi_or_id": "10.1186/s13059-023-02972-3",
+   "url": "https://doi.org/10.1186/s13059-023-02972-3",
+   "authors": "Sahlin; Baudeau; Cazaux et al.",
+   "year": 2023,
+   "title": "A survey of mapping algorithms in the long-reads era",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL2",
+    "ML2"
+   ]
+  },
+  {
+   "key": "Schiff2024_caduceus",
+   "doi_or_id": "arXiv:2403.03234",
+   "url": "https://arxiv.org/abs/2403.03234",
+   "authors": "Yair Schiff; Chia-Hsiang Kao; Aaron Gokaslan; Tri Dao; Albert Gu; Volodymyr Kuleshov",
+   "year": 2024,
+   "title": "Caduceus: Bi-Directional Equivariant Long-Range DNA Sequence Modeling",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML7"
+   ]
+  },
+  {
+   "key": "Schloissnig2025_kglrs",
+   "doi_or_id": "10.1038/s41586-025-09290-7",
+   "url": "https://doi.org/10.1038/s41586-025-09290-7",
+   "authors": "Schloissnig; Pani; Ebler et al.",
+   "year": 2025,
+   "title": "Structural variation in 1,019 diverse humans based on long-read sequencing",
+   "venue": "Nature",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Sharei2024_gema",
+   "doi_or_id": "10.1109/TBCAS.2023.3348152",
+   "url": "https://doi.org/10.1109/TBCAS.2023.3348152",
+   "authors": "Sharei; Kamal; Afzali-Kusha et al.",
+   "year": 2024,
+   "title": "GEMA: A Genome Exact Mapping Accelerator Based on Learned Indexes",
+   "venue": "IEEE Transactions on Biomedical Circuits and Systems",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML3"
+   ]
+  },
+  {
+   "key": "Shaw2023_skani",
+   "doi_or_id": "10.1038/s41592-023-02018-3",
+   "url": "https://doi.org/10.1038/s41592-023-02018-3",
+   "authors": "Shaw; Yu",
+   "year": 2023,
+   "title": "Fast and robust metagenomic sequence comparison through sparse chaining with skani",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL4"
+   ]
+  },
+  {
+   "key": "Shaw2024_sylph",
+   "doi_or_id": "10.1038/s41587-024-02412-y",
+   "url": "https://doi.org/10.1038/s41587-024-02412-y",
+   "authors": "Shaw; Yu",
+   "year": 2024,
+   "title": "Rapid species-level metagenome profiling and containment estimation with sylph",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Shivakumar2024_sigmoni",
+   "doi_or_id": "10.1093/bioinformatics/btae213",
+   "url": "https://doi.org/10.1093/bioinformatics/btae213",
+   "authors": "Shivakumar; Ahmed; Kovaka et al.",
+   "year": 2024,
+   "title": "Sigmoni: classification of nanopore signal with a compressed pangenome index",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1"
+   ]
+  },
+  {
+   "key": "Shivakumar2025_mumemto",
+   "doi_or_id": "10.1186/s13059-025-03644-0",
+   "url": "https://doi.org/10.1186/s13059-025-03644-0",
+   "authors": "Shivakumar; Langmead",
+   "year": 2025,
+   "title": "Mumemto: efficient maximal matching across pangenomes",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Simunovic2026_gnndebugger",
+   "doi_or_id": "10.1186/s12859-026-06526-9",
+   "url": "https://doi.org/10.1186/s12859-026-06526-9",
+   "authors": "Šimunović; Vrček; Šikić et al.",
+   "year": 2026,
+   "title": "GnnDebugger: GNN based error correction in De Bruijn Graphs",
+   "venue": "BMC Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML5"
+   ]
+  },
+  {
+   "key": "Siren2019_gbwt",
+   "doi_or_id": "10.1093/bioinformatics/btz575",
+   "url": "https://doi.org/10.1093/bioinformatics/btz575",
+   "authors": "Sirén; Garrison; Novak et al.",
+   "year": 2019,
+   "title": "Haplotype-aware graph indexes",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS2",
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Siren2021_giraffe",
+   "doi_or_id": "10.1126/science.abg8871",
+   "url": "https://doi.org/10.1126/science.abg8871",
+   "authors": "Sirén; Monlong; Chang et al.",
+   "year": 2021,
+   "title": "Pangenomics enables genotyping of known structural variants in 5202 diverse genomes",
+   "venue": "Science",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Siren2022_gbz",
+   "doi_or_id": "10.1093/bioinformatics/btac656",
+   "url": "https://doi.org/10.1093/bioinformatics/btac656",
+   "authors": "Sirén; Paten",
+   "year": 2022,
+   "title": "GBZ file format for pangenome graphs",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Siren2024_hapsampling",
+   "doi_or_id": "10.1038/s41592-024-02407-2",
+   "url": "https://doi.org/10.1038/s41592-024-02407-2",
+   "authors": "Sirén; Eskandar; Ungaro et al.",
+   "year": 2024,
+   "title": "Personalized pangenome references",
+   "venue": "Nature Methods",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Sosic2017_edlib",
+   "doi_or_id": "10.1093/bioinformatics/btw753",
+   "url": "https://doi.org/10.1093/bioinformatics/btw753",
+   "authors": "Šošić; Šikić",
+   "year": 2017,
+   "title": "Edlib: a C/C ++ library for fast, exact sequence alignment using edit distance",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Stanojevic2026_herro",
+   "doi_or_id": "10.1038/s41586-026-10563-y",
+   "url": "https://doi.org/10.1038/s41586-026-10563-y",
+   "authors": "Stanojević; Lin; Nurk et al.",
+   "year": 2026,
+   "title": "Telomere-to-telomere assembly using HERRO-corrected Nanopore Simplex reads",
+   "venue": "Nature",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML4",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Stergachis2020_fiberseq",
+   "doi_or_id": "10.1126/science.aaz1646",
+   "url": "https://doi.org/10.1126/science.aaz1646",
+   "authors": "Stergachis; Debo; Haugen et al.",
+   "year": 2020,
+   "title": "Single-molecule regulatory architectures captured by chromatin fiber sequencing",
+   "venue": "Science",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM7"
+   ]
+  },
+  {
+   "key": "Suzuki2018_ksw2",
+   "doi_or_id": "10.1186/s12859-018-2014-8",
+   "url": "https://doi.org/10.1186/s12859-018-2014-8",
+   "authors": "Suzuki; Kasahara",
+   "year": 2018,
+   "title": "Introducing difference recurrence relations for faster semi-global alignment of long sequences",
+   "venue": "BMC Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "AL1"
+   ]
+  },
+  {
+   "key": "Synk2026_locale",
+   "doi_or_id": "10.64898/2026.05.12.724581",
+   "url": "https://doi.org/10.64898/2026.05.12.724581",
+   "authors": "Synk; Pandey; Cenk Sahinalp et al.",
+   "year": 2026,
+   "title": "LOCALE: Local-Alignment Embeddings for Noise-Robust DNA Search at Scale <sup>†∗</sup>",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML8",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Tang2025_glmeval",
+   "doi_or_id": "10.1186/s13059-025-03674-8",
+   "url": "https://doi.org/10.1186/s13059-025-03674-8",
+   "authors": "Tang; Somia; Yu et al.",
+   "year": 2025,
+   "title": "Evaluating the representational power of pre-trained DNA language models for regulatory genomics",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML7",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Tolstoganov2026_mcs",
+   "doi_or_id": "10.1186/s13059-026-04017-x",
+   "url": "https://doi.org/10.1186/s13059-026-04017-x",
+   "authors": "Tolstoganov; Martin; Buchin et al.",
+   "year": 2026,
+   "title": "Multi-context seeds enable fast and high-accuracy read mapping",
+   "venue": "Genome Biology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS6",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Vasimuddin2019_bwamem2",
+   "doi_or_id": "10.1109/IPDPS.2019.00041",
+   "url": "https://doi.org/10.1109/IPDPS.2019.00041",
+   "authors": "Vasimuddin; Misra; Li et al.",
+   "year": 2019,
+   "title": "Efficient Architecture-Aware Acceleration of BWA-MEM for Multicore Systems",
+   "venue": "2019 IEEE International Parallel and Distributed Processing Symposium (IPDPS)",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML3",
+    "SY1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Vollger2022_segdups",
+   "doi_or_id": "10.1126/science.abj6965",
+   "url": "https://doi.org/10.1126/science.abj6965",
+   "authors": "Vollger; Guitart; Dishuck et al.",
+   "year": 2022,
+   "title": "Segmental duplications and their variation in a complete human genome",
+   "venue": "Science",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "P2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Vrcek2022_gnnomearxiv",
+   "doi_or_id": "arXiv:2206.00668",
+   "url": "https://arxiv.org/abs/2206.00668",
+   "authors": "Lovro Vrček; Xavier Bresson; Thomas Laurent; Martin Schmitz; Mile Šikić",
+   "year": 2022,
+   "title": "Learning to Untangle Genome Assembly with Graph Convolutional Networks",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML5"
+   ]
+  },
+  {
+   "key": "Vrcek2024_gnnome",
+   "doi_or_id": "10.1101/gr.279307.124",
+   "url": "https://doi.org/10.1101/gr.279307.124",
+   "authors": "Vrček; Bresson; Laurent et al.",
+   "year": 2024,
+   "title": "Geometric deep learning framework for de novo genome assembly",
+   "venue": "Genome Research",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "ML5",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Weilguny2023_bossruns",
+   "doi_or_id": "10.1038/s41587-022-01580-z",
+   "url": "https://doi.org/10.1038/s41587-022-01580-z",
+   "authors": "Weilguny; De Maio; Munro et al.",
+   "year": 2023,
+   "title": "Dynamic, adaptive sampling during nanopore sequencing using Bayesian experimental design",
+   "venue": "Nature Biotechnology",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY2",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Yates2021_refget",
+   "doi_or_id": "10.1093/bioinformatics/btab524",
+   "url": "https://doi.org/10.1093/bioinformatics/btab524",
+   "authors": "Yates; Adams; Chaturvedi et al.",
+   "year": 2021,
+   "title": "Refget: standardized access to reference sequences",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "SY3",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Yuan2025_meloed",
+   "doi_or_id": "10.1101/2025.11.23.689944",
+   "url": "https://doi.org/10.1101/2025.11.23.689944",
+   "authors": "Yuan; Chen; Ahmed et al.",
+   "year": 2025,
+   "title": "MELO-ED: learning locality-sensitive multi-embeddings for edit distance",
+   "venue": "bioRxiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML8"
+   ]
+  },
+  {
+   "key": "Zakeri2024_movi",
+   "doi_or_id": "10.1016/j.isci.2024.111464",
+   "url": "https://doi.org/10.1016/j.isci.2024.111464",
+   "authors": "Zakeri; Brown; Ahmed et al.",
+   "year": 2024,
+   "title": "Movi: A fast and cache-efficient full-text pangenome index",
+   "venue": "iScience",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DS1",
+    "ideas_scout.md"
+   ]
+  },
+  {
+   "key": "Zhang2021_sigmap",
+   "doi_or_id": "10.1093/bioinformatics/btab264",
+   "url": "https://doi.org/10.1093/bioinformatics/btab264",
+   "authors": "Zhang; Li; Jain et al.",
+   "year": 2021,
+   "title": "Real-time mapping of nanopore raw signals",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM1"
+   ]
+  },
+  {
+   "key": "Zhou2022_yahs",
+   "doi_or_id": "10.1093/bioinformatics/btac808",
+   "url": "https://doi.org/10.1093/bioinformatics/btac808",
+   "authors": "Zhou; McCarthy; Durbin",
+   "year": 2022,
+   "title": "YaHS: yet another Hi-C scaffolding tool",
+   "venue": "Bioinformatics",
+   "is_preprint": false,
+   "verified": true,
+   "used_for": [
+    "DM6"
+   ]
+  },
+  {
+   "key": "Zhou2023_dnabert2",
+   "doi_or_id": "arXiv:2306.15006",
+   "url": "https://arxiv.org/abs/2306.15006",
+   "authors": "Zhihan Zhou; Yanrong Ji; Weijian Li; Pratik Dutta; Ramana Davuluri; Han Liu",
+   "year": 2023,
+   "title": "DNABERT-2: Efficient Foundation Model and Benchmark For Multi-Species Genome",
+   "venue": "arXiv (preprint)",
+   "is_preprint": true,
+   "verified": true,
+   "used_for": [
+    "ML7"
+   ]
+  }
+ ]
+}

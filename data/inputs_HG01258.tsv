@@ -1,0 +1,5 @@
+# label	url (GRCh38 alignments of HG01258; region-sliced over HTTPS)
+Illumina NovaSeq6000 PCR-free 2x150 (NYGC)	https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3988862/HG01258.final.cram
+Illumina TruPath (DRAGEN)	https://1000g-ont.s3.amazonaws.com/Illumina_TruPath_WGS/HG01258/C8_HG01258/C8_HG01258.bam
+ONT R10.4.1 dorado0.8.1 sup (1kG-ONT)	https://1000g-ont.s3.amazonaws.com/PROCESSED_DATA/ALIGNED_TO_HG38/MINIMAP2_ALIGNED_BAMS/HG01258-ONT-hg38-R10-LSK114-5mCG_5hmCG.phased.bam
+PacBio HiFi (1KGP_PacBio_WGS)	https://1000g-ont.s3.amazonaws.com/1KGP_PacBio_WGS/Alignment/GRCh38/HG01258-W-0.GRCh38_no_alt.longphase.haplotagged.bam

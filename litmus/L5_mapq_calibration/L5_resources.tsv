@@ -1,0 +1,29 @@
+step	command	wall_s	peak_rss_GB
+mapping	bwa mem -t 1 -K 10000000 idx/grch38 sim/ill_R1.fq.gz sim/ill_R2.fq.gz	472.3	5.67
+extraction	python3 ../l5/scripts/l5_extract.py --bam aln/grch38.bwa_sr.sam --truth sim/ill.truth.tsv.gz --ref grch38 --sd	84.5	5.25
+mapping	minimap2 -t 2 -K 100M -ax map-hifi idx/chm13.k19w19.mmi sim/hifi.fa.gz	332.2	13.92
+extraction	python3 <workdir>/	7.3	0.34
+mapping	minimap2 -t 2 -K 100M -ax lr:hq idx/chm13.k19w19.mmi sim/ont.fa.gz	416.5	14.32
+extraction	python3 <workdir>/	7.3	0.27
+mapping	bwa mem -t 2 -K 10000000 idx/chm13 sim/ill_R1.fq.gz sim/ill_R2.fq.gz	416.8	5.8
+extraction	python3 <workdir>/	126.4	5.26
+index build	minimap2 -t 2 -x sr -d idx/chm13.k21w11.mmi data/chm13v2.0_maskedY_rCRS.fa.gz	100.2	15.07
+mapping	minimap2 -t 2 -K 100M -ax sr --secondary=yes idx/chm13.k21w11.mmi sim/ill_R1.fq.gz sim/ill_R2.fq.gz	133.7	12.57
+extraction	python3 <workdir>/	135.9	5.41
+index build	minimap2 -t 2 -x map-ont -d idx/chm13.k15w10.mmi data/chm13v2.0_maskedY_rCRS.fa.gz	85.9	15.67
+mapping	minimap2 -t 2 -K 100M -ax map-ont idx/chm13.k15w10.mmi sim/ont.fa.gz	1449.0	9.63
+extraction	python3 <workdir>/	6.8	0.26
+index build	minimap2 -t 2 -x map-hifi -d idx/grch38.k19w19.mmi data/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz	57.4	13.75
+mapping	minimap2 -t 2 -K 100M -ax map-hifi idx/grch38.k19w19.mmi sim/hifi.fa.gz	413.6	13.61
+extraction	python3 <workdir>/	7.2	0.34
+mapping	minimap2 -t 2 -K 100M -ax lr:hq idx/grch38.k19w19.mmi sim/ont.fa.gz	537.2	13.72
+extraction	python3 <workdir>/	8.9	0.25
+index build	minimap2 -t 2 -x sr -d idx/grch38.k21w11.mmi data/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz	95.6	13.94
+mapping	minimap2 -t 2 -K 100M -ax sr --secondary=yes idx/grch38.k21w11.mmi sim/ill_R1.fq.gz sim/ill_R2.fq.gz	164.1	11.54
+extraction	python3 <workdir>/	121.9	5.4
+index build	minimap2 -t 2 -x map-ont -d idx/grch38.k15w10.mmi data/GCA_000001405.15_GRCh38_no_alt_analysis_set.fna.gz	72.2	13.01
+mapping	minimap2 -t 2 -K 100M -ax map-ont idx/grch38.k15w10.mmi sim/ont.fa.gz	1544.7	11.34
+extraction	python3 <workdir>/	8.3	0.27
+recalibration	python3 ../l5/scripts/l5_recal.py --feat feat --outdir recal --save-models models	994.2	4.24
+recalibration	python3 ../l5/scripts/l5_recal.py --feat feat_strict --outdir recal_strict	86.9	0.47
+recalibration	python3 ../l5/scripts/l5_recal.py --feat feat --outdir recal --save-models models	1858.7	4.48

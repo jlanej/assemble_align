@@ -1,0 +1,17 @@
+callset	siteset	stratum	truth_het_snv	present_frac
+1kGP_phased_panel	all	CEN	8895	0.3892
+1kGP_phased_panel	all	SD	1387	0.6893
+1kGP_phased_panel	all	TR	6163	0.6399
+1kGP_phased_panel	all	other	59433	0.9858
+1kGP_phased_panel	clean	CEN	8604	0.3962
+1kGP_phased_panel	clean	SD	1299	0.7213
+1kGP_phased_panel	clean	TR	4506	0.7275
+1kGP_phased_panel	clean	other	58769	0.9894
+twopass_bcftools_ilmn	all	CEN	8895	0.4829
+twopass_bcftools_ilmn	all	SD	1387	0.7094
+twopass_bcftools_ilmn	all	TR	6163	0.7112
+twopass_bcftools_ilmn	all	other	59433	0.9863
+twopass_bcftools_ilmn	clean	CEN	8604	0.4919
+twopass_bcftools_ilmn	clean	SD	1299	0.7398
+twopass_bcftools_ilmn	clean	TR	4506	0.7952
+twopass_bcftools_ilmn	clean	other	58769	0.9896

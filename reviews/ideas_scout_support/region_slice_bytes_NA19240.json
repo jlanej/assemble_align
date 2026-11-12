@@ -1,0 +1,73 @@
+{
+ "cram_url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989410/NA19240.final.cram",
+ "cram_md5_expected": "e6d4b9e1e19d1f4d4f5de6a0d16d9c10",
+ "cram_version": "3.0",
+ "cram_bytes": 15072959479,
+ "crai_entries": 76795,
+ "n_contigs_in_header": 3366,
+ "region_sets": {
+  "MRJD_19_regions": "https://1000g-ont.s3.amazonaws.com/Illumina_TruPath_WGS/HG00097/MRJD_regions_38.bed.gz",
+  "GRCh38_SD_merged": "https://hgdownload.soe.ucsc.edu/goldenPath/hg38/database/genomicSuperDups.txt.gz"
+ },
+ "results": {
+  "MRJD_19_regions_primary_pad0": {
+   "merged_intervals": 19,
+   "merged_bp": 405321,
+   "slices": 27,
+   "bytes": 8002932,
+   "fraction_of_cram": 0.0005309462956594471
+  },
+  "MRJD_19_regions_primary_pad1000": {
+   "merged_intervals": 19,
+   "merged_bp": 443321,
+   "slices": 27,
+   "bytes": 8002932,
+   "fraction_of_cram": 0.0005309462956594471
+  },
+  "MRJD_19_regions_all_pad0": {
+   "merged_intervals": 19,
+   "merged_bp": 405321,
+   "slices": 27,
+   "bytes": 8002932,
+   "fraction_of_cram": 0.0005309462956594471
+  },
+  "MRJD_19_regions_all_pad1000": {
+   "merged_intervals": 19,
+   "merged_bp": 443321,
+   "slices": 27,
+   "bytes": 8002932,
+   "fraction_of_cram": 0.0005309462956594471
+  },
+  "GRCh38_SD_merged_primary_pad0": {
+   "merged_intervals": 7939,
+   "merged_bp": 166868673,
+   "slices": 10435,
+   "bytes": 2735009897,
+   "fraction_of_cram": 0.1814514197301784
+  },
+  "GRCh38_SD_merged_primary_pad1000": {
+   "merged_intervals": 6658,
+   "merged_bp": 180808434,
+   "slices": 10705,
+   "bytes": 2803366464,
+   "fraction_of_cram": 0.18598646588984172
+  },
+  "GRCh38_SD_merged_all_pad0": {
+   "merged_intervals": 8048,
+   "merged_bp": 175429664,
+   "slices": 11126,
+   "bytes": 3008833735,
+   "fraction_of_cram": 0.19961798074173673
+  },
+  "GRCh38_SD_merged_all_pad1000": {
+   "merged_intervals": 6749,
+   "merged_bp": 189506318,
+   "slices": 11401,
+   "bytes": 3081437025,
+   "fraction_of_cram": 0.20443477137274405
+  }
+ },
+ "python": "3.11.15",
+ "run_utc": "2026-11-11T19:06:11Z",
+ "method": "sum of .crai slice sizes for slices overlapping merged (padded) intervals; container headers ignored"
+}

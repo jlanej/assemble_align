@@ -1,0 +1,106 @@
+test	scheme	k	w	s	value1	value2	value3	value4
+chunk_equal	mm2	15	10	None	1	562736
+chunk_equal	oc	19	19	4	1	308263
+chunk_equal	ddecyc	15	10	None	1	479313
+chunk_equal	mod	21	11	None	1	407190
+chunk_equal	modoc	15	10	None	1	429165
+chunk_equal	osync	15	10	10	1	1006992
+chunk_equal	miniception	15	10	None	1	464315
+chunk_equal	greedy	15	10	None	1	498265
+strand_sym	mm2	15	10	None	1.0	375970
+strand_sym	random	15	10	None	1.0	375970
+strand_sym	miniception	15	10	None	1.0	315427
+strand_sym	oc	19	19	4	1.0	198703
+strand_sym	ddecyc	15	10	None	1.0	318656
+strand_sym	greedy	15	10	None	1.0	334403
+strand_sym	mod	15	10	None	0.998466	288840
+strand_sym	mod	21	11	None	0.998927	268489
+strand_sym	modoc	15	10	None	0.998466	288840
+strand_sym	osync	15	10	10	1.0	669484
+strand_sym	csync	15	10	5	1.0	376934
+density_random	random	11	5	None	0.34075	0.33885	0.33333	0.25
+density_random	miniception	11	5	6	0.29337	nan	0.2929	0.25
+density_random	oc	11	5	6	0.28675	0.33124	0.2864	0.25
+density_random	random	15	10	None	0.18796	0.18658	0.18182	0.12
+density_random	mod	15	10	None	0.14455	0.14466	0.14286	0.12
+density_random	random	21	11	None	0.16678	0.16676	0.16667	0.09375
+density_random	mod	21	11	None	0.13704	0.13369	0.13043	0.09375
+density_random	random	19	19	None	0.09995	0.10002	0.1	0.05263
+density_random	oc	19	19	4	0.07998	0.09873	nan	0.05263
+density_random	miniception	19	19	None	0.08951	0.09035	nan	0.05263
+density_random	ddecyc	19	19	None	0.07899	0.08695	nan	0.05263
+density_random	ddecyc	15	10	None	0.15379	0.15768	nan	0.12
+density_random	modoc	15	10	None	0.14183	0.14466	nan	0.12
+density_random	greedy	15	10	None	0.13436	0.16709	nan	0.12
+mm2_port_vs_sketch.c	mm2	21	11		1	11069512
+modoc_python_vs_patched_sketch.c	modoc	21	11		1	8175951
+mm2_port_vs_sketch.c	mm2	15	10		1	12452943
+modoc_python_vs_patched_sketch.c	modoc	15	10		1	9388774
+mm2_port_vs_sketch.c	mm2	19	19		1	6652482
+modoc_python_vs_patched_sketch.c	modoc	19	19		1	5402121
+mm2_port_vs_sketch.c	mm2	19	10		1	12050520
+modoc_python_vs_patched_sketch.c	modoc	19	10		1	9085652
+mm2_port_vs_sketch.c	mm2	25	51		1	2569321
+modoc_python_vs_patched_sketch.c	modoc	25	51		1	2233490
+mm2_port_vs_sketch.c	mm2	15	5		1	22624177
+hash_density_random	hash64|hash_w|splitmix56	11	5		0.33882|0.33335|0.33346	0.33333
+hash_density_random	hash64|hash_w|splitmix56	15	10		0.18655|0.18180|0.18196	0.18182
+hash_density_random	hash64|hash_w|splitmix56	15	5		0.34007|0.33342|0.33333	0.33333
+hash_density_random	hash64|hash_w|splitmix56	21	11		0.16666|0.16681|0.16672	0.16667
+hash_density_random	hash64|hash_w|splitmix56	19	19		0.10002|0.10026|0.10017	0.10000
+oc_density_vs_s	oc fwd|canonical	19	19	3	0.07954|0.08571	k-s even
+oc_density_vs_s	oc fwd|canonical	19	19	4	0.07989|0.09893	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	19	5	0.08027|0.08084	k-s even
+oc_density_vs_s	oc fwd|canonical	19	19	6	0.08089|0.09650	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	19	7	0.08152|0.08161	k-s even
+oc_density_vs_s	oc fwd|canonical	19	19	8	0.08248|0.09548	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	19	9	0.08341|0.08353	k-s even
+oc_density_vs_s	oc fwd|canonical	19	19	10	0.08476|0.09539	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	19	11	0.08607|0.08600	k-s even
+oc_density_vs_s	oc fwd|canonical	19	19	12	0.08765|0.09602	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	19	13	0.08918|0.08912	k-s even
+oc_density_vs_s	oc fwd|canonical	25	51	3	0.03267|0.03529	k-s even
+oc_density_vs_s	oc fwd|canonical	25	51	4	0.03296|0.03701	k-s odd
+oc_density_vs_s	oc fwd|canonical	25	51	5	0.03311|0.03338	k-s even
+oc_density_vs_s	oc fwd|canonical	25	51	6	0.03336|0.03688	k-s odd
+oc_density_vs_s	oc fwd|canonical	25	51	7	0.03369|0.03368	k-s even
+oc_density_vs_s	oc fwd|canonical	25	51	8	0.03387|0.03686	k-s odd
+oc_density_vs_s	oc fwd|canonical	25	51	9	0.03407|0.03409	k-s even
+oc_density_vs_s	oc fwd|canonical	25	51	10	0.03446|0.03706	k-s odd
+oc_density_vs_s	oc fwd|canonical	25	51	11	0.03454|0.03459	k-s even
+oc_density_vs_s	oc fwd|canonical	25	51	12	0.03485|0.03727	k-s odd
+oc_density_vs_s	oc fwd|canonical	25	51	13	0.03518|0.03515	k-s even
+oc_density_vs_s	oc fwd|canonical	21	11	3	0.12996|0.14213	k-s even
+oc_density_vs_s	oc fwd|canonical	21	11	4	0.13127|0.17290	k-s odd
+oc_density_vs_s	oc fwd|canonical	21	11	5	0.13259|0.13349	k-s even
+oc_density_vs_s	oc fwd|canonical	21	11	6	0.13370|0.17276	k-s odd
+oc_density_vs_s	oc fwd|canonical	21	11	7	0.13451|0.13488	k-s even
+oc_density_vs_s	oc fwd|canonical	21	11	8	0.13480|0.17172	k-s odd
+oc_density_vs_s	oc fwd|canonical	21	11	9	0.13462|0.13467	k-s even
+oc_density_vs_s	oc fwd|canonical	21	11	10	0.13497|0.16786	k-s odd
+oc_density_vs_s	oc fwd|canonical	21	11	11	0.13433|0.13435	k-s even
+oc_density_vs_s	oc fwd|canonical	21	11	12	0.13557|0.16356	k-s odd
+oc_density_vs_s	oc fwd|canonical	21	11	13	0.13598|0.13596	k-s even
+oc_density_vs_s	oc fwd|canonical	15	10	3	0.14801|0.15636	k-s even
+oc_density_vs_s	oc fwd|canonical	15	10	4	0.14759|0.18540	k-s odd
+oc_density_vs_s	oc fwd|canonical	15	10	5	0.14637|0.14738	k-s even
+oc_density_vs_s	oc fwd|canonical	15	10	6	0.14767|0.18052	k-s odd
+oc_density_vs_s	oc fwd|canonical	15	10	7	0.14810|0.14825	k-s even
+oc_density_vs_s	oc fwd|canonical	15	10	8	0.15030|0.17504	k-s odd
+oc_density_vs_s	oc fwd|canonical	15	10	9	0.15141|0.15147	k-s even
+oc_density_vs_s	oc fwd|canonical	15	10	10	0.15538|0.17355	k-s odd
+oc_density_vs_s	oc fwd|canonical	15	10	11	0.15894|0.15889	k-s even
+oc_density_vs_s	oc fwd|canonical	15	10	12	0.16464|0.17651	k-s odd
+oc_density_vs_s	oc fwd|canonical	15	10	13	0.16956|0.16957	k-s even
+oc_density_vs_s	oc fwd|canonical	19	10	3	0.14310|0.15496	k-s even
+oc_density_vs_s	oc fwd|canonical	19	10	4	0.14453|0.18880	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	10	5	0.14599|0.14705	k-s even
+oc_density_vs_s	oc fwd|canonical	19	10	6	0.14715|0.18830	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	10	7	0.14774|0.14791	k-s even
+oc_density_vs_s	oc fwd|canonical	19	10	8	0.14762|0.18458	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	10	9	0.14643|0.14654	k-s even
+oc_density_vs_s	oc fwd|canonical	19	10	10	0.14778|0.18051	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	10	11	0.14814|0.14805	k-s even
+oc_density_vs_s	oc fwd|canonical	19	10	12	0.15016|0.17521	k-s odd
+oc_density_vs_s	oc fwd|canonical	19	10	13	0.15136|0.15134	k-s even
+hash_w_bijection_k8_to_12	hash_w	8-12			1	

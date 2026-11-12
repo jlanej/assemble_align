@@ -1,0 +1,6 @@
+# region=chr20:40000000-40300000 sample=HG01258 minmapq=20 mask=+/-5bp around 521 sample variants; masked_positions=5831
+label	reads	read_N50	aligned_bases	mismatch_per_kb	ins_events_per_kb	del_events_per_kb	error_events_per_kb	phred_event_Q	indel_fraction	frac_indels_in_hp4plus	err_per_kb_hp1	err_per_kb_hp2_3	err_per_kb_hp4_7	err_per_kb_hp8plus	bases_in_hp8plus	median_read_Q	frac_reads_le_1pct_err	frac_reads_le_0p1pct_err	seconds
+Illumina NovaSeq6000 PCR-free 2x150 (NYGC)	70052	150	10276174	1.4252	0.0153	0.0123	1.4528	28.3780	0.0190	0.2933	1.4770	1.4504	1.2670	3.0393	43102	60.0000	0.9659	0.8962	74.3000
+Illumina TruPath (DRAGEN)	152080	150	20428944	1.3387	0.0167	0.0108	1.3662	28.6447	0.0201	0.4093	1.4291	1.3067	1.1644	3.9492	80269	60.0000	0.9667	0.9145	26.5000
+ONT R10.4.1 dorado0.8.1 sup (1kG-ONT)	1508	47332	11822214	9.6474	3.8338	5.5713	19.0525	17.2005	0.4936	0.1360	18.3279	19.4522	20.6522	31.9266	49144	23.0100	0.6844	0.1399	19.9000
+PacBio HiFi (1KGP_PacBio_WGS)	820	16504	12337935	0.1046	0.6080	0.6323	1.3449	28.7132	0.9222	0.3819	0.4232	1.6309	4.5213	12.7292	50828	32.1640	0.9926	0.5993	14.1000

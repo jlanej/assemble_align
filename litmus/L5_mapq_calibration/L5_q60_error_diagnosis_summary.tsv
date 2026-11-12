@@ -1,0 +1,11 @@
+run	n_wrong_mapq60	mapped_better	tie	truth_better	truth_unaligned	mapped_unaligned	frac_mapped_better	frac_in_sd	frac_same_chrom	median_AS_gap_mapped_better	median_truth_sd_identity
+chm13.bwa_sr	276	232	34	0	10	0	0.841	0.572	0.797	34.0	0.9932
+chm13.mm2_hifi	92	85	0	7	0	0	0.924	0.935	0.696	2309.0	0.9952
+chm13.mm2_lrhq	75	71	0	4	0	0	0.947	0.933	0.667	12406.0	0.9953
+chm13.mm2_ont	69	66	0	3	0	0	0.957	0.928	0.725	12464.5	0.9952
+chm13.mm2_sr	284	201	70	4	9	0	0.708	0.585	0.792	32.0	0.9868
+grch38.bwa_sr	605	501	41	3	59	1	0.828	0.666	0.745	40.0	0.9842
+grch38.mm2_hifi	140	120	1	19	0	0	0.857	0.929	0.529	2111.5	0.9946
+grch38.mm2_lrhq	141	134	0	7	0	0	0.95	0.965	0.496	15097.5	0.9968
+grch38.mm2_ont	136	128	0	8	0	0	0.941	0.963	0.485	15095.5	0.9967
+grch38.mm2_sr	860	659	93	19	89	0	0.766	0.533	0.816	32.0	0.979

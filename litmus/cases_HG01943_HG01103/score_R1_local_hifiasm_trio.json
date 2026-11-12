@@ -1,0 +1,97 @@
+{
+ "test": "R1 assembler: HG01943 chr2 1.09-Mb maternal tandem duplication",
+ "junction_kmers_total": 28,
+ "junction_kmers_in_maternal": 28,
+ "junction_kmers_in_paternal": 0,
+ "junction_context_maternal": {
+  "contig": "h2tg000002l",
+  "contig_length": 44405,
+  "distance_to_contig_end": 20796,
+  "context": "short contig (<100 kb)"
+ },
+ "copy_number_vs_expected": {
+  "maternal": {
+   "bins": 131,
+   "concordant": 34,
+   "fraction": 0.26,
+   "gaps_in_aligned_contigs": 0,
+   "discordant_bins_first10": [
+    [
+     46990001,
+     47000000,
+     2,
+     1
+    ],
+    [
+     47000001,
+     47010000,
+     2,
+     1
+    ],
+    [
+     47010001,
+     47020000,
+     2,
+     1
+    ],
+    [
+     47020001,
+     47030000,
+     2,
+     1
+    ],
+    [
+     47030001,
+     47040000,
+     2,
+     1
+    ],
+    [
+     47040001,
+     47050000,
+     2,
+     1
+    ],
+    [
+     47050001,
+     47060000,
+     2,
+     1
+    ],
+    [
+     47060001,
+     47070000,
+     2,
+     1
+    ],
+    [
+     47070001,
+     47080000,
+     2,
+     1
+    ],
+    [
+     47080001,
+     47090000,
+     2,
+     1
+    ]
+   ]
+  },
+  "paternal": {
+   "bins": 131,
+   "concordant": 131,
+   "fraction": 1.0,
+   "gaps_in_aligned_contigs": 0,
+   "discordant_bins_first10": []
+  }
+ },
+ "trio_inconsistent_contigs": [],
+ "criteria": {
+  "junction_on_maternal_only": true,
+  "copy_number_concordance_ge_0_95": false,
+  "no_gap_joins": true,
+  "trio_consistent": true
+ },
+ "verdict": "FAIL"
+}

@@ -1,0 +1,40 @@
+{
+ "bam_url": "https://1000g-ont.s3.amazonaws.com/Illumina_TruPath_WGS/HG00097/C8_HG00097/C8_HG00097.bam",
+ "bytes_read": 4194304,
+ "header_lines": 3371,
+ "n_sq": 3366,
+ "pg": [
+  "@PG\tID: Hash Table Build\tVN: 00.000.000.4.5.0-2091-g6f03e098-hv-12\tCL: /opt/dragen/4.5.0-2091-g6f03e098/bin/dragen --ht-reference=/staging/tmp/suite_def/illumina-isi07/scratch/dragen_datasets/data/vault/reference_genomes/Hsapiens/hg38/seq/hg38.fa --output-file-prefix=run_dragen-hg38-alt_masked.graph.cnv.hla.methyl_cg.rna_v6-suite10847232-stage1 --events-log-file=/staging/tmp/suite_def/prod/10847232/001_Run_hg38_alt_masked_graph_cnv_hla_methyl_cg_rna_v6/_application_debug/dragen_events.csv --output-directory=/staging/tmp/suite_def/prod/10847232/001_Run_hg38_alt_masked_graph_cnv_hla_methyl_cg_rn",
+  "@PG\tID: DRAGEN HW build\tVN: 10212415",
+  "@PG\tID: DRAGEN SW build\tVN: 13.031.818.4.5.4\tCL: /opt/edico/bin/dragen --cnv-enable-self-normalization true --cnv-filter-duplicate-alignments true --cnv-population-b-allele-vcf 1000G_phase1.snps.high_confidence.vcf.gz --enable-cnv true --enable-duplicate-marking true --enable-map-align true --enable-map-align-output true --enable-metrics-json true --enable-mrjd true --enable-proximity true --enable-sv true --enable-targeted true --enable-variant-caller true --fastq-list fastq-list.csv --fastq-list-sample-id C8_HG00097 --force --intermediate-results-dir /scratch --lic-instance-id-location /opt/"
+ ],
+ "rg_example": "@RG\tID:C8_HG00097_S2_L002_001\tLB:RGLB\tPU:2\tSM:C8_HG00097",
+ "records_parsed": 3000,
+ "records_with_tag": {
+  "RG:Z": 3000,
+  "PS:i": 3000,
+  "pp:i": 3000,
+  "li:B:I": 3000,
+  "gs:i": 2951,
+  "hl:Z": 2951,
+  "hs:i": 2951,
+  "lv:i": 2951,
+  "ps:i": 2939,
+  "sd:f": 2939,
+  "MD:Z": 2939,
+  "NM:i": 2939,
+  "AS:i": 2939,
+  "XS:i": 2936,
+  "MQ:i": 2923,
+  "MC:Z": 2923,
+  "js:i": 2719,
+  "BX:Z": 446,
+  "HP:i": 400,
+  "xq:i": 271,
+  "ga:Z": 81,
+  "SA:Z": 49,
+  "ZS:Z": 4
+ },
+ "python": "3.11.15",
+ "run_utc": "2026-11-11T19:04:28Z"
+}

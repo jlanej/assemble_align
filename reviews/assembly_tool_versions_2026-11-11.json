@@ -1,0 +1,354 @@
+[
+ {
+  "repo": "https://github.com/chhylp123/hifiasm",
+  "tool": "hifiasm",
+  "latest_release_tag": "0.25.0",
+  "release_date": "2025-03-18",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/marbl/verkko",
+  "tool": "verkko",
+  "latest_release_tag": "v2.3.2",
+  "release_date": "2026-03-11",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/AntonBankevich/LJA",
+  "tool": "LJA",
+  "latest_release_tag": "untagged-c539e6b1159980742576",
+  "release_date": "2022-01-20",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/marbl/canu",
+  "tool": "canu",
+  "latest_release_tag": "v2.3",
+  "release_date": "2024-12-17",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/mikolmogorov/Flye",
+  "tool": "Flye",
+  "latest_release_tag": "2.9.6",
+  "release_date": "2025-05-02",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/paoloshasta/shasta",
+  "tool": "shasta",
+  "latest_release_tag": "0.14.0",
+  "release_date": "2025-01-29",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/Nextomics/NextDenovo",
+  "tool": "NextDenovo",
+  "latest_release_tag": "2.5.2",
+  "release_date": "2023-03-17",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/lemene/PECAT",
+  "tool": "PECAT",
+  "latest_release_tag": "v0.0.3",
+  "release_date": "2023-10-03",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/lbcb-sci/raven",
+  "tool": "raven",
+  "latest_release_tag": "1.8.3",
+  "release_date": "2023-09-10",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/ruanjue/wtdbg2",
+  "tool": "wtdbg2",
+  "latest_release_tag": "v2.5",
+  "release_date": "2019-09-13",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/lh3/miniasm",
+  "tool": "miniasm",
+  "latest_release_tag": "v0.3",
+  "release_date": "2018-07-24",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/maickrau/MBG",
+  "tool": "MBG",
+  "latest_release_tag": "v1.0.17",
+  "release_date": "2025-06-12",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/xfengnefx/hifiasm-meta",
+  "tool": "hifiasm-meta",
+  "latest_release_tag": "hamtv0.3.5",
+  "release_date": "2025-11-24",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/GaetanBenoitDev/metaMDBG",
+  "tool": "metaMDBG",
+  "latest_release_tag": "metaMDBG-1.4",
+  "release_date": "2026-05-05",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/bluenote-1577/myloasm",
+  "tool": "myloasm",
+  "latest_release_tag": "v0.7.0",
+  "release_date": "2026-09-09",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/google/deepconsensus",
+  "tool": "deepconsensus",
+  "latest_release_tag": "v1.2.0",
+  "release_date": "2023-03-02",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/nanoporetech/dorado",
+  "tool": "dorado",
+  "latest_release_tag": "v2.1.2",
+  "release_date": "2026-08-26",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/lbcb-sci/herro",
+  "tool": "herro",
+  "latest_release_tag": "v0.1.1",
+  "release_date": "2026-04-13",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/LuoGroup2023/DeChat",
+  "tool": "DeChat",
+  "latest_release_tag": "v1.0.1",
+  "release_date": "2024-05-30",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/google/deeppolisher",
+  "tool": "deeppolisher",
+  "latest_release_tag": "r0.1.0",
+  "release_date": "2024-01-12",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/arangrhie/merfin",
+  "tool": "merfin",
+  "latest_release_tag": "v1.1",
+  "release_date": "2022-12-02",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/nanoporetech/medaka",
+  "tool": "medaka",
+  "latest_release_tag": "v2.2.2",
+  "release_date": "2026-05-20",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/Nextomics/NextPolish",
+  "tool": "NextPolish",
+  "latest_release_tag": "v1.4.1",
+  "release_date": "2022-07-07",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/lh3/yak",
+  "tool": "yak",
+  "latest_release_tag": "v0.1",
+  "release_date": "2020-07-17",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/rlorigro/GFAse",
+  "tool": "GFAse",
+  "latest_release_tag": null,
+  "release_date": null,
+  "note": "no GitHub release objects (HTTP 404 on /releases/latest)",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/treangenlab/methphaser",
+  "tool": "methphaser",
+  "latest_release_tag": "0.0.4",
+  "release_date": "2025-03-05",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/lbcb-sci/GNNome",
+  "tool": "GNNome",
+  "latest_release_tag": "0.4.0",
+  "release_date": "2024-03-08",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/marbl/merqury",
+  "tool": "merqury",
+  "latest_release_tag": "v1.4.1",
+  "release_date": "2026-07-06",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/mobinasri/flagger",
+  "tool": "flagger",
+  "latest_release_tag": "v1.2.1",
+  "release_date": "2026-11-09",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/logsdon-lab/NucFlag",
+  "tool": "NucFlag",
+  "latest_release_tag": "v1.0.2",
+  "release_date": "2026-10-29",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/JiaoLaboratory/CRAQ",
+  "tool": "CRAQ",
+  "latest_release_tag": "v1.10",
+  "release_date": "2025-09-03",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/Maggi-Chen/Inspector",
+  "tool": "Inspector",
+  "latest_release_tag": "v1.3",
+  "release_date": "2024-08-25",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/yeeus/GCI",
+  "tool": "GCI",
+  "latest_release_tag": "v1.1",
+  "release_date": "2026-10-13",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/ablab/quast",
+  "tool": "quast",
+  "latest_release_tag": "quast_5.3.0",
+  "release_date": "2024-11-10",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/huangnengCSU/compleasm",
+  "tool": "compleasm",
+  "latest_release_tag": "v0.2.10",
+  "release_date": "2026-10-07",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/ComparativeGenomicsToolkit/cactus",
+  "tool": "cactus",
+  "latest_release_tag": "v4.0.0",
+  "release_date": "2026-11-09",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/pangenome/pggb",
+  "tool": "pggb",
+  "latest_release_tag": "v0.7.4",
+  "release_date": "2025-04-23",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/pangenome/impg",
+  "tool": "impg",
+  "latest_release_tag": "v0.5.0",
+  "release_date": "2026-07-26",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/waveygang/wfmash",
+  "tool": "wfmash",
+  "latest_release_tag": "v0.24.2",
+  "release_date": "2026-01-30",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/maickrau/ribotin",
+  "tool": "ribotin",
+  "latest_release_tag": "v1.5",
+  "release_date": "2025-07-25",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/lh3/minigraph",
+  "tool": "minigraph",
+  "latest_release_tag": "v0.21",
+  "release_date": "2024-04-21",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/KolmogorovLab/hapdup",
+  "tool": "hapdup",
+  "latest_release_tag": "0.12",
+  "release_date": "2024-05-21",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/marbl/verkko-fillet",
+  "tool": "verkko-fillet",
+  "latest_release_tag": "v0.1.28",
+  "release_date": "2026-10-09",
+  "note": "",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ },
+ {
+  "repo": "https://github.com/human-pangenomics/hpp_production_workflows",
+  "tool": "hpp_production_workflows",
+  "latest_release_tag": null,
+  "release_date": null,
+  "note": "no GitHub release objects (HTTP 404 on /releases/latest)",
+  "checked": "2026-11-11 via api.github.com/repos/<repo>/releases/latest"
+ }
+]

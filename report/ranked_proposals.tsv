@@ -1,0 +1,27 @@
+id	title	area	status	impact	gap	feasibility	demonstrability	pilot_evidence	flagship	sources	litmus_pass	total
+U2	Calibrated MAPQ with paralog-group posteriors (post-processor, then in-aligner)	cross-cutting	prototype	5	3	5	5	2.0	F2	A2; ideas ML1; L5	Real-read transfer: in-SD ECE −50%, SD Mendelian errors −20% at matched calls	20
+U3	Placement-aware assembly QC: positional k-mer copy number, missing-junction recovery, join audit	assembly QC	prototype	5	4	4	5	2.0	F4	S2, S3; cases	Flags 5/5 HG01943 targets; ≤2% false flags on T2T-HG002	20
+U1	Open multi-ancestry placement-truth benchmark on 1kG genomes	cross-cutting	prototype	5	4	5	5	1.0	F1	A1; L5; L4 (region-sliceable reads, slice-aware phasing QC); data protocol	≥1.5x stratum difference between NA19240 and HG002 outside CI, or aligner ranks change (τ < 0.8)	20
+U4	Low-density, strand-symmetric sketching in minimap2 (--mod-oc) plus hash fix	index/sketching	prototype	3	3	5	5	2.0	F6	A10; ideas DS5; L1	Real reads: ≥15% smaller index, ≤0.1-point accuracy loss, equal variant calls	18
+U5	Structural population-aware references for linear mappers (ALT panel + structural personalization)	short-read alignment	implemented-not-adopted	5	3	3	5	1.0	F3	A3, A7; ideas P1; L2/L3	Recovers ≥50% of oracle MAPQ gap and SD bias excess (small-variant personalization, Illumina: 8-31%, 9-11%)	17
+U6	Copy-number-consistent graph walk and haplotype-guarded dual scaffolding in hifiasm	assembly	open	4	5	3	4	1.0	F4	cases	Patched hifiasm holds both HG01943 copies, all 28 junction 31-mers, no unsupported join	17
+U7	Clone-aware assembly output and cell-line provenance labels	assembly	open	4	5	3	4	1.0	F5	S4; cases	Majority clone at ≥15/16 HG01103 forks; ≤1 false non-germline label per control genome	17
+U9	Calibrated multi-evidence assembly reliability tracks (conformal per-base QV)	assembly QC	prototype	4	4	3	4	1.0	F4	S1; ideas P3	AUPRC ≥1.25x best single detector; calibration slope 0.9-1.1	16
+U10	QC provenance carried into pangenome graphs and VCFs	pangenome alignment	open	4	4	4	4	0.0	—	S7; ideas P4	Flagged singleton SV alleles ≥5x more often lack independent read support	16
+U8	Pangenome copy-number-aware mappability track (also an F2 feature)	cross-cutting	open	3	4	4	5	0.0	F2	A4	≥1.5x more error sites captured than Umap at equal genome fraction	16
+U18	Locus-level pangenome genotyping as a standard second pass	pangenome alignment	implemented-not-adopted	4	2	4	4	1.0	—	A6; L4 (population k-mer recruitment 21→24/26 resolved)	Median QV ≥30 with trio excluded; ≥+8 QV in SD loci	15
+U11	PSV/divergence-aware read re-placement in segmental duplications	long-read alignment	prototype	4	3	3	4	1.0	F2/F3	A5; ideas P2; L5	+8 points correctly placed SD reads at ≤0.5% confident-wrong	15
+U12	Trio-phased, QC'd ONT-only diploid assemblies for the 1kG nanopore samples	assembly	implemented-not-adopted	4	2	3	5	1.0	F7	S6; L4; fact-check (247 LRSC hifiasm dual assemblies exist)	On the 12 LRSC samples in HPRC R2: ≥98% of truth at ≥99.9% identity, QV ≥45, ≥5 T2T contigs per haplotype	15
+U13	Pangenome-constrained haplotypes from intermediate-coverage long reads	assembly	prototype	4	4	2	4	1.0	F7	S13; ideas P1; L4 (16x ONT-only 73.5% vs 98.3% at 36x)	QV ≥50 genome-wide, ≥40 in complex loci at 16.9x	15
+U16	Open proximity-aware mapping for Illumina TruPath reads	short-read alignment	open	4	5	2	4	0.0	—	ideas DM3; data	Placement and phasing gains over pair-only mapping on 5 HPRC-overlap TruPath samples	15
+U14	Reference-defect correction by default (FixItFelix/CHM13) for 1kGP pipelines	short-read alignment	implemented-not-adopted	3	2	5	5	0.0	—	A8	Recall ≥95% in the 33 affected genes	15
+U15	Determinism as a tested contract (order, batch, thread and strand invariance)	cross-cutting	implemented-not-adopted	2	3	5	5	0.0	—	A12	<0.01% changed placements after tie-break patch	15
+U19	Paralog-safe correction and homopolymer-length polishing; calibrated long-read base QVs	assembly	implemented-not-adopted	3	3	3	4	1.0	—	S12; ideas ML4; L2/L3	≤0.5% paralog misassignment; ≥90% exact length for homopolymers >20 bp	14
+U22	Locus-level hifiasm-Verkko reconciliation, with ultra-long locus assembly for SD-block genes (SMN)	assembly	implemented-not-adopted	3	3	3	4	1.0	—	S5; L4 (SMN 0/2 under every rule)	≥1,150 of 1,246 HGSVC3 centromeres complete and accurate	14
+U17	Methylation-linked phasing across homozygous stretches in assembly graphs	assembly	open (in assemblers)	3	4	3	4	0.0	—	S10; ideas DM2; closest prior MethPhaser, HapBridge (preprint)	Phase-block NG50 ≥1.5x with ≤0.1-point hamming increase	14
+U20	Learned anchor and chain scoring for long reads	long-read alignment	open	2	5	3	4	0.0	—	ideas ML2; L5 (0-14% search errors)	Fewer confident misplacements at equal speed	14
+U21	Exact chaining and alignment optimality audit	long-read alignment	prototype	2	3	4	4	0.0	—	A9; ideas AL1, AL2	≥10% fewer confident errors in SD/satellite strata	13
+U24	rDNA and acrocentric completion with sized gaps	assembly	prototype	3	3	2	3	1.0	—	S8	≥50% of acrocentric haplotypes T2T (baseline 7.9%)	12
+U25	Graph-guided adaptive finishing with ONT adaptive sampling	cross-cutting	implemented-not-adopted	3	3	3	3	0.0	—	S11	≥80% of gaps closed with ≤40% of UL bases	12
+U23	Graph neural networks trained on T2T truth for residual tangles	assembly	prototype	3	3	2	4	0.0	—	S9; ideas ML5	≥25% more T2T contigs at equal flagged bases	12
+U26	Raw-signal mapping for CPU-only adaptive sampling	long-read alignment	implemented-not-adopted	2	2	3	4	0.0	—	A11; ideas DM1	F1 ≥0.9x basecall arm at ≤50% CPU	11

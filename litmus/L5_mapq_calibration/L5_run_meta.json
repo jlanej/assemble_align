@@ -1,0 +1,495 @@
+[
+ {
+  "run": "chm13.bwa_sr",
+  "n_reads": 1200000,
+  "n_unmapped": 899,
+  "n_no_truth": 18342,
+  "n_eval": 1181658,
+  "features": [
+   "mapq",
+   "AS",
+   "XS",
+   "NM",
+   "n_supp",
+   "n_xa",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "proper",
+   "mate_unmapped",
+   "tlen",
+   "mate_concordant",
+   "mate_mapq",
+   "mate_AS",
+   "mate_XS",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "as_minus_xs",
+   "aln_frac",
+   "nm_rate",
+   "clip_frac",
+   "span_ratio",
+   "mate_as_minus_xs",
+   "log_tlen"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 600
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 525
+   }
+  ]
+ },
+ {
+  "run": "chm13.mm2_hifi",
+  "n_reads": 40095,
+  "n_unmapped": 10,
+  "n_no_truth": 1282,
+  "n_eval": 38813,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "nn",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qlen",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 127
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 119
+   }
+  ]
+ },
+ {
+  "run": "chm13.mm2_lrhq",
+  "n_reads": 24005,
+  "n_unmapped": 8,
+  "n_no_truth": 1264,
+  "n_eval": 22741,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "nn",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qlen",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 104
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 139
+   }
+  ]
+ },
+ {
+  "run": "chm13.mm2_ont",
+  "n_reads": 24005,
+  "n_unmapped": 8,
+  "n_no_truth": 1264,
+  "n_eval": 22741,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "nn",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qlen",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 123
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 114
+   }
+  ]
+ },
+ {
+  "run": "chm13.mm2_sr",
+  "n_reads": 1200000,
+  "n_unmapped": 2753,
+  "n_no_truth": 18342,
+  "n_eval": 1180566,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "proper",
+   "mate_unmapped",
+   "tlen",
+   "mate_concordant",
+   "mate_mapq",
+   "mate_AS",
+   "mate_s2",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio",
+   "log_tlen"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 600
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 600
+   }
+  ]
+ },
+ {
+  "run": "grch38.bwa_sr",
+  "n_reads": 1200000,
+  "n_unmapped": 1049,
+  "n_no_truth": 36854,
+  "n_eval": 1163145,
+  "features": [
+   "mapq",
+   "AS",
+   "XS",
+   "NM",
+   "n_supp",
+   "n_xa",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "proper",
+   "mate_unmapped",
+   "tlen",
+   "mate_concordant",
+   "mate_mapq",
+   "mate_AS",
+   "mate_XS",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "as_minus_xs",
+   "aln_frac",
+   "nm_rate",
+   "clip_frac",
+   "span_ratio",
+   "mate_as_minus_xs",
+   "log_tlen"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 371
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 596
+   }
+  ]
+ },
+ {
+  "run": "grch38.mm2_hifi",
+  "n_reads": 40095,
+  "n_unmapped": 300,
+  "n_no_truth": 2958,
+  "n_eval": 37114,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "nn",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qlen",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 142
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 227
+   }
+  ]
+ },
+ {
+  "run": "grch38.mm2_lrhq",
+  "n_reads": 24005,
+  "n_unmapped": 9,
+  "n_no_truth": 2354,
+  "n_eval": 21651,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "nn",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qlen",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 118
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 136
+   }
+  ]
+ },
+ {
+  "run": "grch38.mm2_ont",
+  "n_reads": 24005,
+  "n_unmapped": 8,
+  "n_no_truth": 2354,
+  "n_eval": 21651,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "nn",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qlen",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 128
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 113
+   }
+  ]
+ },
+ {
+  "run": "grch38.mm2_sr",
+  "n_reads": 1200000,
+  "n_unmapped": 1688,
+  "n_no_truth": 36854,
+  "n_eval": 1162960,
+  "features": [
+   "mapq",
+   "AS",
+   "ms",
+   "nn",
+   "cm",
+   "s1",
+   "s2",
+   "rl",
+   "de",
+   "NM",
+   "n_sec",
+   "n_supp",
+   "n_sa",
+   "clip_l",
+   "clip_r",
+   "qalen",
+   "rspan",
+   "is_supp",
+   "proper",
+   "mate_unmapped",
+   "tlen",
+   "mate_concordant",
+   "mate_mapq",
+   "mate_AS",
+   "mate_s2",
+   "map_sdfrac",
+   "map_sdid",
+   "n_nonsec",
+   "s2_over_s1",
+   "sec_as_rel",
+   "aln_frac",
+   "nm_rate",
+   "rl_frac",
+   "clip_frac",
+   "span_ratio",
+   "log_tlen"
+  ],
+  "gbm": [
+   {
+    "fold_test": 0,
+    "n_iter": 600
+   },
+   {
+    "fold_test": 1,
+    "n_iter": 600
+   }
+  ]
+ }
+]

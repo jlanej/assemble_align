@@ -1,0 +1,246 @@
+{
+ "test": "R3 assembler: HG01103 sub-clonal chr2/chr14 chromothripsis (16 junctions)",
+ "per_junction": {
+  "hap1": {
+   "J1": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000172l",
+    "contig_length": 42428,
+    "distance_to_contig_end": 17576,
+    "context": "short contig (<100 kb)"
+   },
+   "J2": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000204l",
+    "contig_length": 68547,
+    "distance_to_contig_end": 29007,
+    "context": "short contig (<100 kb)"
+   },
+   "J3": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000204l",
+    "contig_length": 68547,
+    "distance_to_contig_end": 27195,
+    "context": "short contig (<100 kb)"
+   },
+   "J4": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000007l",
+    "contig_length": 11931344,
+    "distance_to_contig_end": 20726,
+    "context": "contig end (<100 kb)"
+   },
+   "J5": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000025l",
+    "contig_length": 22128734,
+    "distance_to_contig_end": 18524,
+    "context": "contig end (<100 kb)"
+   },
+   "J6": {
+    "kmers_found": 25,
+    "kmers": 25,
+    "present": true,
+    "contig": "h1tg000033l",
+    "contig_length": 57464231,
+    "distance_to_contig_end": 20746880,
+    "context": "internal"
+   },
+   "J7": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000025l",
+    "contig_length": 22128734,
+    "distance_to_contig_end": 4791538,
+    "context": "internal"
+   },
+   "J8": {
+    "kmers_found": 25,
+    "kmers": 25,
+    "present": true,
+    "contig": "h1tg000025l",
+    "contig_length": 22128734,
+    "distance_to_contig_end": 4137898,
+    "context": "internal"
+   },
+   "J9": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000033l",
+    "contig_length": 57464231,
+    "distance_to_contig_end": 26345980,
+    "context": "internal"
+   },
+   "J10": {
+    "kmers_found": 22,
+    "kmers": 22,
+    "present": true,
+    "contig": "h1tg000025l",
+    "contig_length": 22128734,
+    "distance_to_contig_end": 1472462,
+    "context": "internal"
+   },
+   "J11": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000007l",
+    "contig_length": 11931344,
+    "distance_to_contig_end": 63651,
+    "context": "contig end (<100 kb)"
+   },
+   "J12": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000159l",
+    "contig_length": 41909,
+    "distance_to_contig_end": 18818,
+    "context": "short contig (<100 kb)"
+   },
+   "J13": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000116l",
+    "contig_length": 1872875,
+    "distance_to_contig_end": 17824,
+    "context": "contig end (<100 kb)"
+   },
+   "J14": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000031l",
+    "contig_length": 3203775,
+    "distance_to_contig_end": 21480,
+    "context": "contig end (<100 kb)"
+   },
+   "J15": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000116l",
+    "contig_length": 1872875,
+    "distance_to_contig_end": 20849,
+    "context": "contig end (<100 kb)"
+   },
+   "J16": {
+    "kmers_found": 26,
+    "kmers": 26,
+    "present": true,
+    "contig": "h1tg000033l",
+    "contig_length": 57464231,
+    "distance_to_contig_end": 20406,
+    "context": "contig end (<100 kb)"
+   }
+  },
+  "hap2": {
+   "J1": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J2": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J3": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J4": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J5": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J6": {
+    "kmers_found": 0,
+    "kmers": 25,
+    "present": false
+   },
+   "J7": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J8": {
+    "kmers_found": 0,
+    "kmers": 25,
+    "present": false
+   },
+   "J9": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J10": {
+    "kmers_found": 0,
+    "kmers": 22,
+    "present": false
+   },
+   "J11": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J12": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J13": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J14": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J15": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   },
+   "J16": {
+    "kmers_found": 0,
+    "kmers": 26,
+    "present": false
+   }
+  }
+ },
+ "summary": {
+  "junctions_hap1": 16,
+  "junctions_hap2": 0,
+  "junctions_any": 16,
+  "derivative_haplotype": "hap1",
+  "junctions_on_one_haplotype": 16,
+  "junctions_internal_to_contigs": 5
+ },
+ "criteria": {
+  "all_16_on_one_haplotype": true,
+  "threaded_ge_15_internal": false
+ },
+ "verdict": "FAIL"
+}

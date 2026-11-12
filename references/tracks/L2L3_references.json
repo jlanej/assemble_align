@@ -1,0 +1,252 @@
+[
+ {
+  "doi": "10.1016/j.cell.2022.08.004",
+  "ok": true,
+  "year": 2022,
+  "authors": "Byrska-Bishop; Evani; Zhao et al.",
+  "title": "High-coverage whole-genome sequencing of the expanded 1000 Genomes Project cohort including 602 trios",
+  "journal": "Cell",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/nmeth.3582",
+  "ok": true,
+  "year": 2015,
+  "authors": "van de Geijn; McVicker; Gilad et al.",
+  "title": "WASP: allele-specific software for robust molecular quantitative trait locus discovery",
+  "journal": "Nature Methods",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41467-024-53260-y",
+  "ok": true,
+  "year": 2024,
+  "authors": "Dwarshuis; Kalra; McDaniel et al.",
+  "title": "The GIAB genomic stratifications resource for human reference genomes",
+  "journal": "Nature Communications",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41586-023-05896-x",
+  "ok": true,
+  "year": 2023,
+  "authors": "Liao; Asri; Ebler et al.",
+  "title": "A draft human pangenome reference",
+  "journal": "Nature",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41587-019-0217-9",
+  "ok": true,
+  "year": 2019,
+  "authors": "Wenger; Peluso; Rowell et al.",
+  "title": "Accurate circular consensus long-read sequencing improves variant detection and assembly of a human genome",
+  "journal": "Nature Biotechnology",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41587-022-01435-7",
+  "ok": true,
+  "year": 2022,
+  "authors": "Baid; Cook; Shafin et al.",
+  "title": "DeepConsensus improves the accuracy of sequences with a gap-aware sequence transformer",
+  "journal": "Nature Biotechnology",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41592-018-0054-7",
+  "ok": true,
+  "year": 2018,
+  "authors": "Li; Bloom; Farjoun et al.",
+  "title": "A synthetic-diploid benchmark for accurate variant-calling evaluation",
+  "journal": "Nature Methods",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41592-020-01056-5",
+  "ok": true,
+  "year": 2021,
+  "authors": "Cheng; Concepcion; Feng et al.",
+  "title": "Haplotype-resolved de novo assembly using phased assembly graphs with hifiasm",
+  "journal": "Nature Methods",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41592-022-01539-7",
+  "ok": true,
+  "year": 2022,
+  "authors": "Sereika; Kirkegaard; Karst et al.",
+  "title": "Oxford Nanopore R10.4 long-read sequencing enables the generation of near-finished bacterial genomes from pure cultures and metagenomes without short-read or reference polishing",
+  "journal": "Nature Methods",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41592-023-01993-x",
+  "ok": true,
+  "year": 2023,
+  "authors": "Kolmogorov; Billingsley; Mastoras et al.",
+  "title": "Scalable Nanopore sequencing of human genomes provides a comprehensive view of haplotype-resolved variation and methylation",
+  "journal": "Nature Methods",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1038/s41592-024-02407-2",
+  "ok": true,
+  "year": 2024,
+  "authors": "Sir\u00e9n; Eskandar; Ungaro et al.",
+  "title": "Personalized pangenome references",
+  "journal": "Nature Methods",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/btp579",
+  "ok": true,
+  "year": 2009,
+  "authors": "Degner; Marioni; Pai et al.",
+  "title": "Effect of read-mapping biases on detecting allele-specific expression from RNA-sequencing data",
+  "journal": "Bioinformatics",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/bioinformatics/bty191",
+  "ok": true,
+  "year": 2018,
+  "authors": "Li",
+  "title": "Minimap2: pairwise alignment for nucleotide sequences",
+  "journal": "Bioinformatics",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1093/gigascience/giab008",
+  "ok": true,
+  "year": 2021,
+  "authors": "Danecek; Bonfield; Liddle et al.",
+  "title": "Twelve years of SAMtools and BCFtools",
+  "journal": "GigaScience",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/2025.06.05.657102",
+  "ok": true,
+  "year": 2025,
+  "authors": "Asri; Chang; Mier et al.",
+  "title": "Pangenome-aware DeepVariant",
+  "journal": "bioRxiv (preprint)",
+  "preprint": true,
+  "retracted": false
+ },
+ {
+  "doi": "10.1101/2025.09.29.678807",
+  "ok": true,
+  "year": 2025,
+  "authors": "Chang; Novak; Eizenga et al.",
+  "title": "Rapid, accurate long- and short-read mapping to large pangenome graphs with vg Giraffe",
+  "journal": "bioRxiv (preprint)",
+  "preprint": true,
+  "retracted": false
+ },
+ {
+  "doi": "10.1126/science.abg8871",
+  "ok": true,
+  "year": 2021,
+  "authors": "Sir\u00e9n; Monlong; Chang et al.",
+  "title": "Pangenomics enables genotyping of known structural variants in 5202 diverse genomes",
+  "journal": "Science",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1126/science.abj6965",
+  "ok": true,
+  "year": 2022,
+  "authors": "Vollger; Guitart; Dishuck et al.",
+  "title": "Segmental duplications and their variation in a complete human genome",
+  "journal": "Science",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1126/science.abj6987",
+  "ok": true,
+  "year": 2022,
+  "authors": "Nurk; Koren; Rhie et al.",
+  "title": "The complete sequence of a human genome",
+  "journal": "Science",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1126/science.abl3533",
+  "ok": true,
+  "year": 2022,
+  "authors": "Aganezov; Yan; Soto et al.",
+  "title": "A complete reference genome improves analysis of human genetic variation",
+  "journal": "Science",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1186/s13059-020-02038-8",
+  "ok": true,
+  "year": 2020,
+  "authors": "Groza; Kwan; Soranzo et al.",
+  "title": "Personalized and graph genomes reveal missing signal in epigenomic data",
+  "journal": "Genome Biology",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1186/s13059-020-02134-9",
+  "ok": true,
+  "year": 2020,
+  "authors": "Rhie; Walenz; Koren et al.",
+  "title": "Merqury: reference-free quality, completeness, and phasing assessment for genome assemblies",
+  "journal": "Genome Biology",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1186/s13059-020-02229-3",
+  "ok": true,
+  "year": 2021,
+  "authors": "Chen; Solomon; Mun et al.",
+  "title": "Reference flow: reducing reference bias using multiple population genomes",
+  "journal": "Genome Biology",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.1186/s13059-024-03240-8",
+  "ok": true,
+  "year": 2024,
+  "authors": "Lin; Iyer; Chen et al.",
+  "title": "Measuring, visualizing, and diagnosing reference bias with biastools",
+  "journal": "Genome Biology",
+  "preprint": false,
+  "retracted": false
+ },
+ {
+  "doi": "10.64898/2026.07.21.739710",
+  "ok": true,
+  "year": 2026,
+  "authors": "Lucas; Hebbar; Liao et al.",
+  "title": "HPRC2: A human pangenome reference with near-complete coverage of common genetic variation",
+  "journal": "bioRxiv (preprint)",
+  "preprint": true,
+  "retracted": false
+ }
+]

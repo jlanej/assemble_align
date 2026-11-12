@@ -1,0 +1,5 @@
+preset	variant	split	idx_real_s	idx_cpu_s	idx_rss_gb	mmi_bytes	map_real_s	map_cpu_s	map_rss_gb	mapped	top_mapq	mapped_top	err_top	mapped_q1	err_q1	mapped_all	err_all
+map-hifi	stock	1G	101.617	78.763	7.699	5993367034	38.809	31.369	3.318	2942	60	2847	0.000000000	2907	0.004815961	2942	0.014615908
+map-hifi	modoc	1G	199.530	151.280	5.193	5141230810	42.831	32.094	3.052	2942	60	2880	0.000347222	2902	0.003101309	2942	0.014615908
+map-ont	stock	500M	195.114	116.913	7.178	8825362630	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA
+map-ont	modoc	500M	196.421	153.419	8.711	6877839462	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA	NA

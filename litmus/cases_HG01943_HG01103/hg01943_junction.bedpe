@@ -1,0 +1,2 @@
+#chrom1	start1	end1	chrom2	start2	end2	name	score	strand1	strand2	kind	side1	side2	derivative	hifi_reads	sr_split_reads	sr_fragments	microhomology_bp	inserted	assembly_hap1
+chr2	48057040	48057041	chr2	46970724	46970725	J	31	+	-	tandem_duplication	L	R	maternal_dup	31	6	31	.	.	-

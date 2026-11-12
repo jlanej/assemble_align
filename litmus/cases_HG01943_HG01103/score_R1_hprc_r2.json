@@ -1,0 +1,160 @@
+{
+ "test": "R1 assembler: HG01943 chr2 1.09-Mb maternal tandem duplication",
+ "junction_kmers_total": 28,
+ "junction_kmers_in_maternal": 0,
+ "junction_kmers_in_paternal": 0,
+ "junction_context_maternal": null,
+ "copy_number_vs_expected": {
+  "maternal": {
+   "bins": 131,
+   "concordant": 47,
+   "fraction": 0.359,
+   "gaps_in_aligned_contigs": 0,
+   "discordant_bins_first10": [
+    [
+     46980001,
+     46990000,
+     2,
+     1
+    ],
+    [
+     46990001,
+     47000000,
+     2,
+     1
+    ],
+    [
+     47000001,
+     47010000,
+     2,
+     1
+    ],
+    [
+     47010001,
+     47020000,
+     2,
+     1
+    ],
+    [
+     47020001,
+     47030000,
+     2,
+     1
+    ],
+    [
+     47030001,
+     47040000,
+     2,
+     1
+    ],
+    [
+     47040001,
+     47050000,
+     2,
+     1
+    ],
+    [
+     47050001,
+     47060000,
+     2,
+     1
+    ],
+    [
+     47060001,
+     47070000,
+     2,
+     1
+    ],
+    [
+     47070001,
+     47080000,
+     2,
+     1
+    ]
+   ]
+  },
+  "paternal": {
+   "bins": 131,
+   "concordant": 65,
+   "fraction": 0.496,
+   "gaps_in_aligned_contigs": 4,
+   "discordant_bins_first10": [
+    [
+     46980001,
+     46990000,
+     1,
+     2
+    ],
+    [
+     46990001,
+     47000000,
+     1,
+     2
+    ],
+    [
+     47000001,
+     47010000,
+     1,
+     2
+    ],
+    [
+     47010001,
+     47020000,
+     1,
+     2
+    ],
+    [
+     47020001,
+     47030000,
+     1,
+     2
+    ],
+    [
+     47030001,
+     47040000,
+     1,
+     2
+    ],
+    [
+     47040001,
+     47050000,
+     1,
+     2
+    ],
+    [
+     47050001,
+     47060000,
+     1,
+     2
+    ],
+    [
+     47060001,
+     47070000,
+     1,
+     2
+    ],
+    [
+     47070001,
+     47080000,
+     1,
+     2
+    ]
+   ]
+  }
+ },
+ "trio_inconsistent_contigs": [
+  {
+   "haplotype": "paternal",
+   "contig": "HG01943#1#CM089354.1:46450001-49420000__piece1",
+   "maternal_hapmers": 5638,
+   "paternal_hapmers": 0
+  }
+ ],
+ "criteria": {
+  "junction_on_maternal_only": false,
+  "copy_number_concordance_ge_0_95": false,
+  "no_gap_joins": false,
+  "trio_consistent": false
+ },
+ "verdict": "FAIL"
+}

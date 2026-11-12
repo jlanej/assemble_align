@@ -1,0 +1,53 @@
+id	severity	resolution
+FC01	mis-scoped	Applied as suggested.
+FC02	mis-scoped	Applied as suggested.
+FC03	mis-scoped	Applied as suggested.
+FC04	mis-scoped	Applied as suggested.
+FC05	error	Applied as suggested.
+FC06	mis-scoped	Applied as suggested.
+FC07	mis-scoped	Applied as suggested.
+FC08	error	Applied as suggested.
+FC09	error	Applied as suggested.
+FC10	mis-scoped	Applied as suggested.
+FC11	unsupported	Applied, keeping the documented L1 reason (pbsim3 HiFi mode needs PacBio ccs, unavailable on osx-arm64).
+FC12	mis-scoped	Applied, updated for L4 (3-8 h per pilot where recorded; L4 7.8 h).
+FC13	unsupported	Recounted after the L4 chapter was inserted: the pilots contributed 24 proposals (L1 5, L2/L3 4, L4 6, L5 4, case studies 5).
+FC14	mis-scoped	Applied as suggested.
+FC15	mis-scoped	Applied as suggested.
+FC16	unsupported	Applied as suggested.
+FC17	error	Applied as suggested.
+FC18	mis-scoped	Applied as suggested.
+FC19	mis-scoped	Applied as suggested.
+FC20	mis-scoped	Applied as suggested.
+FC21	error	Applied as suggested.
+FC22	style	Applied as suggested.
+FC23	mis-scoped	Applied as suggested.
+FC24	mis-scoped	Applied as suggested.
+FC25	mis-scoped	Applied as suggested.
+FC26	mis-scoped	Applied as suggested.
+FC27	mis-scoped	Applied as suggested.
+FC28	mis-scoped	Applied as suggested.
+FC29	unsupported	Applied as suggested.
+FC30	unsupported	Applied as suggested.
+FC31	style	Applied as suggested.
+FC32	error	Applied as suggested.
+FC33	unsupported	Applied as suggested.
+FC34	stale	Applied in Table 2.1, the executive summary, F7, U12 (gap 3 → 2) and the chapter 8 cohort paragraph and P6.
+FC35	mis-scoped	Part I now names both cohorts (1kG-ONT Vienna; 1kGP-LRSC ONT); Part II carries a terminology note.
+FC36	stale	Applied: U17 adoption gap 5 → 4; HapBridge (preprint) and MethPhaser cited as closest prior work.
+FC37	mis-scoped	Applied as suggested.
+FC38	style	Applied as suggested.
+FC39	style	Applied as suggested.
+FC40	error	Caption relabelled (figure not re-plotted); the L1 README text was corrected the same way.
+FC41	error	Applied as suggested.
+FC42	error	Applied as suggested.
+FC43	error	Applied as suggested.
+FC44	style	Published versions cited throughout; the preprint provenance of the quoted numbers is stated once (Part II note; assembly-review header).
+FC45	style	Chapter 10 tests renamed LT1-LT6 and AT1-AT5 (T1-T6 would clash with the T0-T3 truth tiers); ideas IDs explained in a Part II note rather than renamed.
+FC46	style	No change needed after the L4 chapter was inserted as chapter 14.
+FC47	style	No change needed after the L4 chapter was inserted.
+FC48	style	Pending markers removed: U12, U13 now carry L4 evidence.
+FC49	unsupported	F7 section added, with the L4 results.
+FC50	style	Evidence TSV rows relabelled ('agrees in kind; values differ'); case README reworded ('no junction read').
+FC51	unsupported	Applied as suggested.
+FC52	unsupported	Applied as suggested.

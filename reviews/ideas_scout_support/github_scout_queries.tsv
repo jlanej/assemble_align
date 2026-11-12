@@ -1,0 +1,75 @@
+mapq	mapping quality prediction machine learning
+mapq	qtip mapping quality
+learned_index	BWA-MEME learned index
+learned_index	learned index suffix array genome
+learned_seed	DeepMinimizer
+learned_chain	chaining score long read alignment learning
+transformer_corr	deepconsensus
+transformer_corr	herro nanopore read correction
+transformer_corr	deeppolisher
+gnn_asm	GNNome
+gnn_asm	graph neural network genome assembly
+rl_asm	reinforcement learning genome assembly
+glm	evo2 genome language model
+glm	caduceus DNA
+glm	nucleotide-transformer
+glm	dna sequence alignment transformer embedding
+li_stephens	haplotype-aware chaining pangenome
+li_stephens	li stephens haplotype copying model
+li_stephens	locityper
+li_stephens	pangenie genotyping
+multimap	parascopy paralog
+multimap	paraphase paralog
+asm_qc	flagger assembly
+asm_qc	nucflag
+asm_qc	conformal prediction genomics
+asm_qc	CRAQ assembly quality
+rindex	movi pangenome index
+rindex	ropebwt3
+rindex	b-move bidirectional
+rindex	spumoni
+rindex	mumemto
+dbg	ggcat de bruijn
+dbg	cuttlefish de bruijn graph
+dbg	sshash k-mer dictionary
+gbwt	gbwt haplotype
+mdbg	mapquik
+mdbg	rust-mdbg
+align_exact	astar-pairwise-aligner
+align_exact	WFA2-lib wavefront
+align_exact	block aligner
+chain	chainx colinear chaining
+chain	minichain
+diffdp	differentiable smith-waterman
+diffdp	SMURF multiple sequence alignment differentiable
+fracmin	sourmash
+fracmin	sylph metagenome
+embed	NeuroSEED
+embed	tensor sketch sequence
+embed	CGK embedding edit distance
+lsh	BLEND fuzzy seed matches
+lsh	MashMap
+seed	strobealign
+seed	subseqhash
+seed	mod-minimizer
+seed	greedymini minimizer
+raw	rawhash nanopore
+raw	uncalled nanopore
+raw	sigmoni
+raw	rawsamble
+methphase	methphaser
+proximity	linked-read alignment barcode
+proximity	illumina constellation
+flow	ultima genomics
+strandseq	graphasing
+strandseq	strand-seq assembly phasing
+hic	yahs scaffolding
+hic	pore-c
+fiber	fibertools
+gpu	minimap2 gpu
+gpu	wfa gpu
+gpu	metal apple silicon sequence alignment
+gpu	minimap2 arm neon
+stream	readfish
+cloud	htsget
+pgdv	pangenome-aware deepvariant

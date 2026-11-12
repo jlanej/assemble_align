@@ -1,0 +1,31 @@
+kind	item	value
+tool	hifiasm	0.25.0-r726
+tool	minimap2	2.31-r1302
+tool	samtools	1.25
+tool	yak	0.1-r69-dirty
+tool	KMC	ver. 3.2.4
+tool	seqkit	seqkit v2.14.0
+tool	python	3.11.18
+source_md5	s3://human-pangenomics/working/HPRC_PLUS/NA19240/analysis/aligned_reads/hifi/CHM13v1Y/NA19240_aligned_CHM13v1Y_winnowmap.sorted.bam	adac968520cae2ee9a3ed14f89840aa5
+source_md5	s3://human-pangenomics/working/HPRC_PLUS/NA19240/analysis/aligned_reads/hifi/GRCh38/NA19240_aligned_GRCh38_winnowmap.sorted.bam	8bade1c0e4d4046fc3ace8b5d27d5830
+source_md5	s3://human-pangenomics/working/HPRC/HG01258/analysis/aligned_reads/hifi/CHM13v1Y/HG01258_aligned_CHM13v1Y_winnowmap.sorted.bam	cc8d90598b8fe4f353d87f30ff605c8d
+source_md5	s3://human-pangenomics/working/HPRC/HG01258/analysis/aligned_reads/hifi/GRCh38/HG01258_aligned_GRCh38_winnowmap.sorted.bam	bba3ac4d54f6a564502ac568a6266533
+source_md5	s3://human-pangenomics/working/HPRC_PLUS/NA19240/assemblies/release2/NA19240_pat_hprc_r2_v1.0.1.fa.gz	2cd406c57e30c7b5a911b276bb255b1e
+source_md5	s3://human-pangenomics/working/HPRC_PLUS/NA19240/assemblies/release2/NA19240_mat_hprc_r2_v1.0.1.fa.gz	b9ed3f11aeb037a0d83f23fb93f8d1fc
+source_md5	s3://human-pangenomics/working/HPRC/HG01258/assemblies/release2/HG01258_pat_hprc_r2_v1.0.1.fa.gz	b29e861a64c2561fb4d0ce40a0ffc60c
+source_md5	s3://human-pangenomics/working/HPRC/HG01258/assemblies/release2/HG01258_mat_hprc_r2_v1.0.1.fa.gz	a805595f030e395be2eb0003925ba49f
+source_md5	s3://human-pangenomics/working/HPRC_PLUS/NA19240/raw_data/Illumina/child/NA19240.final.cram	e6d4b9e1e19d1f4d4f5de6a0d16d9c10
+source_md5	s3://human-pangenomics/working/HPRC/HG01258/raw_data/Illumina/child/HG01258.final.cram	2bcf425fdb960c0a94c518d99945393c
+source_md5	https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239453/NA19238.final.cram	85b877e013035fa239e614004d74c98d
+source_md5	https://ftp.sra.ebi.ac.uk/vol1/run/ERR323/ERR3239454/NA19239.final.cram	155b2fdac4b19b6ca06abdcaa9d9d721
+source_md5	https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241866/HG01256.final.cram	68c38e947bcefb66bc760fe56ec91d22
+source_md5	https://ftp.sra.ebi.ac.uk/vol1/run/ERR324/ERR3241867/HG01257.final.cram	f972fec5e1561216fe213967fff3d1dc
+source_md5	https://1000g-ont.s3.amazonaws.com/PROCESSED_DATA/ALIGNED_TO_CHM13/MINIMAP_ALIGNED_BAMS_2026/HG01258-ONT-WGS_R10-LSK114.dorado081.sup.5mCG-5hmCG.500.phased.bam	(no md5 published; .bai md5 8782a4a2fd5ce5d8c7de0c9e63e4704c)
+source_md5	https://hgdownload.soe.ucsc.edu/goldenPath/hg38/chromosomes/chr20.fa.gz (decompressed hg38_chr20.fa)	cbfd7d9a7892061d9347a3d101298141
+panel	HPRC r2 samples (40 haplotypes)	HG02615,HG03130,NA20129,NA21309,HG00733,HG01934,HG01978,NA19682,HG00609,HG02040,HG02056,HG02178,HG00099,HG00140,HG00290,HG01786,HG02698,HG04199,NA20850,NA20905
+measured	S3 single-connection throughput (2026-11-11)	0.7-6.9 MB/s (4 parallel connections: 1.3 MB/s aggregate)
+measured	EBI FTP / ENA throughput (2026-11-11)	0.17-0.85 MB/s
+measured	NA19240 HiFi chr20 slice (CHM13 BAM, 2.08 GB)	1715 s
+measured	HG01258 HiFi chr20 slice (CHM13 BAM, 1.99 GB)	1706 s
+measured	HG01258 ONT R10 chr20 slice (CHM13 BAM, 1.88 GB)	539 s
+measured	locus pool fetch NA19240 / HG01258 (27.7 Mb + unmapped)	543 s / 592 s

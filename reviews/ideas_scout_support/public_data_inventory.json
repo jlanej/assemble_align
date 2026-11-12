@@ -1,0 +1,294 @@
+{
+ "generated_utc": "2026-11-11T19:08:06Z",
+ "trupath": {
+  "bucket_prefix": "https://1000g-ont.s3.amazonaws.com/Illumina_TruPath_WGS/",
+  "sample_folders": [
+   "GM19238",
+   "GM20847",
+   "GM24631",
+   "GM24694",
+   "GM24695",
+   "HG00097",
+   "HG00109",
+   "HG00136",
+   "HG00142",
+   "HG00143",
+   "HG00171",
+   "HG00253",
+   "HG00320",
+   "HG00410",
+   "HG00513",
+   "HG00553",
+   "HG00663",
+   "HG00675",
+   "HG01170",
+   "HG01258",
+   "HG01323",
+   "HG01615",
+   "HG01795",
+   "HG01811",
+   "HG01857",
+   "HG01893",
+   "HG02186",
+   "HG02187",
+   "HG02220",
+   "HG02282",
+   "HG02389",
+   "HG02462",
+   "HG02570",
+   "HG02810",
+   "HG03009",
+   "HG03018",
+   "HG03066",
+   "HG03123",
+   "HG03538",
+   "HG03583",
+   "HG03643",
+   "HG03864",
+   "HG03971"
+  ],
+  "n_sample_folders": 43,
+  "also_in_hprc_r2_and_1kg_ont": [
+   "HG00097",
+   "HG00253",
+   "HG00320",
+   "HG01258",
+   "HG03583"
+  ],
+  "nyc_trio_member": "GM19238 (NA19238, mother of NA19240)",
+  "example_bam": {
+   "url": "https://1000g-ont.s3.amazonaws.com/Illumina_TruPath_WGS/HG00097/C8_HG00097/C8_HG00097.bam",
+   "bytes": 195578496006
+  },
+  "mrjd_bed": {
+   "url": "https://1000g-ont.s3.amazonaws.com/Illumina_TruPath_WGS/HG00097/MRJD_regions_38.bed.gz",
+   "regions": 19,
+   "bp": 405321
+  }
+ },
+ "pod5_for_overlap_samples": [
+  "GM18879_R9",
+  "HG00097_R10",
+  "HG00126_R9",
+  "HG00232_R9",
+  "HG00253_R10",
+  "HG00320_R10",
+  "HG00706_R9",
+  "HG01258_R10",
+  "HG02615_R10_UL",
+  "HG02615_R9",
+  "HG03369_R10_UL",
+  "HG03583_R10",
+  "HG04157_R9",
+  "GM19238_R10"
+ ],
+ "hprc_r2_sample_summary_subset": {
+  "HG00097": {
+   "population_abbreviation": "GBR",
+   "project": "HPRC",
+   "coverage_hifi": "63.70",
+   "deepconsensus_coverage_hifi": "0.00",
+   "coverage_mm_hifi": "63.70",
+   "production": "UW_HPRC_HiFi_Y4_AND_Y3_Topoff",
+   "n50_hifi": "20460.84",
+   "coverage_hic": "174.78",
+   "coverage_ill": "36.84",
+   "total_reads_kinnex_millions": "12.42",
+   "coverage_ont": "57.09",
+   "coverage_100kb_ont": "25.34",
+   "coverage_100kb_R1041": "25.34",
+   "coverage_100kb_R941": "0.00",
+   "sequencing_chemistry_ont": "R1041",
+   "read_N50_ont": "89210.35",
+   "meth_wg_cov": "63.70"
+  },
+  "HG00253": {
+   "population_abbreviation": "GBR",
+   "project": "HPRC",
+   "coverage_hifi": "64.90",
+   "deepconsensus_coverage_hifi": "0.00",
+   "coverage_mm_hifi": "64.90",
+   "production": "RU_Y4",
+   "n50_hifi": "20564.24",
+   "coverage_hic": "64.34",
+   "coverage_ill": "39.75",
+   "total_reads_kinnex_millions": "12.53",
+   "coverage_ont": "79.40",
+   "coverage_100kb_ont": "32.86",
+   "coverage_100kb_R1041": "32.86",
+   "coverage_100kb_R941": "0.00",
+   "sequencing_chemistry_ont": "R1041",
+   "read_N50_ont": "84792.55",
+   "meth_wg_cov": "64.90"
+  },
+  "HG00320": {
+   "population_abbreviation": "FIN",
+   "project": "HPRC",
+   "coverage_hifi": "68.30",
+   "deepconsensus_coverage_hifi": "0.00",
+   "coverage_mm_hifi": "68.30",
+   "production": "WUSTL_HPRC_HiFi_Year4",
+   "n50_hifi": "19354.14",
+   "coverage_hic": "75.32",
+   "coverage_ill": "42.72",
+   "total_reads_kinnex_millions": "15.67",
+   "coverage_ont": "77.44",
+   "coverage_100kb_ont": "31.63",
+   "coverage_100kb_R1041": "31.63",
+   "coverage_100kb_R941": "0.00",
+   "sequencing_chemistry_ont": "R1041",
+   "read_N50_ont": "84108.38",
+   "meth_wg_cov": "68.30"
+  },
+  "HG01258": {
+   "population_abbreviation": "CLM",
+   "project": "HPRC",
+   "coverage_hifi": "59.04",
+   "deepconsensus_coverage_hifi": "42.84",
+   "coverage_mm_hifi": "16.20",
+   "production": "UW_HPRC_HiFi_Y4_AND_Y3_Topoff",
+   "n50_hifi": "20406.09",
+   "coverage_hic": "73.88",
+   "coverage_ill": "37.17",
+   "total_reads_kinnex_millions": "17.47",
+   "coverage_ont": "49.44",
+   "coverage_100kb_ont": "24.00",
+   "coverage_100kb_R1041": "0.00",
+   "coverage_100kb_R941": "24.00",
+   "sequencing_chemistry_ont": "R941",
+   "read_N50_ont": "97268.06",
+   "meth_wg_cov": "53.40"
+  },
+  "HG01943": {
+   "population_abbreviation": "PEL",
+   "project": "HPRC",
+   "coverage_hifi": "66.98",
+   "deepconsensus_coverage_hifi": "34.98",
+   "coverage_mm_hifi": "63.80",
+   "production": "WUSTL_HPRC_HiFi_Year2_TopUp",
+   "n50_hifi": "19140.59",
+   "coverage_hic": "124.78",
+   "coverage_ill": "35.67",
+   "total_reads_kinnex_millions": "19.71",
+   "coverage_ont": "62.64",
+   "coverage_100kb_ont": "19.38",
+   "coverage_100kb_R1041": "0.00",
+   "coverage_100kb_R941": "19.38",
+   "sequencing_chemistry_ont": "R941",
+   "read_N50_ont": "69312.28",
+   "meth_wg_cov": "63.80"
+  },
+  "HG03583": {
+   "population_abbreviation": "MSL",
+   "project": "HPRC",
+   "coverage_hifi": "57.10",
+   "deepconsensus_coverage_hifi": "0.00",
+   "coverage_mm_hifi": "57.10",
+   "production": "RU_Y4",
+   "n50_hifi": "23065.32",
+   "coverage_hic": "28.24",
+   "coverage_ill": "35.93",
+   "total_reads_kinnex_millions": "22.78",
+   "coverage_ont": "43.13",
+   "coverage_100kb_ont": "18.21",
+   "coverage_100kb_R1041": "18.21",
+   "coverage_100kb_R941": "0.00",
+   "sequencing_chemistry_ont": "R1041",
+   "read_N50_ont": "86923.85",
+   "meth_wg_cov": "57.10"
+  },
+  "NA19240": {
+   "population_abbreviation": "YRI",
+   "project": "HPRC_PLUS",
+   "coverage_hifi": "35.24",
+   "deepconsensus_coverage_hifi": "35.24",
+   "coverage_mm_hifi": "0.00",
+   "production": "HPRC_DEEPCONSENSUS_v1pt2_2023_12_q20",
+   "n50_hifi": "17778.57",
+   "coverage_hic": "",
+   "coverage_ill": "33.03",
+   "total_reads_kinnex_millions": "",
+   "coverage_ont": "73.94",
+   "coverage_100kb_ont": "38.03",
+   "coverage_100kb_R1041": "38.03",
+   "coverage_100kb_R941": "0.00",
+   "sequencing_chemistry_ont": "R1041",
+   "read_N50_ont": "102834.09",
+   "meth_wg_cov": "41.80"
+  }
+ },
+ "hprc_r2_modality_tables": {
+  "fiberseq_hifi_samples": 21,
+  "fiberseq_ont_samples": 23,
+  "hifi_meth_wg_samples": 232,
+  "kinnex_samples": 206,
+  "hic_samples": 225
+ },
+ "url_heads": {
+  "impg_grch38_paf": {
+   "url": "https://s3-us-west-2.amazonaws.com/human-pangenomics/pangenomes/freeze/release2/impg/pafs/all-vs-1/GCA_000001405.15_GRCh38_no_alt_analysis_set.PanSN.merged.paf.gz",
+   "status": 200,
+   "bytes": 6532446867
+  },
+  "mc_grch38_gbz": {
+   "url": "https://s3-us-west-2.amazonaws.com/human-pangenomics/pangenomes/freeze/release2/minigraph-cactus/hprc-v2.0-mc-grch38.gbz",
+   "status": 200,
+   "bytes": 5419804360
+  },
+  "mc_grch38_hapl": {
+   "url": "https://s3-us-west-2.amazonaws.com/human-pangenomics/pangenomes/freeze/release2/minigraph-cactus/hprc-v2.0-mc-grch38.hapl",
+   "status": 200,
+   "bytes": 21418951584
+  },
+  "trupath_HG00097_bam": {
+   "url": "https://1000g-ont.s3.amazonaws.com/Illumina_TruPath_WGS/HG00097/C8_HG00097/C8_HG00097.bam",
+   "status": 200,
+   "bytes": 195578496006
+  }
+ },
+ "kgont_assemblies_HG00097": [
+  [
+   "PROCESSED_DATA/ASSEMBLIES/HPRC_alignments/",
+   [],
+   [
+    [
+     "HG00097_hap1_hprc_r2_v1.0.1.bam",
+     1.56
+    ],
+    [
+     "HG00097_hap1_hprc_r2_v1.0.1.bam.bai",
+     0.0
+    ],
+    [
+     "HG00097_hap2_hprc_r2_v1.0.1.bam",
+     1.69
+    ],
+    [
+     "HG00097_hap2_hprc_r2_v1.0.1.bam.bai",
+     0.0
+    ]
+   ]
+  ],
+  [
+   "PROCESSED_DATA/ASSEMBLIES/NAPU_PIPELINE_FASTAS/",
+   [
+    "PROCESSED_DATA/ASSEMBLIES/NAPU_PIPELINE_FASTAS/HG00097/"
+   ],
+   []
+  ],
+  [
+   "PROCESSED_DATA/ASSEMBLIES/R10_HIFIASM/",
+   [
+    "PROCESSED_DATA/ASSEMBLIES/R10_HIFIASM/HG00097.ONT.R10.LSK114.dorado034_sup_5mCG_5hmCG_v33.unaligned/"
+   ],
+   []
+  ]
+ ],
+ "nygc_cram_NA19240": {
+  "url": "https://ftp.sra.ebi.ac.uk/vol1/run/ERR398/ERR3989410/NA19240.final.cram",
+  "md5_from_1kgp_index": "e6d4b9e1e19d1f4d4f5de6a0d16d9c10",
+  "bytes": 15072959479,
+  "crai_entries": 76795,
+  "contig_order_verified": true
+ }
+}

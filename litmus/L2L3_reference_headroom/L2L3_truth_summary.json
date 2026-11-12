@@ -1,0 +1,20 @@
+{
+ "chrom": "chr20",
+ "tlen": 64444167,
+ "h1_alignments": 225,
+ "h2_alignments": 227,
+ "h1_contigs": [
+  "NA19240#1#CM099588.1"
+ ],
+ "h2_contigs": [
+  "NA19240#2#CM099626.1"
+ ],
+ "confident_bp": 61698074,
+ "acgt_bp": 63944257,
+ "het_snv": 75878,
+ "het_snv_near_indel": 1776,
+ "homalt_snv": 34353,
+ "het_snv_with_chm13": 70650,
+ "h1_indels": 22690,
+ "h2_indels": 25692
+}

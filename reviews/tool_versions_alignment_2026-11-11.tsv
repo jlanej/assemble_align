@@ -1,0 +1,35 @@
+repository	latest_release	release_date	source
+lh3/minimap2	v2.31	2026-05-19	https://github.com/lh3/minimap2/releases
+bwa-mem2/bwa-mem2	v2.3	2025-06-30	https://github.com/bwa-mem2/bwa-mem2/releases
+kaist-ina/BWA-MEME	v1.0.6	2023-03-04	https://github.com/kaist-ina/BWA-MEME/releases
+BenLangmead/bowtie2	v2.5.5	2026-02-17	https://github.com/BenLangmead/bowtie2/releases
+ksahlin/strobealign	v0.20.0	2026-11-06	https://github.com/ksahlin/strobealign/releases
+marbl/Winnowmap	v2.03	2021-05-08	https://github.com/marbl/Winnowmap/releases
+PacificBiosciences/pbmm2	v26.2.99	2026-07-02	https://github.com/PacificBiosciences/pbmm2/releases
+ChaissonLab/LRA	v1.3.7.1	2023-03-27	https://github.com/ChaissonLab/LRA/releases
+philres/ngmlr	v0.2.7	2018-06-25	https://github.com/philres/ngmlr/releases
+bwa-mem2/mm2-fast	mm2-fast-v1.0	2022-12-07	https://github.com/bwa-mem2/mm2-fast/releases
+Minimap2onGPU/mm2-gb	no GitHub releases		https://github.com/Minimap2onGPU/mm2-gb
+vgteam/vg	v1.78.0	2026-10-19	https://github.com/vgteam/vg/releases
+maickrau/GraphAligner	v1.0.20	2024-12-02	https://github.com/maickrau/GraphAligner/releases
+lh3/minigraph	v0.21	2024-04-21	https://github.com/lh3/minigraph/releases
+at-cg/PanAligner	no GitHub releases		https://github.com/at-cg/PanAligner
+at-cg/minichain	v1.3	2024-01-21	https://github.com/at-cg/minichain/releases
+algbio/GraphChainer	v1.0.2	2023-03-13	https://github.com/algbio/GraphChainer/releases
+lh3/gwfa	no GitHub releases		https://github.com/lh3/gwfa
+eblerjana/pangenie	v4.2.2	2026-08-18	https://github.com/eblerjana/pangenie/releases
+ivargr/kage	v2.0.0	2023-12-23	https://github.com/ivargr/kage/releases
+tprodanov/locityper	v1.8.1	2026-11-09	https://github.com/tprodanov/locityper/releases
+smarco/WFA2-lib	v2.3.6	2026-03-18	https://github.com/smarco/WFA2-lib/releases
+Daniel-Liu-c0deb0t/block-aligner	v0.0.0	2021-06-26	https://github.com/Daniel-Liu-c0deb0t/block-aligner/releases
+RagnarGrootKoerkamp/astar-pairwise-aligner	no GitHub releases		https://github.com/RagnarGrootKoerkamp/astar-pairwise-aligner
+mohsenzakeri/Movi	v2.0.0	2025-10-20	https://github.com/mohsenzakeri/Movi/releases
+biointec/b-move	v1.2.0	2024-10-31	https://github.com/biointec/b-move/releases
+CMU-SAFARI/RawHash	v2.1	2024-03-20	https://github.com/CMU-SAFARI/RawHash/releases
+pangenome/impg	v0.5.0	2026-07-26	https://github.com/pangenome/impg/releases
+google/deepvariant	v1.10.0	2026-03-05	https://github.com/google/deepvariant/releases
+PacificBiosciences/paraphase	v4.1.0	2026-09-25	https://github.com/PacificBiosciences/paraphase/releases
+tprodanov/parascopy	v1.19.0	2026-01-27	https://github.com/tprodanov/parascopy/releases
+CMU-SAFARI/BLEND	v.1.0.0	2022-11-22	https://github.com/CMU-SAFARI/BLEND/releases
+ekimb/mapquik	no GitHub releases		https://github.com/ekimb/mapquik
+lh3/bwa	v0.7.19	2025-03-22	https://github.com/lh3/bwa/releases

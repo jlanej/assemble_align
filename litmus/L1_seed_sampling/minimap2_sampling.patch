@@ -1,0 +1,241 @@
+diff -ru a/index.c b/index.c
+--- a/index.c	2026-11-11 14:39:02
++++ b/index.c	2026-11-11 14:39:02
+@@ -114,7 +114,7 @@
+ 	int64_t n = 0, n1 = 0;
+ 	uint32_t i;
+ 	uint64_t sum = 0, len = 0;
+-	fprintf(stderr, "[M::%s] kmer size: %d; skip: %d; is_hpc: %d; #seq: %d\n", __func__, mi->k, mi->w, mi->flag&MM_I_HPC, mi->n_seq);
++	fprintf(stderr, "[M::%s] kmer size: %d; skip: %d; is_hpc: %d; mod-oc: %d; #seq: %d\n", __func__, mi->k, mi->w, mi->flag&MM_I_HPC, !!(mi->flag&MM_I_MODOC), mi->n_seq);
+ 	for (i = 0; i < mi->n_seq; ++i)
+ 		len += mi->seq[i].len;
+ 	for (i = 0; i < 1U<<mi->b; ++i)
+@@ -371,7 +371,7 @@
+ 		for (i = 0; i < s->n_seq; ++i) {
+ 			mm_bseq1_t *t = &s->seq[i];
+ 			if (t->l_seq > 0)
+-				mm_sketch(0, t->seq, t->l_seq, p->mi->w, p->mi->k, t->rid, p->mi->flag&MM_I_HPC, &s->a);
++				mm_sketch(0, t->seq, t->l_seq, p->mi->w, p->mi->k, t->rid, p->mi->flag&(MM_I_HPC|MM_I_MODOC), &s->a);
+ 			else if (mm_verbose >= 2)
+ 				fprintf(stderr, "[WARNING] the length database sequence '%s' is 0\n", t->name);
+ 			free(t->seq); free(t->name);
+@@ -478,7 +478,7 @@
+ 	uint32_t x[5], i;
+ 
+ 	x[0] = mi->w, x[1] = mi->k, x[2] = mi->b, x[3] = mi->n_seq, x[4] = mi->flag;
+-	fwrite(MM_IDX_MAGIC, 1, 4, fp);
++	fwrite((mi->flag & MM_I_MODOC)? MM_IDX_MAGIC_MODOC : MM_IDX_MAGIC, 1, 4, fp);
+ 	fwrite(x, 4, 5, fp);
+ 	for (i = 0; i < mi->n_seq; ++i) {
+ 		if (mi->seq[i].name) {
+@@ -521,7 +521,7 @@
+ 	mm_idx_t *mi;
+ 
+ 	if (fread(magic, 1, 4, fp) != 4) return 0;
+-	if (strncmp(magic, MM_IDX_MAGIC, 4) != 0) return 0;
++	if (strncmp(magic, MM_IDX_MAGIC, 4) != 0 && strncmp(magic, MM_IDX_MAGIC_MODOC, 4) != 0) return 0;
+ 	if (fread(x, 4, 5, fp) != 5) return 0;
+ 	mi = mm_idx_init(x[0], x[1], x[2], x[4]);
+ 	mi->n_seq = x[3];
+@@ -585,7 +585,7 @@
+ 		lseek(fd, 0, SEEK_SET);
+ #endif // WIN32
+ 		ret = read(fd, magic, 4);
+-		if (ret == 4 && strncmp(magic, MM_IDX_MAGIC, 4) == 0)
++		if (ret == 4 && (strncmp(magic, MM_IDX_MAGIC, 4) == 0 || strncmp(magic, MM_IDX_MAGIC_MODOC, 4) == 0))
+ 			is_idx = 1;
+ 	}
+ 	close(fd);
+@@ -623,7 +623,7 @@
+ 	mm_idx_t *mi;
+ 	if (r->is_idx) {
+ 		mi = mm_idx_load(r->fp.idx);
+-		if (mi && mm_verbose >= 2 && (mi->k != r->opt.k || mi->w != r->opt.w || (mi->flag&MM_I_HPC) != (r->opt.flag&MM_I_HPC)))
++		if (mi && mm_verbose >= 2 && (mi->k != r->opt.k || mi->w != r->opt.w || (mi->flag&(MM_I_HPC|MM_I_MODOC)) != (r->opt.flag&(MM_I_HPC|MM_I_MODOC))))
+ 			fprintf(stderr, "[WARNING]\033[1;31m Indexing parameters (-k, -w or -H) overridden by parameters used in the prebuilt index.\033[0m\n");
+ 	} else
+ 		mi = mm_idx_gen(r->fp.seq, r->opt.w, r->opt.k, r->opt.bucket_bits, r->opt.flag, r->opt.mini_batch_size, n_threads, r->opt.batch_size);
+diff -ru a/main.c b/main.c
+--- a/main.c	2026-11-11 14:39:02
++++ b/main.c	2026-11-11 14:39:02
+@@ -88,6 +88,7 @@
+ 	{ "spsc-scale",     ko_required_argument, 363 },
+ 	{ "spsc0",          ko_required_argument, 364 },
+ 	{ "dbg-seed-occ",   ko_no_argument,       501 },
++	{ "mod-oc",         ko_no_argument,       380 },
+ 	{ "help",           ko_no_argument,       'h' },
+ 	{ "max-intron-len", ko_required_argument, 'G' },
+ 	{ "version",        ko_no_argument,       'V' },
+@@ -167,6 +168,7 @@
+ 		if (c == 'w') ipt.w = atoi(o.arg);
+ 		else if (c == 'k') ipt.k = atoi(o.arg);
+ 		else if (c == 'H') ipt.flag |= MM_I_HPC;
++		else if (c == 380) ipt.flag |= MM_I_MODOC; // --mod-oc
+ 		else if (c == 'd') fnw = o.arg; // the above are indexing related options, except -I
+ 		else if (c == 't') n_threads = atoi(o.arg);
+ 		else if (c == 'v') mm_verbose = atoi(o.arg);
+@@ -363,6 +365,7 @@
+ 		fprintf(fp_help, "Options:\n");
+ 		fprintf(fp_help, "  Indexing:\n");
+ 		fprintf(fp_help, "    -H           use homopolymer-compressed k-mer (preferrable for PacBio)\n");
++		fprintf(fp_help, "    --mod-oc     sample k-mers with the open-closed mod-minimizer (lower index density)\n");
+ 		fprintf(fp_help, "    -k INT       k-mer size (no larger than 28) [%d]\n", ipt.k);
+ 		fprintf(fp_help, "    -w INT       minimizer window size [%d]\n", ipt.w);
+ 		fprintf(fp_help, "    -I NUM       split index for every ~NUM input bases [8G]\n");
+diff -ru a/map.c b/map.c
+--- a/map.c	2026-11-11 14:39:02
++++ b/map.c	2026-11-11 14:39:02
+@@ -62,7 +62,7 @@
+ 	mv->n = 0;
+ 	for (i = n = 0; i < n_segs; ++i) {
+ 		size_t j;
+-		mm_sketch(km, seqs[i], qlens[i], mi->w, mi->k, i, mi->flag&MM_I_HPC, mv);
++		mm_sketch(km, seqs[i], qlens[i], mi->w, mi->k, i, mi->flag&(MM_I_HPC|MM_I_MODOC), mv);
+ 		for (j = n; j < mv->n; ++j)
+ 			mv->a[j].y += sum << 1;
+ 		if (opt->sdust_thres > 0) // mask low-complexity minimizers
+diff -ru a/minimap.h b/minimap.h
+--- a/minimap.h	2026-11-11 14:39:02
++++ b/minimap.h	2026-11-11 14:39:02
+@@ -52,8 +52,10 @@
+ #define MM_I_HPC          0x1
+ #define MM_I_NO_SEQ       0x2
+ #define MM_I_NO_NAME      0x4
++#define MM_I_MODOC        0x8   // sample k-mers with the open-closed mod-minimizer instead of random minimizers
+ 
+ #define MM_IDX_MAGIC   "MMI\2"
++#define MM_IDX_MAGIC_MODOC "MMI\3" // --mod-oc index: old binaries do not recognise it as an index; they parse it as FASTA and emit no alignments (exit 0) instead of confident wrong ones
+ 
+ #define MM_MAX_SEG       255
+ 
+diff -ru a/sketch.c b/sketch.c
+--- a/sketch.c	2026-11-11 14:39:02
++++ b/sketch.c	2026-11-11 14:39:02
+@@ -57,6 +57,114 @@
+ 	return x;
+ }
+ 
++/*********************************************************************************************
++ * Open-closed mod-minimizer (Groot Koerkamp & Pibiri 2024; Groot Koerkamp, Liu & Pibiri 2025),
++ * strand-symmetric version.  In each window of w consecutive k-mers (L = w+k-1 bases) find the
++ * smallest t-mer, t = r + ((k-r) mod w), r = 4, under the order (class, splitmix56(canonical t-mer)),
++ * where class 0/1/2 = open syncmer / closed syncmer / other with respect to canonical s-mers
++ * (s = smallest value >= 4 (3 if t < 6) with t-s even; open offset (t-s)/2 is then the unique
++ * mirror-symmetric centre).  If the smallest t-mer starts at window offset x, the k-mer at offset
++ * x mod w is sampled.  Because k-t is a multiple of w, the selection is identical on both strands
++ * (ties between identical t-mers are broken by splitmix56 of the candidate canonical k-mer).
++ * When t == k this is the open-closed minimizer.  The emitted key is minimap2's usual
++ * hash64(canonical k-mer)<<8 | span, so the index format and seeding are unchanged.
++ *********************************************************************************************/
++static inline uint64_t mm_mix56(uint64_t x)
++{
++	x ^= 0x9E3779B97F4A7C15ULL;
++	x = (x ^ (x >> 30)) * 0xBF58476D1CE4E5B9ULL;
++	x = (x ^ (x >> 27)) * 0x94D049BB133111EBULL;
++	x ^= x >> 31;
++	return x >> 8;
++}
++
++#define MODOC_RB 512
++#define MODOC_M (MODOC_RB - 1)
++
++static void mm_sketch_modoc(void *km, const char *str, int len, int w, int k, uint32_t rid, mm128_v *p)
++{
++	const int r = 4;
++	int t = k < r? k : r + (k - r) % w;
++	int s, v, use_oc, l = 0, nt = w + k - t, L = w + k - 1;
++	uint64_t kmask = (1ULL<<2*k) - 1, tmask = (1ULL<<2*t) - 1, smask;
++	uint64_t kf = 0, kr = 0, tf = 0, tr = 0, sf = 0, sr = 0;
++	uint64_t shash[MODOC_RB], trank[MODOC_RB], kx[MODOC_RB], ky[MODOC_RB], kh[MODOC_RB];
++	int64_t sdq[MODOC_RB], tdq[MODOC_RB], sh = 0, st = 0, th = 0, tt = 0, i, last = -1;
++	size_t n0 = p->n, a, b;
++	assert(w + k < MODOC_RB);
++	s = t >= 6? 4 : 3;
++	while ((t - s) & 1) ++s;
++	use_oc = (t > 4 && s < t);
++	v = (t - s) / 2;
++	smask = (1ULL<<2*s) - 1;
++	kv_resize(mm128_t, km, *p, p->n + len/w + 16);
++	for (i = 0; i < len; ++i) {
++		int c = seq_nt4_table[(uint8_t)str[i]], j = i & MODOC_M;
++		if (c >= 4) { l = 0, sh = st = th = tt = 0; continue; }
++		++l;
++		kf = (kf << 2 | c) & kmask, kr = (kr >> 2) | (3ULL^c) << (2*(k-1));
++		tf = (tf << 2 | c) & tmask, tr = (tr >> 2) | (3ULL^c) << (2*(t-1));
++		if (use_oc) {
++			sf = (sf << 2 | c) & smask, sr = (sr >> 2) | (3ULL^c) << (2*(s-1));
++			if (l >= s) {
++				shash[j] = mm_mix56((sf < sr? sf : sr) ^ 0x5bd1e995ULL);
++				while (st > sh && shash[sdq[(st-1)&MODOC_M] & MODOC_M] > shash[j]) --st;
++				sdq[st++ & MODOC_M] = i;
++			}
++		}
++		if (l >= t) {
++			uint64_t cls = 0;
++			if (use_oc) {
++				int64_t first = i - (t - s);
++				uint64_t m;
++				while (sdq[sh & MODOC_M] < first) ++sh;
++				m = shash[sdq[sh & MODOC_M] & MODOC_M];
++				if (shash[(first + v) & MODOC_M] == m || shash[(first + t - s - v) & MODOC_M] == m) cls = 0;
++				else if (shash[first & MODOC_M] == m || shash[j] == m) cls = 1;
++				else cls = 2;
++			}
++			trank[j] = cls << 58 | mm_mix56(tf < tr? tf : tr);
++			while (tt > th && trank[tdq[(tt-1)&MODOC_M] & MODOC_M] > trank[j]) --tt;
++			tdq[tt++ & MODOC_M] = i;
++		}
++		if (l >= k) {
++			if (kf == kr) kx[j] = UINT64_MAX; // symmetric k-mer: never sampled (as in mm_sketch)
++			else {
++				int z = kf < kr? 0 : 1;
++				kx[j] = hash64(z? kr : kf, kmask) << 8 | k;
++				ky[j] = (uint64_t)rid<<32 | (uint32_t)i<<1 | z;
++				kh[j] = mm_mix56(z? kr : kf);
++			}
++		}
++		if (l >= L) {
++			int64_t wstart = i - L + 1, best = -1, h;
++			uint64_t m, bh = UINT64_MAX;
++			while (tdq[th & MODOC_M] < i - nt + 1) ++th;
++			m = trank[tdq[th & MODOC_M] & MODOC_M];
++			for (h = th; h < tt && trank[tdq[h & MODOC_M] & MODOC_M] == m; ++h) {
++				int64_t x = tdq[h & MODOC_M] - (t - 1) - wstart, kend = wstart + x % w + k - 1;
++				int jj = kend & MODOC_M;
++				if (kx[jj] != UINT64_MAX && (best < 0 || kh[jj] < bh)) best = kend, bh = kh[jj];
++			}
++			if (best >= 0 && best != last) {
++				mm128_t mz;
++				mz.x = kx[best & MODOC_M], mz.y = ky[best & MODOC_M];
++				kv_push(mm128_t, km, *p, mz);
++				last = best;
++			}
++		}
++	}
++	// selected positions can step back by < w when the anchor t-mer changes: insertion-sort by y, dedup
++	for (a = n0 + 1; a < p->n; ++a) {
++		mm128_t tmp = p->a[a];
++		for (b = a; b > n0 && p->a[b-1].y > tmp.y; --b) p->a[b] = p->a[b-1];
++		p->a[b] = tmp;
++	}
++	for (a = b = n0; a < p->n; ++a)
++		if (b == n0 || p->a[a].y != p->a[b-1].y) p->a[b++] = p->a[a];
++	p->n = b;
++}
++
+ /**
+  * Find symmetric (w,k)-minimizers on a DNA sequence
+  *
+@@ -82,6 +190,12 @@
+ 	tiny_queue_t tq;
+ 
+ 	assert(len > 0 && (w > 0 && w < 256) && (k > 0 && k <= 28)); // 56 bits for k-mer; could use long k-mers, but 28 enough in practice
++	if (is_hpc & MM_I_MODOC) { // --mod-oc (HPC is not supported together with mod-oc)
++		assert(!(is_hpc & MM_I_HPC));
++		mm_sketch_modoc(km, str, len, w, k, rid, p);
++		return;
++	}
++	is_hpc &= MM_I_HPC;
+ 	memset(buf, 0xff, w * 16);
+ 	memset(&tq, 0, sizeof(tiny_queue_t));
+ 	kv_resize(mm128_t, km, *p, p->n + len/w);
