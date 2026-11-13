@@ -3,144 +3,223 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Calibrated placement: where read alignment and genome assembly still fail</title>
-<meta name="description" content="A 2026 review and five litmus pilots on public 1000 Genomes data: mapping quality in segmental duplications, assembly QC blind spots, structural reference headroom, a minimap2 sketching patch, and the coverage floor for nanopore-only assembly.">
+<title>copyproof: finding the right sequence in the wrong place in genome assemblies</title>
+<meta name="description" content="copyproof is a tool in development that audits released human genome assemblies for copies that are missing, doubled, misjoined or on the wrong parental chromosome, using public 1000 Genomes data.">
 <style>
-  :root { --ink:#1f2328; --muted:#57606a; --fail:#c2452d; --fix:#1d5a96; --rule:#e3e6ea; --soft:#f6f8fa; }
+  :root { --ink:#1f2328; --muted:#57606a; --fail:#c2452d; --fix:#1d5a96; --rule:#e3e6ea; --soft:#f6f8fa; --mat:#a3487f; --pat:#00795a; --asm:#b27300; }
   * { box-sizing:border-box; }
   html { -webkit-text-size-adjust:100%; }
-  body { margin:0; color:var(--ink); background:#fff; font:17px/1.58 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
-  main { max-width:900px; margin:0 auto; padding:48px 24px 72px; }
+  body { margin:0; color:var(--ink); background:#fff; font:17px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; }
+  main { max-width:940px; margin:0 auto; padding:48px 24px 72px; }
   a { color:var(--fix); text-decoration:none; } a:hover { text-decoration:underline; }
   .kicker { font-size:13px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted); margin:0 0 10px; }
-  h1 { font-size:34px; line-height:1.18; margin:0 0 14px; letter-spacing:-.01em; }
+  .kicker .pill { display:inline-block; margin-left:8px; padding:1px 8px; border-radius:10px; background:var(--fix); color:#fff; letter-spacing:.04em; }
+  h1 { font-size:36px; line-height:1.16; margin:0 0 14px; letter-spacing:-.01em; }
+  h1 .name { color:var(--fix); }
   .lede { font-size:19px; color:#333; margin:0 0 22px; }
-  .links { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 34px; }
+  .links { display:flex; flex-wrap:wrap; gap:10px; margin:0 0 30px; }
   .btn { display:inline-block; padding:8px 14px; border:1px solid var(--rule); border-radius:6px; font-size:15px; color:var(--ink); background:var(--soft); }
   .btn.primary { background:var(--fix); color:#fff; border-color:var(--fix); }
-  .stats { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin:0 0 18px; }
+  .stats { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin:0 0 10px; }
   .stat { border:1px solid var(--rule); border-radius:8px; padding:16px 16px 14px; }
   .stat .num { font-size:30px; font-weight:700; line-height:1.1; margin-bottom:6px; }
   .stat .num.fail { color:var(--fail); } .stat .num.fix { color:var(--fix); }
   .stat p { margin:0; font-size:14.5px; line-height:1.45; color:#333; }
-  .note { font-size:14px; color:var(--muted); margin:0 0 8px; }
   section { border-top:1px solid var(--rule); margin-top:44px; padding-top:30px; }
-  h2 { font-size:24px; line-height:1.25; margin:0 0 10px; }
+  h2 { font-size:25px; line-height:1.25; margin:0 0 12px; }
   h2 .n { color:var(--muted); font-weight:500; margin-right:8px; }
-  .claim { font-size:18px; margin:0 0 18px; }
-  figure { margin:0 0 18px; }
+  p { margin:0 0 14px; }
+  figure { margin:22px 0 22px; }
   figure img { width:100%; height:auto; display:block; }
-  figcaption { font-size:13.5px; line-height:1.5; color:var(--muted); margin-top:8px; }
-  .build-it { background:var(--soft); border-left:3px solid var(--fix); padding:10px 14px; margin:14px 0 0; font-size:15.5px; }
-  .build-it b { color:var(--fix); }
-  ol.steps { list-style:none; counter-reset:s; padding:0; margin:18px 0 0; }
-  ol.steps li { counter-increment:s; position:relative; padding:12px 0 12px 54px; border-bottom:1px solid var(--rule); }
-  ol.steps li:before { content:counter(s); position:absolute; left:0; top:12px; width:34px; height:34px; border-radius:50%; background:var(--fix); color:#fff; font-weight:700; text-align:center; line-height:34px; }
-  ol.steps li .tag { font-size:13px; color:var(--muted); font-weight:600; margin-left:6px; }
-  ol.steps li .test { display:block; font-size:14.5px; color:var(--muted); margin-top:2px; }
-  .callout { margin:22px 0 0; padding:14px 16px; border:1px solid var(--rule); border-radius:8px; font-size:16px; }
-  .caveats { font-size:15px; color:#333; } .caveats li { margin:4px 0; }
+  figcaption { font-size:14px; line-height:1.5; color:var(--muted); margin-top:10px; }
+  figcaption b { color:var(--ink); }
+  .key { font-size:14.5px; color:var(--muted); margin:-4px 0 18px; }
+  .key span { white-space:nowrap; margin-right:14px; }
+  .sw { display:inline-block; width:11px; height:11px; border-radius:2px; margin-right:5px; vertical-align:-1px; }
+  .classes { display:grid; grid-template-columns:1fr 1fr; gap:10px 22px; margin:14px 0 18px; padding:0; list-style:none; }
+  .classes li { border-left:3px solid var(--rule); padding:2px 0 2px 12px; font-size:15.5px; line-height:1.45; }
+  .classes li b { display:block; }
+  .classes li.na { border-left-color:var(--muted); }
+  .callout { margin:18px 0 18px; padding:14px 16px; border:1px solid var(--rule); border-left:3px solid var(--fix); border-radius:6px; font-size:16px; background:var(--soft); }
+  .status { display:grid; grid-template-columns:repeat(3, 1fr); gap:14px; margin:16px 0 8px; }
+  .status div { border:1px solid var(--rule); border-radius:8px; padding:12px 14px; font-size:15px; line-height:1.45; }
+  .status div b { display:block; font-size:13px; letter-spacing:.06em; text-transform:uppercase; color:var(--muted); margin-bottom:4px; }
+  ul.plain { margin:8px 0 14px; padding-left:20px; } ul.plain li { margin:4px 0; }
+  .refs { font-size:13.5px; line-height:1.5; color:var(--muted); columns:2; column-gap:28px; padding-left:18px; margin:10px 0 0; }
+  .refs li { break-inside:avoid; margin:0 0 4px; }
   footer { margin-top:44px; padding-top:20px; border-top:1px solid var(--rule); font-size:14px; color:var(--muted); }
   code { font:13.5px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:var(--soft); padding:1px 4px; border-radius:4px; }
-  @media (max-width:720px) { main { padding:32px 16px 56px; } h1 { font-size:27px; } .stats { grid-template-columns:1fr; } }
+  @media (max-width:760px) { main { padding:32px 16px 56px; } h1 { font-size:28px; } .stats, .status, .classes { grid-template-columns:1fr; } .refs { columns:1; } }
 </style>
 </head>
 <body>
 <main>
 
-<p class="kicker">Read alignment &amp; genome assembly · 2026 review + litmus pilots on public 1000 Genomes data</p>
-<h1>The frontier is calibrated placement: knowing where sequence belongs, and how sure we are.</h1>
-<p class="lede">Speed and contiguity are no longer the binding constraints. The errors that remain sit in segmental duplications (SDs), satellites and structurally variable loci, and they are increasingly <em>silent</em>: aligners report their top mapping quality for wrong placements, and assemblies carry misplaced copies that standard QC does not flag. Each failure below was measured on public 1kG data; the pilots show that the first can be fixed and the second caught.</p>
+<p class="kicker">copyproof<span class="pill">in development</span></p>
+<h1>Genome assemblies can hold the right sequence in the wrong place. <span class="name">copyproof</span> is being built to find it.</h1>
+<p class="lede">Hundreds of human genomes are now released as assemblies, one sequence for each parental copy of every chromosome. Releases are checked by asking whether sequencing reads cover each position normally. A copy that is real but misplaced has normal coverage, so it passes. copyproof will audit released assemblies for copies that are missing, doubled, joined without evidence or placed on the wrong parental chromosome, using public data that existing checks do not combine.</p>
 <div class="links">
-  <a class="btn primary" href="https://github.com/jlanej/assemble_align/blob/main/report/assemble_align_review.pdf">Full report (PDF, 105 pp.)</a>
-  <a class="btn" href="https://github.com/jlanej/assemble_align">Repository: scripts, tables, patch</a>
-  <a class="btn" href="https://github.com/jlanej/assemble_align/blob/main/report/ranked_proposals.tsv">26 ranked proposals</a>
+  <a class="btn primary" href="https://github.com/jlanej/assemble_align/blob/main/copyproof/GUIDE.md">Implementation guide</a>
+  <a class="btn" href="https://github.com/jlanej/assemble_align/tree/main/copyproof">copyproof on GitHub</a>
+  <a class="btn" href="https://github.com/jlanej/assemble_align/tree/main/litmus/cases_HG01943_HG01103">The two example cases</a>
+  <a class="btn" href="review.html">The review behind it</a>
 </div>
-
 <div class="stats">
-  <div class="stat"><div class="num fail">4,900–27,700×</div><p>how much more often <b>MAPQ 60 is wrong</b> inside SDs than its nominal 10⁻⁶ (5 aligner presets × GRCh38/CHM13).</p></div>
-  <div class="stat"><div class="num fail">0 of 5</div><p>errors in a real 1.09-Mb <b>misassembly flagged by HPRC's default QC</b> tracks (HG01943). All calls flag 2; positional k-mer evidence flags all 5.</p></div>
-  <div class="stat"><div class="num fail">9–11%</div><p>of the SD <b>reference-bias</b> excess removed by small-variant personalization, which closes 88–93% of the gap in unique sequence.</p></div>
+  <div class="stat"><div class="num fail">0 of 5</div><p>problems at one example locus flagged by the default quality-control tracks published with HPRC release 2</p></div>
+  <div class="stat"><div class="num">592</div><p>haplotypes copyproof is designed to audit: 462 from HPRC release 2 and 130 from HGSVC3</p></div>
+  <div class="stat"><div class="num fix">24</div><p>HG002 assemblies (19 from different methods, plus 5 versions of the truth itself) already compared with a near-perfect truth genome: the test bed for accuracy before any release is scanned</p></div>
 </div>
-<p class="note">Red marks failures of current practice, blue the proposed fix, grey the comparators.</p>
 
-<section id="mapq">
-  <h2><span class="n">1</span>Mapping quality is miscalibrated exactly where it matters</h2>
-  <p class="claim">Inside SDs, MAPQ 60 was wrong for <b>1.2–2.8%</b> of reads on GRCh38 and 0.5–1.4% on CHM13; outside SDs, for 0.005–0.04%.</p>
-  <figure>
-    <img src="assets/fig_mapq.svg" alt="Left: error rate of MAPQ-60 placements inside SDs (0.5 to 2.8 percent) and outside SDs (about 0.01 percent) for ten aligner and reference runs, against a nominal one in a million. Right: when reads are selected to target 0.1 percent error, reported MAPQ delivers 2.8 to 10.5 percent error and a recalibrated score 0.06 to 0.40 percent.">
-    <figcaption>Simulated NA19240 reads (600,000 Illumina pairs, 40,095 HiFi, 24,005 ONT) with each read's origin lifted to GRCh38 and CHM13 through the HPRC release-2 assembly alignments. Long-read in-SD values use ≥ 50%-lifted truth (0.12–0.33% under a strict ≥ 90%-colinear truth). Right: thresholds chosen without labels to target 0.1% error, then scored against truth. Data: <a href="https://github.com/jlanej/assemble_align/tree/main/litmus/L5_mapq_calibration"><code>litmus/L5_mapq_calibration</code></a>.</figcaption>
-  </figure>
-  <p>In 71–96% of wrong MAPQ-60 placements the read genuinely aligns better to the paralog it was sent to, so better search cannot fix them; only calibrated uncertainty can. A recalibrator using only SAM tags and SD annotation (gradient boosting plus isotonic calibration, trained and tested on different chromosomes) cut in-SD calibration error by 59–93% in all ten runs.</p>
-  <p class="build-it"><b>Build:</b> an aligner-agnostic BAM post-processor that writes a calibrated error probability and paralog-group posteriors, then the same features inside minimap2 and strobealign (F2). It passes if the calibration holds on real NYGC and HPRC reads and on held-out samples.</p>
-</section>
-
-<section id="assembly-qc">
-  <h2><span class="n">2</span>Assembly QC misses misplaced copies, because they carry normal coverage</h2>
-  <p class="claim">HG01943 carries a de novo 1.09-Mb tandem duplication. The HPRC release-2 assembly holds <b>none of its 28 junction 31-mers</b>, joins maternal pieces into the paternal chromosome at four joins that no read spans, and departs from the read copy number at four places.</p>
-  <figure>
-    <img src="assets/fig_hg01943.svg" alt="Top: 21-mer copy number along chr2 46.4 to 48.65 Mb. The child's reads show three copies across the duplication; the assembly drops to two copies in two stretches and rises to four at two false duplications. Bottom: published HMM-Flagger conservative tracks flag 0 of 5 errors, all calls and NucFlag flag 2 of 5, positional k-mer copy number flags 5 of 5.">
-    <figcaption>21-mer copy number in 10-kb bins from NYGC 30x Illumina reads of the child and both parents, and from the HPRC release-2 assembly (both haplotypes plus unplaced contigs). The five errors: unsupported scaffold joins, a trio-inconsistent maternal piece, the missing copy, the missing junction and the false duplications. "Conservative" is HPRC's default published track. Data: <a href="https://github.com/jlanej/assemble_align/tree/main/litmus/cases_HG01943_HG01103"><code>litmus/cases_HG01943_HG01103</code></a>.</figcaption>
-  </figure>
-  <p>Every misplaced copy is real sequence at haploid depth, so coverage-based QC is blind to it. Positional evidence (k-mer copy number along the reference, haplotype-specific k-mers per assembly piece, audits of scaffold joins) catches all five errors. A second case shows the cell-line failure mode: in HG01103 a sub-clonal chromothripsis (16 junctions, about 64% of cells) is fully present in the trio assembly, but its long contigs follow the minority (normal) clone at 11 of 16 forks.</p>
-  <p class="build-it"><b>Build:</b> placement-aware assembly QC (F4), then scan the 462 QC'd HPRC release-2 haplotypes and 130 HGSVC3 haplotypes for this error class; follow with a copy-number-consistent graph walk in the assembler and clone-aware output for cell lines (F5). It passes at 5/5 HG01943 targets with ≤ 2% false flags on T2T HG002.</p>
-</section>
-
-<section id="structure">
-  <h2><span class="n">3</span>The remaining reference headroom is structural</h2>
-  <p class="claim">On real NA19240 reads, personalizing GRCh38 with the sample's small variants closes almost all of the unique-sequence gap, <b>little</b> of the gap in duplications and almost none at structural differences. A structurally complete reference (CHM13) closes 90% of the clipping gap.</p>
-  <figure>
-    <img src="assets/fig_headroom.svg" alt="Share of the gap to the sample's own assembly closed: own variant calls and 1kGP phased variants close 88 and 93 percent of the unique-sequence perfect-alignment gap, 11 and 9 percent of the SD reference-bias excess, and 1.4 and 1.1 percent of the soft-clipping gap; CHM13 closes 0.8, 44 and 90 percent.">
-    <figcaption>Gap = metric on GRCh38 minus metric on the sample's own HPRC/HGSVC3 assembly (the oracle). NYGC 30x Illumina, chr20, 16.2M reads; whiskers, 95% block-bootstrap intervals (not computed for the perfect-alignment metric). Data: <a href="https://github.com/jlanej/assemble_align/tree/main/litmus/L2L3_reference_headroom"><code>litmus/L2L3_reference_headroom</code></a>.</figcaption>
-  </figure>
-  <p class="build-it"><b>Build:</b> population-aware references that add <i>structural</i> haplotypes, as an ALT panel or per-sample structural personalization for linear mappers (F3), rather than more SNVs. It passes if it recovers ≥ 50% of the oracle gap in SD mapping quality and reference bias.</p>
-</section>
-
-<section id="sketching">
-  <h2><span class="n">4</span>A drop-in sketching change makes minimap2 smaller and faster</h2>
-  <p class="claim">Replacing random minimizers with a strand-symmetric open-closed mod-minimizer (a 241-line patch with its own index format) gives <b>14–22% smaller indexes</b> and <b>12–30% less mapping CPU</b>, with equal or lower wrong-mapping rates at MAPQ ≥ 1.</p>
-  <figure>
-    <img src="assets/fig_sketch.svg" alt="Change versus stock minimap2 per preset: index size minus 22, 21 and 14 percent; mapping CPU minus 20, 30 and 12 percent; one-off index build CPU plus 44, 30 and 85 percent for Illumina, ONT and HiFi.">
-    <figcaption>Simulated CHM13- and NA19240-derived reads, about half each, chr20. Wrong mappings at MAPQ ≥ 1: Illumina 0.32 → 0.27%, ONT 0.26 → 0.26%, HiFi 0.35 → 0.14%. The whole-genome CHM13 map-ont index shrinks from 8.83 to 6.88 GB. Theory caps the possible gain: at w = k = 19 at most about 23% of minimizer occurrences are avoidable, and the open-closed mod-minimizer already removes 18.8% of index entries there. Data and patch: <a href="https://github.com/jlanej/assemble_align/tree/main/litmus/L1_seed_sampling"><code>litmus/L1_seed_sampling</code></a>.</figcaption>
-  </figure>
-  <p class="build-it"><b>Build:</b> upstream the patch after a real-read accuracy check (F6). It passes with a ≥ 15% smaller index, ≤ 0.1-point accuracy loss and equal variant calls on real reads.</p>
-</section>
-
-<section id="nanopore">
-  <h2><span class="n">5</span>Population-scale nanopore assembly needs coverage the largest 1kG cohort lacks</h2>
-  <p class="claim">hifiasm in ONT mode on standard-length R10 reads reproduced 98.3% of HG01258's chr20 at about 36x, close to HiFi, but <b>only 73.5% at 16x</b>, where HiFi still reached 97.6%.</p>
-  <figure>
-    <img src="assets/fig_coverage.svg" alt="Share of the chr20 truth reproduced at 99.9 percent identity against coverage: HiFi 79.5, 97.6 and 99.6 percent at 8, 16 and 37x; ONT R10 alone 73.5 and 98.3 percent at 16 and 36x. The 1kG-ONT Vienna cohort's median coverage, 16.9x, is marked.">
-    <figcaption>Provisional: 6 of 15 planned runs, one sample, chr20 reads recruited by alignment, hifiasm 0.25.0; truth is HG01258's HPRC release-2 trio-phased chr20 haplotypes. Standard R10 reads (≥ 20 kb) used as <code>--ul</code> input cut the HiFi assembly from 16 contigs to 5. Data: <a href="https://github.com/jlanej/assemble_align/tree/main/litmus/L4_assembly"><code>litmus/L4_assembly</code></a>.</figcaption>
-  </figure>
-  <p class="build-it"><b>Build:</b> trio-phased, QC'd nanopore assemblies for the high-coverage 1kGP-LRSC R10 samples, and pangenome-constrained haplotypes for the 16.9x Vienna cohort (F7). It passes if, on the 12 LRSC samples in HPRC release 2, ≥ 98% of each truth haplotype is reproduced at ≥ 99.9% identity with QV ≥ 45.</p>
-</section>
-
-<section id="roadmap">
-  <h2>What to build, in order</h2>
-  <ol class="steps">
-    <li><b>Open placement-truth benchmark on 1kG genomes</b><span class="tag">F1</span><span class="test">Truth from HPRC release-2 and HGSVC3 haplotypes of NA19240, HG00733, HG02818 and NA19036, plus HG002, with leakage-free panels. Informative if NA19240 and HG002 differ ≥ 1.5× in some stratum, or aligner rankings change (τ &lt; 0.8).</span></li>
-    <li><b>Calibrated MAPQ with paralog posteriors</b><span class="tag">F2</span><span class="test">Halve in-SD calibration error on real reads; cut SD Mendelian errors by 20% at matched call counts.</span></li>
-    <li><b>Placement-aware assembly QC</b><span class="tag">F4</span><span class="test">5/5 HG01943 targets; ≤ 2% false flags on T2T HG002; a prevalence estimate across 592 haplotypes.</span></li>
-    <li><b>Upstream the minimap2 sketching patch</b><span class="tag">F6</span><span class="test">≥ 15% smaller index, ≤ 0.1-point accuracy loss, equal variant calls on real reads.</span></li>
-    <li><b>Structural population-aware references</b><span class="tag">F3</span><span class="test">Recover ≥ 50% of the oracle gap in SD mapping quality and reference bias.</span></li>
-    <li><b>Assembler repairs and clone-aware assembly</b><span class="tag">F4, F5</span><span class="test">Both HG01943 copies and the junction assembled; HG01103 majority clone followed at ≥ 15/16 forks.</span></li>
-    <li><b>Population-scale nanopore assemblies</b><span class="tag">F7</span><span class="test">On the 12 1kGP-LRSC samples in HPRC release 2: ≥ 98% of truth at ≥ 99.9% identity, QV ≥ 45.</span></li>
-  </ol>
-  <p class="callout"><b>If only one thing is funded:</b> the benchmark and calibrated MAPQ (F1 + F2). They are cheap, openly demonstrable on 1kG data, already shown to work in simulation, and they improve every downstream analysis of the 3,202 NYGC genomes.</p>
-</section>
-
-<section id="caveats">
-  <h2>Caveats</h2>
-  <ul class="caveats">
-    <li>The MAPQ (L5) and sketching (L1) pilots use simulated reads; their real-read acceptance tests are specified, not yet run.</li>
-    <li>The reference-headroom pilot (L2/L3) covers one sample and one chromosome; the nanopore pilot (L4) is a partial grid on one sample.</li>
-    <li>The case studies use region slices of public data; several 2025–2026 sources are preprints; proposal scores are structured judgments, recorded so readers can re-weight them.</li>
+<section id="problem">
+  <h2><span class="n">1</span>The problem</h2>
+  <p>A modern human genome assembly has two sequences for each chromosome, one inherited from each parent (two <em>haplotypes</em>). HPRC release 2 (462 haplotypes) and HGSVC3 (130) are mostly assemblies of 1000 Genomes participants. They are the basis of the human pangenome, of new variant catalogues and of benchmarks, so their errors spread downstream.</p>
+  <p>Releases are checked mainly by aligning reads back to the assembly and looking at coverage. Too few reads suggest a collapsed copy, too many a false duplication, odd patterns a misjoin. These checks catch many errors, but they have a blind spot: <b>sequence that is real but sits in the wrong place</b>. Duplicated segments and stretches shared by both parental chromosomes are hard to place. An assembler can then:</p>
+  <ul class="plain">
+    <li>collapse two copies into one;</li>
+    <li>put a correct copy on the wrong parental chromosome;</li>
+    <li>stitch pieces together where no read connects them;</li>
+    <li>duplicate sequence at the stitch.</li>
   </ul>
+  <p>Every piece is still real sequence, so reads cover it at normal depth. Figure 1 shows all four at one locus.</p>
+  <p class="key"><span><i class="sw" style="background:#CC79A7"></i>maternal sequence</span><span><i class="sw" style="background:#009E73"></i>paternal sequence</span><span><i class="sw" style="background:#E69F00"></i>the released assembly</span><span><i class="sw" style="background:#1f2328"></i>reads</span><span><i class="sw" style="background:#c2452d"></i>a problem</span><span><i class="sw" style="background:#1d5a96"></i>copyproof</span></p>
+  <figure>
+    <img src="assets/fig_cp_problem.svg" alt="Schematic of chromosome 2 in HG01943. The child's maternal chromosome carries a segment twice (copy 1 and a new copy 2); the paternal chromosome carries it once. In the released assembly the maternal chromosome holds one copy and lacks the junction; two pieces of copy 2 were placed in the paternal chromosome at four joins no read crosses; a third piece is an unplaced contig; two stretches are missing. Read depth on every piece is normal, 31 to 36x.">
+    <figcaption><b>Figure 1. One locus, four placement errors.</b> Schematic, approximately to scale, of chromosome 2 in the 1000 Genomes child HG01943 (data in Figure 2). <b>Top:</b> the child carries a new 1.09-Mb duplication (copy 2) on the chromosome inherited from his mother; neither parent has it. <b>Middle:</b> the released assembly (HPRC release 2) has these problems:
+      <ul class="plain">
+        <li>The maternal chromosome holds one copy and lacks the junction.</li>
+        <li>Two pieces of copy 2 (B and D) were placed inside the paternal chromosome, at four joins (black) that no read crosses.</li>
+        <li>A third piece is an unplaced contig, and two stretches are absent.</li>
+        <li>The joins duplicate sequence (red; widths exaggerated).</li>
+      </ul>
+      <b>Bottom:</b> the measured HiFi read depth on every piece is normal (31–36x), so coverage-based checks have nothing to flag.</figcaption>
+  </figure>
+</section>
+
+<section id="example">
+  <h2><span class="n">2</span>A real example: a new duplication in a 1000 Genomes child</h2>
+  <p>HG01943 is a boy from the 1000 Genomes Peruvian (PEL) population. His genome was assembled by the Human Pangenome Reference Consortium with his parents' data (trio phasing). Public reads show a 1.09-Mb segment of chromosome 2 present three times instead of twice:</p>
+  <ul class="plain">
+    <li>read depth and k-mer counts give 3.05–3.13 copies;</li>
+    <li>31 PacBio HiFi reads and 35 Illumina read pairs or split reads cross the new junction;</li>
+    <li>neither parent shows any of these signals.</li>
+  </ul>
+  <p>It is a new (de novo) duplication on the chromosome he inherited from his mother. The released assembly scatters the second copy, as Figure 1 shows.</p>
+  <p>Each problem leaves a trace in public data that the published checks do not read: the copy number of k-mers along the chromosome, the parent of origin of each piece, and reads across each join (Figure 2).</p>
+  <figure>
+    <img src="assets/fig_cp_hg01943.svg" alt="Three panels. a: copy number along chromosome 2 from 46.4 to 48.65 Mb. The child's reads show 3 copies across the 1.09-Mb segment and the parents 2; the assembly shows 3 in most windows, 2 in two stretches and 4 at two joins. b: share of maternal parent-specific k-mers per assembly piece; piece B on the paternal chromosome is 100 percent maternal (5,638 versus 0). c: at each of four joins, 17 to 44 HiFi reads lie beside the join and none crosses it.">
+    <figcaption><b>Figure 2. The evidence at HG01943, all from public data.</b> <b>a,</b> 21-mer copy number in 10-kb windows from NYGC 30x Illumina reads of the child and both parents, and from the released assembly (both haplotypes plus unplaced contigs). Red marks the 20 windows where the assembly disagrees with the child's reads: 17 at 2 copies and 3 at 4. <b>b,</b> Parent-specific k-mers (present in the child and in only one parent) in each assembly piece. Piece D is identical to the maternal copy, but its region has too few variants to call by k-mers. <b>c,</b> For each join on the paternal chromosome: grey, mean HiFi depth in the 2 kb on each side; red, reads aligned at least 1 kb past both sides.</figcaption>
+  </figure>
+  <p>When these five problems are scored against the QC tracks HPRC publishes for this genome, the default tracks flag none of them and the most sensitive flag two (Figure 3). The pilot checks that later became copyproof's design flag all five. They were built after looking at this locus, so this shows the evidence exists; it says nothing about accuracy elsewhere.</p>
+  <figure>
+    <img src="assets/fig_cp_qc.svg" alt="Grid of six QC outputs against five problems. HMM-Flagger default tracks, HiFi and nanopore: 0 of 5. HMM-Flagger all predictions, HiFi and nanopore: 2 of 5. NucFlag HiFi: 2 of 5. Pilot copyproof checks, built on this locus: 5 of 5.">
+    <figcaption><b>Figure 3. What published checks flag at HG01943.</b> The five problems of Figure 1 are scored in the release's own coordinates (regression test R2): the unsupported joins, the misplaced maternal piece, the two stretches where the missing copy's reads pile up, the two ends of the copy where the junction should be, and the two duplicated overlaps. Bracketed numbers count each problem's parts, and a circle's fill shows the fraction of parts covered. A problem counts as flagged when the test's rule is met: all four joins, at least half of the piece, both stretches, either copy end, both overlaps.</figcaption>
+  </figure>
+</section>
+
+<section id="mixtures">
+  <h2><span class="n">3</span>A second kind: cell lines are mixtures</h2>
+  <p>1000 Genomes DNA comes from cell lines, which keep changing in culture. HG01103, from the Puerto Rican (PUR) population, carries a shattering and rejoining of chromosomes 2 and 14 (chromothripsis) in about 64% of its cells. The 16 new junctions are supported by 203 HiFi reads and 297 Illumina split reads or read pairs, and none appears in either parent.</p>
+  <p>Its trio assembly (1KGP PacBio, hifiasm) contains all 16 junctions, yet it misrepresents the event in three ways:</p>
+  <ul class="plain">
+    <li>At 11 junctions the long contigs follow the minority, unrearranged cells.</li>
+    <li>At least one contig switches between the two cell populations, producing a sequence that exists in no single cell.</li>
+    <li>Over the nine segments the rearranged cells lost (46.2 Mb), reads show 1.31–1.37 copies while the assembly holds two. A coverage model would probably call that real sequence a false duplication.</li>
+  </ul>
+  <p>A review that reads only the published assembly-to-GRCh38 alignments sees 5 of the 16 junctions, because that file omits 75 of the 217 paternal contigs and the junction-side ends of five others (Figure 4).</p>
+  <figure>
+    <img src="assets/fig_cp_hg01103.svg" alt="Two panels. a: copy number along chromosome 2 for HG01103; reads show 2 copies in most segments and about 1.35 in six lost segments between 140 and 231 Mb, while the assembly holds 2 everywhere. b: of 16 junctions, 16 are supported by reads, 16 are in the assembly sequence, 5 are inside long contigs and 5 are visible in the published alignments.">
+    <figcaption><b>Figure 4. HG01103: a rearrangement present in about 64% of cells.</b> <b>a,</b> Copy number on chromosome 2 in the segments between junctions. Black: NYGC 30x Illumina reads, from CRAM indexes. Orange: the trio assembly, both haplotypes. Red: segments lost in the rearranged cells. Chromosome 14 behaves the same way. <b>b,</b> The 16 junctions: supported by reads; present in the assembly sequence; inside a contig at least 100 kb long and at least 100 kb from its end; and visible in the published alignments to GRCh38.</figcaption>
+  </figure>
+  <p>A tool that audits releases therefore has to read the sequence itself, not only alignments. It also needs words for sequence that is real but present in only some cells, and for DNA samples that genuinely differ.</p>
+</section>
+
+<section id="what">
+  <h2><span class="n">4</span>What copyproof will do</h2>
+  <p>copyproof is a standalone auditor for released assemblies, meant to complement coverage-based QC rather than replace it. For every haplotype it reports <em>issues</em>: loci where independent evidence disagrees with where, or how often, the assembly places a sequence. Each issue gets one of these classes:</p>
+  <ul class="classes">
+    <li><b>Missing copy</b>fewer copies in the assembly than in the reads</li>
+    <li><b>Extra copy</b>a false duplication, often at a join</li>
+    <li><b>Missing junction</b>a breakpoint carried by the reads but absent from the assembly</li>
+    <li><b>Misplaced piece</b>a piece carrying the other parent's sequence</li>
+    <li><b>Unsupported join</b>a gap or join that no read crosses</li>
+    <li><b>Sub-clonal sequence</b>real sequence present in only some cells, or a contig that switches between cell populations</li>
+    <li><b>Different DNA</b>the reads and the assembly came from DNA samples that genuinely differ; not an assembly error</li>
+    <li class="na"><b>Cannot assess</b>satellites, rDNA, high-copy repeats: the evidence cannot decide here, and copyproof says so rather than guessing</li>
+  </ul>
+  <p>Each issue comes with an evidence card, a calibrated score, coordinates on the assembly, GRCh38 and CHM13, and a curation status. It stays an issue until someone has looked.</p>
+</section>
+
+<section id="how">
+  <h2><span class="n">5</span>How it will work</h2>
+  <p>copyproof runs five checks on public data that already exist for almost every released sample:</p>
+  <ul class="plain">
+    <li>the NYGC 30x Illumina reads of each 1000 Genomes participant, which come from a DNA preparation independent of the assembly's and cover both parents in 602 trios;</li>
+    <li>the long reads each consortium aligned to its own assemblies;</li>
+    <li>the per-assembly annotation of gaps, segmental duplications and satellites.</li>
+  </ul>
+  <figure>
+    <img src="assets/fig_cp_method.svg" alt="Five tiles: 1 count copies, comparing k-mer copy number in reads and assembly; 2 missing sequence, assembling read k-mers absent from the assembly into short contigs whose ends map far apart; 3 parent of origin, parent-specific k-mers per scaffold piece; 4 join support, reads crossing each gap; 5 read ends, clusters of reads that stop at one place. Arrows lead to a box: combine into issues with a class, calibrated score and evidence card; outputs per haplotype.">
+    <figcaption><b>Figure 5. Five checks, one call per locus.</b> Colours as in Figures 1–2. The score for each issue class is calibrated on planted and real errors in HG002 (Figure 6), so that a score of 0.9 means about nine in ten such calls are real.</figcaption>
+  </figure>
+  <p><b>What is new.</b> Each check has a precedent:</p>
+  <ul class="plain">
+    <li>Merfin compares read and assembly k-mer copy number;</li>
+    <li>HMM-Flagger and NucFlag read coverage and base signals;</li>
+    <li>GAVISUNK validates duplications with ultra-long nanopore reads;</li>
+    <li>Inspector and CRAQ use clipped reads;</li>
+    <li>Merqury measures completeness and phasing genome-wide;</li>
+    <li>truth-based comparison scores assemblies against the HG002 benchmark.</li>
+  </ul>
+  <p>copyproof contributes four things: the audit of every scaffold piece and every join, an explicit "cannot assess" class, a single calibrated call per locus, and a scan of whole releases to measure how common this class of error is.</p>
+</section>
+
+<section id="validation">
+  <h2><span class="n">6</span>How we will know it works</h2>
+  <p>A detector is only useful if it rarely raises false alarms, so validation is ordered by what could stop the project. The key test is rung 3. copyproof runs on HG002, a genome whose diploid assembly is essentially complete and correct (the Q100 truth), with real HG002 reads. Every flag there is a false alarm, a residual error in the truth, or a real difference between DNA samples. The truth's maintainers publish 3,172 known low-confidence intervals (38.8 Mb), so each flag can be sorted into "known" or "new".</p>
+  <p>The target, set by the review that proposed copyproof, is to flag at most 2% of the truth's anchored duplication junctions. If copyproof cannot meet it, its scope narrows to scaffold joins and segmental duplications, where this error class lives.</p>
+  <figure>
+    <img src="assets/fig_cp_ladder.svg" alt="A staircase of seven validation rungs, from 0 synthetic genomes and 1 two known cases, through 2 planted errors and 3 false flags on the truth (marked go/no-go), 4 real assemblies with labels and 5 agreement without truth, to 6 the release scan.">
+    <figcaption><b>Figure 6. The validation ladder.</b> Each rung answers one question and costs more than the one below. The release scan comes last, with thresholds frozen beforehand so the prevalence estimate is not tuned on the data it reports.</figcaption>
+  </figure>
+</section>
+
+<section id="status">
+  <h2><span class="n">7</span>Scope, status and how to follow</h2>
+  <div class="status">
+    <div><b>Status</b>Design complete; implementation under way (November 2026). No genome-wide result exists yet.</div>
+    <div><b>Scope</b>592 haplotypes. Parent-of-origin checks need both parents' reads: 121 of 223 HPRC release-2 samples and 30 of 63 HGSVC3 samples in the 1000 Genomes set have them.</div>
+    <div><b>Sharing</b>Confirmed issues go to the HPRC and HGSVC teams as issues, and are reported as errors only once they agree.</div>
+  </div>
+  <p class="callout">The numbers on this page come from two loci. They show that this class of error exists and that public data can reveal it. How common it is across whole releases is the question copyproof is being built to answer.</p>
+  <p>The project is developed openly:</p>
+  <ul class="plain">
+    <li>the <a href="https://github.com/jlanej/assemble_align/blob/main/copyproof/GUIDE.md">implementation guide</a> sets out what to build, with which data, and the decisions to take along the way;</li>
+    <li>the <a href="https://github.com/jlanej/assemble_align/blob/main/copyproof/NOTEBOOK.md">notebook</a> records what each experiment showed;</li>
+    <li><a href="https://github.com/jlanej/assemble_align/blob/main/copyproof/resources.tsv">resources.tsv</a> lists every public input.</li>
+  </ul>
+  <p>Questions and suggestions are welcome as <a href="https://github.com/jlanej/assemble_align/issues">GitHub issues</a>.</p>
+</section>
+
+<section id="refs">
+  <h2>Key references</h2>
+  <ol class="refs">
+    <li>Lucas et al. 2026. HPRC2: a human pangenome reference with near-complete coverage of common genetic variation. Preprint. <a href="https://doi.org/10.64898/2026.07.21.739710">doi</a></li>
+    <li>Logsdon et al. 2025. Complex genetic variation in nearly complete human genomes. <i>Nature</i>. <a href="https://doi.org/10.1038/s41586-025-09140-6">doi</a></li>
+    <li>Byrska-Bishop et al. 2022. High-coverage whole-genome sequencing of the expanded 1000 Genomes Project cohort including 602 trios. <i>Cell</i>. <a href="https://doi.org/10.1016/j.cell.2022.08.004">doi</a></li>
+    <li>Hansen et al. 2026. A complete diploid human genome benchmark for personalized genomics. <i>Cell</i>. <a href="https://doi.org/10.1016/j.cell.2026.06.016">doi</a></li>
+    <li>Asri et al. 2026. Evaluating genome assemblies with HMM-Flagger. Preprint. <a href="https://doi.org/10.64898/2026.02.27.708355">doi</a></li>
+    <li>Oshima 2025. NucFlag v0.3.3.1 (software). <a href="https://doi.org/10.5281/zenodo.17902823">doi</a></li>
+    <li>Formenti et al. 2022. Merfin: improved variant filtering, assembly evaluation and polishing via k-mer validation. <i>Nature Methods</i>. <a href="https://doi.org/10.1038/s41592-022-01445-y">doi</a></li>
+    <li>Rhie et al. 2020. Merqury: reference-free quality, completeness, and phasing assessment for genome assemblies. <i>Genome Biology</i>. <a href="https://doi.org/10.1186/s13059-020-02134-9">doi</a></li>
+    <li>Dishuck et al. 2022. GAVISUNK: genome assembly validation via inter-SUNK distances in Oxford Nanopore reads. <i>Bioinformatics</i>. <a href="https://doi.org/10.1093/bioinformatics/btac714">doi</a></li>
+    <li>Chen et al. 2021. Accurate long-read de novo assembly evaluation with Inspector. <i>Genome Biology</i>. <a href="https://doi.org/10.1186/s13059-021-02527-4">doi</a></li>
+    <li>Li et al. 2023. Identification of errors in draft genome assemblies at single-nucleotide resolution for quality assessment and improvement (CRAQ). <i>Nature Communications</i>. <a href="https://doi.org/10.1038/s41467-023-42336-w">doi</a></li>
+  </ol>
 </section>
 
 <footer>
-  All analyses use public data from the 1000 Genomes Project (NYGC 30x), HPRC, HGSVC, GIAB and 1kGP-LRSC; every number on this page is computed from tables in the <a href="https://github.com/jlanej/assemble_align">repository</a>, where each pilot's scripts stream region slices and can be rerun on a workstation. Code: MIT. Text and figures: CC BY 4.0.
+  <p>Data: the 1000 Genomes Project (NYGC 30x), HPRC release 2, HGSVC3, 1KGP PacBio and the T2T HG002 Q100 project. Every number on this page is computed from tables in the <a href="https://github.com/jlanej/assemble_align">repository</a>: the case data are in <code>litmus/cases_HG01943_HG01103/</code>, the sample overlaps in <code>data/</code>, and the truth resources in <code>copyproof/resources.tsv</code>.</p>
+  <p>Code is under the MIT licence; text and figures under CC BY 4.0. copyproof grew out of <a href="review.html">a review of where read alignment and genome assembly still fail</a>.</p>
 </footer>
 
 </main>

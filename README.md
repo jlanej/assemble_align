@@ -22,7 +22,7 @@ The recommended order of work:
 
 | Path | Contents |
 |---|---|
-| `docs/` | One-page landing summary (`index.html`) with five figures generated from the pilot tables (`assets/`) |
+| `docs/` | Landing page for copyproof (`index.html`), with six figures drawn from the case tables (`assets/fig_cp_*.svg`); the one-page summary of the review (`review.html`, five figures in `assets/`) |
 | `report/` | Report PDF and markdown, figures, `ranked_proposals.tsv`, and the build script (`build_pdf.sh`: pandoc → HTML → weasyprint) |
 | `references/` | `references.bib` (369 cited works) and `references.json` (452 verified records, with a `cited_in_report` flag); `tracks/` holds each review track's own bibliography |
 | `reviews/` | Full literature reviews: alignment, assembly, transferable ideas (`ideas_matrix.tsv`); verified tool versions as of 2026-11-11; the HPRC release-2 QC baseline script and tables |
