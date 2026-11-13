@@ -33,6 +33,7 @@ The recommended order of work:
 | `litmus/L4_assembly/` | Assembly pilot on real reads: chr20 coverage and read-type titration with hifiasm 0.25.0 (HG01258; HiFi, R10 ONT, HiFi + R10 as `--ul`) and four read-recruitment rules at 13 hard loci (NA19240); scripts 01-14, tables, figures |
 | `factcheck/` | Independent fact-check of the draft: report, 52 findings, how each was resolved, and spot-check scripts |
 | `litmus/cases_HG01943_HG01103/` | Re-test of the two flagged 1kG cases, five scored regression tests, drivers and scorer |
+| `copyproof/` | Implementation guide for copyproof, a placement-aware assembly auditor (the detection half of F4): rationale, data, validation ladder, decision points and a running notebook. Design stage; no code yet |
 
 ## Headline litmus results
 
