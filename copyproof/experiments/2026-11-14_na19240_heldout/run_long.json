@@ -1,0 +1,116 @@
+{
+ "copyproof": "0.1.0",
+ "engine": "cpk 0.1.0",
+ "asm": [
+  {
+   "label": "pat",
+   "path": "DATA/hprc_r2/NA19240/NA19240_pat_hprc_r2_v1.0.1.fa.gz",
+   "md5_first_mb": "c72cf281077810a0ea13722a41ac9305"
+  },
+  {
+   "label": "mat",
+   "path": "DATA/hprc_r2/NA19240/NA19240_mat_hprc_r2_v1.0.1.fa.gz",
+   "md5_first_mb": "620067897288af96a347a24e622cea2b"
+  }
+ ],
+ "databases": {
+  "sample": "DATA/kmerdb/NA19240.nygc.cpkdb",
+  "mother": "DATA/kmerdb/NA19238.nygc.cpkdb",
+  "father": "DATA/kmerdb/NA19239.nygc.cpkdb",
+  "verkko": "DATA/kmerdb/NA19240.hgsvc3_verkko.exact.cpkdb",
+  "hifiasm": "DATA/kmerdb/NA19240.hgsvc3_hifiasm.exact.cpkdb"
+ },
+ "parameters": {
+  "k": 31,
+  "sample": 4,
+  "window": 1000,
+  "cap": 8,
+  "cn": {
+   "add": [
+    1,
+    -1,
+    2
+   ],
+   "mult": [
+    0.0,
+    0.25,
+    0.5,
+    0.75,
+    1.25,
+    1.5,
+    2.0
+   ],
+   "add_from": [
+    1,
+    2,
+    3,
+    5
+   ],
+   "nu": 5.0,
+   "min_class": 4,
+   "min_kmers": 30,
+   "max_high_copy": 0.5,
+   "min_gc_factor": 0.5,
+   "min_acgt": 0.5,
+   "min_island": 5,
+   "p_enter": 1e-06,
+   "p_leave": 0.02,
+   "min_llr": 20.0,
+   "merge_gap": 2,
+   "min_seg_class": 20,
+   "margin": 3.0,
+   "max_z": 3.5,
+   "fit_share": 0.9,
+   "min_share": 0.5,
+   "dominant_tol": 0.35,
+   "use_baseline": false,
+   "base_span": 10,
+   "base_min": 100,
+   "base_windows": 7,
+   "base_win_min": 4,
+   "base_range": [
+    0.8,
+    1.25
+   ],
+   "psi_local": 0.04,
+   "max_wander": 2.0,
+   "absent_factor": 0.25,
+   "absent_min_windows": 20,
+   "deep_ratio": 1.5,
+   "deep_windows": 8,
+   "high_windows": 5
+  },
+  "hapmers": {
+   "err": 0.02,
+   "p_switch": 0.001,
+   "min_sites": 4,
+   "min_ratio": 3.0,
+   "min_piece_sites": 20,
+   "parent_depth": [
+    0.7,
+    1.5
+   ],
+   "min_depth_kmers": 20,
+   "min_density": 0.1
+  },
+  "missing": {
+   "min_count_frac": 0.5,
+   "min_count": 4,
+   "max_count_frac": 3.5,
+   "min_hits": 2,
+   "max_reads": 1000000,
+   "max_repeat_frac": 0.5,
+   "max_occ": 4,
+   "anchor_sample": 2,
+   "min_anchor": 3,
+   "min_reads": 3,
+   "min_kmers": 3,
+   "local_max": 10000,
+   "diag_tol": 30,
+   "locus_tol": 40,
+   "min_strand": 1,
+   "min_strand_frac": 0.15
+  }
+ },
+ "finished": "2026-11-14 11:14:04"
+}

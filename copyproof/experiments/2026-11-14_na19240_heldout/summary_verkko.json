@@ -1,0 +1,190 @@
+{
+ "copyproof": "0.1.0",
+ "k": 31,
+ "sample": 4,
+ "window": 1000,
+ "multiplicity_cap": 8,
+ "groups": [
+  {
+   "label": "hap1",
+   "sequences": 76,
+   "bases": 2975688928,
+   "non_acgt": 1547681
+  },
+  {
+   "label": "hap2",
+   "sequences": 63,
+   "bases": 3025562967,
+   "non_acgt": 2606425
+  },
+  {
+   "label": "other",
+   "sequences": 981,
+   "bases": 105243839,
+   "non_acgt": 0
+  }
+ ],
+ "read_sets": [
+  "sample",
+  "mother",
+  "father",
+  "hprc_pat",
+  "hprc_mat"
+ ],
+ "depth_per_copy": 13.637,
+ "depth_model": {
+  "omega": [
+   1.0,
+   1.4372,
+   1.4372,
+   2.8519,
+   1.7766,
+   5.3328,
+   1.8963,
+   7.5887,
+   2.2382
+  ],
+  "psi": 0.0785,
+  "ratio_sd_per_window": 0.11344085723638633,
+  "median_kmers_per_window": 225.0,
+  "median_expected_sum": 6081.643673290026,
+  "gc_bins": 61,
+  "omega_windows": {
+   "1": 2015502,
+   "3": 38108,
+   "4": 810750,
+   "5": 13875,
+   "6": 191212,
+   "7": 8074,
+   "8": 60697
+  },
+  "median_pair_weight_per_kmer": 27.52408256880734
+ },
+ "bases": 6106495734,
+ "assessable_fraction": 0.8913,
+ "cannot_assess_bp": 663709575,
+ "kmer_support": {
+  "distinct_kmers_estimated": 2594990408,
+  "unsupported_kmers_estimated": 4018608,
+  "unsupported_fraction": 0.0015486022559509976,
+  "qv": 43.01
+ },
+ "read_kmer_completeness": 0.996963,
+ "cn_segments": {
+  "DEPTH": 2660,
+  "IRREGULAR": 498,
+  "CN_OR_DEPTH": 183,
+  "CN": 122,
+  "ABSENT": 8
+ },
+ "cn_or_depth_not_reported": 127,
+ "cn_settled_by_other_copies": 10,
+ "unsupported_clusters": 93502,
+ "hapmers": {
+  "hapmer_sites": 3263203,
+  "sequences_assessed": 177,
+  "sequences_not_assessable": 943,
+  "switch_segments": 65,
+  "switched_bp": 27199000,
+  "pieces_other_parent": 0
+ },
+ "missing": {
+  "threshold": 7,
+  "tracked_kmers": 1966565,
+  "estimated_kmers": 7866260,
+  "low_complexity": 2633132,
+  "high_copy": 252172,
+  "candidates": 4980956,
+  "candidates_about_one_copy": 4304976,
+  "candidates_about_two_copies": 675980,
+  "candidates_in_both_parents": 4449392,
+  "candidates_in_parent1_only": 313952,
+  "candidates_in_parent2_only": 94580,
+  "candidates_in_neither_parent": 123032,
+  "note": "missing k-mers were counted but not localised (no reads given, or --no-missing)"
+ },
+ "joins": {},
+ "issues": 251,
+ "issues_by_class": [
+  {
+   "class": "COLLAPSE",
+   "role": "locus",
+   "confidence": "high",
+   "n": 4
+  },
+  {
+   "class": "COLLAPSE",
+   "role": "partner",
+   "confidence": "high",
+   "n": 3
+  },
+  {
+   "class": "EXPANSION",
+   "role": "locus",
+   "confidence": "high",
+   "n": 25
+  },
+  {
+   "class": "EXPANSION",
+   "role": "locus",
+   "confidence": "low",
+   "n": 52
+  },
+  {
+   "class": "EXPANSION",
+   "role": "partner",
+   "confidence": "high",
+   "n": 23
+  },
+  {
+   "class": "EXPANSION",
+   "role": "partner",
+   "confidence": "low",
+   "n": 2
+  },
+  {
+   "class": "EXPANSION",
+   "role": "unresolved",
+   "confidence": "high",
+   "n": 30
+  },
+  {
+   "class": "EXPANSION",
+   "role": "unresolved",
+   "confidence": "low",
+   "n": 10
+  },
+  {
+   "class": "PHASE_SWITCH",
+   "role": "locus",
+   "confidence": "high",
+   "n": 13
+  },
+  {
+   "class": "PHASE_SWITCH",
+   "role": "locus",
+   "confidence": "low",
+   "n": 52
+  },
+  {
+   "class": "UNSUPPORTED",
+   "role": "locus",
+   "confidence": "high",
+   "n": 22
+  },
+  {
+   "class": "UNSUPPORTED",
+   "role": "locus",
+   "confidence": "low",
+   "n": 15
+  }
+ ],
+ "timings": {
+  "count_s": 0.0,
+  "scan_s": 176.7,
+  "windows_s": 96.4,
+  "cn_s": 53.7,
+  "hapmers_s": 1.4,
+  "total_s": 329.1
+ }
+}

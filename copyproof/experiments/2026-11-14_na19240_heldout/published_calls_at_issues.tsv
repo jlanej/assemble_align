@@ -1,0 +1,10 @@
+tool	label	calls	bp	at_any_issue	at_copy_number_issue
+flagger_hifi_conservative	Col	42	1711900	8	1
+flagger_hifi_conservative	Dup	48	3845477	9	5
+flagger_hifi_conservative	Err	59	688556	37	30
+flagger_hifi_conservative	NNN	55	3074807	45	25
+nucflag	COLLAPSE	8	162901	0	0
+nucflag	COLLAPSE_OTHER	168	2232646	34	4
+nucflag	COLLAPSE_VAR	22	817675	6	0
+nucflag	HET	608	14494382	26	6
+nucflag	MISJOIN	2008	60313549	339	95

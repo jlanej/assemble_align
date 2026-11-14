@@ -22,7 +22,7 @@ Next:      the next step
 | D3 | Coordinate frame | the release's own sequences; nothing is projected to a reference | a |
 | D4 | Segmentation | HMM over 1-kb windows with additive and depth-factor states, then classification per segment with one shared regional factor | e, i, j |
 | D5 | Negative-control denominator | fixed in g before the run; result 0.11% | g, h |
-| D6 | Thresholds and score | rules with log-likelihood margins; changed on rungs 1 to 4, so not frozen: rung 6 is open. Every value and its origin: `docs/thresholds.md` | e, h, i, j, l, m, n |
+| D6 | Thresholds and score | rules with log-likelihood margins; changed on rungs 1 to 4, then frozen at commit 1465496 and tested on NA19240 with the scores fixed beforehand: all seven declared comparisons hold, without a truth genome. Every value and its origin: `docs/thresholds.md` | e, h, i, j, l, m, n, p, s |
 | D7 | Non-trio assemblies | S1, S2 and S4 need no parents. S3 needs both, readable; it is specific for misplaced pieces and weak for switches under 50 kb, which S2 finds without parents | c, h, l, m |
 | D8 | Reuse or build | built one engine (`cpk`) | a |
 | D9 | Cost | measured: about 5 minutes to count 36x of FASTQ (30 from CRAM), 5 to 10 minutes per assembly after that when the disk keeps up. A scan ends by writing a 10- to 13-GB file; on the USB disk used here that step took 1 to 20 minutes | b, l, m, o |
@@ -56,9 +56,64 @@ How this log was kept: entry g was written before its experiment, as the guide a
 follow the result. Entries a to f and h to l were written in the evening of the same day, from the working record
 of the session, after the experiments they describe; their numbers were not all recomputed when they were written.
 Entries m, n and o were written within the hour of their experiments. Entry p, like g, was written before its
-experiment; what was added to it afterwards is marked with the time.
+experiment; what was added to it afterwards is marked with the time. Entry s, its result, was written within the
+hour of the runs.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
+
+### 2026-11-14 (s): rung 6, the held-out test on NA19240
+
+Note:      written within the hour of the runs, from the tables of the record
+           (`experiments/2026-11-14_na19240_heldout`). Entry p fixed the test beforehand; nothing in it was
+           changed afterwards except the additions it marks with their times.
+Question:  with every threshold fixed beforehand, do the results hold on a second person (GUIDE §8; D6)?
+Run:       `scripts/run_na19240_heldout.sh`, and `plant.sh`, `alt_settings.py`, `tables.py` and `after.py` of
+           the record, with `src/` and `engine/` at commit 1465496. Inputs of
+           `scripts/manifests/05_na19240_heldout.tsv`, each assembly and CRAM checked against its published MD5;
+           one file of the HGSVC3 hifiasm assembly had arrived with 198 wrong bytes and was repaired. The
+           pre-registration was committed (a82fdbe) and pushed at 10:29; the scored run started at 10:30:45 and
+           took 1,167 s. The run with long reads, the planted genome, the Verkko assembly and the alternative
+           settings followed one at a time until 11:41. Outputs: DATA/work/rung6 (95 GB); k-mer databases under
+           DATA/kmerdb (72 GB in 11 files).
+Seen:      all seven declared comparisons hold (`verdicts.tsv`). Score 1: 46 of 81 high-confidence copy-number
+           issues confirmed by both other assemblies, predicted 74 of 119 (p = 0.27); by the Verkko assembly
+           alone 75, by the hifiasm assembly alone 53, by neither 6. Score 2: 64 of 76 surplus copies of 5 kb
+           and more found, predicted 117 of 127 (p = 0.066); 2 of 14 collapses, predicted 1 of 3. Score 3: 47
+           of 48, 28 of 31, 41 of 43 and 8 of 12, none below HG002's share.
+           What "holds" is worth. Against the second HG002 pair, 97 of 119, score 1 is lower (p = 0.0001).
+           The difference is the second judge. The HGSVC3 hifiasm assembly holds 7.17 Gb; of the 2,813
+           stretches of 5 kb and more where it alone holds more copies than the release and no issue lies, the
+           reads side with the release at 2,777, 1.38 Gb. It confirms 44 of 69 surplus copies where the Verkko
+           assembly confirms 64.
+           Of the 12 surplus copies not found, the classifier saw 7 and did not call them (3 judged a depth
+           change, 4 ambiguous). Of the 12 collapses not found, 11 have no segment, and at 10 the reads stand
+           at the release's count: this proxy cannot judge collapses.
+           Missing alleles: one or both assemblies hold 1,395 of 1,773 strong calls (79%; HG002 92%). Calls
+           whose k-mers a parent's reads carry are held at 91% (HG002 93%). 922 calls are in neither parent's
+           reads (HG002 71), with a median of 8 reads where one copy gives 13.6.
+           With long reads: `scripts/eval_assemblies.py` scores issues of channel S1 only and so leaves out
+           the 38 that the audit marked S1+S4. Counted in full: 79 high-confidence copy-number issues, 44
+           confirmed by both and 72 by the Verkko assembly. The audit made 3 of the 5 high-confidence surplus
+           copies it looked at low-confidence; the Verkko assembly confirms all 3.
+           The two candidate values: with `min_seg_class` 10 and `margin` 2, 84 high-confidence issues where
+           the shipped values give 78, 79 confirmed by the Verkko assembly where they give 72, and 67 of 76
+           surplus copies found where they give 64.
+           The added run: on the Strand-seq-phased Verkko assembly the hapmer audit calls 65 switch segments,
+           13 of them with 10 sites or more. HPRC's trio-phased haplotypes confirm 7 of the 13 and contradict
+           none; of the 52 weaker ones they confirm 16 and contradict 8. Two stretches of 12.4 Mb, each at the
+           end of a sequence, make up 24.8 of the 27.2 Mb.
+           Costs: the three read counts took 2,721 s, 2,450 s and 758 s for 109, 141 and 109 Gb. The first two
+           ran while a CRAM was being downloaded to the same drive; which load cost the time was not measured.
+Decision:  D6: the thresholds stay as shipped. Frozen, they held on a second person by every declared
+           comparison. The test has no truth genome: its two measures of the share of true issues give 57% and
+           93%, as they gave 62% and 85% on HG002 where the truth gave 96%. The two candidate values looked no
+           worse on the new sample; changing them is a separate decision and was not made here. No code under
+           `src/` or `engine/` changed.
+           Seen and not acted on: the scoring script's channel filter on runs with long reads; the long-read
+           audit on an assembly made from the same reads; missing-allele calls in neither parent's reads.
+Next:      not decided here. The scan of whole releases, the guide's rung 6, was not started. A second person
+           with a truth genome would settle what this test could not; the candidate found, I002C, has MGI
+           short reads and no parental short reads (`resources.tsv`).
 
 ### 2026-11-14 (q): rung 2 with long reads: what the audit says at planted false joins
 
@@ -236,6 +291,12 @@ Decision:  D6.
            haplotypes were phased with these parents' k-mers from other reads: another assembly, not another
            pedigree. Only the hapmer channel of this run is part of the record. Script:
            `experiments/2026-11-14_na19240_heldout/hapmers_against_hprc.py`, tried on the synthetic trio.
+           Committed beforehand after all, added at 10:31 on 2026-11-14, while the scored run was in its first
+           minutes and before any output of it had been read. On request, this entry and the 28 other files of
+           the pre-registration were committed as a82fdbe at 10:27:36, merged with the branch as 8f5b972 and
+           pushed. GitHub's activity record gives the push 16:29:27 UTC, which is 10:29:27 here. The scored
+           run was held for it and started at 10:30:45. The files of a82fdbe are those of `prereg.sha256`,
+           so the order now rests on GitHub's time for the push as well as on the local times above.
 Next:      NA19240.
 
 ### 2026-11-13 (o): six more assemblies; the disk measured while a scan waited on it

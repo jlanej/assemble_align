@@ -1,0 +1,10 @@
+direction	confidence_short	long_reads	confidence_long	issues	confirmed_verkko	confirmed_hifiasm	confirmed_both	confirmed_either
+gain	high	not asked	high	12	11	9	2	11
+gain	low	not asked	low	2	0	2	0	2
+loss	high	carry its k-mers	low	3	3	2	2	3
+loss	high	do not carry them	high	2	2	2	2	2
+loss	high	not asked	high	64	59	40	40	59
+loss	low	carry its k-mers	low	32	1	1	1	1
+loss	low	do not carry them	high	1	0	0	0	0
+loss	low	not asked	low	37	15	8	8	15
+loss	low	not reported	not reported	12	0	0	0	0

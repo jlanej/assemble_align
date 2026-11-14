@@ -122,10 +122,31 @@ shows what marks the known four: sequence repeated beside another join of the sa
 *An evidence card: the piece between two joins of a paternal scaffold carries only maternal
 hapmers; to its right the reads hold one copy more than the release.*
 
-**Not yet measured.** Thresholds were adjusted on the same data they are reported on
-([docs/thresholds.md](docs/thresholds.md) says which, and what moving them does); a second sample
-with every threshold frozen beforehand is the missing test. Only human assemblies at 30x to 36x
-of 150-bp reads were run.
+**A second person, with every threshold fixed beforehand**
+([experiments/2026-11-14_na19240_heldout](experiments/2026-11-14_na19240_heldout/README.md)).
+NA19240 in HPRC release 2, run at the thresholds of the commit that produced the results above.
+The scores, their denominators and the predictions were written down, committed and pushed before
+the run. No truth genome exists for this person. Two other assemblies of her stand in for one, and
+on HG002 that stand-in confirmed 62% to 85% of the issues where the truth confirmed 96%.
+
+- All seven declared comparisons hold. Of 81 high-confidence copy-number issues, both other
+  assemblies confirm 46 with the same number of copies (predicted from HG002: 74 of 119), the
+  Verkko assembly alone 75, and neither 6.
+- Of the surplus copies of 5 kb and more on which the two assemblies agree, 64 of 76 are found
+  (predicted: 117 of 127). That is within what the test allows (p = 0.066), and a real drop of
+  some points cannot be excluded.
+- Errors planted in this release are found as in the truth genome, from 5 kb: 47 of 48 false
+  duplications, 28 of 31 deletions as a collapse, 41 of 43 as a missing haplotype.
+- Collapses could not be judged. Where the other assemblies hold more than the release and no
+  collapse is called, the reads agree with the release at 10 of 12.
+- On another assembly of the same person, phased without the parents, the hapmer audit calls 13
+  high-confidence phase switches; trio-phased haplotypes confirm 7 and contradict none.
+
+**Not yet measured.** The thresholds were adjusted on HG002 and HG01943
+([docs/thresholds.md](docs/thresholds.md) says which, and what moving them does). Frozen, they
+were tested on one more person, with reads of the same kind, an assembly of the same pipeline and
+no truth genome. Whether a call is true has been measured on HG002 only. Only human assemblies at
+30x to 36x of 150-bp reads were run.
 
 ## Install
 

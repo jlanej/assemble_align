@@ -1,0 +1,17 @@
+class	confidence	issues	median_bp	at_flagger_call	at_flagger_call_if_placed_at_random	at_flagger_call_random_max_of_200	at_nucflag_call	at_nucflag_call_if_placed_at_random	at_nucflag_call_random_max_of_200
+BASE_ERROR	high	76	56	7	0.04	1	59	0.99	4
+BASE_ERROR	low	25	50	1	0.03	1	20	0.36	2
+COLLAPSE	high	12	10000	1	1.01	2	4	0.14	2
+COLLAPSE	low	2	4000	0	0.0	0	1	0.02	1
+EXPANSION	high	68	50500	18	4.08	5	33	6.9	12
+EXPANSION	low	71	2000	4	0.07	1	26	1.97	6
+MISSING_ALLELE	high	1258	6	3	0.81	5	101	14.99	26
+MISSING_ALLELE	low	511	20	1	0.42	3	39	6.11	14
+MISSING_HAPLOTYPE	high	76	8540	4	1.09	3	52	1.17	5
+MISSING_HAPLOTYPE	low	52	2155	0	0.03	1	23	0.54	4
+MISSING_JUNCTION	low	1	1	0	0.0	0	0	0.01	1
+MISSING_SEQUENCE	low	238	1	17	17.14	19	18	4.42	10
+PHASE_SWITCH	high	18	18500	4	0.1	2	18	0.88	3
+PHASE_SWITCH	low	18	4500	2	0.01	1	13	0.25	2
+UNSUPPORTED	high	1	7000	0	0.0	0	1	0.02	1
+UNSUPPORTED	low	11	1000	0	0.0	0	7	0.09	1

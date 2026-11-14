@@ -1,0 +1,13 @@
+run	judged_by	direction	high_confidence_issues	confirmed	not_confirmed
+NA19240, with long reads, every channel	verkko	gain	12	11	1
+NA19240, with long reads, every channel	verkko	loss	67	61	6
+NA19240, with long reads, every channel	verkko	both directions	79	72	7
+NA19240, with long reads, every channel	hifiasm	gain	12	9	3
+NA19240, with long reads, every channel	hifiasm	loss	67	42	25
+NA19240, with long reads, every channel	hifiasm	both directions	79	51	28
+NA19240, with long reads, every channel	both	gain	12	2	10
+NA19240, with long reads, every channel	both	loss	67	42	25
+NA19240, with long reads, every channel	both	both directions	79	44	35
+NA19240, with long reads, every channel	either	gain	12	11	1
+NA19240, with long reads, every channel	either	loss	67	61	6
+NA19240, with long reads, every channel	either	both directions	79	72	7

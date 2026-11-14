@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """The hapmer audit on an assembly phased without the parents, held against trio-phased haplotypes
-of the same person (NOTEBOOK entry p, "a run added by the user").
+of the same person (NOTEBOOK entry p, "A run added on request").
 
 The run's scan carries the exact k-mers of the two trio-phased haplotypes as label sets. A tracked
 k-mer of the assembly that only one of them holds marks the parent of the stretch it lies in, by an

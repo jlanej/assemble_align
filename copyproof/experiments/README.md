@@ -13,16 +13,20 @@ commands is the data root (`scripts/manifests/` lists what to download into it).
 | [`2026-11-13_hg002_assemblies`](2026-11-13_hg002_assemblies/README.md) | 4 | On real assemblies of the same person, are the issues real and how many are found? |
 | [`2026-11-13_hg01943_trio`](2026-11-13_hg01943_trio/README.md) | 1 | Is the case that motivated the tool flagged, and what else is in that genome? |
 | [`2026-11-13_threshold_sensitivity`](2026-11-13_threshold_sensitivity/README.md) | | Do the results move with the thresholds? What did the classifier's revision change? |
+| [`2026-11-14_na19240_heldout`](2026-11-14_na19240_heldout/README.md) | 5 on one person, with the thresholds frozen as the guide asks before rung 6 | With every threshold fixed beforehand, do the results hold on a second person? |
 
-Rung 0 (a synthetic trio) is the test suite, `tests/`. Rungs 5 and 6 (other samples; thresholds
-frozen beforehand) were not run.
+Rung 0 (a synthetic trio) is the test suite, `tests/`. Rung 5 (agreement between assemblies of
+one person, without a truth genome) was run for one of its four people, with every threshold
+frozen beforehand; the notebook and the records call that test rung 6. The scan of whole releases,
+which is the guide's rung 6, was not run.
 
 ## Reading order for a reviewer
 
 1. [`../README.md`](../README.md), "What it finds": the claims.
 2. This page: where each claim's number comes from.
 3. The experiment records, in the order rung 3, trio, rung 2, rung 4, rung 1: that is the order
-   in which the method was shaped. The sensitivity record last.
+   in which the method was shaped. Then the sensitivity record, and last the held-out test,
+   which was run after the method had stopped changing.
 4. [`../docs/method.md`](../docs/method.md) for the method as built and
    [`../docs/thresholds.md`](../docs/thresholds.md) for every numeric choice and its origin.
 5. [`../NOTEBOOK.md`](../NOTEBOOK.md) for the order of events. Its entries were written the same
@@ -70,6 +74,12 @@ Every number in `../README.md`, with the table it is read from and what writes t
 | HG01943: missing sequence in neither parent is 46 events, the known junction first | `2026-11-13_hg01943_trio/missing_in_neither_parent.tsv` | `tables.py` |
 | The engine's counts against jellyfish | `2026-11-13_engine_validation/compare_jellyfish.tsv` | `compare_jellyfish.py` |
 | The classifier before and after its revision; one threshold moved at a time | `2026-11-13_threshold_sensitivity/sensitivity.tsv` | `scripts/dev/cache_segments.py`, then `scripts/dev/sensitivity.py` |
+| Held-out test: the seven declared comparisons, each beside its prediction | `2026-11-14_na19240_heldout/verdicts.tsv`; the predictions in `predictions.tsv`, fixed before the run (`prereg.sha256`) | `2026-11-14_na19240_heldout/tables.py`, from the outputs of `scripts/eval_assemblies.py` and `scripts/eval_planted.py` |
+| Held-out test: 46 of 81 confirmed by both other assemblies, 75 by the Verkko assembly alone, 6 by neither | `2026-11-14_na19240_heldout/score1_counts.tsv`, `after_confirmed_by.tsv`; one row per unconfirmed issue in `unconfirmed_high.tsv` | `tables.py`; `after.py`, written after the result was seen |
+| The stand-in for a truth genome on HG002: 62% to 85% confirmed where the truth confirms 96% | `2026-11-14_na19240_heldout/score1_counts.tsv`, `hg002_proxy_against_truth.tsv` | `calibrate_hg002.sh`, then `tables.py` |
+| Held-out test: surplus copies found (64 of 76); where no collapse is called the reads agree with the release at 10 of 12 | `2026-11-14_na19240_heldout/na19240_short_cn_scores.tsv`, `after_missed_discordances.tsv` | `scripts/eval_assemblies.py`; `after.py` |
+| Held-out test: planted errors found | `2026-11-14_na19240_heldout/planted_sensitivity.tsv` | `plant.sh` (`scripts/plant_errors.py`, `scripts/eval_planted.py`) |
+| Hapmer audit on an assembly phased without the parents: 13 high-confidence switches, 7 confirmed, none contradicted | `2026-11-14_na19240_heldout/verkko_hapmers_summary.tsv`, `verkko_hapmers_calls.tsv` | `2026-11-14_na19240_heldout/hapmers_against_hprc.py` |
 | Costs (minutes, GB) | stated in `../README.md` and in the engine record | timings printed by the engine and in each run's `summary.json`; not collected into a table |
 
 ## What cannot be regenerated from this repository
@@ -83,4 +93,6 @@ Every number in `../README.md`, with the table it is read from and what writes t
   (`scripts/manifests/`). The k-mer databases (32 GB) and the run directories (about 315 GB as
   they stand, nearly all of it positional tracks of 9 to 18 GB per run) are rebuilt from those.
   The long reads of rung 2 are not in a manifest: `scripts/run_planted_hifi.sh` fetches them by
-  region from a public alignment (0.5 GB).
+  region from a public alignment (0.5 GB). The held-out test adds 56 GB of downloads, 72 GB of
+  k-mer databases in 11 files and 95 GB of run directories, as measured on the disk when it was
+  done.

@@ -5,8 +5,12 @@ picked on judgement and kept because results looked reasonable; it was not optim
 derivation. Where the notebook or an experiment gives the reason, the entry is named.
 
 None of these was fixed before the data were seen, and several were changed on the same data the
-results are reported on (rungs 1 to 4). A second sample with every value frozen beforehand is the
-test still missing (GUIDE §8 rung 6).
+results are reported on (rungs 1 to 4). They were then frozen as they stand in commit `1465496`
+and tested on a second person, NA19240, with the scores and predictions written down and pushed
+before the run
+([`experiments/2026-11-14_na19240_heldout`](../experiments/2026-11-14_na19240_heldout/README.md)).
+All seven declared comparisons hold. That test has no truth genome, so it shows that the results
+did not fall on a new person, not that each value is right.
 
 The classifier's thresholds were varied one at a time in
 [`experiments/2026-11-13_threshold_sensitivity`](../experiments/2026-11-13_threshold_sensitivity/README.md);
@@ -49,10 +53,10 @@ row says so.
 |---|---|---|
 | `psi_local`: how far one k-mer class may sit from another in a segment | 4% | 3% is the same; at 6% a quarter of the collapses found in the assembly are lost. For scale: copies per class come out within 2.5% of the multiplicity genome-wide (NOTEBOOK d) |
 | `max_z`: a class fits within this many sd | 3.5 | plateau between 3 and 4 |
-| `margin`: log-likelihood to prefer one explanation | 3 nats (about 20 to 1) | **2 looks better on these data**: 13 more confirmed high-confidence calls on the assembly, 11 more on the planted genome, the truth genome unchanged. Left at 3 |
+| `margin`: log-likelihood to prefer one explanation | 3 nats (about 20 to 1) | **2 looks better on these data**: 13 more confirmed high-confidence calls on the assembly, 11 more on the planted genome, the truth genome unchanged. Left at 3. On NA19240, with the thresholds frozen, 2 gives 6 more high-confidence issues and 6 more that the Verkko assembly of the same person confirms (`alt_settings_na19240.tsv` of the held-out record) |
 | `dominant_tol`: the commonest class lands this near a whole copy number | 0.35 | plateau between 0.25 and 0.45 |
 | `min_share`: share of k-mers that must follow a whole-copy change | 0.5 | 0.4 the same; at 0.6, 5 collapses fewer |
-| `min_seg_class`: k-mers a class needs to count in a segment | 20 | **10 looks better on these data**: ambiguous segments on the truth genome 143 to 49, more high-confidence calls on the other two. 40 is worse on all three. Left at 20 |
+| `min_seg_class`: k-mers a class needs to count in a segment | 20 | **10 looks better on these data**: ambiguous segments on the truth genome 143 to 49, more high-confidence calls on the other two. 40 is worse on all three. Left at 20. On NA19240, 10 leaves 71 ambiguous segments where 20 leaves 179, and finds 66 of the 76 surplus copies on which both other assemblies agree where 20 finds 64; with `margin` 2 as well, 67 are found and the Verkko assembly confirms 79 high-confidence issues where it confirmed 72 |
 | `min_llr`: log-likelihood a segment needs | 20 nats | at 30: truth-genome issues 49 to 17, 11 planted signals lost, the assembly keeps 110 of 114 confirmed calls |
 
 ## Chosen, not varied

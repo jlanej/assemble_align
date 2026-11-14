@@ -29,3 +29,27 @@ HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	truth	both di
 HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	either	gain	24	7	17	0.292
 HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	either	loss	95	92	3	0.968
 HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	either	both directions	119	99	20	0.832
+NA19240, short reads of the trio	verkko	gain	12	11	1	0.917
+NA19240, short reads of the trio	verkko	loss	69	64	5	0.928
+NA19240, short reads of the trio	verkko	both directions	81	75	6	0.926
+NA19240, short reads of the trio	hifiasm	gain	12	9	3	0.75
+NA19240, short reads of the trio	hifiasm	loss	69	44	25	0.638
+NA19240, short reads of the trio	hifiasm	both directions	81	53	28	0.654
+NA19240, short reads of the trio	both	gain	12	2	10	0.167
+NA19240, short reads of the trio	both	loss	69	44	25	0.638
+NA19240, short reads of the trio	both	both directions	81	46	35	0.568
+NA19240, short reads of the trio	either	gain	12	11	1	0.917
+NA19240, short reads of the trio	either	loss	69	64	5	0.928
+NA19240, short reads of the trio	either	both directions	81	75	6	0.926
+NA19240, with long reads	verkko	gain	12	11	1	0.917
+NA19240, with long reads	verkko	loss	64	59	5	0.922
+NA19240, with long reads	verkko	both directions	76	70	6	0.921
+NA19240, with long reads	hifiasm	gain	12	9	3	0.75
+NA19240, with long reads	hifiasm	loss	64	40	24	0.625
+NA19240, with long reads	hifiasm	both directions	76	49	27	0.645
+NA19240, with long reads	both	gain	12	2	10	0.167
+NA19240, with long reads	both	loss	64	40	24	0.625
+NA19240, with long reads	both	both directions	76	42	34	0.553
+NA19240, with long reads	either	gain	12	11	1	0.917
+NA19240, with long reads	either	loss	64	59	5	0.922
+NA19240, with long reads	either	both directions	76	70	6	0.921

@@ -1,0 +1,8 @@
+score	what	predicted	predicted_share	NA19240	NA19240_share	p_lower_one_sided	holds
+1	high-confidence copy-number issues confirmed by both other assemblies	74 of 119	0.622	46 of 81	0.568	0.2682	yes
+2 gain	assessable discordances of 5 kb and more found: the other assemblies hold more (collapse)	1 of 3	0.333	2 of 14	0.143	0.4647	yes
+2 loss	assessable discordances of 5 kb and more found: the other assemblies hold fewer (surplus copy)	117 of 127	0.921	64 of 76	0.842	0.0656	yes
+3a	planted false duplications found, from 5 kb	46 of 47	0.979	47 of 48	0.979	0.7579	yes
+3b	planted deletions found as a collapse on the homologue, from 5 kb	25 of 28	0.893	28 of 31	0.903	0.7127	yes
+3c	planted deleted or overwritten stretches found as a missing haplotype, from 5 kb	34 of 40	0.85	41 of 43	0.953	0.9777	yes
+3d	planted swaps found as a phase switch	7 of 12	0.583	8 of 12	0.667	0.7998	yes

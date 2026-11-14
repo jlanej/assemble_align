@@ -1,0 +1,24 @@
+labels	direction	found	reads_nearer_to	discordances	bp	median_reads_over_release	median_others_over_release
+both	gain	False	the release	12	856000	1.0585	1.4915
+both	gain	True	the other assemblies	1	5000	2.646	1.826
+both	gain	True	the release	1	6000	1.057	1.765
+both	loss	False	the other assemblies	10	142000	0.6835	0.748
+both	loss	False	the release	2	11000	1.0045	0.819
+both	loss	True	the other assemblies	62	2835003	0.6735	0.677
+both	loss	True	the release	2	43000	0.852	0.6715
+hifiasm	gain	False	the other assemblies	36	2400000	1.143	1.1875
+hifiasm	gain	False	the release	2777	1384849845	0.984	1.487
+hifiasm	gain	True	the other assemblies	1	5000	2.646	1.981
+hifiasm	gain	True	the release	4	43000	1.0905	1.253
+hifiasm	loss	False	the other assemblies	12	161000	0.637	0.7435
+hifiasm	loss	False	the release	17	336570	1.028	0.693
+hifiasm	loss	True	the other assemblies	62	2838003	0.673	0.677
+hifiasm	loss	True	the release	2	43000	0.852	0.6725000000000001
+verkko	gain	False	the other assemblies	30	290000	1.1360000000000001	1.1135000000000002
+verkko	gain	False	the release	89	6107000	1.037	1.465
+verkko	gain	True	the other assemblies	8	162570	1.329	1.464
+verkko	gain	True	the release	2	15000	1.1885	1.7125
+verkko	loss	False	the other assemblies	21	878595	0.815	0.766
+verkko	loss	False	the release	23	1108000	1.025	0.821
+verkko	loss	True	the other assemblies	95	4418909	0.674	0.676
+verkko	loss	True	the release	7	232000	0.912	0.752

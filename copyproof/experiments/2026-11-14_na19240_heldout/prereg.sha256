@@ -47,3 +47,19 @@ a6f56407f92b02986fb8c4ad57f42beb45ebbde23c3333bb6ccbffdea65746ec  experiments/20
 1fc9ddd78a723ef8b395a7fd982a4bbd7b3a5028f4dacb9ea5de90f3dcd69e13  experiments/2026-11-14_na19240_heldout/README.md
 # added 2026-11-14 10:22:04 CST, same state: README.md with one sentence made exact (two faults and one generalisation, not three faults)
 d017543eba4121b5a191439df6799e00b64eb41dcb45543946adf508c86aff8e  experiments/2026-11-14_na19240_heldout/README.md
+# added 2026-11-14 10:31:41 CST, after the push (a82fdbe, merged as 8f5b972; GitHub records it at 2026-11-14T16:29:27Z) and after the scored run had started (10:30:45), before any output of it was read: entry p with six lines that say it was committed and pushed before the run. No rule, number or earlier line changed
+86ea685112b2ba93559056a2aa219e2f7532d075fdd35131f08595b127d02e4e  NOTEBOOK.md entry p, with the note on the push
+# added 2026-11-14 11:45:18 CST, after every run of the test had finished (the last at 11:41): one comment line in each of two scripts now quotes entry p as it has read since 08:25 ("A run added on request"). No code changed; git diff a82fdbe shows the one line in each. Every run of NA19240 was made with the scripts as hashed above
+d696ec39749a6aefe002eff4ba3c7c589ba55c3b542b5c416ddfe71985be315b  scripts/run_na19240_heldout.sh
+98680e4c8410f159ff13861544f423f809fd1a62044a42a17bfed734fa2b7cbc  experiments/2026-11-14_na19240_heldout/hapmers_against_hprc.py
+# added 2026-11-14 11:45:18 CST: after.py, written after the scored run had been seen. It writes the after_* tables, which describe what the scores leave open, and decides nothing; tables.py, which writes the verdicts, is as hashed at 10:21:53
+2ecd51b306c073c00c581c58153c141487f78747c6b7ce03457f08a3e7c7304c  experiments/2026-11-14_na19240_heldout/after.py
+6b759d08f76f478007e4671f84fb951edd21b945c98c00f3596cb6c3930ff6a8  experiments/2026-11-14_na19240_heldout/tables.py
+# added 2026-11-14 11:56:52 CST, with the record written: after.py as it stands. Since the line above it gained the tables on the run with long reads, on both HG002 pairs, on the read depth as referee, on the planted totals and on the homologous stretches; all of it after every result had been seen
+14703a904166845d785cd3d202490813a753efdbb65dde7fd8fa37840c444279  experiments/2026-11-14_na19240_heldout/after.py
+6b759d08f76f478007e4671f84fb951edd21b945c98c00f3596cb6c3930ff6a8  experiments/2026-11-14_na19240_heldout/tables.py
+8e58bc2ff70f084c90bbb7058e3ad812de0501d26d5689b582c90aff6212dd3e  experiments/2026-11-14_na19240_heldout/verdicts.tsv
+a6f56407f92b02986fb8c4ad57f42beb45ebbde23c3333bb6ccbffdea65746ec  experiments/2026-11-14_na19240_heldout/predictions.tsv
+# added 2026-11-14 11:57:39 CST: after.py once more (it now names the inputs under DATA in the copied run_*.json, so that no path of the machine goes into the repository) and the record
+ae43b5a16c42bfb256b8ad1acccfc03c7f190f394b9a8fa1cca9842586dc11b4  experiments/2026-11-14_na19240_heldout/after.py
+f9b1bfebff3254bba0271d921a39e26bb9c2a1056798c9ea969f644c1bbdf972  experiments/2026-11-14_na19240_heldout/README.md

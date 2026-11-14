@@ -1,0 +1,13 @@
+setting	labels	whole_copy_segments	ambiguous_segments	high	high_confirmed	low	low_confirmed	collapses_5kb	collapses_5kb_found	surplus_5kb	surplus_5kb_found
+as shipped (20, 3)	verkko	102	179	78	72	85	18	129	9	146	102
+as shipped (20, 3)	hifiasm	102	179	78	51	85	10	2818	5	93	64
+as shipped (20, 3)	both	102	179	78	45	85	10	14	2	76	64
+min_seg_class = 10	verkko	95	71	77	72	49	18	129	9	146	104
+min_seg_class = 10	hifiasm	95	71	77	50	49	12	2818	5	93	66
+min_seg_class = 10	both	95	71	77	44	49	11	14	2	76	66
+margin = 2	verkko	113	131	84	78	73	12	129	10	146	100
+margin = 2	hifiasm	113	131	84	54	73	9	2818	5	93	65
+margin = 2	both	113	131	84	47	73	9	14	2	76	65
+min_seg_class = 10 and margin = 2	verkko	106	36	84	79	39	11	129	10	146	102
+min_seg_class = 10 and margin = 2	hifiasm	106	36	84	56	39	8	2818	5	93	67
+min_seg_class = 10 and margin = 2	both	106	36	84	49	39	7	14	2	76	67

@@ -7,7 +7,7 @@
 # Two runs of the unedited release: `short` (the child's reads and both parents: the run that is
 # scored against the prediction, like the HG002 calibration) and `long` (the same with HPRC's
 # HiFi-to-assembly alignment, read remotely).
-# A run added to the test (entry p, "a run added by the user"): the hapmer audit on HGSVC3's Verkko
+# A run added to the test (entry p, "A run added on request"): the hapmer audit on HGSVC3's Verkko
 # assembly, which was phased with Strand-seq and not with the parents; HPRC's two trio-phased
 # haplotypes ride along as labels, and every call is held against them.
 #
