@@ -59,23 +59,24 @@ Entries m, n and o were written within the hour of their experiments.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
 
-### 2026-11-13 (o): five more assemblies; the disk measured while a scan waited on it
+### 2026-11-13 (o): six more assemblies; the disk measured while a scan waited on it
 
 Question:  does rung 4 hold on more assemblies, among them drafts of the truth genome, where almost nothing is
            wrong? And, asked by the user a second time: is the disk slow now?
 Run:       `scripts/run_hg002_assemblies.sh` for `hg002v0.9`, `hg002v1.0.1`, `hprc_curated`, `verkko_asm_thic`,
-           `v2_trio` and `hifi_q28_trio_hic`, one at a time; `scripts/scoreboard.py`, which now also writes out
-           the sums the record quotes; `experiments/2026-11-13_hg002_assemblies/unconfirmed.py`. For the disk:
+           `v2_trio`, `hifi_q28_trio_hic` and `lc24_nopolish`, one at a time; `scripts/scoreboard.py`, which
+           now also writes out the sums the record quotes; `experiments/2026-11-13_hg002_assemblies/unconfirmed.py`. For the disk:
            cores used by the running `cpk scan`, growth of its track file and MB moved by the device, every
            5 s; a stack sample of the process; write tests of random data flushed with F_FULLFSYNC.
-Seen:      Assemblies, twelve now: 4,499 of 4,566 high-confidence copy-number issues confirmed (99%; 1,119 of
-           1,176 without `verkko_2023`). The unconfirmed ones are 1 to 10 per assembly whether the confirmed ones
+Seen:      Assemblies, thirteen now, which is every one that was downloaded: 4,579 of 4,648
+           high-confidence copy-number issues confirmed (99%; 1,199 of 1,258 without `verkko_2023`). Surplus
+           copies of 5 kb and more: 73% to 79% found. Collapses: 25% to 54%. Under 5 kb: 9% to 18%. The unconfirmed ones are 1 to 10 per assembly whether the confirmed ones
            are 0 or 3,380. The three drafts have 3 unconfirmed each beside 4, 3 and 0 confirmed; two of the three
            are the same in every draft: the pair of calls near the start of chromosome 1 that the truth genome's
            own run makes. QV by read k-mers saturates: 51.2, 51.8 and 52.0 for drafts that the truth's k-mers put
            at 56.9, 58.7 and 59.3. `hprc_curated`, which has accession names and no haplotype labels, scores
            like `hprc_year1`.
-           A thirteenth run, `hifi_q28_trio_hic`, gave the numbers of `verkko_asm_thic` to the last digit. The
+           One more run, `hifi_q28_trio_hic`, gave the numbers of `verkko_asm_thic` to the last digit. The
            two downloads are one file (same size, same MD5): the benchmark folder holds that assembly under
            two names. It is counted once, and it is an unplanned repeat: the two runs, 43 minutes apart, wrote
            identical issue lists, segments, depth anomalies, models and scores.
@@ -100,7 +101,7 @@ Seen:      Assemblies, twelve now: 4,499 of 4,566 high-confidence copy-number is
            write test shows none of this, and what the drive does during a stall was not established.
 Decision:  no change to the method. The costs in the README hold when the disk keeps up, and it now says that
            a scan ends by writing a 10- to 13-GB file in one stream. Entry m and D9 are corrected.
-Next:      one assembly is still to be scored (`lc24_nopolish`).
+Next:      none for rung 4 on this sample. Rung 5 is other samples.
 
 ### 2026-11-13 (n): a review pass over the day's claims
 
@@ -254,9 +255,9 @@ Seen:      With the classifier of entries h and i: high-confidence calls about 8
            planted genome 147 signals found (119 high), 13 of 656 issues unexplained.
 Decision:  D4 and D6 as in `docs/method.md` §3. Thresholds were changed on rungs 2 to 4 together, so none of
            these rungs is a held-out test any more; rung 6 (a second sample, frozen thresholds) is the open one.
-Next:      seven more assemblies are downloaded and listed; they wait for a disk that writes. (Five were run
+Next:      seven more assemblies are downloaded and listed; they wait for a disk that writes. (Six were run
            later the same evening, entry o; the numbers above are those of the first seven, and the scoreboard
-           in the experiment folder holds all that are scored.)
+           in the experiment folder holds all thirteen.)
 
 ### 2026-11-13 (i): rung 2, errors planted in the truth genome
 

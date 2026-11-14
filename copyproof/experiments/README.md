@@ -74,5 +74,5 @@ Every number in `../README.md`, with the table it is read from and what writes t
   agrees with them (8 and 17 of 64) but leaves out two pipeline steps.
 - The first exploratory runs at half depth, which the notebook's entries d to f describe.
 - Anything at all without the downloads: about 220 GB of reads, assemblies and alignments
-  (`scripts/manifests/`). The k-mer databases (32 GB) and the run directories (276 GB as they
-  stand, nearly all of it positional tracks of 9 to 18 GB per run) are rebuilt from those.
+  (`scripts/manifests/`). The k-mer databases (32 GB) and the run directories (about 315 GB as
+  they stand, nearly all of it positional tracks of 9 to 18 GB per run) are rebuilt from those.

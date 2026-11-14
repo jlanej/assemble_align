@@ -21,6 +21,13 @@
   "truth_found": 2
  },
  {
+  "assembly": "lc24_nopolish",
+  "high": 82,
+  "high_true": 80,
+  "truth_assessable": 130,
+  "truth_found": 108
+ },
+ {
   "assembly": "hprc_year2_v2_thic",
   "high": 70,
   "high_true": 69,

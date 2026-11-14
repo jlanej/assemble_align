@@ -47,6 +47,8 @@ hprc_year2	h1tg000021l	104197000	104356000	159	EXPANSION	0.37	the release holds 
 hprc_year2	h1tg000042l	18000	210000	192	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
 hprc_year2	h2tg000042l	2000	186000	184	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
 hprc_year2_v2_thic	pat-0000699	7110000	7116000	6	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+lc24_nopolish	haplotype2-0000155	297000	477000	180	EXPANSION	0.37	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+lc24_nopolish	unassigned-0000939	27000	333000	306	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
 v2_trio	pat-0000643	4752000	5096000	344	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
 v2_trio	unassigned-0000431	0	100000	100	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
 v2_trio	unassigned-0000456	24000	94822	71	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release

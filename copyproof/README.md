@@ -51,18 +51,18 @@ Measured on public data; each line links to the record with commands and tables.
 
 **Real assemblies of one person, scored by a truth genome**
 ([experiments/2026-11-13_hg002_assemblies](experiments/2026-11-13_hg002_assemblies/README.md)).
-Twelve HG002 assemblies, three of them earlier drafts of the truth genome, were run with HG002's
+Thirteen HG002 assemblies, three of them earlier drafts of the truth genome, were run with HG002's
 36x short reads and scored against the k-mers of T2T-HG002 Q100, without alignment.
 
-![Twelve HG002 assemblies scored against the truth genome](experiments/2026-11-13_hg002_assemblies/scoreboard.png)
+![Thirteen HG002 assemblies scored against the truth genome](experiments/2026-11-13_hg002_assemblies/scoreboard.png)
 
-- 4,499 of 4,566 high-confidence copy-number issues are confirmed by the truth genome (99%; 1,119
-  of 1,176 without the one assembly that holds 150 Mb of surplus sequence).
+- 4,579 of 4,648 high-confidence copy-number issues are confirmed by the truth genome (99%; 1,199
+  of 1,258 without the one assembly that holds 150 Mb of surplus sequence).
 - The ones not confirmed number 1 to 10 per assembly, whether the confirmed ones number 0 or
   3,380. The three drafts, which have almost no errors left, get 3 unconfirmed issues each
   beside 4, 3 and 0 confirmed.
-- Of the surplus copies of 5 kb and more that lie in assessable sequence, 70% to 79% are found; of
-  the collapsed copies, 24% to 54%; under 5 kb, 9% to 18%.
+- Of the surplus copies of 5 kb and more that lie in assessable sequence, 73% to 79% are found; of
+  the collapsed copies, 25% to 54%; under 5 kb, 9% to 18%.
 - Strong missing-allele calls are true 96% of the time; one-sided missing sequence is not
   (46% when strong), and is reported accordingly.
 
