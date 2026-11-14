@@ -20,10 +20,14 @@ correct and cheap enough (GUIDE decisions D8 and D9)?
    | jellyfish k-mers with count ≥ 2 | 54,140,460 |
    | of those, tracked (hash multiple of 4) | 13,534,369 (24.9986%) |
    | present in the cpk database | 13,534,369 |
-   | identical count | 13,534,076 |
-   | cpk higher by 1 (Bloom false positive at first sighting) | 292 |
+   | identical count | 13,534,071 |
+   | cpk higher by 1 (Bloom false positive at first sighting) | 297 |
    | saturated at 65,535 (jellyfish: 73,122) | 1 |
-   | in cpk only, with count 2 (singletons that hit a Bloom false positive) | 2,192 |
+   | in cpk only, with count 2 (singletons that hit a Bloom false positive) | 2,199 |
+
+   (`compare_jellyfish.tsv`, from `compare_jellyfish.py`. Which k-mers meet a Bloom false positive
+   depends on the order in which threads insert them, so the last three rows move by a few
+   between runs: an earlier run gave 13,534,076, 292 and 2,192.)
 
    No k-mer is missing and no count is lower than jellyfish's.
 3. **Internal consistency.** `cpk count --exact` on hg002v1.1 and `cpk scan` of the same FASTA
@@ -65,5 +69,9 @@ cd copyproof/engine && cargo test --release
 cd copyproof && .venv/bin/python -m pytest tests/test_engine.py
 ```
 
-The jellyfish comparison used `jellyfish count -m 31 -C -s 1G -t 10`, `jellyfish dump -c -L 2`, and
-`cpk dump`; the k-mers were encoded and hashed with numpy to select the tracked ones.
+The jellyfish comparison (needs jellyfish 2 on the PATH; `--adapter none` because jellyfish does
+not trim adapters):
+
+```bash
+cd copyproof && .venv/bin/python experiments/2026-11-13_engine_validation/compare_jellyfish.py HG002.novaseq.pcr-free.30x.R1.fastq.gz WORKDIR
+```

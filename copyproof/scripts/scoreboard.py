@@ -5,7 +5,8 @@
 
 DIR holds NAME.eval.truth_eval.json and NAME.eval.cn_by_size.tsv from scripts/eval_truth.py.
 Writes PREFIX.tsv (one row per assembly), PREFIX.by_size.tsv (recall and precision by segment
-size, summed over assemblies), PREFIX.json (the figure's numbers) and PREFIX.png.
+size, summed over assemblies), PREFIX.md (both as Markdown tables, and every sum the experiment
+record quotes), PREFIX.json (the figure's numbers) and PREFIX.png.
 """
 
 from __future__ import annotations
@@ -91,6 +92,59 @@ md = ["| Assembly | What it is | Size (Gb), sequences | Discordant with the trut
 for r in tab.sort_values("truth_Mb", ascending=False).itertuples(index=False):
     md.append(f"| `{r.assembly}` | {r.what} | {r.Gb:.2f}, {r.sequences:,} | {r.truth_Mb:.1f} | {pct(r.truth_found, r.truth_assessable)} | "
               f"{pct(r.high_true, r.high)} | {pct(r.low_true, r.low)} | {r.qv_truth} / {r.qv_reads} |")
+
+SIZE = {"2-5 kb": "under 5 kb", "5-20 kb": "5 to 20 kb", "20-100 kb": "20 to 100 kb", ">100 kb": "over 100 kb"}
+DIRECTION = {"gain": "The truth holds more (collapse)", "loss": "The truth holds fewer (surplus copy)"}
+md += ["", f"Summed over the {len(tab)} assemblies, by size of the segment:", "",
+       "| Direction | Size | Assessable discordances | Found | Issues | Confirmed | High-confidence issues | Confirmed |",
+       "|---|---|---|---|---|---|---|---|"]
+for d in ("gain", "loss"):
+    for i, r in enumerate(agg[agg["direction"] == d].itertuples(index=False)):
+        md.append(f"| {DIRECTION[d] if i == 0 else ''} | {SIZE.get(r.size, r.size)} | {r.truth_assessable:,} | "
+                  f"{r.found:,} ({100 * r.found / max(r.truth_assessable, 1):.0f}%) | {r.issues:,} | "
+                  f"{pct(r.issues_true, r.issues).split(' of ')[0]} ({100 * r.issues_true / max(r.issues, 1):.0f}%) | {r.high:,} | "
+                  + (f"{r.high_true:,} ({100 * r.high_true / r.high:.0f}%) |" if r.high else " |"))
+
+
+def span(v, digits=0):
+    v = [x for x in v if x == x]
+    return f"{min(v):.{digits}f} to {max(v):.{digits}f}" if v else "none"
+
+
+def share_span(agg, d, sizes, num, den):
+    x = agg[(agg["direction"] == d) & agg["size"].isin(sizes)]
+    return span(100 * x[num] / x[den].clip(lower=1))
+
+
+big = tab.sort_values("high", ascending=False).iloc[0]
+rest = tab[tab["assembly"] != big.assembly]
+many = tab[tab["high"] >= 20]
+few = tab[tab["high"] < 20]
+unconfirmed = tab["high"] - tab["high_true"]
+ge5 = ["5-20 kb", "20-100 kb", ">100 kb"]
+lt5 = agg[agg["size"] == "2-5 kb"].set_index("direction")
+md += ["", "Sums the record quotes:", "",
+       f"- High-confidence copy-number issues confirmed: {pct(int(tab.high_true.sum()), int(tab.high.sum()))}; "
+       f"without `{big.assembly}`, {pct(int(rest.high_true.sum()), int(rest.high.sum()))}.",
+       f"- Per assembly, among the {len(many)} with 20 such issues or more: {span(100 * many.high_true / many.high)}% confirmed.",
+       f"- The {len(few)} with fewer than 20 ({', '.join('`' + n + '`' for n in few.assembly)}): "
+       f"{pct(int(few.high_true.sum()), int(few.high.sum()))} confirmed.",
+       f"- High-confidence issues not confirmed, per assembly: {span(unconfirmed)} "
+       f"({int(unconfirmed.sum())} in all), while the confirmed ones range from {int(tab.high_true.min()):,} to {int(tab.high_true.max()):,}.",
+       f"- Found, of assessable discordances of 5 kb and more: surplus copies {share_span(agg, 'loss', ge5, 'found', 'truth_assessable')}%, "
+       f"collapses {share_span(agg, 'gain', ge5, 'found', 'truth_assessable')}% (the three size classes).",
+       f"- Under 5 kb: found {100 * lt5.loc['gain', 'found'] / lt5.loc['gain', 'truth_assessable']:.0f}% (collapses) and "
+       f"{100 * lt5.loc['loss', 'found'] / lt5.loc['loss', 'truth_assessable']:.0f}% (surplus copies); "
+       f"{pct(int(lt5.loc['loss', 'issues_true']), int(lt5.loc['loss', 'issues']))} surplus-copy issues confirmed.",
+       f"- Segments that fit a depth factor or nothing regular (not reported): "
+       f"{pct(int(tab.depth_anomalies_true.sum()), int(tab.depth_anomalies.sum()))} confirmed; "
+       f"without `{big.assembly}`, {pct(int(rest.depth_anomalies_true.sum()), int(rest.depth_anomalies.sum()))}.",
+       f"- Ambiguous segments without support (not reported): "
+       f"{pct(int(tab.ambiguous_not_reported_true.sum()), int(tab.ambiguous_not_reported.sum()))} confirmed.",
+       f"- Sequence discordant with the truth: {span(tab.truth_Mb, 1)} Mb.",
+       f"- QV by truth k-mers minus QV by read k-mers: {span(tab.qv_truth - tab.qv_reads, 1)}; highest QV by read k-mers {tab.qv_reads.max():.2f}.",
+       f"- Unread assembly k-mers that are wrong by the truth: {span(100 * tab.unsupported_kmers_wrong)}%; "
+       f"k-mers wrong by the truth that the reads find: {span(100 * tab.wrong_kmers_found_by_reads)}%."]
 Path(f"{a.out}.md").write_text("\n".join(md) + "\n")
 
 # ---- figure: for each assembly, the high-confidence copy-number issues split by what the truth says

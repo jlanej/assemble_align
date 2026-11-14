@@ -110,6 +110,25 @@ pd.set_option("display.width", 200)
 pd.set_option("display.max_rows", 200)
 print(tab.to_string(index=False))
 
+# A false adjacency (the join left by a deletion, an inversion breakpoint) is not an issue from
+# short reads alone. Does it at least show as a run of assembly k-mers that no read holds?
+upath = Path(a.run) / "unsupported_clusters.tsv"
+if upath.is_file():
+    u = pd.read_csv(upath, sep="\t")
+    uby = {c: g for c, g in u.groupby("contig")}
+    rows = []
+    for r in exp[exp["signal"].isin(["FALSE_JOIN", "MISSING_JUNCTION"])].itertuples(index=False):
+        g = uby.get(r.contig)
+        mid = (r.start + r.end) // 2
+        hit = g[(g["start"] <= mid + a.point_tol) & (g["end"] >= mid - a.point_tol)] if g is not None else u.iloc[:0]
+        rows.append({"id": r.id, "kind": r.kind, "stratum": r.stratum, "size": r.size, "contig": r.contig, "position": mid,
+                     "unsupported_run": len(hit) > 0, "covered_flanks": bool(len(hit) and (hit["flank_copies"] >= 0.85).any())})
+    bp = pd.DataFrame(rows)
+    bp.to_csv(f"{a.out}.breakpoints.tsv", sep="\t", index=False)
+    print("\nplanted false adjacencies that show as a run of unsupported assembly k-mers:")
+    print(bp.groupby(["kind", "stratum"]).agg(adjacencies=("unsupported_run", "size"), unsupported_run=("unsupported_run", "sum"),
+                                              with_covered_flanks=("covered_flanks", "sum")).to_string())
+
 # issues away from every planted edit
 regions = {c: g[["start", "end"]].values for c, g in exp.groupby("contig")}
 

@@ -73,6 +73,26 @@ cand = segs[segs["kind"] == "CN"].sort_values("llr", ascending=False)
 cand[["contig", "start", "end", "direction", "delta", "own", "llr", "stratum", "known_bp", "classes", "own_classes"]].to_csv(
     f"{out}.cn_candidates.tsv", sep="\t", index=False)
 
+# The counts behind two reporting rules (CnParams.deep_ratio, deep_windows, high_windows).
+amb = segs[segs["kind"] == "CN_OR_DEPTH"].copy()
+amb["ratio"] = (amb["dominant_m"] + amb["delta"]).clip(lower=0) / amb["dominant_m"].clip(lower=1)
+amb["deep"] = (amb["ratio"] <= 2 / 3 + 1e-9) | (amb["ratio"] >= 1.5 - 1e-9)
+amb["windows"] = pd.cut(amb["n_assessed"], [0, 2, 4, 7, 10**9], labels=["1-2", "3-4", "5-7", "8 or more"])
+print("\n== ambiguous segments (a depth factor fits as well as a whole copy): assessed windows, by depth of the change")
+t = amb.groupby(["deep", "windows"], observed=False).size().unstack(fill_value=0)
+t.index = ["under 1.5-fold" if not d else "1.5-fold or more" for d in t.index]
+print(t.to_string())
+t.to_csv(f"{out}.ambiguous_by_length.tsv", sep="\t")
+half = amb[(amb["dominant_m"] == 2) & (amb["delta"] == -1) & (amb["n_assessed"] <= 2)]
+print(f"ambiguous: {len(amb)}; long (8 windows) and deep (1.5-fold): {int((amb['deep'] & (amb['n_assessed'] >= 8)).sum())}; "
+      f"two-copy k-mers at half depth over 1 or 2 windows: {len(half)}")
+cn = segs[(segs["kind"] == "CN") & ~segs["contig"].str.contains("chrM")]
+short = cn[cn["n_assessed"] < 5]
+print(f"whole-copy segments: {len(cn)} (without chrM); on fewer than 5 windows: {len(short)}, of which losses on the "
+      f"haplotype's own k-mers: {int(((short['direction'] == 'loss') & (short['own'] == 'own')).sum())}")
+anom_dir = anom.groupby("direction").size()
+print(f"depth anomalies by direction: {dict(anom_dir)}")
+
 iss = pd.read_csv(run / "issues.tsv", sep="\t")
 iss["len"] = iss["end"] - iss["start"]
 iss["stratum"] = [stratum(c, s, e) for c, s, e in zip(iss.contig, iss.start, iss.end)]

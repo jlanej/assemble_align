@@ -173,7 +173,7 @@ if mc.is_file():
     col = f"frac_in_{a.truth_label}"
     if col in c.columns and len(c):
         c["true"] = c[col] >= 0.5
-        c["strong"] = (c["n_reads"] >= 6) & (c["tracked_kmers"] >= 5)
+        c["strong"] = (c["n_reads_locus"] >= 6) & (c["tracked_kmers"] >= 5)  # as in the issue list
         res["missing_clusters"] = {
             f"{kind}|{'high' if strong else 'low'}": {"n": int(len(g)), "true": int(g["true"].sum())}
             for (kind, strong), g in c.groupby(["kind", "strong"])

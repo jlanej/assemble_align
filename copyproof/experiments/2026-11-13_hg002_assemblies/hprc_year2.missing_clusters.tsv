@@ -1,0 +1,5 @@
+kind	strength	clusters	true	share_true
+MISSING_ALLELE	strong	996	957	0.961
+MISSING_ALLELE	weak	273	175	0.641
+MISSING_SEQUENCE	strong	115	53	0.461
+MISSING_SEQUENCE	weak	1010	92	0.091

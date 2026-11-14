@@ -1,5 +1,19 @@
 [
  {
+  "assembly": "hg002v1.0.1",
+  "high": 3,
+  "high_true": 0,
+  "truth_assessable": 2,
+  "truth_found": 0
+ },
+ {
+  "assembly": "hg002v0.9",
+  "high": 6,
+  "high_true": 3,
+  "truth_assessable": 5,
+  "truth_found": 0
+ },
+ {
   "assembly": "hg002v0.7",
   "high": 7,
   "high_true": 4,
@@ -14,6 +28,13 @@
   "truth_found": 73
  },
  {
+  "assembly": "verkko_asm_thic",
+  "high": 81,
+  "high_true": 77,
+  "truth_assessable": 158,
+  "truth_found": 89
+ },
+ {
   "assembly": "hifiasm_ontonly_2025",
   "high": 80,
   "high_true": 71,
@@ -21,11 +42,25 @@
   "truth_found": 76
  },
  {
+  "assembly": "v2_trio",
+  "high": 74,
+  "high_true": 69,
+  "truth_assessable": 178,
+  "truth_found": 71
+ },
+ {
   "assembly": "hprc_year2",
   "high": 119,
   "high_true": 114,
   "truth_assessable": 233,
   "truth_found": 151
+ },
+ {
+  "assembly": "hprc_curated",
+  "high": 242,
+  "high_true": 233,
+  "truth_assessable": 667,
+  "truth_found": 273
  },
  {
   "assembly": "hprc_year1",

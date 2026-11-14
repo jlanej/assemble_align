@@ -15,7 +15,8 @@ was measured, and what was not, is in [NOTEBOOK.md](NOTEBOOK.md) and under
 | [NOTEBOOK.md](NOTEBOOK.md) | Running log of experiments and decisions, newest first |
 | [docs/method.md](docs/method.md) | How each channel works, as built |
 | [docs/outputs.md](docs/outputs.md) | Every output file and column |
-| [experiments/](experiments/) | One folder per experiment: question, commands, result tables |
+| [docs/thresholds.md](docs/thresholds.md) | Every numeric threshold: its value, where it came from, what was checked |
+| [experiments/](experiments/README.md) | One folder per experiment: question, commands, result tables. Its index says where every number above comes from |
 | [resources.tsv](resources.tsv) | Public data the work uses |
 | `engine/` | The k-mer engine (`cpk`, Rust) |
 | `src/copyproof/` | The Python package: model, segmentation, calls, evidence cards |
@@ -50,15 +51,18 @@ Measured on public data; each line links to the record with commands and tables.
 
 **Real assemblies of one person, scored by a truth genome**
 ([experiments/2026-11-13_hg002_assemblies](experiments/2026-11-13_hg002_assemblies/README.md)).
-Seven HG002 assemblies were run with HG002's 36x short reads and scored against the k-mers of
-T2T-HG002 Q100, without alignment.
+Twelve HG002 assemblies, three of them earlier drafts of the truth genome, were run with HG002's
+36x short reads and scored against the k-mers of T2T-HG002 Q100, without alignment.
 
-![Seven HG002 assemblies scored against the truth genome](experiments/2026-11-13_hg002_assemblies/scoreboard.png)
+![Twelve HG002 assemblies scored against the truth genome](experiments/2026-11-13_hg002_assemblies/scoreboard.png)
 
-- 4,117 of 4,160 high-confidence copy-number issues are confirmed by the truth genome (99%; 737
-  of 770 without the one assembly that holds 150 Mb of surplus sequence).
-- Of the surplus copies of 5 kb and more that lie in assessable sequence, 72% to 80% are found; of
-  the collapsed copies, 26% to 50%; under 5 kb, 10% to 20%.
+- 4,499 of 4,566 high-confidence copy-number issues are confirmed by the truth genome (99%; 1,119
+  of 1,176 without the one assembly that holds 150 Mb of surplus sequence).
+- The ones not confirmed number 1 to 10 per assembly, whether the confirmed ones number 0 or
+  3,380. The three drafts, which have almost no errors left, get 3 unconfirmed issues each
+  beside 4, 3 and 0 confirmed.
+- Of the surplus copies of 5 kb and more that lie in assessable sequence, 70% to 79% are found; of
+  the collapsed copies, 24% to 54%; under 5 kb, 9% to 18%.
 - Strong missing-allele calls are true 96% of the time; one-sided missing sequence is not
   (46% when strong), and is reported accordingly.
 
@@ -81,24 +85,34 @@ With short reads alone: about 25 high-confidence issues per haplotype, and an is
 0.11% of 20,237 duplication boundaries (the design's target was at most 2%). With long reads
 added, 1,123 runs of assembly k-mers that no short read holds are sorted by whether long reads
 hold them: they do for 957; of the 119 they do not hold, 115 lie on the list of known issues that
-the truth genome's own curators publish.
+the truth genome's own curators publish. Where the reads can be compared with the assembly there
+(110 of the 119), they hold a different length of sequence in 106: an insertion or deletion,
+often in a homopolymer.
+
+**The truth genome with its parents**
+([experiments/2026-11-13_hg002_trio](experiments/2026-11-13_hg002_trio/README.md)). No scaffold
+piece is called misplaced (0 of 18). Phase switches, all false here, number 24 (0.4 Mb); the
+strongest are the immunoglobulin heavy-chain locus, where a parent's B-cell line has lost the
+haplotype it passed on. Before two filters that this run led to, there were 143. Of 12 planted
+haplotype swaps the hapmer channel finds 7, the parent-free missing-haplotype call 11.
 
 **HG01943 in HPRC release 2, the case this was built for**
 ([experiments/2026-11-13_hg01943_trio](experiments/2026-11-13_hg01943_trio/README.md)). All five
 defects of the locus are flagged with 2 off-target calls, where the published QC of that assembly
 finds 0 to 2. Two of copyproof's rules were added after its first run scored 3 of 5, so this is
 not an independent test of those two. Genome-wide it reports one scaffold piece on the wrong
-haplotype (the known one) and seven more scaffold joins with a surplus copy beside them.
+haplotype (the known one). Seven more scaffold joins have a surplus copy beside them, but none
+shows what marks the known four: sequence repeated beside another join of the same scaffold.
 
 ![A scaffold piece on the wrong haplotype](experiments/2026-11-13_hg01943_trio/card_misplaced_piece.png)
 
 *An evidence card: the piece between two joins of a paternal scaffold carries only maternal
 hapmers; to its right the reads hold one copy more than the release.*
 
-**Not yet measured.** The hapmer channel has no false-flag rate on a truth genome (HG002's
-parents are downloaded, `scripts/run_hg002_trio.sh` is ready). Thresholds were adjusted on the
-same data they are reported on; a second sample with frozen thresholds is the missing test.
-Only human assemblies at 30x to 36x of 150-bp reads were run.
+**Not yet measured.** Thresholds were adjusted on the same data they are reported on
+([docs/thresholds.md](docs/thresholds.md) says which, and what moving them does); a second sample
+with every threshold frozen beforehand is the missing test. Only human assemblies at 30x to 36x
+of 150-bp reads were run.
 
 ## Install
 
@@ -163,6 +177,11 @@ No temporary files are written. A read set is counted once and its database (abo
 any assembly of the same sample; a scan writes a track of 10 to 13 GB. Stages are cached, so a
 re-run after changing a threshold takes about 2 minutes.
 
+These times need a disk that keeps up. A scan ends by writing its track in one stream, and the
+other steps read it back. The portable USB drive used for this work takes writes at speed for a
+while and then nearly stops for 10 to 20 minutes; on it the same scan took from 1.5 to over 20
+minutes (NOTEBOOK entry o).
+
 ## What it cannot do
 
 - It makes no copy-number statement where more than half of a window's k-mers occur more than
@@ -185,7 +204,10 @@ re-run after changing a threshold takes about 2 minutes.
 - Calls land on the copies that remain. When a duplicate is collapsed, the reads pile up on its
   twin; which haplotype lost the copy is decided by haplotype-specific k-mers when there are any,
   and an identical extra copy cannot be told from the copy it repeats.
-- Without the parents there is no phase audit.
+- Without the parents there is no phase audit. With them, the audit is specific for whole
+  scaffold pieces and weak for switches under 50 kb (the missing-haplotype call finds those
+  without parents), and where the parents' samples are cell lines, a switch at an immunoglobulin
+  locus says something about the parents' cells, not the assembly.
 
 ## Conventions
 

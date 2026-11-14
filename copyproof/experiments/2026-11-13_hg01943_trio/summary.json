@@ -68,15 +68,15 @@
   "CN_OR_DEPTH": 163,
   "CN": 135
  },
- "cn_or_depth_not_reported": 118,
+ "cn_or_depth_not_reported": 124,
  "cn_settled_by_other_copies": 9,
  "unsupported_clusters": 12255,
  "hapmers": {
-  "hapmer_sites": 2439310,
-  "sequences_assessed": 157,
-  "sequences_not_assessable": 87,
-  "switch_segments": 156,
-  "switched_bp": 12683000,
+  "hapmer_sites": 2355996,
+  "sequences_assessed": 153,
+  "sequences_not_assessable": 91,
+  "switch_segments": 32,
+  "switched_bp": 2065000,
   "pieces_other_parent": 1
  },
  "missing": {
@@ -118,7 +118,7 @@
    "not_carried": 3
   }
  },
- "issues": 2867,
+ "issues": 2737,
  "issues_by_class": [
   {
    "class": "BASE_ERROR",
@@ -184,7 +184,7 @@
    "class": "EXPANSION",
    "role": "partner",
    "confidence": "low",
-   "n": 5
+   "n": 4
   },
   {
    "class": "EXPANSION",
@@ -196,7 +196,7 @@
    "class": "EXPANSION",
    "role": "unresolved",
    "confidence": "low",
-   "n": 15
+   "n": 10
   },
   {
    "class": "FALSE_JOIN",
@@ -273,38 +273,26 @@
   {
    "class": "MISSING_SEQUENCE",
    "role": "locus",
-   "confidence": "high",
-   "n": 65
-  },
-  {
-   "class": "MISSING_SEQUENCE",
-   "role": "locus",
    "confidence": "low",
-   "n": 43
-  },
-  {
-   "class": "MISSING_SEQUENCE",
-   "role": "twin",
-   "confidence": "high",
-   "n": 72
+   "n": 108
   },
   {
    "class": "MISSING_SEQUENCE",
    "role": "twin",
    "confidence": "low",
-   "n": 44
+   "n": 116
   },
   {
    "class": "PHASE_SWITCH",
    "role": "locus",
    "confidence": "high",
-   "n": 19
+   "n": 7
   },
   {
    "class": "PHASE_SWITCH",
    "role": "locus",
    "confidence": "low",
-   "n": 137
+   "n": 25
   },
   {
    "class": "UNSUPPORTED",
@@ -334,11 +322,11 @@
  "timings": {
   "count_s": 0.0,
   "scan_s": 0.0,
-  "windows_s": 4.8,
-  "cn_s": 31.4,
-  "hapmers_s": 1.3,
-  "missing_s": 10.0,
-  "joins_s": 48.8,
-  "total_s": 122.1
+  "windows_s": 60.1,
+  "cn_s": 130.7,
+  "hapmers_s": 4.8,
+  "missing_s": 82.0,
+  "joins_s": 105.0,
+  "total_s": 739.9
  }
 }

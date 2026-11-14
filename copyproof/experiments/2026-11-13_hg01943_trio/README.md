@@ -20,7 +20,7 @@ HiFi-to-assembly alignment, read remotely by region.
 | Target of the regression test | copyproof | Found |
 |---|---|---|
 | T1: the four joins that no read spans | `UNSUPPORTED_JOIN` at all four (0 linking reads, 4 to 11 reads on each flank), each high-confidence because it lies next to another issue | 4 of 4 |
-| T2: the piece on the wrong haplotype | `MISPLACED_PIECE` paternal 47,396,531-47,765,590: 281 maternal hapmer sites against 0 paternal; the only misplaced piece in the genome | 1 of 1 |
+| T2: the piece on the wrong haplotype | `MISPLACED_PIECE` paternal 47,396,531-47,765,590: 148 maternal hapmer sites against 0 paternal (281 against 0 before windows that a parent's reads do not cover were set aside); the only misplaced piece in the genome | 1 of 1 |
 | T3: the collapsed copy | `COLLAPSE` maternal 47.368-47.455 Mb (`locus`) and 47.684-47.782 Mb (`partner`), paternal 48.103-48.201 Mb (`locus`) | 2 of 2 |
 | T4: the junction of the duplication | `MISSING_SEQUENCE` at maternal 46,997,978, one base from the junction end; 4 reads, k-mers in neither parent | 1 of 2 ends |
 | T5: the two false duplications at the joins | `EXPANSION` paternal 47.376-47.397 and 47.745-47.786 Mb (the first pair), 48.202-48.241 and 48.524-48.541 Mb (the second) | 2 of 2 |
@@ -38,38 +38,48 @@ looking at them, both stated generally and both documented in `docs/method.md`:
    as a weak one-sided cluster of 4 reads: the far side of the junction is a high-copy repeat,
    where reads are deliberately not recruited. Weak one-sided clusters are not reported (nine in
    ten are artefacts). But recurrent artefacts recur in the parents' reads; clusters whose k-mers
-   are solid in the child and in neither parent are few (45 events in this genome), and the
-   junction is the one with the highest k-mer count. These are now reported at low confidence.
+   are solid in the child and in neither parent are few (46 events in this genome,
+   `missing_in_neither_parent.tsv`), and the junction is the one with the highest k-mer count.
+   These are now reported at low confidence.
 2. *An ambiguous copy-number segment at an unlinked join.* The second false duplication is "one
    copy fewer among four", which a depth factor of 0.81 explains as well. It lies within 5 kb of
    a join that no long read links, and that is reported now (2 segments in this genome, both
    here).
 
+Later the same day the HG002 trio run (`../2026-11-13_hg002_trio/`) changed two more things that
+show in this genome's numbers: the hapmer channel now ignores windows that a parent's reads do
+not cover, and a one-sided missing-sequence call is never high-confidence. The locus score did
+not change (5 of 5, 2 off-target).
+
 ## The rest of the genome
 
-2,867 issue rows (`issues_by_class.tsv`). Depth per copy 14.2; 88.9% of bases assessable.
+2,737 issue rows (`issues_by_class.tsv`). Depth per copy 14.2; 88.9% of bases assessable.
 
 | Class | High | Low | Note |
 |---|---|---|---|
 | `MISPLACED_PIECE` | 1 | 0 | the known one |
-| `PHASE_SWITCH` | 19 | 137 | 12.7 Mb switched in all (0.2% of the genome) |
+| `PHASE_SWITCH` | 7 | 25 | 2.1 Mb in all. Before the hapmer channel was revised on the HG002 trio: 156 segments, 12.7 Mb |
 | `UNSUPPORTED_JOIN` | 11 | 23 | 34 of the 42 joins have no linking read; 11 lie next to another issue |
 | `COLLAPSE` | 14 (+8 partner, +14 unresolved) | 4 | |
-| `EXPANSION` | 17 (+32, +37) | 47 | |
+| `EXPANSION` | 17 (+32, +37) | 41 | |
 | `UNSUPPORTED` | 1 | 2 | |
 | `FALSE_JOIN` | 5 | 3 | no read of either kind holds the k-mers, and no long read runs through |
 | `BASE_ERROR` | 425 | 284 | no read of either kind holds the k-mers; long reads run through |
 | `MISSING_HAPLOTYPE` | 25 (+19 twin) | 21 (+21) | |
 | `MISSING_ALLELE` | 558 (+527 twin) | 198 (+189) | |
 | `MISSING_JUNCTION` | 1 | 0 | |
-| `MISSING_SEQUENCE` | 65 (+72 twin) | 43 (+44) | 87 rows have k-mers in neither parent |
+| `MISSING_SEQUENCE` | 0 | 108 (+116 twin) | 87 rows have k-mers in neither parent |
 
-1. **Seven more joins look like the known four.** Besides the four at the locus, seven unlinked
-   joins have a copy too many right next to them (`joins.tsv`, `next_to=EXPANSION`): on
-   JBHIIK010000006.1 at 22.40 Mb, JBHIIK010000076.1 at 22.89 Mb, CM089367.1 at 49.41 Mb (also a
-   phase switch), JBHIIL010000001.1 at 0.83 Mb, JBHIIL010000004.1 at 6.17 Mb and JBHIIL010000072.1
-   at 5.78 and 90.31 Mb. These are candidates for the same kind of error and were not examined
-   further.
+1. **Seven more joins have a surplus copy beside them, but not the signature of the known four.**
+   Besides the four at the locus, seven unlinked joins lie next to an `EXPANSION`
+   (`joins_evidence.tsv`). At the known locus the surplus copy beside each join repeats sequence
+   from beside another join of the same scaffold: two pieces that overlap were joined end to end.
+   None of the seven shows that. Six have their other copies on other sequences only, one
+   (JBHIIK010000006.1 at 22.40 Mb) has a copy 50 Mb away on the same sequence, and five sit at
+   runs of N of 19 kb to 795 kb, not at 100-N scaffold joins. The two at 100-N joins
+   (JBHIIK010000076.1 at 22.89 Mb, `card_expansion_at_another_join.png`, and JBHIIL010000004.1 at
+   6.17 Mb) are the ones most like the known case. All seven were flagged by the same rule and
+   none was examined further.
 2. **An unlinked join alone says little.** 34 of 42 scaffold joins have no long read across them,
    which is what a gap is. Reporting each as an error (as a clip-based tool does at all 42) would
    bury the four that matter.
@@ -95,7 +105,10 @@ looking at them, both stated generally and both documented in `docs/method.md`:
 
 ## Files
 
-- `score_R2.json`: the scorer's output. `issues_at_locus.tsv`: the 17 issue rows at the locus.
-- `issues_by_class.tsv`, `joins.tsv` (the 34 unlinked joins with what lies next to them),
-  `summary.json`.
-- `card_misplaced_piece.png`, `card_collapse.png`, `card_expansion_at_join.png`: evidence cards.
+- `score_R2.json`: the scorer's output. `summary.json`: the run's summary.
+- `tables.py` makes the tables from the run directory: `issues_at_locus.tsv` (the 17 issue rows at
+  the locus), `issues_by_class.tsv`, `joins.tsv` (the 34 unlinked joins with what lies next to
+  them), `joins_evidence.tsv` (gap size, neighbouring copy-number issue and same-scaffold repeats
+  for the 11 firm joins) and `missing_in_neither_parent.tsv`.
+- `card_misplaced_piece.png`, `card_collapse.png`, `card_expansion_at_join.png` (the known locus)
+  and `card_expansion_at_another_join.png`: evidence cards, drawn with `copyproof cards`.

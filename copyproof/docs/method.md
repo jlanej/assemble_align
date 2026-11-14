@@ -31,8 +31,9 @@ that carry k-mers of a set, the second lists where the k-mers of some sequences 
 release.
 
 Checked against a naive counter on simulated reads (exact) and against jellyfish 2.3.1 on 4 million
-real reads: 13,534,076 of 13,534,369 tracked k-mers identical, 292 higher by one (Bloom false
-positives), one saturated at 65,535.
+real reads: 13,534,071 of 13,534,369 tracked k-mers identical, 297 higher by one (Bloom false
+positives), one saturated at 65,535, none missing and none lower
+(`experiments/2026-11-13_engine_validation/`).
 
 ## 2. Depth model
 
@@ -183,10 +184,11 @@ co-linear anchors are chained, and each read is classified by its flanks:
 - one flank only: `MISSING_SEQUENCE`. This is the weakest evidence of the channel. With fewer
   than 6 reads or 5 tracked k-mers about nine in ten are artefacts where truth is known (and all
   of them on a truth genome), so those stay in the cluster table and are not issues; the others
-  are low-confidence issues unless a parent's reads hold the missing k-mers too. With parents,
-  one kind of weak cluster is kept: missing k-mers that are solid in the child and in neither
-  parent. Recurrent artefacts recur in the parents' reads, so these are few (about 45 events
-  in HG01943), and a de novo junction is among them;
+  are low-confidence issues. A parent's reads holding the missing k-mers does not vouch for
+  them: recurrent artefacts recur in the parents' reads, and on the truth genome a parent holds
+  the k-mers of 208 of 211 strong clusters. The parents help the other way round: missing k-mers
+  that are solid in the child and in neither parent are few (46 events in HG01943, 5 on the
+  truth genome), a de novo junction is among them, and weak clusters of that kind are kept;
 - no flank: unplaced.
 
 Placements at one locus form a cluster (clustering by shared k-mers chains unrelated loci
@@ -201,13 +203,33 @@ adjacency is still in the release. It shows as unsupported assembly k-mers (sect
 
 ## 5. S3: parental hapmers
 
-A hapmer is an assembly k-mer present in the child's reads and in exactly one parent's (count at
-least 3 in one, 0 in the other). Hapmers are counted in sites (runs less than k apart), because
-one variant makes up to k of them. A two-state model per sequence decodes the parent of each
-stretch (2% of sites assumed wrong, switch prior 10^-3 per kb). Stretches that follow the other
-parent than the rest of their sequence, with at least 4 sites and 3:1, are `PHASE_SWITCH`; a
-gap-delimited piece that does so is `MISPLACED_PIECE`. Sequences with fewer than 20 sites are not
-assessable.
+A hapmer is an assembly k-mer present in the child's reads and in exactly one parent's (at least
+3 reads in one, none in the other). Hapmers are counted in sites (runs less than k apart),
+because one variant makes up to k of them. A two-state model per sequence decodes the parent of
+each stretch (2% of sites assumed wrong, switch prior 10^-3 per window). Stretches that follow
+the other parent than the rest of their sequence, with at least 4 sites and 3 to 1, are
+`PHASE_SWITCH`; a gap-delimited piece that does so is `MISPLACED_PIECE`. Sequences with fewer
+than 20 sites are not assessable.
+
+Two conditions came from running the channel on a truth genome with its parents, where every
+switch is a false flag (143 segments at first):
+
+- *Both parents must be readable.* "None in the other parent" is evidence only where that
+  parent's reads cover the place. Windows where a parent's depth on the two-copy k-mers lies
+  outside 0.7 to 1.5 of its usual depth are not used (1.7% of windows). Most false switches were
+  such places: dropouts of sequencing, and deletions in the parents' own cell lines. The largest
+  were the immunoglobulin loci, where a parent's B-cell line has lost part of the haplotype it
+  passed on.
+- *A switch carries sites at about the usual density.* A segment whose other-parent sites per kb
+  are under a tenth of the sequence's own density is dropped: a few stray sites spread over a
+  megabase that has almost none of its own.
+
+With both, the truth genome keeps 24 segments (0.4 Mb, 8 of them with 10 sites or more, 4 of
+those at the immunoglobulin heavy-chain locus) and no misplaced piece among 18. Of 12 haplotype
+swaps planted in that genome the channel finds 7 (all four of 200 kb, two of four at 50 kb, one
+of four at 10 kb), filters or not: a 10-kb swap holds about 4 sites. The missing-haplotype call
+of S2 finds 11 of the 12 without any parent, so S3 earns its place with large pieces, not short
+switches.
 
 ## 6. S4: long-read audit (optional)
 
@@ -244,6 +266,9 @@ long reads? An alignment can run through a stretch the read does not hold; its k
 On the truth genome, 13 stretches of 1 to 3 kb have one haplotype's own k-mers unread by short
 reads; HiFi reads carry all of those k-mers at 10, and carry few or none at 2, both of which are
 known issues of that assembly.
+
+Every threshold named in this document is listed in [thresholds.md](thresholds.md) with where
+its value came from: fitted, set from a count on real data, or chosen.
 
 ## 7. Evaluation without alignment
 

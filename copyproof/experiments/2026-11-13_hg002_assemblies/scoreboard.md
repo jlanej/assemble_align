@@ -2,8 +2,40 @@
 |---|---|---|---|---|---|---|---|
 | `verkko_2023` | Verkko HiFi + ONT, trio (2023); names carry no haplotype | 6.08, 3,258 | 149.6 | 3,802 of 4,937 (77%) | 3,380 of 3,390 (100%) | 429 of 551 (78%) | 44.3 / 42.03 |
 | `hprc_year1` | HPRC year-1 assembly (hifiasm trio, 2021 data) | 6.02, 1,055 | 59.7 | 290 of 681 (43%) | 254 of 260 (98%) | 50 of 88 (57%) | 52.4 / 49.72 |
+| `hprc_curated` | HPRC curated HG002 (accession names; one group) | 6.02, 869 | 59.5 | 273 of 667 (41%) | 233 of 242 (96%) | 60 of 179 (34%) | 52.6 / 49.82 |
 | `hifiasm_2021` | hifiasm 0.12, HiFi only (2021) | 5.97, 1,030 | 53.4 | 350 of 838 (42%) | 225 of 234 (96%) | 85 of 135 (63%) | 50.8 / 48.43 |
+| `verkko_asm_thic` | Verkko, trio + Hi-C | 5.97, 90 | 23.6 | 89 of 158 (56%) | 77 of 81 (95%) | 5 of 52 (10%) | 55.8 / 50.07 |
 | `hifiasm_ontonly_2025` | hifiasm, ONT only (2025) | 5.98, 163 | 18.8 | 76 of 159 (48%) | 71 of 80 (89%) | 4 of 57 (7%) | 45.7 / 43.89 |
 | `hprc_year2_v2_thic` | HPRC year-2 v2, trio + Hi-C | 5.98, 209 | 17.9 | 73 of 155 (47%) | 69 of 70 (99%) | 10 of 45 (22%) | 52.7 / 48.79 |
 | `hprc_year2` | HPRC year-2 pipeline, hifiasm trio, polished | 5.98, 302 | 16.5 | 151 of 233 (65%) | 114 of 119 (96%) | 31 of 74 (42%) | 51.4 / 49.21 |
+| `v2_trio` | Verkko v2, trio | 6.00, 678 | 15.7 | 71 of 178 (40%) | 69 of 74 (93%) | 7 of 57 (12%) | 50.6 / 49.54 |
 | `hg002v0.7` | Q100 draft v0.7 | 6.00, 48 | 2.2 | 2 of 12 (17%) | 4 of 7 (57%) | 2 of 38 (5%) | 56.9 / 51.18 |
+| `hg002v0.9` | Q100 draft v0.9 | 6.00, 48 | 2.1 | 0 of 5 (0%) | 3 of 6 (50%) | 0 of 32 (0%) | 58.7 / 51.78 |
+| `hg002v1.0.1` | Q100 v1.0.1 | 6.00, 48 | 0.2 | 0 of 2 (0%) | 0 of 3 (0%) | 0 of 43 (0%) | 59.3 / 51.95 |
+
+Summed over the 12 assemblies, by size of the segment:
+
+| Direction | Size | Assessable discordances | Found | Issues | Confirmed | High-confidence issues | Confirmed |
+|---|---|---|---|---|---|---|---|
+| The truth holds more (collapse) | under 5 kb | 435 | 39 (9%) | 26 | 19 (73%) | 0 |  |
+|  | 5 to 20 kb | 534 | 130 (24%) | 153 | 139 (91%) | 138 | 127 (92%) |
+|  | 20 to 100 kb | 422 | 213 (50%) | 225 | 210 (93%) | 213 | 203 (95%) |
+|  | over 100 kb | 158 | 85 (54%) | 148 | 134 (91%) | 143 | 131 (92%) |
+| The truth holds fewer (surplus copy) | under 5 kb | 363 | 65 (18%) | 656 | 26 (4%) | 4 | 4 (100%) |
+|  | 5 to 20 kb | 3,505 | 2,771 (79%) | 2,544 | 2,517 (99%) | 2,132 | 2,120 (99%) |
+|  | 20 to 100 kb | 2,166 | 1,563 (72%) | 1,815 | 1,804 (99%) | 1,616 | 1,606 (99%) |
+|  | over 100 kb | 442 | 311 (70%) | 350 | 333 (95%) | 320 | 308 (96%) |
+
+Sums the record quotes:
+
+- High-confidence copy-number issues confirmed: 4,499 of 4,566 (99%); without `verkko_2023`, 1,119 of 1,176 (95%).
+- Per assembly, among the 9 with 20 such issues or more: 89 to 100% confirmed.
+- The 3 with fewer than 20 (`hg002v0.7`, `hg002v0.9`, `hg002v1.0.1`): 7 of 16 (44%) confirmed.
+- High-confidence issues not confirmed, per assembly: 1 to 10 (67 in all), while the confirmed ones range from 0 to 3,380.
+- Found, of assessable discordances of 5 kb and more: surplus copies 70 to 79%, collapses 24 to 54% (the three size classes).
+- Under 5 kb: found 9% (collapses) and 18% (surplus copies); 26 of 656 (4%) surplus-copy issues confirmed.
+- Segments that fit a depth factor or nothing regular (not reported): 1,302 of 32,740 (4%) confirmed; without `verkko_2023`, 440 of 29,305 (2%).
+- Ambiguous segments without support (not reported): 171 of 1,337 (13%) confirmed.
+- Sequence discordant with the truth: 0.2 to 149.6 Mb.
+- QV by truth k-mers minus QV by read k-mers: 1.1 to 7.3; highest QV by read k-mers 51.95.
+- Unread assembly k-mers that are wrong by the truth: 9 to 90%; k-mers wrong by the truth that the reads find: 32 to 92%.

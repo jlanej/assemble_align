@@ -32,8 +32,8 @@ class, so the file can be given as it is to scorers that read a label in column 
 | `MISSING_JUNCTION` | S2 | reads join this position to a distant one; no sequence in the release holds that junction | fewer than 6 reads or 5 tracked k-mers |
 | `MISSING_HAPLOTYPE` | S2 | three or more alleles carried by the reads, less than 10 kb apart, are absent: one haplotype of the stretch is not represented | fewer than 5 alleles |
 | `MISSING_ALLELE` | S2 | reads carry one allele here that no sequence in the release holds | fewer than 6 reads or 5 tracked k-mers |
-| `MISSING_SEQUENCE` | S2 | reads run from here into sequence found nowhere in the release (reported with at least 6 reads and 5 tracked k-mers, or when its k-mers are in neither parent's reads; weaker ones stay in `missing_clusters.tsv`) | unless it is strong and a parent's reads hold most of the missing k-mers too |
-| `PHASE_SWITCH` | S3 | a stretch carries the other parent's hapmers than the rest of its sequence | fewer than 10 hapmer sites |
+| `MISSING_SEQUENCE` | S2 | reads run from here into sequence found nowhere in the release (reported with at least 6 reads and 5 tracked k-mers, or when its k-mers are in neither parent's reads; weaker ones stay in `missing_clusters.tsv`) | always |
+| `PHASE_SWITCH` | S3 | a stretch carries the other parent's hapmers than the rest of its sequence, where both parents' reads cover it at their usual depth | fewer than 10 hapmer sites |
 | `MISPLACED_PIECE` | S3 | a whole gap-delimited scaffold piece carries the other parent's hapmers | never |
 | `UNSUPPORTED_JOIN` | S4 | no long read links the two sides of a run of N | unless another issue lies within 20 kb (a misplaced piece, a copy too many or too few, a missing junction): an unlinked scaffold gap alone is ordinary |
 | `FALSE_JOIN` | S1 + S4 | a run of assembly k-mers that neither short nor long reads hold, and that no long read runs through (needs `--long-read-bam`) | fewer than 3 long reads clipped there and fewer than 10 over it |
@@ -71,7 +71,7 @@ copy it repeats, and a `partner` on the other haplotype; `other_copies` ties the
 | `unsupported_clusters.tsv` | every run of tracked assembly k-mers with no read support, with the support of its flanks and how many of its k-mers occur once in the release. A run is an issue (`BASE_ERROR`) only when the reads carry another allele there; a false join looks the same but so do about a thousand correct stretches of a truth genome that short reads do not cover |
 | `missing_clusters.tsv` | clusters of solid read k-mers absent from the release: kind, locus, reads, tracked k-mers, median count, share found in each parent |
 | `missing/` | the recruited reads (`missing.reads.fa`) and where their k-mers anchor (`missing.anchors.tsv`) |
-| `hapmer_sequences.tsv`, `hapmer_pieces.tsv`, `hapmer_switches.tsv` | hapmer sites per sequence, per gap-delimited piece, and the switch segments |
+| `hapmer_sequences.tsv`, `hapmer_pieces.tsv`, `hapmer_switches.tsv` | hapmer sites per sequence (with `windows_unreadable`: windows set aside because a parent's reads do not cover them at their usual depth), per gap-delimited piece, and the switch segments |
 | `joins.tsv` | with `--long-read-bam`: per run of N, reads that link it, reads near it on each side, clips, verdict |
 | `unsupported_points.tsv` | with `--long-read-bam`: per unsupported run with normally covered flanks (`run...`) and per copy-number loss on a haplotype's own k-mers (`cn...`): long reads that run through, long reads clipped there, the verdict by alignment (`spanned`, `broken`, `unclear`), the unread assembly k-mers, how many of them at least two long reads hold, and the verdict by content (`long_read_kmers`: `carried`, `not_carried`, `unclear`) |
 | `cards/` | per issue, `ID.json` (the numbers) and `ID.png` (copies implied by the reads along the locus, hapmer sites, and where reads and release disagree in sequence) |

@@ -1,0 +1,4 @@
+direction	windows	segments	confirmed
+gain	5 or more	24	22
+loss	5 or more	93	90
+loss	under 5	18	1

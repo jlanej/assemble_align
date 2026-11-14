@@ -59,8 +59,8 @@ calls of low confidence (`new_elsewhere.tsv`).
    inversion breakpoint the reads carry the true adjacency, and the release still holds it: on the
    homologue. No read k-mer is missing. What does show is the release's own false adjacency: its
    k-mers have no read. All 24 inversion breakpoints and 34 of 36 deletion joins are runs of
-   unsupported assembly k-mers (`unsupported_clusters.tsv`), 23 and 29 of them with normally
-   covered flanks. But rung 3 found 1,123 such runs on the unedited genome, nearly all in sequence
+   unsupported assembly k-mers, 23 and 29 of them with normally covered flanks
+   (`breakpoints.tsv`, written by `scripts/eval_planted.py`). But rung 3 found 1,123 such runs on the unedited genome, nearly all in sequence
    that long reads confirm. So an unsupported run is reported only with a second witness: a
    missing allele from the reads (`BASE_ERROR`), or long reads that also break there
    (`FALSE_JOIN`, needs `--long-read-bam`; there is no long-read alignment to this edited genome,
@@ -77,7 +77,8 @@ calls of low confidence (`new_elsewhere.tsv`).
    - *Long and deep ambiguous segments are rare in a correct genome.* On the unedited genome no
      ambiguous segment in 5.3 Gb is at least 8 kb long with a depth change of 1.5-fold or more
      (one, under the classifier of that moment); dips to half the depth that last one or two
-     windows number 105. Such segments are now reported, at low confidence.
+     windows number 105 (`../2026-11-13_hg002_q100_false_flags/ambiguous_by_length.tsv`). Such
+     segments are now reported, at low confidence.
 3. **An event must not outlive its evidence.** A hidden state for "one copy fewer, among k-mers
    the release holds three times or more" says nothing about a window without such k-mers; its
    likelihood there equals the concordant one, and the model stayed in it for free. Segments ran
@@ -95,6 +96,8 @@ calls of low confidence (`new_elsewhere.tsv`).
 ## Files
 
 - `sensitivity.tsv`: found and planted per kind, signal, stratum and size.
+- `breakpoints.tsv`: per planted false adjacency, whether it shows as a run of unsupported
+  assembly k-mers, and whether that run has normally covered flanks.
 - `edits.tsv`: every planted edit in original and edited coordinates.
 - `new_elsewhere.tsv`: the 13 issues that are neither at an edit, nor at its homologue, nor in the
   unedited genome.

@@ -22,10 +22,10 @@ Next:      the next step
 | D3 | Coordinate frame | the release's own sequences; nothing is projected to a reference | a |
 | D4 | Segmentation | HMM over 1-kb windows with additive and depth-factor states, then classification per segment with one shared regional factor | e, i, j |
 | D5 | Negative-control denominator | fixed in g before the run; result 0.11% | g, h |
-| D6 | Thresholds and score | rules with log-likelihood margins; changed on rungs 1 to 4, so not frozen: rung 6 is open | e, h, i, j, l |
-| D7 | Non-trio assemblies | S1, S2 and S4 need no parents; S3 runs only with both; unlabelled haplotypes give role `unresolved` | c, h, l |
+| D6 | Thresholds and score | rules with log-likelihood margins; changed on rungs 1 to 4, so not frozen: rung 6 is open. Every value and its origin: `docs/thresholds.md` | e, h, i, j, l, m, n |
+| D7 | Non-trio assemblies | S1, S2 and S4 need no parents. S3 needs both, readable; it is specific for misplaced pieces and weak for switches under 50 kb, which S2 finds without parents | c, h, l, m |
 | D8 | Reuse or build | built one engine (`cpk`) | a |
-| D9 | Cost | measured: about 5 minutes to count 36x of FASTQ (30 from CRAM), 5 to 10 minutes per assembly after that | b, l |
+| D9 | Cost | measured: about 5 minutes to count 36x of FASTQ (30 from CRAM), 5 to 10 minutes per assembly after that when the disk keeps up. A scan ends by writing a 10- to 13-GB file; on the USB disk used here that step took 1 to 20 minutes | b, l, m, o |
 | D10 | Change of course | not needed: 25 high-confidence issues per haplotype on a truth genome | h, j |
 
 ## Baselines to reproduce
@@ -52,8 +52,124 @@ These values come from the pilot work in this repository. M0 and M1 should repro
 
 ## Log
 
+How this log was kept: entry g was written before its experiment, as the guide asks for a decision that must not
+follow the result. Entries a to f and h to l were written in the evening of the same day, from the working record
+of the session, after the experiments they describe; their numbers were not all recomputed when they were written.
+Entries m, n and o were written within the hour of their experiments.
+The experiment folders are regenerated from the run directories by the scripts named in each, and are the
+reference where a number here and a number there differ.
+
+### 2026-11-13 (o): five more assemblies; the disk measured while a scan waited on it
+
+Question:  does rung 4 hold on more assemblies, among them drafts of the truth genome, where almost nothing is
+           wrong? And, asked by the user a second time: is the disk slow now?
+Run:       `scripts/run_hg002_assemblies.sh` for `hg002v0.9`, `hg002v1.0.1`, `hprc_curated`, `verkko_asm_thic`,
+           `v2_trio` and `hifi_q28_trio_hic`, one at a time; `scripts/scoreboard.py`, which now also writes out
+           the sums the record quotes; `experiments/2026-11-13_hg002_assemblies/unconfirmed.py`. For the disk:
+           cores used by the running `cpk scan`, growth of its track file and MB moved by the device, every
+           5 s; a stack sample of the process; write tests of random data flushed with F_FULLFSYNC.
+Seen:      Assemblies, twelve now: 4,499 of 4,566 high-confidence copy-number issues confirmed (99%; 1,119 of
+           1,176 without `verkko_2023`). The unconfirmed ones are 1 to 10 per assembly whether the confirmed ones
+           are 0 or 3,380. The three drafts have 3 unconfirmed each beside 4, 3 and 0 confirmed; two of the three
+           are the same in every draft: the pair of calls near the start of chromosome 1 that the truth genome's
+           own run makes. QV by read k-mers saturates: 51.2, 51.8 and 52.0 for drafts that the truth's k-mers put
+           at 56.9, 58.7 and 59.3. `hprc_curated`, which has accession names and no haplotype labels, scores
+           like `hprc_year1`.
+           A thirteenth run, `hifi_q28_trio_hic`, gave the numbers of `verkko_asm_thic` to the last digit. The
+           two downloads are one file (same size, same MD5): the benchmark folder holds that assembly under
+           two names. It is counted once, and it is an unplanned repeat: the two runs, 43 minutes apart, wrote
+           identical issue lists, segments, depth anomalies, models and scores.
+           The disk: entry m says the evening's slow scans were not the disk. That was wrong, and it was a
+           guess: I had tested the disk with short writes, found them fast, and blamed memory bandwidth without
+           measuring it. Measured now. The track-writing step of six scans that evening took 95 s to 1,218 s for
+           9 to 12 GB (95 MB/s down to 10). At 22:06 a 4-GB test wrote 690 MB/s for 2.3 GB, then 270 to 300. At
+           22:10 the next scan began its track. For six and a half minutes it used 0.0 cores, all 1,766 stack
+           samples of its main thread were inside `write`, the file grew by about 2 MB/s and the device moved 1
+           to 3 MB/s; a new file of random data took 32 MB in 43 s. The same stalls are in the earlier logs:
+           200 s to load a FASTA that otherwise loads in 28 to 48 s, and 288 s to write a table of hits.
+           Then a second wrong turn. I paused that scan for five minutes, and when it continued it wrote the
+           other 10.8 GB in 55 s (170 to 235 MB/s, 3.3 to 3.9 cores busy). I took the pause for the cure and
+           had a watchdog repeat it. On the next scan the track stalled after 5.7 GB; the watchdog paused it
+           twice for five minutes, and both times the drive was still at 1 to 2 MB/s afterwards. Left alone,
+           the stall ended by itself, 15 minutes after it began, and the other 6 GB went out at 215 MB/s. The
+           pause did nothing that waiting would not have done.
+           What the numbers support: this drive takes writes at 200 to 700 MB/s for a while, then nearly stops
+           for 10 to 20 minutes, reads included, and resumes by itself. Between the end of one stall and the
+           start of the next, 17 to 18 GB were written. A scan writes 12 GB, so nearly every run meets one
+           stall, and an assembly with its scoring took 16 to 24 minutes, most of it the stall. A short
+           write test shows none of this, and what the drive does during a stall was not established.
+Decision:  no change to the method. The costs in the README hold when the disk keeps up, and it now says that
+           a scan ends by writing a 10- to 13-GB file in one stream. Entry m and D9 are corrected.
+Next:      one assembly is still to be scored (`lc24_nopolish`).
+
+### 2026-11-13 (n): a review pass over the day's claims
+
+Question:  can a reviewer follow the findings and the reasons for the decisions from what is in the repository?
+Run:       every headline number was traced to a table and the table to a script; see `experiments/README.md`.
+Seen:      Six gaps. (1) Several numbers came from analyses typed once and not saved. They are scripts now and
+           were run again: the known-issue and v1.2 comparison (`annotate_runs.py`), the planted breakpoints (in
+           `eval_planted.py`), the counts behind the long-and-deep and short-call rules (`analyse.py`), the missed
+           collapses and cluster precision (`details.py`), the HG01943 tables (`tables.py`), the jellyfish
+           comparison (`compare_jellyfish.py`). All reproduced; two corrections: 46 events in neither parent, not
+           "about 45", and the jellyfish table moves by a few k-mers between runs.
+           (2) The classifier's history was prose. The classifier before its revision is kept in `scripts/dev/`
+           and both are run on the same cached segments (`experiments/2026-11-13_threshold_sensitivity/`).
+           (3) Entries h, i and l quoted counts from before later changes; each now says so.
+           (4) Most thresholds had no stated origin. `docs/thresholds.md` lists every one as fitted, set from a
+           count, or chosen. The sensitivity check found most on a plateau, and two chosen values that are not
+           the best on these data (`min_seg_class` 20 against 10; `margin` 3 against 2). They were left alone:
+           another change on the same data would be one more, and they are the first candidates for rung 6.
+           (5) Findings were coordinates without evidence. For the 119 runs of Q100 that no read holds, the
+           reads' own version was extracted (`reads_allele.py`): in 110 runs reads can be compared, at most one
+           read agrees with the assembly in each, and 106 differ in length (28 in a homopolymer). The four on no
+           list are a homopolymer, a 1-base insertion and two GA-repeat lengths. For HG01943 the "seven more
+           joins like the known four" did not hold up: at the known joins the surplus copy repeats sequence from
+           beside another join of the same scaffold; at none of the seven does it, and five are at gaps of 19 to
+           795 kb. The record says so now.
+           (6) There was no map from claim to table to script, and this log did not say how it was kept.
+Decision:  no threshold changed in this pass. The records are regenerated from the run directories and are the
+           reference where they and this log differ.
+Next:      rung 6 with `min_seg_class` and `margin` decided beforehand.
+
+### 2026-11-13 (m): the hapmer channel on the truth genome; the disk was not slow
+
+Note:      the sentence below that later slowdowns "were not the disk either" is wrong, and so is the time
+           given for one scan; entry o has the measurement. The drive was fast in the short test at 20:30 and
+           stalled under the scans' 10-GB writes.
+Question:  what does S3 flag on a genome whose phasing is right, and does it find planted haplotype swaps (D7)?
+           Asked after the user doubted that the disk was still slow.
+Run:       `scripts/run_hg002_trio.sh` (parents HG004 and HG003, counted in 5 minutes each), then
+           `experiments/2026-11-13_hg002_trio/tables.py`. Outputs: DATA/work/hg002_v1.1/run35_trio and
+           DATA/work/plant/run35_trio.
+Seen:      The disk first: I had reported it slow from a test at 18:47 (2 MB/s) and repeated that an hour and a
+           half later without testing again. At 20:30 it wrote 545 MB/s. The cancelled runs were restarted.
+           Later slowdowns that evening were not the disk either (still 400 to 650 MB/s): three scans at once
+           compete for memory bandwidth and each ran ten times slower. One scan at a time takes 2 to 5 minutes.
+           S3 on the truth genome: all 46 chromosomes on the right parent, no misplaced piece among 18, but 143
+           phase-switch segments (28 with 10 sites or more, 10.9 Mb) where there should be none. The largest are
+           the immunoglobulin loci on the maternal haplotype (up to 151 sites against 7): the mother's sample is a
+           B-cell line that has deleted part of the haplotype she passed on. Of the 143, 111 lie where a parent's
+           depth on two-copy k-mers is outside 0.7 to 1.5 of its usual depth. Seven are a handful of sites (5 to
+           14) spread over 0.7 to 1.4 Mb each.
+           Planted swaps: S3 finds 1 of 4 at 10 kb, 2 of 4 at 50 kb, 4 of 4 at 200 kb; the missing-haplotype call
+           of S2 finds 11 of the 12 without parents.
+           S2 with parents: a rule I had written without data made strong one-sided missing sequence
+           high-confidence when a parent's reads held the k-mers. On the truth genome a parent holds the k-mers of
+           208 of 211 strong clusters. Missing k-mers in neither parent: 5 events.
+Decision:  D7. Hapmer sites count only where both parents are readable, and a switch needs sites at a tenth of
+           the usual density (0.1 to 0.2 give the same result on the truth genome; 0.2 loses one planted swap):
+           143 segments become 24 (0.4 Mb; 8 with 10 sites or more, 4 of them still the heavy-chain locus), and
+           the planted swaps are found as before. The inheritance rule for missing sequence is removed.
+           HG01943 with these changes: phase switches 156 to 32, the misplaced piece still called (148 sites
+           against 0), the locus score unchanged at 5 of 5.
+Next:      a phase switch at an immunoglobulin locus of a cell-line trio could be labelled as such, if the loci
+           were given.
+
 ### 2026-11-13 (l): rung 1, HG01943 in HPRC release 2
 
+Note:      entry m changed the hapmer channel and one missing-sequence rule after this was written. The final
+           counts are in `experiments/2026-11-13_hg01943_trio/` (2,737 issue rows, 32 phase-switch segments).
+           The "7 more joins" below turned out weaker candidates than this entry suggests: see that record.
 Question:  on the published assembly with public reads, are the five defects of the HG01943 locus flagged without
            flooding it (GUIDE §8 rung 1; regression test R2), and what is reported genome-wide?
 Run:       `scripts/run_hg01943.sh`: NYGC 30x CRAMs of the trio, HPRC's HiFi-to-assembly BAM read remotely.
@@ -71,12 +187,13 @@ Seen:      First run: 3 of 5 targets (the four joins, the misplaced piece, both 
            copy too many beside them. 156 phase-switch segments (19 high-confidence), 12.7 Mb. Of 2,184 runs of
            assembly k-mers that no short read holds, HiFi reads carry 1,072 and not 659.
 Decision:  an unlinked join is high-confidence only next to another issue. The two rules above. R2 passes, but it is
-           not an independent test of those two rules. Their cost in this genome is 2 segments and 45 events; the
+           not an independent test of those two rules. Their cost in this genome is 2 segments and 46 events; the
            second rule's cost on a truth genome is not measured, because that needs HG002's parents.
 Next:      the 7 other joins with a neighbouring expansion are candidates of the same error class; not examined.
            HG002's parents (HG003, HG004) are downloaded and `scripts/run_hg002_trio.sh` is ready: it gives the
            false-flag rate of the hapmer channel on the truth genome and its sensitivity on the planted swaps.
            It was started and stopped: after about 450 GB of writes in a day the USB SSD dropped to 2 MB/s.
+           (Run two hours later: entry m.)
 
 ### 2026-11-13 (k): long reads settle what short reads cannot
 
@@ -137,10 +254,14 @@ Seen:      With the classifier of entries h and i: high-confidence calls about 8
            planted genome 147 signals found (119 high), 13 of 656 issues unexplained.
 Decision:  D4 and D6 as in `docs/method.md` §3. Thresholds were changed on rungs 2 to 4 together, so none of
            these rungs is a held-out test any more; rung 6 (a second sample, frozen thresholds) is the open one.
-Next:      seven more assemblies are downloaded and listed; they wait for a disk that writes.
+Next:      seven more assemblies are downloaded and listed; they wait for a disk that writes. (Five were run
+           later the same evening, entry o; the numbers above are those of the first seven, and the scoreboard
+           in the experiment folder holds all that are scored.)
 
 ### 2026-11-13 (i): rung 2, errors planted in the truth genome
 
+Note:      the counts below are those of the classifier and reporting rules at that hour. Entry j changed both.
+           The final counts are in `experiments/2026-11-13_planted_errors/` (147 signals found, 656 issues).
 Question:  is each planted error found as the right class, and does anything else change (GUIDE §8 rung 2; D1, D4, D6)?
 Run:       `scripts/plant_errors.py` (111 edits in hg002v1.1: 39 tandem duplications, 8 extra sequences, 36 deletions,
            12 swaps, 12 inversions, 4 inversions through N), `scripts/run_sample.py`, `scripts/eval_planted.py`.
@@ -168,6 +289,9 @@ Next:      rung 4. A planted genome with long reads simulated or re-aligned woul
 
 ### 2026-11-13 (h): rung 3, the truth genome itself
 
+Note:      the counts below are those of the classifier and reporting rules at that hour. Entries j and k
+           changed both. The final counts are in `experiments/2026-11-13_hg002_q100_false_flags/` (2,792
+           segments, 404 issue rows, 49 high-confidence at their locus; the litmus is unchanged at 0.11%).
 Question:  what does copyproof flag on T2T-HG002 Q100 v1.1 with HG002's own reads (GUIDE §8 rung 3; D1, D5, D10)?
 Run:       `scripts/run_hg002_truth.sh`, `experiments/2026-11-13_hg002_q100_false_flags/analyse.py`,
            `scripts/sd_boundary_litmus.py`. 711.6 million 151-bp reads (107.5 Gb). Record in that folder.

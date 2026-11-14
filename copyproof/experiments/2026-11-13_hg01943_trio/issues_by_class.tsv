@@ -10,8 +10,8 @@ EXPANSION	high	locus	17
 EXPANSION	high	partner	32
 EXPANSION	high	unresolved	37
 EXPANSION	low	locus	27
-EXPANSION	low	partner	5
-EXPANSION	low	unresolved	15
+EXPANSION	low	partner	4
+EXPANSION	low	unresolved	10
 FALSE_JOIN	high	locus	5
 FALSE_JOIN	low	locus	3
 MISPLACED_PIECE	high	locus	1
@@ -24,12 +24,10 @@ MISSING_HAPLOTYPE	high	twin	19
 MISSING_HAPLOTYPE	low	locus	21
 MISSING_HAPLOTYPE	low	twin	21
 MISSING_JUNCTION	high	locus	1
-MISSING_SEQUENCE	high	locus	65
-MISSING_SEQUENCE	high	twin	72
-MISSING_SEQUENCE	low	locus	43
-MISSING_SEQUENCE	low	twin	44
-PHASE_SWITCH	high	locus	19
-PHASE_SWITCH	low	locus	137
+MISSING_SEQUENCE	low	locus	108
+MISSING_SEQUENCE	low	twin	116
+PHASE_SWITCH	high	locus	7
+PHASE_SWITCH	low	locus	25
 UNSUPPORTED	high	locus	1
 UNSUPPORTED	low	locus	2
 UNSUPPORTED_JOIN	high	locus	11

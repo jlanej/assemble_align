@@ -10,3 +10,5 @@ dist/
 *.novel.bin
 *.u8
 __pycache__/
+# machine-specific notes (absolute paths on the local data volume)
+LOCAL_NOTES.md

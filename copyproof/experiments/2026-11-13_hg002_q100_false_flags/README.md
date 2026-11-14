@@ -7,7 +7,8 @@ difference between the reads' DNA and the assembly's. How many are there, and of
 
 **Inputs.** `hg002v1.1.fasta.gz` (maternal, paternal and chrM; 6.00 Gb); HG002 NovaSeq PCR-free
 reads, both files (711.6 million 151-bp reads, 107.5 Gb, 36x); the Q100 annotation
-(`hg002v1.1_issues.v4.bed`, segmental duplications, centromeres, HSats). Parents were not used.
+(`hg002v1.1_issues.v4.bed`, segmental duplications, centromeres, HSats). Parents were not used
+here; the same genome with its parents' reads is in `../2026-11-13_hg002_trio/`.
 
 **Run.** `scripts/run_hg002_truth.sh DATA`, then `analyse.py` here and
 `scripts/sd_boundary_litmus.py`. k = 31, 1 in 4 k-mers tracked, 1-kb windows. A second run adds
@@ -113,11 +114,41 @@ carry the k-mers that short reads lack.
 
    So 85% of the runs are correct sequence that the short-read chemistry does not read, and the
    runs that neither read type holds are, 115 times in 119, places the truth genome's curators
-   already list. The other four are on no list and unchanged in v1.2: chr13 paternal 28,112,400,
-   chr15 maternal 46,844,785, chr17 maternal 9,027,454 and chr22 paternal 35,690,655, each with 23
-   to 62 HiFi reads running through and none holding the 4 or 5 tracked k-mers. By alignment
-   alone, HiFi reads "run through" 109 of the 119: an alignment across a place does not show
-   that the read holds the assembly's sequence there.
+   already list. By alignment alone, HiFi reads "run through" 109 of the 119: an alignment across
+   a place does not show that the read holds the assembly's sequence there.
+
+   **What the reads hold instead** (`reads_allele.py`, `not_carried_reads_allele.tsv`). For each
+   of the 119, the assembly's sequence between two 25-base anchors outside the unread k-mers was
+   compared with what each HiFi read holds between the same anchors. In 110 runs reads hold both
+   anchors (median 26 reads), and in every one of those at most one read agrees with the
+   assembly; in 101, none does. The commonest version among the reads differs from the assembly by:
+
+   | Difference | Runs |
+   |---|---|
+   | length of a homopolymer | 28 |
+   | another insertion or deletion of 1 base | 24 |
+   | insertion or deletion of 2 to 10 bases | 35 |
+   | longer insertion or deletion | 19 |
+   | several bases, same length | 3 |
+   | one substitution | 1 |
+   | no read holds both anchors (rDNA gap edges and the like) | 9 |
+
+   These are length differences in homopolymers and short tandem repeats, where reads also
+   disagree with each other: the commonest version is held by about two thirds of the reads
+   (quartiles 44% and 80%). So "the assembly's version is in no read" is firm, and "the reads' commonest version is
+   the right one" is not.
+
+   **The four that are on no list** and unchanged in v1.2 (`candidates_reads_allele.tsv`):
+
+   | Place | HiFi reads with both anchors | ... like the assembly | Commonest version in the reads |
+   |---|---|---|---|
+   | chr13 paternal 28,112,400 | 17 | 1 | one C fewer in a homopolymer (10 reads) |
+   | chr17 maternal 9,027,454 | 32 | 0 | one T more (22 reads) |
+   | chr22 paternal 35,690,655 | 19 | 0 | 11 bases more in a GA repeat (10 reads) |
+   | chr15 maternal 46,844,785 | 26 | 0 | 17 bases fewer in a GA/GAAA repeat (10 reads) |
+
+   They are candidates, of the same kind as the listed ones, and were not checked against
+   ONT or Element reads.
 6. **Ambiguous segments are short.** Of the 142 segments that a depth factor explains as well as
    a whole copy, 105 are dips of one or two windows in which two-copy k-mers fall to about half
    their depth. None is both long (8 windows) and deep (1.5-fold), which is why such segments are
@@ -150,5 +181,10 @@ quality is far higher. Short-read k-mer QV saturates near there at this depth.
   many HiFi reads hold them (made by `hifi_at_short_losses.py`, the hand-made first version of
   the long-read audit).
 - `unsupported_runs_hifi.tsv`: every audited run with both long-read verdicts, known-issue and
-  v1.2 flags.
+  v1.2 flags (made by `annotate_runs.py`, which prints the table of item 5).
+- `not_carried_reads_allele.tsv`, `candidates_reads_allele.tsv`: for the runs long reads do not
+  carry, the assembly's sequence and the reads' commonest version between two anchors (made by
+  `reads_allele.py`).
+- `ambiguous_by_length.tsv`: ambiguous segments by length and depth, the count behind the
+  long-and-deep rule (made by `analyse.py`).
 - `litmus.txt`: output of `scripts/sd_boundary_litmus.py`.

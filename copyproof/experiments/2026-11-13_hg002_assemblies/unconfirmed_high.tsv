@@ -1,0 +1,68 @@
+assembly	contig	start	end	kb	class	truth_overlap	summary
+hg002v0.7	chr13_PATERNAL	7071000	7415000	344	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hg002v0.7	chr1_MATERNAL	60000	66000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hg002v0.7	chr1_PATERNAL	66000	72000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hg002v0.9	chr13_PATERNAL	7071000	7415000	344	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hg002v0.9	chr1_MATERNAL	60000	66000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hg002v0.9	chr1_PATERNAL	66000	72000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hg002v1.0.1	chr1_MATERNAL	57000	63000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hg002v1.0.1	chr1_PATERNAL	58000	64000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hg002v1.0.1	chr7_PATERNAL	58662000	58741000	79	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (chr7_MATERNAL:58537798-58617393)
+hifiasm_2021	h1tg000060l	814000	821000	7	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hifiasm_2021	h1tg000074l	4980000	5131000	151	EXPANSION	0.35	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hifiasm_2021	h1tg000122l	505000	551000	46	EXPANSION	0.39	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hifiasm_2021	h1tg000148l	3255000	3406000	151	COLLAPSE	0.48	reads hold 1 more copy of this sequence than the release
+hifiasm_2021	h1tg000317l	0	38543	39	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hifiasm_2021	h1tg000437l	0	35983	36	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hifiasm_2021	h1tg000455l	0	29943	30	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hifiasm_2021	h2tg000312l	0	38543	39	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hifiasm_2021	h2tg000424l	0	35605	36	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release; the release holds it once (a collapsed duplicate, or the other haplotype's copy is missing)
+hifiasm_ontonly_2025	h1tg000037l	4518000	4863000	345	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hifiasm_ontonly_2025	h1tg000088l	0	33000	33	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hifiasm_ontonly_2025	h1tg000091l	0	171500	172	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hifiasm_ontonly_2025	h1tg000092l	19000	55000	36	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hifiasm_ontonly_2025	h2tg000013l	64000	70000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hifiasm_ontonly_2025	h2tg000014l	60000	66000	6	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hifiasm_ontonly_2025	h2tg000015l	45807000	45913000	106	COLLAPSE	0.47	reads hold 1 more copy of this sequence than the release; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hifiasm_ontonly_2025	h2tg000069l	0	33000	33	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hifiasm_ontonly_2025	h2tg000071l	0	171500	172	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hprc_curated	CM039015.1	46654000	47614000	960	EXPANSION	0.2	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (CM039038.1:46740595-47487336)
+hprc_curated	CM039024.1	5637000	5796000	159	COLLAPSE	0.33	reads hold 1 more copy of this sequence than the release
+hprc_curated	CM039033.1	100876000	101030000	154	EXPANSION	0.23	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (CM039033.1:100737987-100760028)
+hprc_curated	CM039042.1	42398000	42405000	7	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (CM039019.1:44317020-44324008)
+hprc_curated	CM039046.1	280000	287000	7	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (JAKCWR010000335.1:978897-985823)
+hprc_curated	CM039046.1	7808000	7814000	6	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (CM039055.1:385324-391303)
+hprc_curated	CM039047.1	4982000	5114000	132	COLLAPSE	0.41	reads hold 1 more copy of this sequence than the release
+hprc_curated	CM039050.1	37183000	37303000	120	EXPANSION	0.16	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (CM039027.1:37353822-37464162)
+hprc_curated	JAKCWR010000336.1	705000	1054000	349	COLLAPSE	0.21	reads hold 1 more copy of this sequence than the release
+hprc_year1	HG002#1#JAHKSE010000013.1	4562000	4568000	6	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hprc_year1	HG002#1#JAHKSE010000087.1	42398000	42405000	7	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (HG002#2#JAHKSD010000111.1:320830-327818)
+hprc_year1	HG002#1#JAHKSE010000154.1	2960000	2981000	21	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (HG002#2#JAHKSD010000125.1:1405697-1426641)
+hprc_year1	HG002#1#JAHKSE010000186.1	64000	70000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hprc_year1	HG002#2#JAHKSD010000051.1	2268000	2426000	158	COLLAPSE	0.35	reads hold 1 more copy of this sequence than the release; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hprc_year1	HG002#2#JAHKSD010000149.1	64000	70000	6	COLLAPSE	0.0	reads hold 4 more copies of this sequence than the release
+hprc_year2	h1tg000011l	4344000	4600000	256	EXPANSION	0.43	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (h2tg000029l:44216289-44339357)
+hprc_year2	h1tg000015l	99147000	99158000	11	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hprc_year2	h1tg000021l	104197000	104356000	159	EXPANSION	0.37	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+hprc_year2	h1tg000042l	18000	210000	192	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hprc_year2	h2tg000042l	2000	186000	184	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+hprc_year2_v2_thic	pat-0000699	7110000	7116000	6	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+v2_trio	pat-0000643	4752000	5096000	344	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+v2_trio	unassigned-0000431	0	100000	100	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+v2_trio	unassigned-0000456	24000	94822	71	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+v2_trio	unassigned-0000457	24000	118000	94	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+v2_trio	unassigned-0000459	23000	38000	15	COLLAPSE	0.0	reads hold 3 more copies of this sequence than the release
+verkko_2023	path_from_utig4-2954	91836000	91851000	15	EXPANSION	0.47	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-2955:91916724-91931730)
+verkko_2023	path_from_utig4-3444	851000	881000	30	EXPANSION	0.43	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-5106:1199277-1230525)
+verkko_2023	path_from_utig4-4519	136158000	136179000	21	EXPANSION	0.48	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-4521:136145073-136166078)
+verkko_2023	path_from_utig4-4521	136145000	136166000	21	EXPANSION	0.48	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-4519:136157938-136178919)
+verkko_2023	path_from_utig4-5106	1199000	1231000	32	EXPANSION	0.44	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-3444:850724-881310)
+verkko_2023	path_from_utig4-5106	96246000	96523000	277	EXPANSION	0.06	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-4262:39625693-39705806)
+verkko_2023	path_from_utig4-5114	29472000	29477000	5	UNSUPPORTED	0.4	sequence found once in the release has no read support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-1271:29210704-29217205)
+verkko_2023	path_from_utig4-5172	41278000	41346000	68	EXPANSION	0.24	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-5173:41271949-41281190)
+verkko_2023	path_from_utig4-5176	4499000	4844000	345	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-4864:37942153-38288976)
+verkko_2023	path_from_utig4-5176	94625000	94683000	58	EXPANSION	0.16	the release holds one more copy of this sequence than the reads support; the surplus copy is this one or one it shares its k-mers with (path_from_utig4-5325:91533032-91537349)
+verkko_asm_thic	pat-0000573	99161000	99169000	8	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+verkko_asm_thic	pat-0000573	101945000	101950000	5	EXPANSION	0.0	the release holds one more copy of this sequence than the reads support; k-mers unique to this haplotype are concordant, so the change is on the homologous or a paralogous copy
+verkko_asm_thic	pat-0000573	106860000	108191000	1331	COLLAPSE	0.5	reads hold 1 more copy of this sequence than the release
+verkko_asm_thic	pat-0000591	181000	269000	88	EXPANSION	0.41	the release holds one more copy of this sequence than the reads support
