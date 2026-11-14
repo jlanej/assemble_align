@@ -1,0 +1,28 @@
+locus	calls	assemblies	lineages	in_assemblies	classes	kb_min	kb_max	best_placements	sort	truth_run_issue	truth_run_segment_same_direction	known_issue_share_max	v12_changes	satellites	truth_differs_share_median	calls_list
+L01	10	10	8	hg002v0.7,hg002v0.9,hifiasm_2021,hifiasm_ontonly_2025,hprc_curated,hprc_year1,hprc_year2_v2_thic,v2_trio,verkko_2023,verkko_asm_thic	EXPANSION:10	5	345	chr13_PATERNAL:7256929-7626822 (10)	reads_only_recurrent:10		CN_OR_DEPTH,DEPTH	0.001	chr13_PATERNAL:7417460:-1	HSat1A,HSat1B,HSat3	0.002	u01,u04,u10,u19,u33,u37,u48,u51,u64,u67
+L07	15	5	5	hifiasm_2021,hifiasm_ontonly_2025,hprc_year2,lc24_nopolish,v2_trio	COLLAPSE:15	15	306	chrEBV:21-173224 (15)	virus:15						0.0	u14,u15,u16,u17,u18,u21,u22,u27,u46,u47,u50,u52,u53,u54,u55
+L02	10	5	3	hg002v0.7,hg002v0.9,hg002v1.0.1,hifiasm_ontonly_2025,hprc_year1	COLLAPSE:10	6	6	chr1_MATERNAL:56756-63439 (6); chr1_PATERNAL:57590-64092 (4)	mito_kmers:10	COLLAPSE:high:chr1_MATERNAL:57000-63000,COLLAPSE:high:chr1_PATERNAL:58000-64000	CN	0.0			0.0	u02,u03,u05,u06,u07,u08,u23,u24,u40,u42
+L13	3	3	2	hprc_curated,hprc_year1,hprc_year2	EXPANSION:3	7	256	chr9_PATERNAL:42394057-42401084 (2); chr9_MATERNAL:44212592-44335698 (1)	reads_only_alone:2,truth_differs:1		CN_OR_DEPTH	0.001			0.013	u31,u38,u43
+L09	2	2	2	hifiasm_ontonly_2025,verkko_asm_thic	COLLAPSE:2	106	1331	chr13_MATERNAL:3416951-3522983 (1); chr13_PATERNAL:574262-2420015 (1)	truth_differs:2			0.007	chr21_MATERNAL:3996844:-2	HSat1A,HSat3,cenSat(CER/HSAT5/HSAT5v2),cenSat(HSAT5/HSAT5v1)	0.865	u25,u68
+L17	2	2	2	hprc_year2,verkko_asm_thic	EXPANSION:2	8	11	chr13_PATERNAL:10039877-10051081 (2)	reads_only_recurrent:2	EXPANSION:high:chr13_MATERNAL:14126000-14134000,EXPANSION:high:chr13_PATERNAL:10040000-10052000	CN,DEPTH	0.013			0.002	u44,u66
+L11	3	2	1	hprc_curated,hprc_year1	COLLAPSE:3	132	159	chr14_MATERNAL:14271188-14479328 (2); chr14_PATERNAL:12414525-12596118 (1)	truth_differs:3			0.0		HSat3	0.84	u29,u34,u41
+L08	2	1	1	hifiasm_ontonly_2025	COLLAPSE:2	33	33	chrM:0-16568 (2)	mitochondrion:2		CN	0.0			0.0	u20,u26
+L14	2	2	1	hprc_curated,hprc_year1	EXPANSION:2	7	21	chr22_PATERNAL:3883978-3906693 (2)	reads_only_alone:2			0.005			0.002	u32,u39
+L21	2	1	1	verkko_2023	EXPANSION:2	30	32	chr14_MATERNAL:107214086-107245699 (1); chr14_PATERNAL:104926681-104957224 (1)	truth_differs:2			0.272			0.774	u57,u60
+L22	2	1	1	verkko_2023	EXPANSION:2	21	21	chr2_MATERNAL:105940689-105961708 (1); chr2_PATERNAL:105723506-105744534 (1)	truth_differs:2			0.01			0.52	u58,u59
+L03	1	1	1	hg002v1.0.1	EXPANSION:1	79	79	chr7_PATERNAL:58662000-58741013 (1)	reads_only_alone:1		DEPTH	0.001			0.0	u09
+L04	1	1	1	hifiasm_2021	EXPANSION:1	151	151	chr17_PATERNAL:44515547-44666562 (1)	truth_differs:1			0.001			0.991	u11
+L05	1	1	1	hifiasm_2021	EXPANSION:1	46	46	chrY_PATERNAL:22707708-22753733 (1)	truth_differs:1			0.0			0.786	u12
+L06	1	1	1	hifiasm_2021	COLLAPSE:1	151	151	chr13_PATERNAL:53826-205986 (1)	truth_differs:1			0.0			0.997	u13
+L10	1	1	1	hprc_curated	EXPANSION:1	960	960	chr5_PATERNAL:46462651-48821467 (1)	truth_differs:1		DEPTH	0.014			0.968	u28
+L12	1	1	1	hprc_curated	EXPANSION:1	154	154	chrX_MATERNAL:100851659-101005438 (1)	truth_differs:1			0.0	chrX_MATERNAL:100881273:-2		0.965	u30
+L15	1	1	1	hprc_curated	EXPANSION:1	120	120	chr17_MATERNAL:38278918-38390017 (1)	truth_differs:1			0.002		cenSat(HSAT5v1)	0.932	u35
+L16	1	1	1	hprc_curated	COLLAPSE:1	349	349	chr15_MATERNAL:419920-783162 (1)	truth_differs:1			0.0		HSat3	0.687	u36
+L18	1	1	1	hprc_year2	EXPANSION:1	159	159	chr8_MATERNAL:42301414-42331100 (1)	truth_differs:1			0.0			0.996	u45
+L19	1	1	1	lc24_nopolish	EXPANSION:1	180	180	chr14_PATERNAL:9272296-9457658 (1)	truth_differs_in_part:1		DEPTH	0.001		HSat1A,HSat1B,HSat3	0.446	u49
+L20	1	1	1	verkko_2023	EXPANSION:1	15	15	chr3_PATERNAL:109666923-109681952 (1)	truth_differs:1			0.0			0.716	u56
+L23	1	1	1	verkko_2023	EXPANSION:1	277	277	chr14_MATERNAL:11513302-11794109 (1)	reads_only_alone:1			0.0		HSat1A,HSat1B,HSat3	0.149	u61
+L24	1	1	1	verkko_2023	UNSUPPORTED:1	5	5	chr16_PATERNAL:29468516-29475047 (1)	truth_differs:1			0.0			0.578	u62
+L25	1	1	1	verkko_2023	EXPANSION:1	68	68	chr15_MATERNAL:59597573-59606844 (1)	truth_differs:1			0.022	chr15_MATERNAL:59598560:+14		0.871	u63
+L26	1	1	1	verkko_2023	EXPANSION:1	58	58	chr13_PATERNAL:97383784-97388133 (1)	truth_differs:1			0.0			0.997	u65
+L27	1	1	1	verkko_asm_thic	EXPANSION:1	88	88	chr14_PATERNAL:9506125-9604114 (1)	truth_differs_in_part:1		DEPTH	0.0		HSat3	0.42	u69

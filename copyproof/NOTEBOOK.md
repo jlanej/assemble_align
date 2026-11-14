@@ -59,6 +59,67 @@ Entries m, n and o were written within the hour of their experiments.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
 
+### 2026-11-14 (r): the 69 unconfirmed issues of rung 4, placed in the truth genome and sorted
+
+Note:      written within the hour of the runs, from the tables of the record. Nothing under `src/` or `engine/`
+           is changed (the code is frozen at commit 1465496 for the held-out test). No threshold was changed and
+           no call was relabelled: the scoreboard of rung 4 stands as it was.
+Question:  are the high-confidence copy-number issues that the truth genome does not confirm the tool's errors,
+           errors of the truth genome, or differences between the DNA that was read and the genome that was
+           assembled (review of 2026-11-14, point 3.2)?
+Run:       in `experiments/2026-11-13_hg002_assemblies/`: `place_unconfirmed.py` (`cpk extract` on each of the 13
+           assemblies; `cpk locate --query` of the 69 calls, 8.6 Mb, in T2T-HG002 Q100 v1.1, 1 k-mer in 4, up to
+           64 occurrences; each call's k-mers from its run's track), `sort_unconfirmed.py`, then `locus_depth.py`
+           on six loci (48 stretches: the track of the trio run of entry m, and the public HiFi alignment read by
+           region). Record: the section "The 69 unconfirmed issues, sorted" of that folder. Outputs:
+           DATA/work/hg002_assemblies/unconfirmed (0.6 GB). The steps that load a genome ran for 25 minutes,
+           8 of them in one stall of the drive, and waited 62 minutes behind the held-out test's jobs.
+Seen:      All 69 are placed (1,283 placements). Where the benchmark's own alignment covers a call (52), it
+           overlaps a principal placement of 50.
+           27 of 69 are DNA of which a cell holds another number than a genome lists. 15 are Epstein-Barr virus
+           contigs in five assemblies: the truth genome v1.1 holds none of their k-mers, and the reads hold 31 to
+           37 copies. 2 are a contig that holds the mitochondrial genome twice (1,113 copies in the reads). 10
+           are the pair of calls 57 to 64 kb into chromosome 1 that entries h and o left unexplained: the stretch
+           is an insertion of mitochondrial sequence, 56% to 60% of its k-mers also occur in chrM and are read
+           at about 1,100 copies, and its own k-mers are read at 1.07 of the truth genome's count in short reads
+           and 1.03 in long reads. "Four more copies" was the cap of the window statistics, not a count.
+           24 of 69 are real differences from the truth genome: it holds another number of copies of at least
+           half of the call's k-mers for 22 (a fifth to a half for 2). The scoring rule, which wants such
+           k-mers to be the majority in windows covering half of a call, fell short for three reasons: 13 calls
+           lie in sequence repeated more than 8 times, 4 are mostly gap (63% to 86% N), and 5 are wider than
+           the difference (it covers 40% to 48% of them).
+           18 of 69 have only the reads behind them; all are expansions; 15 lie on acrocentric short arms. 12 are
+           two loci on the paternal chromosome 13: an HSat1B block at 7.26 Mb that begins a 345-kb duplication
+           (10 calls in ten assemblies) and an 11-kb four-copy stretch at 10.04 Mb (2 calls, and the truth
+           genome's own run).
+           The test that told the cases apart: count the locus's k-mers in the short reads of HG002 and of both
+           parents and in HG002's long reads. At the HSat1B block the long reads hold the truth genome's count
+           (0.91 to 1.09 of it) and the short reads of all three people fall short (0.37 to 0.81): short reads
+           of this kind under-read the satellite, and the classifier took a shortfall that differs by class for
+           a copy. The
+           same at chr9 42.4 Mb (60 k-mers at 0.42 to 0.48 in three people, 0.98 in long reads) and, mildly, at
+           chr7 58.7 Mb. At chr13 10.04 Mb and at chr22 3.9 Mb the long reads fall short too (0.83 to 0.99; 0.73
+           to 0.93). Every copy there has long reads running through it, and over all 29 short-arm stretches the
+           long reads' alignment depth is a median 0.89 of that over ordinary sequence.
+           None of the 52 nuclear calls has half of a placement on a known issue (the most is 27%); v1.2 changed
+           four positions inside placements, by 1 to 14 bases. 6 of 27 loci recur in two or more independent
+           assemblies and hold 42 of the 69 calls.
+           Three things went wrong on the way. The wait for the held-out test's jobs matched its own command
+           line and waited on itself for a minute. A second placement pass for high-copy k-mers wrote 3.7 GB
+           and was not needed, because the track already holds each k-mer's count in the truth genome; it is
+           removed. And the chromosome 13 calls were first read as one copy missing from the short reads' DNA;
+           the parents' reads and the long reads showed otherwise.
+Decision:  no change to the method while the code is frozen. Nothing here is an error of the truth genome that
+           could be shown; two loci are written up for its curators as open questions, with what is missing.
+           For after the held-out test, as suggestions and not as changes: sequences whose k-mers are read at
+           tens to thousands of copies (virus, mitochondrion, and nuclear copies of mitochondrial sequence)
+           should be named as such and not called collapsed; a count at the cap should be reported as "at
+           least"; and with `--long-read-bam`, the long reads' count of a loss's k-mers could lower its
+           confidence when it equals the assembly's, which is now done only where no short read holds the
+           k-mers at all.
+Next:      the two loci need reads of a third kind (ONT, Element) counted the same way. A score that also counts
+           k-mers above multiplicity 8 would say how many of the 24 real differences rung 4 undercounts; not
+           done.
 ### 2026-11-14 (q): rung 2 with long reads: what the audit says at planted false joins
 
 Note:      written within the hour of the runs, from the tables of the record. The code under `src/` is

@@ -1,0 +1,7 @@
+locus	stretch	stretches	truth_copies	kmers	child_low	child_high	mother_low	mother_high	father_low	father_high	long_reads_low	long_reads_high	kmers_also_in_chrM	child_copies_of_those	mother_copies_of_those	father_copies_of_those	run_through_fewest	alignment_depth_vs_control_median
+chr1_start	chr1_MATERNAL:57000-63000	6	2	433	1.07	1.07	1.63	1.63	0.56	0.56	1.03	1.03	857	1138.0	922.0	938.0	14	0.96
+chr13_7.26Mb	chr13_PATERNAL:7258767-7264797	11	1,2,3,4,6,7,8	956	0.41	0.74	0.0	0.63	0.37	0.81	0.91	1.09	0				12	0.92
+chr13_10.04Mb	chr13_PATERNAL:10040061-10051081	9	4,5,6,7,8	1716	0.79	0.95	0.77	0.94	0.87	0.96	0.83	0.99	0				5	0.98
+chr7_58.7Mb	chr7_PATERNAL:58662000-58741013	4	2,3,4,6	7086	0.85	0.91	0.41	0.68	0.85	0.94	0.94	1.06	0				0	0.94
+chr9_42.4Mb	chr9_PATERNAL:42394057-42401084	3	2,3	927	0.42	0.89	0.45	0.96	0.48	0.86	0.98	1.1	0				17	1.02
+chr22_3.9Mb	chr22_PATERNAL:3899668-3906693	11	2,4,5,6,7,8	816	0.74	0.88	0.81	1.05	0.97	1.33	0.73	0.93	0				11	0.86
