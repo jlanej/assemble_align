@@ -141,6 +141,7 @@ def test_copy_loci():
     assert copy_loci(h[h["contig"] == "mat"], "mat", 50_000, 60_000, 31) == []
 
 
+@pytest.mark.skipif(not (shutil.which("minimap2") and shutil.which("samtools")), reason="needs minimap2 and samtools")
 def test_long_reads_adjudicate_unread_kmers(tmp_path):
     """Assembly k-mers that short reads lack, at three places: correct sequence (long reads carry
     the k-mers), a false join (they do not, and no read runs through), and a wrong base (they do
