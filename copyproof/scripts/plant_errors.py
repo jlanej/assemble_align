@@ -16,12 +16,18 @@ annotated segmental duplications.
 
 Outputs: PREFIX.fa (one line per sequence), PREFIX.edits.tsv (every edit, in original and edited
 coordinates) and PREFIX.expected.bed (where each signal is expected, in edited coordinates).
+
+By default edits go on sequences named chr* other than X, Y, M and EBV, and the group of a sequence
+is read from MATERNAL or PATERNAL in its name: the naming of the T2T-HG002 truth genome. For another
+release, --min-length makes every sequence of that length eligible, --group LABEL=REGEX names the
+groups, and --fasta takes every file of the release (scripts/paf_to_chain.py makes the chain).
 """
 
 from __future__ import annotations
 
 import argparse
 import gzip
+import re
 import subprocess
 import sys
 from collections import defaultdict
@@ -107,7 +113,7 @@ class Chain:
 
 def main() -> int:
     ap = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
-    ap.add_argument("--fasta", required=True)
+    ap.add_argument("--fasta", required=True, nargs="+", help="every FASTA of the release")
     ap.add_argument("--chain", required=True, help="chain from each haplotype to the other")
     ap.add_argument("--sd", required=True, help="BED of segmental duplications")
     ap.add_argument("--avoid", nargs="*", default=[], help="BEDs to stay away from (satellites, known issues)")
@@ -116,11 +122,18 @@ def main() -> int:
     ap.add_argument("--reps", type=int, default=4)
     ap.add_argument("--seed", type=int, default=20261113)
     ap.add_argument("--spacing", type=int, default=3_000_000)
+    ap.add_argument("--min-length", type=int, help="place edits on every sequence at least this long "
+                                                   "(default: on sequences named chr*, except X, Y, M and EBV)")
+    ap.add_argument("--group", action="append", default=[], metavar="LABEL=REGEX",
+                    help="group of a sequence by its name, first match wins, others go to 'other' "
+                         "(default: mat if the name holds MATERNAL, pat if PATERNAL)")
     a = ap.parse_args()
     rng = np.random.default_rng(a.seed)
 
     print("reading the genome", file=sys.stderr)
-    seqs = read_fasta(a.fasta)
+    seqs = {}
+    for path in a.fasta:
+        seqs.update(read_fasta(path))
     chain = Chain(a.chain)
     sd = IntervalSet.from_bed(a.sd)
     avoid = IntervalSet()
@@ -128,7 +141,10 @@ def main() -> int:
         avoid = avoid.union(IntervalSet.from_bed(p))
     if a.assessable:
         avoid = avoid.union(IntervalSet.from_bed(a.assessable))
-    autosomes = [n for n in seqs if n.startswith("chr") and not n.startswith(("chrX", "chrY", "chrM", "chrEBV"))]
+    if a.min_length:
+        autosomes = [n for n in seqs if len(seqs[n]) >= a.min_length]
+    else:
+        autosomes = [n for n in seqs if n.startswith("chr") and not n.startswith(("chrX", "chrY", "chrM", "chrEBV"))]
 
     plan = []
     for size in (2_000, 5_000, 10_000, 50_000, 200_000):
@@ -274,10 +290,16 @@ def main() -> int:
     with open(f"{a.out}.expected.bed", "w") as f:
         for row in expected:
             f.write("\t".join(map(str, row)) + "\n")
+    rules = [(label, re.compile(rx)) for label, rx in (g.split("=", 1) for g in a.group)]
+
+    def group_of(name):
+        if not rules:
+            return "mat" if "MATERNAL" in name else ("pat" if "PATERNAL" in name else "other")
+        return next((label for label, rx in rules if rx.search(name)), "other")
+
     with open(f"{a.out}.groups.tsv", "w") as f:
         for name in list(new) + list(extras):
-            g = "mat" if "MATERNAL" in name else ("pat" if "PATERNAL" in name else "other")
-            f.write(f"{name}\t{g}\n")
+            f.write(f"{name}\t{group_of(name)}\n")
     print(f"wrote {a.out}.fa with {len(edits)} edits", file=sys.stderr)
     return 0
 

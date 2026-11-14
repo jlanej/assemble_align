@@ -1,0 +1,20 @@
+# Published checksums of the inputs (md5, path under DATA). Sources: the .md5 files beside the HPRC
+# FASTAs; the manifests of the two HGSVC3 batches (20240201_verkko_batch3.manifest.tsv,
+# 20240318_hifiasm_ont_batch2_manifest.txt); the MD5SUM column of the two NYGC sequence indexes.
+# check_inputs.sh compares the downloaded files with these. A file of the right size is not
+# enough: the EBI server returned one HGSVC3 file with an error message of its own in place of
+# 198 bytes (see the record).
+2cd406c57e30c7b5a911b276bb255b1e  hprc_r2/NA19240/NA19240_pat_hprc_r2_v1.0.1.fa.gz
+b9ed3f11aeb037a0d83f23fb93f8d1fc  hprc_r2/NA19240/NA19240_mat_hprc_r2_v1.0.1.fa.gz
+d4648eb461d03f57c677ea0b321b3a98  hgsvc3/NA19240/verkko/NA19240.vrk-ps-sseq.asm-hap1.fasta.gz
+ad594bfcc52a547da3ac3d0079010773  hgsvc3/NA19240/verkko/NA19240.vrk-ps-sseq.asm-hap2.fasta.gz
+7ce1b7a7c3f83061c09e7344bc2bb0f3  hgsvc3/NA19240/verkko/NA19240.vrk-ps-sseq.asm-unassigned.fasta.gz
+3c5facbd438ebc123e05c74fddfe9e70  hgsvc3/NA19240/verkko/NA19240.vrk-ps-sseq.asm-disconnected.fasta.gz
+127044b24584e589a6ee23b245dad504  hgsvc3/NA19240/verkko/NA19240.vrk-ps-sseq.asm-rdna.fasta.gz
+95fe47ea9c39dd3418a90a9b79f6055d  hgsvc3/NA19240/verkko/NA19240.ps-sseq.exemplar-ebv.fasta.gz
+8bc2c55c72b9f217afc205246cd9ff32  hgsvc3/NA19240/verkko/NA19240.ps-sseq.exemplar-mito.fasta.gz
+53939dfc602b63544aee67ea0671ffb6  hgsvc3/NA19240/hifiasm/NA19240-hifiasm-hap1.fasta.gz
+ee9664cd1ed3b7a9f3f62e5ac2dea12b  hgsvc3/NA19240/hifiasm/NA19240-hifiasm-hap2.fasta.gz
+e6d4b9e1e19d1f4d4f5de6a0d16d9c10  nygc/NA19240.final.cram
+85b877e013035fa239e614004d74c98d  nygc/NA19238.final.cram
+155b2fdac4b19b6ca06abdcaa9d9d721  nygc/NA19239.final.cram

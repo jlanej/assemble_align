@@ -1,0 +1,31 @@
+run	judged_by	direction	high_confidence_issues	confirmed	not_confirmed	share_confirmed
+HG002 hprc_year2, judged by v2_trio and hprc_year1	v2_trio	gain	24	9	15	0.375
+HG002 hprc_year2, judged by v2_trio and hprc_year1	v2_trio	loss	95	92	3	0.968
+HG002 hprc_year2, judged by v2_trio and hprc_year1	v2_trio	both directions	119	101	18	0.849
+HG002 hprc_year2, judged by v2_trio and hprc_year1	hprc_year1	gain	24	2	22	0.083
+HG002 hprc_year2, judged by v2_trio and hprc_year1	hprc_year1	loss	95	80	15	0.842
+HG002 hprc_year2, judged by v2_trio and hprc_year1	hprc_year1	both directions	119	82	37	0.689
+HG002 hprc_year2, judged by v2_trio and hprc_year1	both	gain	24	0	24	0.0
+HG002 hprc_year2, judged by v2_trio and hprc_year1	both	loss	95	74	21	0.779
+HG002 hprc_year2, judged by v2_trio and hprc_year1	both	both directions	119	74	45	0.622
+HG002 hprc_year2, judged by v2_trio and hprc_year1	truth	gain	24	22	2	0.917
+HG002 hprc_year2, judged by v2_trio and hprc_year1	truth	loss	95	92	3	0.968
+HG002 hprc_year2, judged by v2_trio and hprc_year1	truth	both directions	119	114	5	0.958
+HG002 hprc_year2, judged by v2_trio and hprc_year1	either	gain	24	11	13	0.458
+HG002 hprc_year2, judged by v2_trio and hprc_year1	either	loss	95	92	3	0.968
+HG002 hprc_year2, judged by v2_trio and hprc_year1	either	both directions	119	103	16	0.866
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	verkko_asm_thic	gain	24	6	18	0.25
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	verkko_asm_thic	loss	95	92	3	0.968
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	verkko_asm_thic	both directions	119	98	21	0.824
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	hprc_year2_v2_thic	gain	24	7	17	0.292
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	hprc_year2_v2_thic	loss	95	92	3	0.968
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	hprc_year2_v2_thic	both directions	119	99	20	0.832
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	both	gain	24	5	19	0.208
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	both	loss	95	92	3	0.968
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	both	both directions	119	97	22	0.815
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	truth	gain	24	22	2	0.917
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	truth	loss	95	92	3	0.968
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	truth	both directions	119	114	5	0.958
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	either	gain	24	7	17	0.292
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	either	loss	95	92	3	0.968
+HG002 hprc_year2, judged by verkko_asm_thic and hprc_year2_v2_thic	either	both directions	119	99	20	0.832

@@ -55,9 +55,132 @@ These values come from the pilot work in this repository. M0 and M1 should repro
 How this log was kept: entry g was written before its experiment, as the guide asks for a decision that must not
 follow the result. Entries a to f and h to l were written in the evening of the same day, from the working record
 of the session, after the experiments they describe; their numbers were not all recomputed when they were written.
-Entries m, n and o were written within the hour of their experiments.
+Entries m, n and o were written within the hour of their experiments. Entry p, like g, was written before its
+experiment; what was added to it afterwards is marked with the time.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
+
+### 2026-11-14 (p): rung 6 fixed before the run
+
+Question:  with every threshold fixed beforehand, do the results hold on a second person (GUIDE §8 rung 6; D6)?
+Run:       none yet. Written at 07:34 on 2026-11-14, when the downloads had started and before any read of the new
+           sample was counted or any program had opened its assemblies. The sample was chosen from two
+           candidates; the other was I002C, a second genome with a near-truth assembly, whose public short
+           reads are MGI and whose parents' short reads are not public.
+Seen:      n/a.
+Decision:  D6.
+           Sample. NA19240, a trio child of HPRC release 2 on which copyproof has not been run. Release under
+           test: `NA19240_pat_hprc_r2_v1.0.1.fa.gz` and `NA19240_mat_hprc_r2_v1.0.1.fa.gz` (hifiasm 0.19.9, trio).
+           Reads: the NYGC 30x CRAMs of NA19240, her mother NA19238 and her father NA19239, each counted once.
+           Long reads: HPRC's HiFi-to-assembly alignment, read remotely. Manifest:
+           `scripts/manifests/05_na19240_heldout.tsv`.
+           What is frozen. The code of commit 1465496 with every default it carries (`docs/thresholds.md`). The
+           drivers refuse to run when `src/`, `engine/src` or `scripts/run_sample.py` differ from it. Of the two
+           values that were not the best on the old data, the shipped ones are tested (`min_seg_class` 20,
+           `margin` 3), because every reported number uses them.
+           Evidence. No truth genome exists for this person. Two other assemblies of her do: the Verkko and the
+           hifiasm assembly of HGSVC3, made at another centre from other reads. Their exact k-mer counts label
+           every tracked k-mer of the release as a truth genome's do in rung 4, with one rule added, called
+           `both`: a k-mer is contradicted when the two assemblies hold the same number of copies of it and
+           that number differs from the release's. All else is rung 4's. Only k-mers that the release holds at
+           most 8 times count. A discordance is 2 or more 1-kb windows (joined across one window), each with at
+           least 30 such k-mers of which half or more are contradicted in one direction. An issue is confirmed
+           when discordances of its direction cover at least half of it. A discordance is found when
+           copy-number issues of its direction cover at least half of it, and is assessable when under half of
+           it lies in the run's mask. Script: `scripts/eval_assemblies.py`, tested on the synthetic trio
+           (`tests/test_eval_assemblies.py`).
+           This is a proxy, not truth. Two assemblies can share an error, and the hifiasm one more readily,
+           because the release is a hifiasm assembly too. An issue that neither confirms is not thereby false.
+           So every count is also given for the Verkko assembly alone, the hifiasm assembly alone, and either.
+           The scored run. The child's reads and both parents, no long reads (`short`), because neither the
+           calibration below nor rung 4 has long reads. The run with long reads (`long`) is reported beside it.
+           Driver: `scripts/run_na19240_heldout.sh`.
+           Score 1. Denominator: every high-confidence copy-number issue of the `short` run (channel S1; class
+           COLLAPSE, EXPANSION or UNSUPPORTED; any role). Count: those confirmed by `both`.
+           Score 2. Denominator: the assessable discordances by `both` of 5 kb and more, separately for the two
+           directions. Count: those found.
+           Score 3. Errors planted in the release with the design of rung 2: the same kinds, sizes and number
+           per cell, seed 20261113, 3 Mb apart. Placed on sequences of at least 12 Mb (the release has no
+           chromosome names; the sample is female, so X is not set apart), outside HPRC's satellite annotation,
+           outside HPRC's own Flagger and NucFlag calls (in place of a list of known issues) and outside the
+           copy-number mask of the `short` run. Duplications come from HPRC's annotation, the homologous
+           stretch from an alignment of the two haplotypes (minimap2, asm5). Run with the child's reads and
+           both parents, scored by `scripts/eval_planted.py`, unchanged, against the `short` run. Counts, each
+           from 5 kb: false duplications (kinds dup and extra, signal EXPANSION); deletions as a collapse on
+           the homologue (del, COLLAPSE); deleted or overwritten stretches as a missing haplotype (del and
+           swap, MISSING_HAPLOTYPE); and swaps as a phase switch (swap, PHASE_SWITCH, every size).
+           Prediction. For scores 1 and 2, the same rule applied to HG002, where the truth is known: the HPRC
+           year-2 assembly (`hprc_year2`), run with HG002's reads and parents, judged by `v2_trio` (Verkko) and
+           `hprc_year1` (hifiasm, other reads), with the truth genome's verdict beside it
+           (`experiments/2026-11-14_na19240_heldout/calibrate_hg002.sh`). It runs after this entry and its
+           counts are added below before the first run of NA19240. A second pair (`verkko_asm_thic`,
+           `hprc_year2_v2_thic`) shows how far the proxy moves with the assemblies chosen and predicts nothing.
+           For score 3, the counts of HG002's planted genome with its parents: 46 of 47, 25 of 28, 34 of 40
+           and 7 of 12.
+           Verdict. A score holds when NA19240's share is not below the predicted one by a one-sided Fisher
+           exact test at 5%. It is reported with its counts either way. Seven comparisons are made (score 1;
+           score 2 in two directions; score 3 in four rows), with no correction for their number. HG002's other
+           assemblies are not HGSVC3's, so the prediction is an anchor, not a guarantee.
+           Reported without a prediction. Issues by class and confidence beside HG01943's. Strong missing-allele
+           calls whose k-mers the other assemblies hold. Assembly k-mers that no read holds and the other
+           assemblies lack. Misplaced pieces, phase switches and joins. Overlap of the issues with HPRC's
+           Flagger and NucFlag calls. Scores 1 and 2 for the `long` run.
+           The two candidate values. The segments of the `short` run are classified again with `min_seg_class`
+           10, with `margin` 2 and with both, as in the sensitivity record (without the lookup of other copies
+           and without support from other channels), and scored by `both`. This is a second, declared result.
+           It changes neither the scored run nor the shipped values.
+           Breaking the freeze. If code under `src/` or `engine/` has to change after the first output of
+           NA19240 is seen, that is a new entry and the test is no longer held out; the record will say so.
+           Not committed beforehand: commits to this branch are made on request only. The order rests on the times in
+           this entry, on the logs under DATA/logs and DATA/work/rung6, and on the checksums of the scoring
+           script and drivers in `experiments/2026-11-14_na19240_heldout/prereg.sha256`.
+           Prediction, added at 07:53 on 2026-11-14, after the calibration and before any program had read a
+           file of NA19240 other than to download it or check its checksum (`predictions.tsv` and the `hg002_*`
+           tables of the record). By the truth genome the calibration run gives rung 4's counts again: 114 of
+           119 high-confidence copy-number issues confirmed, 151 of 233 assessable discordances found. By the
+           proxy, on the same 119 issues: `both` 74, the Verkko assembly alone 101, the hifiasm assembly alone
+           82, either 103. `both` confirms no issue that the truth does not; the Verkko assembly alone confirms
+           2 of the 5 that the truth does not. Collapses are where the proxy fails: of 24 high-confidence
+           collapse issues the truth confirms 22, the Verkko assembly 9, the hifiasm assembly 2 and `both` none.
+           So score 1 will speak for surplus copies almost alone.
+           Score 1: 74 of 119. Score 2: 1 of 3 where the other assemblies hold more, and 117 of 127 where they
+           hold fewer. With three discordances the first of these can show next to nothing; it stays because it
+           was declared. Score 3: 46 of 47, 25 of 28, 34 of 40, 7 of 12.
+           The second pair gives `both` 97 of 119. The proxy thus moves by 19 points with the assemblies chosen,
+           and the declared prediction is the lower of the two anchors: "holds" will say little by itself, and
+           the record will set NA19240's share against both. Strong missing-allele calls on HG002, for the same
+           comparison later: the truth holds the k-mers of 957 of 996, both other assemblies of 706, either of
+           913.
+           Two points from a review of the pull request, added at 08:00 on 2026-11-14, while the first CRAM of
+           NA19240 was still downloading and none of her reads had been counted.
+           The hapmer channel. The release was phased with the parents' k-mers (hifiasm, trio), so an audit with
+           the same parents is not an independent test of its phasing. It can show what went wrong after
+           phasing, such as a piece scaffolded into the other haplotype (HG01943), and nothing more: few
+           switches there will not mean that the phasing is right. Both HGSVC3 assemblies were phased with
+           Strand-seq and without the parents (the README files of their two batches say so), so the same audit
+           on one of them would be independent. That run is not part of this test unless it is added.
+           Counts, not only shares. Score 1 is reported as the count confirmed and the count not confirmed, with
+           the share, and the issues not confirmed are listed one by one. Rung 4's share of 99% rests on one
+           assembly with 3,390 of the 4,648 calls; without it the share is 95% (1,199 of 1,258).
+           A run added on request, written down at 08:05 on 2026-11-14, still before any read of NA19240 was
+           counted: the hapmer audit where it is independent. The HGSVC3 Verkko assembly, every file of it, is
+           run with the same reads and parents at the frozen thresholds, without long reads and without the
+           missing-sequence channel. It was phased with Strand-seq, so the audit here tests phasing that the
+           parents did not help to make. Each call is then held against HPRC's trio-phased haplotypes, whose
+           exact k-mers ride along as two label sets. Among the tracked k-mers in a call that only one HPRC
+           haplotype holds, those of the parent the call names must number at least 20 and at least three
+           times those of the sequence's own parent: then the call is confirmed. The reverse makes it
+           contradicted, anything else unclear. The other way round, the assessed sequences are cut into 50-kb
+           bins. A bin follows the other parent by the same rule of 20 and three to one, and is flagged when
+           calls cover at least half of it; a bin thus speaks only for switches that fill most of 50 kb.
+           Reported: the sequences assessed and whether hapmers and HPRC's k-mers name the same parent for
+           each; switch segments and misplaced pieces confirmed, contradicted and unclear; the bins that follow
+           the other parent and how many of them are flagged. No prediction: nothing like it was measured
+           before (on HG002's truth genome, where every switch is false, the audit left 24 segments). HPRC's
+           haplotypes were phased with these parents' k-mers from other reads: another assembly, not another
+           pedigree. Only the hapmer channel of this run is part of the record. Script:
+           `experiments/2026-11-14_na19240_heldout/hapmers_against_hprc.py`, tried on the synthetic trio.
+Next:      NA19240.
 
 ### 2026-11-13 (o): six more assemblies; the disk measured while a scan waited on it
 

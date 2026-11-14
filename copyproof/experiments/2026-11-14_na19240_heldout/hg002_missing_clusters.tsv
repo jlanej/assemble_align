@@ -1,0 +1,5 @@
+kind	strength	clusters	held_by_v2_trio	held_by_hprc_year1	held_by_both	held_by_either	held_by_truth	both_and_truth	either_and_truth
+MISSING_ALLELE	strong	996	888	731	706	913	957	705	905
+MISSING_ALLELE	weak	273	149	124	111	162	175	111	157
+MISSING_SEQUENCE	strong	115	51	42	40	53	53	40	53
+MISSING_SEQUENCE	weak	1010	84	62	53	93	92	53	90

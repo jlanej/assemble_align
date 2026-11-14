@@ -1,0 +1,7 @@
+database	what	every_sighting_counted	records	bases	kmers	tracked_kmers	distinct_tracked_kmers_kept	kept_from_count	reads_cut_at_adapter	seconds	peak_rss_gb
+NA19240.nygc.cpkdb	reads of NA19240 (NYGC 30x CRAM)	False	727171320	109075698000	87206907613	21873846031	681539821	2	1395626	2720.8	20.31
+NA19238.nygc.cpkdb	reads of the mother, NA19238	False	939885340	140982801000	112149827583	28142383517	710089334	2	1908812	2450.2	20.44
+NA19240.hgsvc3_verkko.exact.cpkdb	HGSVC3 Verkko assembly, every file	True	1120	6106495734	6102306978	1527013129	648747602	1	0	287.0	22.08
+NA19240.hgsvc3_hifiasm.exact.cpkdb	HGSVC3 hifiasm assembly, both haplotypes	True	248	7171149766	7171142326	1794738889	647829868	1	0	1063.2	15.73
+NA19240.hprc_r2_pat.exact.cpkdb	HPRC release 2, paternal haplotype	True	64	3038833213	3037237059	759959714	624291607	1	0	697.2	15.72
+NA19240.hprc_r2_mat.exact.cpkdb	HPRC release 2, maternal haplotype	True	65	3024651147	3023166974	756511964	624217946	1	0	310.5	15.72
