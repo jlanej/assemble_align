@@ -278,15 +278,16 @@ def issues_from_missing(clusters: pd.DataFrame, sample: int, run_gap: int = 10_0
         if r.kind == "MISSING_SEQUENCE":
             # Reads anchored on one side only are the weakest evidence of this channel: with few
             # reads nine in ten are artefacts (and all of them on a truth genome), so those stay
-            # in the cluster table. The others are firm only when a parent's reads hold the
-            # sequence. One exception among the weak ones needs the parents: recurrent artefacts
-            # recur in the parents' reads too, so k-mers that are solid in the child and in neither
-            # parent are few (some 45 events in a genome) and are where a de novo junction shows.
+            # in the cluster table. Strong ones are issues of low confidence, whatever the
+            # parents' reads hold: recurrent artefacts recur in the parents' reads too, and on a
+            # truth genome 146 strong clusters are found in a parent. The one use of the parents
+            # is the other way round: k-mers that are solid in the child and in neither parent
+            # are few (46 events in one genome), and that is where a de novo junction shows.
             p1, p2 = float(getattr(r, "frac_in_parent1", np.nan)), float(getattr(r, "frac_in_parent2", np.nan))
             in_neither = p1 == 0.0 and p2 == 0.0
             if not strong and not in_neither:
                 continue
-            conf = "high" if strong and max(p1, p2) >= 0.5 else "low"
+            conf = "low"
             if in_neither:
                 what += "; these k-mers are in neither parent's reads (a de novo junction or a change in the cell line)"
         rows.append(

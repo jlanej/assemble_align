@@ -28,6 +28,16 @@ class HapParams:
     min_sites: int = 4  # sites of the other parent a switch segment needs
     min_ratio: float = 3.0  # and its ratio of other-parent to own-parent sites
     min_piece_sites: int = 20  # sites a piece needs to be assessed
+    # A hapmer says "this parent's reads hold the k-mer and the other's do not". The second half
+    # is only evidence where the other parent's reads cover the place: where a parent's depth on
+    # the window's two-copy k-mers is outside this range of its usual depth (a dropout, or a
+    # deletion in that parent's cell line, as at the immunoglobulin loci), the window's sites are
+    # not used.
+    parent_depth: tuple = (0.7, 1.5)
+    min_depth_kmers: int = 20  # two-copy k-mers a window needs for that check
+    # A real switch carries the other parent's sites at about the usual density. A few stray
+    # sites spread over a long stretch that has almost none of its own are noise.
+    min_density: float = 0.1  # of the sequence's own density of sites
 
 
 def viterbi_two_state(a: np.ndarray, b: np.ndarray, err: float, p_switch: float) -> np.ndarray:
@@ -77,6 +87,23 @@ def pieces_of(length: int, gaps: list[tuple[int, int]], min_gap: int = 10) -> li
     return out
 
 
+def readable_windows(w: Windows, p: HapParams) -> np.ndarray:
+    """Windows where both parents' reads cover the release at about their usual depth. Windows
+    with too few two-copy k-mers to tell (a hemizygous X, for instance) count as readable."""
+    ok = np.ones(len(w.contig), dtype=bool)
+    if w.par is None:
+        return ok
+    n2 = w.n[:, 2].astype(float)
+    known = n2 >= p.min_depth_kmers
+    for i in range(w.par.shape[1]):
+        per = w.par[:, i] / np.maximum(n2, 1.0)
+        usual = float(np.median(per[known])) if known.any() else 0.0
+        if usual > 0:
+            rel = per / usual
+            ok &= ~(known & ((rel < p.parent_depth[0]) | (rel > p.parent_depth[1])))
+    return ok
+
+
 def audit(w: Windows, gaps: pd.DataFrame, parent_names: tuple[str, str] = ("parent1", "parent2"), p: HapParams | None = None):
     """Phase audit of every sequence.
 
@@ -87,14 +114,15 @@ def audit(w: Windows, gaps: pd.DataFrame, parent_names: tuple[str, str] = ("pare
         raise ValueError("the windows carry no hapmer counts: scan with both parents' read sets")
     p = p or HapParams()
     lr = math.log((1.0 - p.err) / p.err)
+    readable = readable_windows(w, p)
     crow, prow, srow = [], [], []
     gap_by = {c: list(zip(g["start"], g["end"])) for c, g in gaps.groupby("contig")} if len(gaps) else {}
     for ci in range(len(w.contigs)):
         sl = w.slice_of(ci)
         name = w.contigs.at[ci, "name"]
         L = int(w.contigs.at[ci, "length"])
-        a = w.hap[sl, 0].astype(np.int64)
-        b = w.hap[sl, 1].astype(np.int64)
+        a = np.where(readable[sl], w.hap[sl, 0], 0).astype(np.int64)
+        b = np.where(readable[sl], w.hap[sl, 1], 0).astype(np.int64)
         ta, tb = int(a.sum()), int(b.sum())
         major = 0 if ta >= tb else 1
         path = viterbi_two_state(a, b, p.err, p.p_switch)
@@ -107,13 +135,15 @@ def audit(w: Windows, gaps: pd.DataFrame, parent_names: tuple[str, str] = ("pare
                 f"sites_{parent_names[0]}": ta, f"sites_{parent_names[1]}": tb,
                 "parent": parent_names[major] if assessed else "not_assessable",
                 "purity": round(max(ta, tb) / (ta + tb), 4) if ta + tb else float("nan"),
-                "switched_bp": int((path != major).sum()) * w.W if assessed else 0,
+                "switched_bp": 0,  # filled below from the switch segments that are kept
                 "discordant_sites": minority,
                 "sites_neither": int(w.hap[sl, 2].sum()) if w.hap.shape[1] > 2 else 0,
+                "windows_unreadable": int((~readable[sl]).sum()),
             }
         )
         if not assessed:
             continue
+        own_density = int(own.sum()) / max(len(own), 1)  # own-parent sites per window
         # switch segments: runs decoded as the other parent
         cut = np.flatnonzero(np.diff(path)) + 1
         starts = np.r_[0, cut]
@@ -126,6 +156,9 @@ def audit(w: Windows, gaps: pd.DataFrame, parent_names: tuple[str, str] = ("pare
                 continue
             hit = np.flatnonzero(oth[s:e] > 0)
             s2, e2 = s + int(hit[0]), s + int(hit[-1]) + 1  # trim to the first and last informative window
+            if n_oth / (e2 - s2) < p.min_density * own_density:
+                continue
+            crow[-1]["switched_bp"] += (min(e2 * w.W, L) - s2 * w.W)
             srow.append(
                 {
                     "contig": name, "start": s2 * w.W, "end": min(e2 * w.W, L), "scaffold_parent": parent_names[major],

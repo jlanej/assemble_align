@@ -82,6 +82,9 @@ class Windows:
     # 2nd parent, and found in neither parent
     hap: np.ndarray | None = None
     reff: int = 120  # k-mer start positions per read (read length - k + 1)
+    # (windows, 2): sum of each parent's read counts over the window's two-copy k-mers. It says
+    # whether that parent's reads cover the window at all, which hapmer evidence depends on.
+    par: np.ndarray | None = None
 
     def slice_of(self, ci: int) -> slice:
         row = self.contigs.iloc[ci]
@@ -95,6 +98,8 @@ class Windows:
         )
         if self.hap is not None:
             arrays["hap"] = self.hap
+        if self.par is not None:
+            arrays["par"] = self.par
         np.savez(path, **arrays)
         self.contigs.to_csv(str(path).removesuffix(".npz") + ".contigs.tsv", sep="\t", index=False)
 
@@ -106,6 +111,7 @@ class Windows:
             W=int(z["W"]), cap=int(z["cap"]), lam=float(z["lam"]), contigs=contigs, contig=z["contig"], start=z["start"],
             n=z["n"], S=z["S"], n_sp=z["n_sp"], S_sp=z["S_sp"], zero=z["zero"], V=z["V"], n_all=z["n_all"], gc=z["gc"],
             acgt=z["acgt"], hap=z["hap"] if "hap" in z.files else None, reff=int(z["reff"]),
+            par=z["par"] if "par" in z.files else None,
         )
 
 
@@ -243,6 +249,9 @@ def _contig_windows(prefix: str, ci: int, W: int, cap: int, lam: float, reff: in
         masks = hapmer_masks(c, 0, parents, min_parent, min_child)
         sites = [count_sites(pos, win, mk & elig, sc.k, nw) for mk in masks]
         out["hap"] = np.stack(sites, axis=1).astype(np.int32)
+        two = elig & (mt == 2)
+        out["par"] = np.stack([np.bincount(win[two], weights=c[two, i].astype(np.float64), minlength=nw) for i in parents],
+                              axis=1).astype(np.float32)
     return out
 
 
@@ -304,7 +313,7 @@ def compute_windows(
             results[ci] = _contig_windows(sc.prefix, ci, *args)
             if progress:
                 progress(ci, n_contigs)
-    keys = ["contig", "start", "n", "S", "n_sp", "S_sp", "zero", "V", "n_all", "gc", "acgt"] + (["hap"] if parents is not None else [])
+    keys = ["contig", "start", "n", "S", "n_sp", "S_sp", "zero", "V", "n_all", "gc", "acgt"] + (["hap", "par"] if parents is not None else [])
     out = {k: [r[k] for r in results] for k in keys}
     n_win = [r["nw"] for r in results]
     win_start = np.concatenate([[0], np.cumsum(n_win)[:-1]]).astype(int).tolist()
@@ -318,5 +327,5 @@ def compute_windows(
     return Windows(
         W=W, cap=cap, lam=float(lam), contigs=contigs, contig=cat["contig"], start=cat["start"], n=cat["n"], S=cat["S"],
         n_sp=cat["n_sp"], S_sp=cat["S_sp"], zero=cat["zero"], V=cat["V"], n_all=cat["n_all"], gc=cat["gc"],
-        acgt=cat["acgt"], hap=cat.get("hap"), reff=reff,
+        acgt=cat["acgt"], hap=cat.get("hap"), reff=reff, par=cat.get("par"),
     )

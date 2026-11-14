@@ -152,10 +152,13 @@ def run(cfg: Config) -> dict:
     parents = (1, 2) if len(sc.reads) >= 3 else None
     wpath = out / f"windows.w{cfg.window}.npz"
     upath = out / "unsupported_clusters.tsv"
+    w = None
     if wpath.is_file() and upath.is_file():
         w = Windows.load(str(wpath))
         unsupported = pd.read_csv(upath, sep="\t")
-    else:
+        if parents is not None and (w.hap is None or w.par is None):
+            w = None  # windows of an older version, or made without the parents: make them again
+    if w is None:
         _log("aggregating windows")
         clusters = []
         w = compute_windows(sc, W=cfg.window, cap=cfg.cap, parents=parents, unsupported=clusters,

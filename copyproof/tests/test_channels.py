@@ -11,12 +11,12 @@ import pytest
 from copyproof import sim
 from copyproof.cn import viterbi_star
 from copyproof.copies import copy_loci
-from copyproof.hapmers import pieces_of, viterbi_two_state
+from copyproof.hapmers import HapParams, audit, pieces_of, readable_windows, viterbi_two_state
 from copyproof.hmm import transition_matrix, viterbi
 from copyproof.intervals import IntervalSet
 from copyproof.missing import low_complexity
 from copyproof.kmers import encode
-from copyproof.windows import count_sites, pair_weights, unsupported_clusters
+from copyproof.windows import Windows, count_sites, pair_weights, unsupported_clusters
 
 
 def test_intervals():
@@ -177,3 +177,33 @@ def test_long_reads_adjudicate_unread_kmers(tmp_path):
     kept = adjudicate_cn(cn, out.reset_index())
     assert kept["contig"].tolist() == ["typo"] and kept["confidence"].tolist() == ["high"]
     assert "low_because" not in kept.iloc[0]["evidence"] and "in_long_reads=0" in kept.iloc[0]["evidence"]
+
+
+def test_hapmer_audit_needs_readable_parents_and_dense_sites():
+    """One 1-Mb sequence of the first parent with three stretches that carry the other parent's
+    sites: a real switch (dense sites, both parents covered), a stretch the first parent's reads do
+    not cover, and a few stray sites spread over 300 kb that has none of its own."""
+    nw, cap = 1000, 8
+    hap = np.zeros((nw, 3), dtype=np.int32)
+    hap[:, 0] = 1  # the sequence's own parent: one site per window
+    hap[100:130, 0], hap[100:130, 1] = 0, 2  # a switch
+    hap[400:420, 0], hap[400:420, 1] = 0, 2  # the same, where the first parent has no reads
+    hap[600:900, 0] = 0
+    hap[[620, 700, 780, 860], 1] = 2  # stray sites
+    n = np.zeros((nw, cap + 1), dtype=np.int32)
+    n[:, 2] = 200
+    par = np.full((nw, 2), 200 * 27.0, dtype=np.float32)
+    par[400:420, 0] *= 0.1
+    contigs = pd.DataFrame({"name": ["seq"], "group": ["hap1"], "length": [nw * 1000], "win_start": [0], "n_win": [nw]})
+    zeros = np.zeros((nw, cap + 1), dtype=np.float32)
+    w = Windows(W=1000, cap=cap, lam=13.5, contigs=contigs, contig=np.zeros(nw, dtype=np.int32), start=np.arange(nw) * 1000, n=n,
+                S=zeros, n_sp=n, S_sp=zeros, zero=n, V=zeros, n_all=n.sum(axis=1), gc=np.full(nw, 0.4, dtype=np.float32),
+                acgt=np.full(nw, 1000, dtype=np.int32), hap=hap, par=par)
+    gaps = pd.DataFrame(columns=["contig", "start", "end"])
+    assert int((~readable_windows(w, HapParams())).sum()) == 20
+    _, _, sw = audit(w, gaps, ("mother", "father"))
+    assert len(sw) == 1 and (sw.iloc[0]["start"], sw.iloc[0]["end"]) == (100_000, 130_000)
+    assert sw.iloc[0]["sites_segment_parent"] == 60 and sw.iloc[0]["segment_parent"] == "father"
+    # without the two conditions all three stretches are called
+    _, _, raw = audit(w, gaps, ("mother", "father"), HapParams(parent_depth=(0.0, 1e9), min_density=0.0))
+    assert sorted(raw["start"]) == [100_000, 400_000, 620_000]
