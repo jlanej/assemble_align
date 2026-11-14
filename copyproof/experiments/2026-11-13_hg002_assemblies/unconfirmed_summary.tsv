@@ -1,0 +1,62 @@
+quantity	value	of
+unconfirmed high-confidence copy-number issues	69	
+... with a placement	69	69
+placements	1283	
+... principal	274	1283
+calls that the benchmark's own alignment of the assembly covers at all	52	69
+... and it overlaps a principal placement	50	52
+sort: virus	15	69
+sort: mitochondrion	2	69
+sort: mito_kmers	10	69
+sort: truth_differs	22	69
+sort: truth_differs_in_part	2	69
+sort: reads_only_recurrent	12	69
+sort: reads_only_alone	6	69
+virus: the truth genome holds none of the call's k-mers	15	15
+virus: lowest share of a call's k-mers that lie on chrEBV	0.432	
+virus: copies in the reads (median over a call's k-mers), lowest	30.6	
+virus: copies in the reads, highest	36.7	
+virus: copies the assembly holds (median over a call's k-mers), values	2,3,6	
+mitochondrion: copies in the reads, lowest	1112.8	
+mitochondrion: copies in the reads, highest	1112.8	
+mito_kmers: the truth genome's own run reports the same class at a principal placement	10	10
+mito_kmers: share of a call's k-mers that chrM also holds, lowest	0.563	
+mito_kmers: share of a call's k-mers that chrM also holds, highest	0.601	
+mito_kmers: reads per assembly copy on those k-mers, lowest	183.0	
+mito_kmers: reads per assembly copy on those k-mers, highest	366.2	
+mito_kmers: reads per assembly copy on the other k-mers, lowest	1.06	
+mito_kmers: reads per assembly copy on the other k-mers, highest	1.08	
+truth_differs: by all the call's k-mers	17	22
+truth_differs: only by the k-mers the scoring rule uses	5	22
+truth_differs: lowest share of the call that a truth discordance covers	0.16	
+truth_differs: highest share of the call that a truth discordance covers (0.5 is under 0.5 before rounding)	0.5	
+truth_differs: the median multiplicity of the call's k-mers is above 8	13	22
+truth_differs: at least half of the call is a gap (N)	4	22
+truth_differs: ... smallest share of gap among those	0.631	
+truth_differs: ... largest share of gap among those	0.862	
+truth_differs: neither	5	22
+truth_differs: ... lowest share of the call that a truth discordance covers, among those	0.4	
+truth_differs: ... highest, among those	0.48	
+truth_differs, in whole or in part: the benchmark's alignment lists a structural difference inside the call	7	24
+calls whose best placement is nuclear sequence of the truth genome	52	69
+known-issue intervals after merging	3154	
+known issues: a principal placement touches an interval	21	52
+known issues: they cover half of a principal placement	0	52
+known issues: they cover a tenth of a principal placement	2	52
+known issues: largest share of a principal placement	0.272	
+known issues: touched over less than 1% of the placement	14	21
+known issues: a curators' submitted issue at a principal placement	0	52
+v1.2: changes that lie inside a principal placement	4	5651
+v1.2: those changes (position, bases added or removed)	chr13_PATERNAL:7417460:-1; chr15_MATERNAL:59598560:+14; chr21_MATERNAL:3996844:-2; chrX_MATERNAL:100881273:-2	
+v1.2: calls with such a change	9	52
+truth genome's own run: an issue of the same class at a principal placement	12	52
+reads_only (recurrent or alone)	18	69
+reads_only: expansions	18	18
+reads_only: largest share of a call's k-mers of which the truth genome holds another number, in the call's direction	0.149	
+reads_only: truth genome's own run has an issue of the same class at a principal placement	2	18
+reads_only: ... no issue, but a segment of the same direction that it does not report	13	18
+reads_only: ... neither	3	18
+reads_only: best placement in the first 20 Mb of chromosome 13, 14, 15, 21 or 22	15	18
+loci	27	
+loci called in two or more independent assemblies	6	27
+calls at those loci	42	69
