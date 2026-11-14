@@ -1,0 +1,5 @@
+name	contig	start	end	original_start	fetched_for	distance_to_edit	distance_to_homologue	reads	long_reads_over	spanning	clipped	kmers	kmers_carried	by_alignment	by_content	issue	confidence	truth_reads	truth_long_reads_over	truth_spanning	truth_clipped	truth_kmers	truth_kmers_carried	truth_by_alignment	truth_by_content
+run187	chr5_MATERNAL	180490459	180490533	180490460	plant025:edit	11375	38013649	37	26	24	0	8	8	spanned	carried	none		38	26	24	0	8	8	spanned	carried
+run329	chr14_PATERNAL	49744543	49744626	49747543	plant037:homologue	11399398	19314	45	33	31	0	7	7	spanned	carried	none		38	31	30	0	7	7	spanned	carried
+run550	chr14_MATERNAL	52085977	52086056	52085977	plant037:edit	19306	11396270	36	26	25	0	5	5	spanned	carried	none		45	28	27	0	5	5	spanned	carried
+run664	chr1_MATERNAL	222426735	222426811	222426735	plant027:homologue	3331231	32316	44	37	33	0	5	5	spanned	carried	none		49	37	34	0	5	5	spanned	carried

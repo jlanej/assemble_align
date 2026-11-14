@@ -278,6 +278,24 @@ long reads? An alignment can run through a stretch the read does not hold; its k
 - *No long read's sequence there.* At a wrong join the reads' primary alignments often go to the
   other haplotype, and secondary alignments carry no sequence. Then alignment decides: no long
   read runs through the run and at least 3 are clipped at it: `FALSE_JOIN`.
+  Secondary records count here, and they are most of what there is.
+
+On joins planted in a truth genome, with HiFi reads aligned by minimap2
+(`experiments/2026-11-13_planted_errors`, "With long reads"), nearly every `FALSE_JOIN` comes
+from this third case. No long read holds an unread k-mer at any of the 59 planted joins the
+audit asked about, but a median of 2 reads keep their sequence there, so content is "unclear" at
+51 of them. Nearly all the records clipped at an inversion breakpoint or at the join of a
+deletion are secondary records, of reads whose primary record is on the other haplotype. Three
+things follow.
+
+- The alignment file must keep its secondary records. With them, 23 of 24 planted inversion
+  breakpoints and 21 of 36 joins left by deletions are `FALSE_JOIN`; without them, 8 and 3.
+- A join left by a short deletion is missed. At 2 kb the reads that hold the deleted sequence
+  are aligned through the join with that sequence as an insertion (nearly all as secondary
+  records, none with a mapping quality of 20 or more), and an alignment through a run counts as
+  a read through it: 0 of 8 found, 5 of 8 at 5 kb, and from 10 kb all that were asked about.
+- A run is asked about only when short reads cover its flanks. The junction of a tandem
+  duplication seldom passes (7 of 39), because the copies beside it are short of reads.
 
 On the truth genome, 13 stretches of 1 to 3 kb have one haplotype's own k-mers unread by short
 reads; HiFi reads carry all of those k-mers at 10, and carry few or none at 2, both of which are
