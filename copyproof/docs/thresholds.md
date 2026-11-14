@@ -41,7 +41,7 @@ row says so.
 | Hapmers: both parents readable (`parent_depth`) | 0.7 to 1.5 of the parent's usual depth on two-copy k-mers | the rule came from the count (111 of 143 false switches on the truth genome lie in such windows); the two bounds were chosen and not varied. Effect: 143 segments to 32, with 1.7% of windows set aside | trio |
 | Hapmers: density of a switch (`min_density`) | a tenth of the sequence's own site density | with the row above, 32 to 24 segments and 5.6 to 0.4 Mb. Any value from 0.1 to 0.2 gives the same 24; at 0.2 one planted 200-kb swap, whose ratio is 0.20, is lost | trio |
 | Unlinked join is firm only next to another issue | within 20 kb | 34 of 42 scaffold joins of one release have no linking long read | rung 1 |
-| Long-read verdicts | carried: 80% of the unread k-mers in at least 2 reads; not carried: at most 20%, with at least 5 reads | not tuned; checked afterwards: 115 of 119 not-carried runs are known issues of the truth genome, 74 of 957 carried ones | rung 3 |
+| Long-read verdicts | carried: 80% of the unread k-mers in at least 2 reads; not carried: at most 20%, with at least 5 reads | not tuned; checked afterwards: 115 of 119 not-carried runs are known issues of the truth genome, 74 of 957 carried ones. At false joins planted in that genome no long read holds an unread k-mer, but 5 reads with their sequence lie over only 8 of the 59 joins asked about; at the others the alignment rule below decides | rung 3; rung 2 with long reads |
 
 ## Chosen, with a sensitivity check
 
@@ -87,4 +87,4 @@ These need the pipeline to run again to vary, and were not.
 | S3 | wrong-parent sites assumed; switch prior | 2%; 10^-3 per window | |
 | S3 | a switch needs; a sequence or piece is assessed from | 4 sites at 3 to 1; 20 sites | |
 | S4 | join: bases fetched each side; a read must reach; reads needed near each side | 10 kb; 5 kb; 3 | |
-| S4 | run: alignment must cover; clip counted from; within | 500 bp beyond both ends; 200 bp; 100 bp | |
+| S4 | run: alignment must cover; clip counted from; within | 500 bp beyond both ends; 200 bp; 100 bp | not varied. On planted joins (rung 2 with long reads): 23 of 24 inversion breakpoints, 21 of 36 deletion joins |

@@ -1,0 +1,15 @@
+adjacency	size	planted	sum_primary_over	sum_through	sum_through_primary	sum_through_secondary	sum_through_secondary_primary_on_homologue	sum_through_mapq20	sum_through_large_insertion	sum_through_large_deletion	sum_clipped	sum_clipped_primary	sum_clipped_secondary	sum_clipped_secondary_primary_on_homologue	sum_clipped_supplementary	median_primary_over	median_through	median_through_primary	median_through_secondary	median_through_secondary_primary_on_homologue	median_through_mapq20	median_through_large_insertion	median_through_large_deletion	median_clipped	median_clipped_primary	median_clipped_secondary	median_clipped_secondary_primary_on_homologue	median_clipped_supplementary
+deletion join	2000	8	25	405	3	402	402	0	405	0	162	13	149	149	0	3.0	48.0	0.0	48.0	48.0	0.0	48.0	0.0	21.5	1.5	20.5	20.5	0.0
+deletion join	5000	8	13	6	0	6	6	0	6	0	234	12	222	222	0	1.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	31.5	1.5	29.5	29.5	0.0
+deletion join	10000	8	12	0	0	0	0	0	0	0	176	6	170	170	0	1.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	22.0	0.0	21.5	21.5	0.0
+deletion join	50000	8	11	0	0	0	0	0	0	0	186	5	180	180	1	0.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	22.5	0.0	22.0	22.0	0.0
+deletion join	200000	4	9	0	0	0	0	0	0	0	99	5	94	94	0	2.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	24.0	1.5	22.0	22.0	0.0
+inversion breakpoint	10000	8	10	0	0	0	0	0	0	0	111	7	102	102	2	1.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	12.5	0.5	12.0	12.0	0.0
+inversion breakpoint	50000	8	13	0	0	0	0	0	0	0	241	10	227	227	4	1.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	30.0	0.5	27.5	27.5	0.0
+inversion breakpoint	200000	8	28	0	0	0	0	0	0	0	230	17	205	205	8	3.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	28.5	2.5	24.5	24.5	1.0
+join through 100 N	50000	8	0	0	0	0	0	0	0	0	216	6	208	208	2	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	28.0	0.5	27.5	27.5	0.0
+junction of a tandem duplication	2000	8	177	452	171	281	281	20	0	452	15	2	13	13	0	25.5	56.5	24.5	31.5	31.5	0.5	0.0	56.5	2.0	0.0	2.0	2.0	0.0
+junction of a tandem duplication	5000	8	177	336	162	174	174	58	0	336	34	10	24	24	0	23.0	43.5	20.5	20.0	20.0	4.5	0.0	43.5	4.0	1.0	3.0	3.0	0.0
+junction of a tandem duplication	10000	8	72	117	64	53	53	1	0	117	111	7	104	97	0	9.5	16.0	7.5	6.5	6.5	0.0	0.0	16.0	13.0	0.5	12.5	11.5	0.0
+junction of a tandem duplication	50000	8	0	0	0	0	0	0	0	0	191	0	191	85	0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	22.0	0.0	22.0	11.0	0.0
+junction of a tandem duplication	200000	7	1	0	0	0	0	0	0	0	178	0	178	89	0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	27.0	0.0	27.0	13.0	0.0

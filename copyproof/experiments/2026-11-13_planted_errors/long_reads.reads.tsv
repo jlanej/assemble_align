@@ -1,0 +1,20 @@
+what	n
+fetched stretches of the unedited genome	222
+... bases	33783585
+public alignment: records in those stretches	102425
+... primary (the reads that are aligned again)	80615
+... ... with mapping quality 20 or more	65119
+... ... bases	1304561012
+... ... mean read length	16183
+... ... mean depth of their alignments inside the fetched stretches	34.6
+... secondary	21697
+... supplementary	113
+... reads with only a secondary or supplementary record there (not aligned again)	645
+new alignment to the planted genome: records	166518
+... primary	80615
+... ... with mapping quality 20 or more	45373
+... ... on another sequence than in the public alignment	9342
+... secondary	85778
+... supplementary	125
+... unmapped reads	0
+... reads of the public alignment that are missing from the new one	0

@@ -17,7 +17,7 @@ Next:      the next step
 
 | # | Decision (GUIDE §9) | Status | Decided in |
 |---|---|---|---|
-| D1 | Read source for copy number | short reads detect; long reads adjudicate by k-mer content (`--long-read-bam`) | h, k |
+| D1 | Read source for copy number | short reads detect; long reads adjudicate by k-mer content (`--long-read-bam`). At a false join whose other haplotype is right they adjudicate by alignment instead, from the aligner's secondary records | h, k, q |
 | D2 | k-mer size | 31 throughout; other sizes not tried | a |
 | D3 | Coordinate frame | the release's own sequences; nothing is projected to a reference | a |
 | D4 | Segmentation | HMM over 1-kb windows with additive and depth-factor states, then classification per segment with one shared regional factor | e, i, j |
@@ -58,6 +58,62 @@ of the session, after the experiments they describe; their numbers were not all 
 Entries m, n and o were written within the hour of their experiments.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
+
+### 2026-11-14 (q): rung 2 with long reads: what the audit says at planted false joins
+
+Note:      written within the hour of the runs, from the tables of the record. The code under `src/` is
+           frozen at commit 1465496 for the held-out test (rung 6) and is unchanged here.
+Question:  given real HiFi reads, what does the long-read audit say at the false joins planted in the truth
+           genome (entry i, "not done"; review of 2026-11-14, point 3.4; D1)?
+Run:       `scripts/run_planted_hifi.sh`. The reads that the public HiFi alignment places within 50 kb of an
+           edit or of its homologous stretch (222 stretches, 33.8 Mb; 80,615 reads, 1.30 Gb) were fetched by
+           region and aligned again to the planted genome with minimap2 2.30 (`-ax map-hifi`). The pipeline ran
+           with `--long-read-bam` on links into DATA/work/plant/run35, once with that alignment and once without
+           its secondary records. Scoring: `experiments/2026-11-13_planted_errors/long_read_audit.py`. Record:
+           the part "With long reads" of that folder. Outputs: DATA/work/plant/hifi (2 GB), run35_hifi and
+           run35_hifi_no_secondary. The fetch and the alignment were first run by hand, with the commands that
+           are now in the driver; the driver ran both pipeline runs and the scoring. Fetch 7 minutes, alignment
+           4, each pipeline run 3.
+Seen:      `FALSE_JOIN`, all of high confidence, at 23 of 24 inversion breakpoints and at 21 of 36 joins left by
+           deletions: 16 of 20 from 10 kb, 5 of 8 at 5 kb, 0 of 8 at 2 kb. All 49 `FALSE_JOIN` issues lie at a
+           planted adjacency (5 are junctions of tandem duplications), all 86 issues the audit made or changed
+           lie within 5 kb of an edit, and the scoring of rung 2 changes in the nine rows of the deletion's join
+           and in no other. The 8 runs of N of the inversions rejoined through N have no linking read: 8
+           `UNSUPPORTED_JOIN`, of low confidence, because nothing else is wrong within 20 kb of them.
+           The misses have two causes. The audit asks only about runs of unread k-mers whose flanks short
+           reads cover: that leaves out 1 breakpoint, 7 deletion joins and 32 of 39 duplication junctions. And
+           at the 2-kb deletions 405 alignments run through the 8 joins, each with the deleted 2 kb as an
+           insertion, 402 of them secondary records and none with a mapping quality of 20 or more; the rule
+           counts them as reads through the join (2 `BASE_ERROR`, 3 not reported among the 5 asked about).
+           The calls rest on alignment, not on content. No long read holds an unread k-mer at any of the 59
+           joins asked about, but "not carried" needs 5 reads with their sequence there and the median is 2,
+           because a read that crosses a false join gets its primary record on the other haplotype. Content is
+           "unclear" at 51 of 59, and the rule "no alignment through, 3 or more clipped" decides. Of 582
+           records clipped at the inversion breakpoints, 534 are secondary, all of reads whose primary record
+           is on the other haplotype. Without the secondary records: `FALSE_JOIN` at 8 of 24 breakpoints and 3
+           of 36 deletion joins.
+           The aligners differ on the same reads: minimap2 wrote 85,778 secondary records where the public
+           Winnowmap alignment has 21,697, and put 9,342 primary records on another sequence.
+           Away from the edits the audit asked about 4 runs in the fetched stretches; long reads hold their
+           k-mers, as in the truth genome's run. Four is too few to call a false-flag rate.
+           Beside the experiment: a run's `run.json` does not name the long-read alignment, because the
+           pipeline does not record `--long-read-bam`; the address of the public file is in `resources.tsv`
+           (`hg002_q100_hifi_bam`). The `run.json` of these two runs does name their alignment: they were made
+           with one more line in `pipeline.py` that writes it, and that line is not kept, because the code is
+           frozen. It changes nothing else that a run writes. The drive paused three times, for 10 to 15
+           minutes each, while other jobs wrote to it (entry o); the steps waited and finished.
+Decision:  no threshold or rule changed. D1 is qualified: at a false join whose other haplotype is right, long
+           reads adjudicate by alignment, from the aligner's secondary records, and not by k-mer content. The
+           documents now say that the alignment file must keep its secondary records.
+Next:      not done, in the order they would matter. (1) The same test on a Winnowmap alignment and with ONT
+           reads. (2) After rung 6, when the code may change again: write `--long-read-bam` into `run.json`,
+           and three changes to the audit that these numbers suggest and that were not tried: take the sequence
+           of a read from its primary record wherever that lies, so that content can speak at a false join; do
+           not count an alignment as running through a run when it holds a long insertion or deletion there,
+           or when its mapping quality is under 20; let the two unlinked joins of one inversion vouch for each
+           other. Each of the three needs the truth genome's count of false flags again. (3) A false-flag
+           count for the minimap2 alignment on unedited sequence: fetch the reads at the 1,123 runs of rung 3
+           and compare the verdicts with those of the public alignment.
 
 ### 2026-11-13 (o): six more assemblies; the disk measured while a scan waited on it
 
@@ -287,6 +343,7 @@ Decision:  D4, D6. Added a step to S1: locate each candidate segment's k-mers in
            one such segment in 5.3 Gb, against 97 short dips to half depth. An unsupported run alone stays
            unreported (see h); inversions need the long-read audit.
 Next:      rung 4. A planted genome with long reads simulated or re-aligned would test FALSE_JOIN; not done.
+           (Done a day later with real reads aligned again: entry q.)
 
 ### 2026-11-13 (h): rung 3, the truth genome itself
 

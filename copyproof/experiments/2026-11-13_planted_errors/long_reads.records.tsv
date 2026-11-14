@@ -1,0 +1,108 @@
+id	kind	adjacency	stratum	size	contig	start	end	records	primary	secondary	supplementary	primary_over	through	through_primary	through_secondary	through_secondary_primary_on_homologue	through_mapq20	through_large_insertion	through_large_deletion	clipped	clipped_primary	clipped_secondary	clipped_secondary_primary_on_homologue	clipped_supplementary	median_length_of_those
+plant005	del	deletion join	unique	2000	chr17_MATERNAL	64321534	64321536	80	11	69	0	1	44	0	44	44	0	44	0	16	1	15	15	0	2020
+plant006	del	deletion join	unique	2000	chr3_PATERNAL	150867345	150867347	98	12	86	0	2	57	0	57	57	0	57	0	22	1	21	21	0	2000
+plant007	del	deletion join	unique	2000	chr20_PATERNAL	49438377	49438379	92	23	69	0	7	46	3	43	43	0	46	0	23	2	21	21	0	2000
+plant008	del	deletion join	unique	2000	chr6_PATERNAL	167477518	167477520	106	14	92	0	3	62	0	62	62	0	62	0	18	3	15	15	0	2000
+plant013	del	deletion join	SD	2000	chr3_PATERNAL	73849007	73849009	89	10	79	0	4	50	0	50	50	0	50	0	22	2	20	20	0	2000
+plant014	del	deletion join	SD	2000	chr19_MATERNAL	55990629	55990631	83	11	72	0	3	46	0	46	46	0	46	0	15	1	14	14	0	2000
+plant015	del	deletion join	SD	2000	chr10_MATERNAL	60340721	60340723	109	13	96	0	5	60	0	60	60	0	60	0	25	3	22	22	0	2000
+plant016	del	deletion join	SD	2000	chr11_PATERNAL	50221790	50221792	85	13	72	0	0	40	0	40	40	0	40	0	21	0	21	21	0	1999
+plant021	del	deletion join	unique	5000	chr16_MATERNAL	27430412	27430414	49	9	40	0	2	0	0	0	0	0	0	0	30	2	28	28	0	
+plant022	del	deletion join	unique	5000	chr12_MATERNAL	93450671	93450673	67	16	51	0	1	0	0	0	0	0	0	0	35	1	34	34	0	
+plant023	del	deletion join	unique	5000	chr20_MATERNAL	17110402	17110404	41	11	30	0	3	3	0	3	3	0	3	0	24	2	22	22	0	4996
+plant024	del	deletion join	unique	5000	chr14_PATERNAL	29164171	29164173	59	10	49	0	4	0	0	0	0	0	0	0	35	4	31	31	0	
+plant029	del	deletion join	SD	5000	chr10_MATERNAL	29839675	29839677	43	14	29	0	1	0	0	0	0	0	0	0	19	1	18	18	0	
+plant030	del	deletion join	SD	5000	chr1_MATERNAL	229771831	229771833	40	12	28	0	2	0	0	0	0	0	0	0	23	2	21	21	0	
+plant031	del	deletion join	SD	5000	chr13_MATERNAL	91052641	91052643	61	12	49	0	0	1	0	1	1	0	1	0	33	0	33	33	0	5001
+plant032	del	deletion join	SD	5000	chr13_PATERNAL	58635582	58635584	56	8	48	0	0	2	0	2	2	0	2	0	35	0	35	35	0	5000
+plant037	del	deletion join	unique	10000	chr14_MATERNAL	52105361	52105363	41	6	35	0	0	0	0	0	0	0	0	0	23	0	23	23	0	
+plant038	del	deletion join	unique	10000	chr12_MATERNAL	102911404	102911406	44	15	29	0	2	0	0	0	0	0	0	0	22	1	21	21	0	
+plant039	del	deletion join	unique	10000	chr22_MATERNAL	26644677	26644679	39	10	29	0	0	0	0	0	0	0	0	0	23	0	23	23	0	
+plant040	del	deletion join	unique	10000	chr3_MATERNAL	23189489	23189491	41	12	29	0	2	0	0	0	0	0	0	0	17	0	17	17	0	
+plant045	del	deletion join	SD	10000	chr15_PATERNAL	69835820	69835822	32	8	24	0	0	0	0	0	0	0	0	0	14	0	14	14	0	
+plant046	del	deletion join	SD	10000	chr17_PATERNAL	16952250	16952252	43	7	36	0	1	0	0	0	0	0	0	0	22	0	22	22	0	
+plant047	del	deletion join	SD	10000	chr21_MATERNAL	28606843	28606845	61	12	49	0	3	0	0	0	0	0	0	0	35	1	34	34	0	
+plant048	del	deletion join	SD	10000	chr7_MATERNAL	55772389	55772391	35	10	25	0	4	0	0	0	0	0	0	0	20	4	16	16	0	
+plant053	del	deletion join	unique	50000	chr18_MATERNAL	5889110	5889112	47	10	37	0	2	0	0	0	0	0	0	0	22	0	22	22	0	
+plant054	del	deletion join	unique	50000	chr11_MATERNAL	11585218	11585220	41	8	33	0	0	0	0	0	0	0	0	0	26	0	26	26	0	
+plant055	del	deletion join	unique	50000	chr6_MATERNAL	93843145	93843147	35	8	27	0	1	0	0	0	0	0	0	0	23	1	22	22	0	
+plant056	del	deletion join	unique	50000	chr3_PATERNAL	127205392	127205394	37	11	26	0	1	0	0	0	0	0	0	0	16	0	16	16	0	
+plant061	del	deletion join	SD	50000	chr1_PATERNAL	25559656	25559658	45	13	32	0	0	0	0	0	0	0	0	0	22	0	22	22	0	
+plant062	del	deletion join	SD	50000	chr22_MATERNAL	46770895	46770897	41	8	33	0	0	0	0	0	0	0	0	0	28	0	28	28	0	
+plant063	del	deletion join	SD	50000	chr17_PATERNAL	21415928	21415930	45	6	39	0	0	0	0	0	0	0	0	0	22	0	22	22	0	
+plant064	del	deletion join	SD	50000	chr7_MATERNAL	144529362	144529364	51	16	34	1	7	0	0	0	0	0	0	0	27	4	22	22	1	
+plant069	del	deletion join	unique	200000	chr10_MATERNAL	95849828	95849830	46	16	30	0	3	0	0	0	0	0	0	0	22	2	20	20	0	
+plant070	del	deletion join	unique	200000	chr20_PATERNAL	60408455	60408457	36	8	28	0	1	0	0	0	0	0	0	0	19	0	19	19	0	
+plant071	del	deletion join	unique	200000	chr8_PATERNAL	15333834	15333836	50	14	36	0	3	0	0	0	0	0	0	0	26	2	24	24	0	
+plant072	del	deletion join	unique	200000	chr13_PATERNAL	97767847	97767849	46	9	37	0	2	0	0	0	0	0	0	0	32	1	31	31	0	
+plant088	inv	inversion breakpoint	unique	10000	chr12_MATERNAL	78594456	78594458	28	6	22	0	2	0	0	0	0	0	0	0	12	2	10	10	0	
+plant088	inv	inversion breakpoint	unique	10000	chr12_MATERNAL	78604456	78604458	28	7	21	0	1	0	0	0	0	0	0	0	14	0	14	14	0	
+plant089	inv	inversion breakpoint	unique	10000	chr1_MATERNAL	59504160	59504162	29	5	22	2	0	0	0	0	0	0	0	0	17	0	15	15	2	
+plant089	inv	inversion breakpoint	unique	10000	chr1_MATERNAL	59514160	59514162	18	7	11	0	3	0	0	0	0	0	0	0	9	2	7	7	0	
+plant090	inv	inversion breakpoint	unique	10000	chr15_MATERNAL	67717327	67717329	19	5	14	0	2	0	0	0	0	0	0	0	10	2	8	8	0	
+plant090	inv	inversion breakpoint	unique	10000	chr15_MATERNAL	67727327	67727329	22	5	17	0	0	0	0	0	0	0	0	0	12	0	12	12	0	
+plant091	inv	inversion breakpoint	unique	10000	chr12_PATERNAL	107995814	107995816	22	4	18	0	2	0	0	0	0	0	0	0	13	1	12	12	0	
+plant091	inv	inversion breakpoint	unique	10000	chr12_PATERNAL	108005814	108005816	36	4	32	0	0	0	0	0	0	0	0	0	24	0	24	24	0	
+plant096	inv	inversion breakpoint	unique	50000	chr8_PATERNAL	115908428	115908430	45	11	34	0	0	0	0	0	0	0	0	0	24	0	24	24	0	
+plant096	inv	inversion breakpoint	unique	50000	chr8_PATERNAL	115958428	115958430	57	9	48	0	0	0	0	0	0	0	0	0	35	0	35	35	0	
+plant097	inv	inversion breakpoint	unique	50000	chr17_PATERNAL	72304874	72304876	56	8	48	0	1	0	0	0	0	0	0	0	36	0	36	36	0	
+plant097	inv	inversion breakpoint	unique	50000	chr17_PATERNAL	72354874	72354876	45	10	35	0	1	0	0	0	0	0	0	0	23	0	23	23	0	
+plant098	inv	inversion breakpoint	unique	50000	chr18_PATERNAL	59731298	59731300	48	11	35	2	2	0	0	0	0	0	0	0	33	2	29	29	2	
+plant098	inv	inversion breakpoint	unique	50000	chr18_PATERNAL	59781298	59781300	49	12	37	0	4	0	0	0	0	0	0	0	30	3	27	27	0	
+plant099	inv	inversion breakpoint	unique	50000	chr13_MATERNAL	106622270	106622272	51	12	38	1	4	0	0	0	0	0	0	0	30	4	25	25	1	
+plant099	inv	inversion breakpoint	unique	50000	chr13_MATERNAL	106672270	106672272	48	7	40	1	1	0	0	0	0	0	0	0	30	1	28	28	1	
+plant104	inv	inversion breakpoint	unique	200000	chr21_PATERNAL	18059164	18059166	48	11	35	2	3	0	0	0	0	0	0	0	30	3	25	25	2	
+plant104	inv	inversion breakpoint	unique	200000	chr21_PATERNAL	18259164	18259166	45	13	30	2	5	0	0	0	0	0	0	0	30	5	23	23	2	
+plant105	inv	inversion breakpoint	unique	200000	chr11_MATERNAL	96201822	96201824	51	15	35	1	7	0	0	0	0	0	0	0	25	3	21	21	1	
+plant105	inv	inversion breakpoint	unique	200000	chr11_MATERNAL	96401822	96401824	63	10	51	2	1	0	0	0	0	0	0	0	39	1	36	36	2	
+plant106	inv	inversion breakpoint	unique	200000	chr6_PATERNAL	152645292	152645294	48	15	33	0	5	0	0	0	0	0	0	0	27	3	24	24	0	
+plant106	inv	inversion breakpoint	unique	200000	chr6_PATERNAL	152845292	152845294	58	13	44	1	2	0	0	0	0	0	0	0	31	0	30	30	1	
+plant107	inv	inversion breakpoint	unique	200000	chr1_MATERNAL	225758041	225758043	46	11	35	0	3	0	0	0	0	0	0	0	27	2	25	25	0	
+plant107	inv	inversion breakpoint	unique	200000	chr1_MATERNAL	225958041	225958043	40	13	27	0	2	0	0	0	0	0	0	0	21	0	21	21	0	
+plant108	invgap	join through 100 N	unique	50000	chr10_MATERNAL	14225933	14226033	41	9	32	0	0	0	0	0	0	0	0	0	27	0	27	27	0	
+plant108	invgap	join through 100 N	unique	50000	chr10_MATERNAL	14276033	14276133	37	10	27	0	0	0	0	0	0	0	0	0	22	0	22	22	0	
+plant109	invgap	join through 100 N	unique	50000	chr1_PATERNAL	49052361	49052461	50	12	38	0	0	0	0	0	0	0	0	0	28	0	28	28	0	
+plant109	invgap	join through 100 N	unique	50000	chr1_PATERNAL	49102461	49102561	41	4	37	0	0	0	0	0	0	0	0	0	28	0	28	28	0	
+plant110	invgap	join through 100 N	unique	50000	chr3_PATERNAL	87204598	87204698	43	11	32	0	0	0	0	0	0	0	0	0	31	3	28	28	0	
+plant110	invgap	join through 100 N	unique	50000	chr3_PATERNAL	87254698	87254798	49	11	37	1	0	0	0	0	0	0	0	0	32	1	30	30	1	
+plant111	invgap	join through 100 N	unique	50000	chr5_PATERNAL	5913310	5913410	43	10	32	1	0	0	0	0	0	0	0	0	28	1	26	26	1	
+plant111	invgap	join through 100 N	unique	50000	chr5_PATERNAL	5963410	5963510	35	12	23	0	0	0	0	0	0	0	0	0	20	1	19	19	0	
+plant001	dup	junction of a tandem duplication	unique	2000	chr3_PATERNAL	38239431	38239433	77	45	32	0	33	56	31	25	25	1	0	56	2	1	1	1	0	2000
+plant002	dup	junction of a tandem duplication	unique	2000	chr22_PATERNAL	26563374	26563376	81	36	45	0	27	54	25	29	29	0	0	54	2	0	2	2	0	2000
+plant003	dup	junction of a tandem duplication	unique	2000	chr6_PATERNAL	121735946	121735948	75	19	56	0	13	54	13	41	41	0	0	54	2	0	2	2	0	2000
+plant004	dup	junction of a tandem duplication	unique	2000	chr14_PATERNAL	32996123	32996125	84	41	43	0	31	59	29	30	30	3	0	59	3	1	2	2	0	2002
+plant009	dup	junction of a tandem duplication	SD	2000	chr16_PATERNAL	20883330	20883332	82	34	48	0	24	57	24	33	33	7	0	57	2	0	2	2	0	2000
+plant010	dup	junction of a tandem duplication	SD	2000	chr13_PATERNAL	17676550	17676552	75	8	67	0	0	54	0	54	54	0	0	54	2	0	2	2	0	2000
+plant011	dup	junction of a tandem duplication	SD	2000	chr1_PATERNAL	87618222	87618224	78	38	40	0	30	60	30	30	30	9	0	60	1	0	1	1	0	2000
+plant012	dup	junction of a tandem duplication	SD	2000	chr20_MATERNAL	55322863	55322865	86	33	53	0	19	58	19	39	39	0	0	58	1	0	1	1	0	2001
+plant017	dup	junction of a tandem duplication	unique	5000	chr2_MATERNAL	203544176	203544178	60	26	34	0	20	38	19	19	19	0	0	38	4	0	4	4	0	4993
+plant018	dup	junction of a tandem duplication	unique	5000	chr12_MATERNAL	70793619	70793621	76	36	40	0	22	51	22	29	29	1	0	51	3	0	3	3	0	5001
+plant019	dup	junction of a tandem duplication	unique	5000	chr7_MATERNAL	86917236	86917238	49	20	29	0	15	31	12	19	19	8	0	31	3	2	1	1	0	4994
+plant020	dup	junction of a tandem duplication	unique	5000	chr8_PATERNAL	66930015	66930017	72	37	35	0	25	38	19	19	19	6	0	38	5	3	2	2	0	4999
+plant025	dup	junction of a tandem duplication	SD	5000	chr5_MATERNAL	180506907	180506909	66	35	31	0	26	46	26	20	20	3	0	46	4	0	4	4	0	5001
+plant026	dup	junction of a tandem duplication	SD	5000	chr9_MATERNAL	93118797	93118799	71	40	31	0	25	44	22	22	22	22	0	44	7	3	4	4	0	4979
+plant027	dup	junction of a tandem duplication	SD	5000	chr1_PATERNAL	230586033	230586035	64	35	29	0	24	43	23	20	20	18	0	43	4	1	3	3	0	4999
+plant028	dup	junction of a tandem duplication	SD	5000	chr10_MATERNAL	36205595	36205597	69	31	38	0	20	45	19	26	26	0	0	45	4	1	3	3	0	4999
+plant033	dup	junction of a tandem duplication	unique	10000	chr7_PATERNAL	13992265	13992267	42	14	28	0	8	13	7	6	6	0	0	13	12	1	11	10	0	10001
+plant034	dup	junction of a tandem duplication	unique	10000	chr3_MATERNAL	176018605	176018607	44	16	28	0	12	17	12	5	5	0	0	17	10	0	10	10	0	10001
+plant035	dup	junction of a tandem duplication	unique	10000	chr17_PATERNAL	57016482	57016484	59	20	39	0	10	18	8	10	10	0	0	18	16	2	14	13	0	10001
+plant036	dup	junction of a tandem duplication	unique	10000	chr14_PATERNAL	61154023	61154025	55	8	47	0	3	15	3	12	12	0	0	15	25	0	25	24	0	10001
+plant041	dup	junction of a tandem duplication	SD	10000	chr5_PATERNAL	148100821	148100823	37	15	22	0	6	11	6	5	5	0	0	11	9	0	9	8	0	9999
+plant042	dup	junction of a tandem duplication	SD	10000	chr2_PATERNAL	137740280	137740282	53	19	34	0	12	17	10	7	7	0	0	17	18	2	16	14	0	10001
+plant043	dup	junction of a tandem duplication	SD	10000	chr1_PATERNAL	205398605	205398607	56	22	34	0	12	18	11	7	7	0	0	18	14	0	14	13	0	9999
+plant044	dup	junction of a tandem duplication	SD	10000	chr17_MATERNAL	41945895	41945897	31	16	15	0	9	8	7	1	1	1	0	8	7	2	5	5	0	10001
+plant049	dup	junction of a tandem duplication	unique	50000	chr14_MATERNAL	56705997	56705999	38	4	34	0	0	0	0	0	0	0	0	0	16	0	16	6	0	
+plant050	dup	junction of a tandem duplication	unique	50000	chr2_MATERNAL	215007517	215007519	58	5	53	0	0	0	0	0	0	0	0	0	34	0	34	16	0	
+plant051	dup	junction of a tandem duplication	unique	50000	chr13_PATERNAL	83010329	83010331	48	3	45	0	0	0	0	0	0	0	0	0	30	0	30	13	0	
+plant052	dup	junction of a tandem duplication	unique	50000	chr13_PATERNAL	78625398	78625400	42	3	39	0	0	0	0	0	0	0	0	0	24	0	24	12	0	
+plant057	dup	junction of a tandem duplication	SD	50000	chr11_PATERNAL	88468192	88468194	39	7	32	0	0	0	0	0	0	0	0	0	15	0	15	7	0	
+plant058	dup	junction of a tandem duplication	SD	50000	chr7_MATERNAL	155832615	155832617	39	5	34	0	0	0	0	0	0	0	0	0	20	0	20	9	0	
+plant059	dup	junction of a tandem duplication	SD	50000	chr16_MATERNAL	14961723	14961725	37	3	34	0	0	0	0	0	0	0	0	0	20	0	20	10	0	
+plant060	dup	junction of a tandem duplication	SD	50000	chr7_PATERNAL	36043574	36043576	50	6	44	0	0	0	0	0	0	0	0	0	32	0	32	12	0	
+plant065	dup	junction of a tandem duplication	unique	200000	chr10_MATERNAL	10447935	10447937	55	6	49	0	1	0	0	0	0	0	0	0	32	0	32	18	0	
+plant066	dup	junction of a tandem duplication	unique	200000	chr11_MATERNAL	69495904	69495906	33	3	30	0	0	0	0	0	0	0	0	0	22	0	22	12	0	
+plant067	dup	junction of a tandem duplication	unique	200000	chr17_PATERNAL	53423167	53423169	48	3	45	0	0	0	0	0	0	0	0	0	26	0	26	16	0	
+plant068	dup	junction of a tandem duplication	unique	200000	chr14_MATERNAL	89146921	89146923	49	3	46	0	0	0	0	0	0	0	0	0	28	0	28	14	0	
+plant073	dup	junction of a tandem duplication	SD	200000	chr2_PATERNAL	111127481	111127483	49	2	47	0	0	0	0	0	0	0	0	0	29	0	29	13	0	
+plant074	dup	junction of a tandem duplication	SD	200000	chr7_MATERNAL	74065867	74065869	43	7	36	0	0	0	0	0	0	0	0	0	27	0	27	13	0	
+plant075	dup	junction of a tandem duplication	SD	200000	chr15_PATERNAL	18694772	18694774	35	7	28	0	0	0	0	0	0	0	0	0	14	0	14	3	0	

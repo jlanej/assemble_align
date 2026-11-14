@@ -1,0 +1,9 @@
+adjacency	stratum	planted	unsupported_run	run_with_covered_flanks	audited	median_primary_reads_over	median_spanning	median_clipped	some_unread_kmer_in_a_long_read	content_not_carried	content_carried	content_unclear	alignment_broken	alignment_spanned	alignment_unclear	join_unsupported	join_linked	join_not_assessable	FALSE_JOIN_high	FALSE_JOIN_low	BASE_ERROR_high	BASE_ERROR_low	UNSUPPORTED	UNSUPPORTED_JOIN_high	UNSUPPORTED_JOIN_low	no_issue
+inversion breakpoint	all	24	24	23	23	2	0	27	0	3	0	20	23	0	0	0	0	0	23	0	0	0	0	0	0	1
+deletion join	unique	20	19	16	16	2	0	23	0	2	0	14	13	3	0	0	0	0	13	0	0	1	0	0	0	6
+deletion join	SD	16	15	13	13	1	0	22	0	1	0	12	8	3	2	0	0	0	8	0	1	0	0	0	0	7
+deletion join	all	36	34	29	29	2	0	23	0	3	0	26	21	6	2	0	0	0	21	0	1	1	0	0	0	13
+join through 100 N	all	8	0	0	0				0	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	8	0
+junction of a tandem duplication	unique	20	20	4	4	6	8.5	13	0	2	0	2	2	2	0	0	0	0	2	0	2	0	0	0	0	16
+junction of a tandem duplication	SD	19	18	3	3	0	0	20	0	0	0	3	3	0	0	0	0	0	3	0	0	0	0	0	0	16
+junction of a tandem duplication	all	39	38	7	7	0	0	20	0	2	0	5	5	2	0	0	0	0	5	0	2	0	0	0	0	32
