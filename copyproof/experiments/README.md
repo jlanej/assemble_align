@@ -9,7 +9,7 @@ commands is the data root (`scripts/manifests/` lists what to download into it).
 | [`2026-11-13_engine_validation`](2026-11-13_engine_validation/README.md) | | Are the k-mer counts right, and what do they cost? |
 | [`2026-11-13_hg002_q100_false_flags`](2026-11-13_hg002_q100_false_flags/README.md) | 3 | What is flagged on a truth genome, with short reads and with long reads? |
 | [`2026-11-13_hg002_trio`](2026-11-13_hg002_trio/README.md) | 2 and 3, with parents | What does the hapmer channel flag on a truth genome, and does it find planted swaps? |
-| [`2026-11-13_planted_errors`](2026-11-13_planted_errors/README.md) | 2 | Are errors planted in the truth genome found, and does anything else change? |
+| [`2026-11-13_planted_errors`](2026-11-13_planted_errors/README.md) | 2 | Are errors planted in the truth genome found, and does anything else change? With long reads: what does the audit say at the planted false joins? |
 | [`2026-11-13_hg002_assemblies`](2026-11-13_hg002_assemblies/README.md) | 4 | On real assemblies of the same person, are the issues real and how many are found? |
 | [`2026-11-13_hg01943_trio`](2026-11-13_hg01943_trio/README.md) | 1 | Is the case that motivated the tool flagged, and what else is in that genome? |
 | [`2026-11-13_threshold_sensitivity`](2026-11-13_threshold_sensitivity/README.md) | | Do the results move with the thresholds? What did the classifier's revision change? |
@@ -52,6 +52,11 @@ Every number in `../README.md`, with the table it is read from and what writes t
 | Planted errors found, by kind and size | `2026-11-13_planted_errors/sensitivity.tsv` | `scripts/eval_planted.py` |
 | Planted false adjacencies show as unread assembly k-mers | `2026-11-13_planted_errors/breakpoints.tsv` | `scripts/eval_planted.py` |
 | Issues on the planted genome that are neither at an edit nor on the unedited genome | `2026-11-13_planted_errors/new_elsewhere.tsv` (the totals are printed) | `scripts/eval_planted.py` |
+| With long reads, planted false joins become `FALSE_JOIN` (23 of 24 inversion breakpoints, 21 of 36 deletion joins; by size of the edit) and joins through N become `UNSUPPORTED_JOIN` (8 of 8, low) | `2026-11-13_planted_errors/long_reads.summary.tsv`, `long_reads.by_size.tsv`; one row per planted adjacency in `long_reads.adjacencies.tsv` | `scripts/run_planted_hifi.sh` (fetches the reads, aligns them, runs the pipeline), then `2026-11-13_planted_errors/long_read_audit.py score` |
+| Nothing the long-read audit reports on the planted genome lies away from an edit | `2026-11-13_planted_errors/long_reads.audit_issues.tsv`, `long_reads.issue_changes.tsv`, `long_reads.elsewhere.tsv` (the totals at and away from edits are printed by `scripts/eval_planted.py`) | `long_read_audit.py score` |
+| Without the alignment's secondary records the same audit finds 8 of 24 breakpoints and 3 of 36 deletion joins | `2026-11-13_planted_errors/long_reads_no_secondary.summary.tsv` | the same, on the second run of `scripts/run_planted_hifi.sh` |
+| What lies at a planted false join in the alignment: alignments through it, records clipped at it, by type | `2026-11-13_planted_errors/long_reads.records_by_size.tsv`, `long_reads.records.tsv` | `long_read_audit.py records` |
+| The reads fetched for that test, and how the two aligners place them | `2026-11-13_planted_errors/long_reads.reads.tsv` | `long_read_audit.py reads` |
 | Issues on the truth genome by class and confidence (about 25 high-confidence per haplotype) | `2026-11-13_hg002_q100_false_flags/issues_by_class.tsv` | `2026-11-13_hg002_q100_false_flags/analyse.py` |
 | 0.11% of 20,237 duplication boundaries flagged | `2026-11-13_hg002_q100_false_flags/litmus.txt` | `scripts/sd_boundary_litmus.py` (the denominator was fixed in NOTEBOOK entry g before the run) |
 | No ambiguous segment on the truth genome is long and deep; 105 are short dips | `2026-11-13_hg002_q100_false_flags/ambiguous_by_length.tsv` | `analyse.py` |
@@ -77,3 +82,5 @@ Every number in `../README.md`, with the table it is read from and what writes t
 - Anything at all without the downloads: about 220 GB of reads, assemblies and alignments
   (`scripts/manifests/`). The k-mer databases (32 GB) and the run directories (about 315 GB as
   they stand, nearly all of it positional tracks of 9 to 18 GB per run) are rebuilt from those.
+  The long reads of rung 2 are not in a manifest: `scripts/run_planted_hifi.sh` fetches them by
+  region from a public alignment (0.5 GB).

@@ -1,0 +1,15 @@
+adjacency	size	planted	unsupported_run	run_with_covered_flanks	audited	median_primary_reads_over	median_spanning	median_clipped	some_unread_kmer_in_a_long_read	content_not_carried	content_carried	content_unclear	alignment_broken	alignment_spanned	alignment_unclear	join_unsupported	join_linked	join_not_assessable	FALSE_JOIN_high	FALSE_JOIN_low	BASE_ERROR_high	BASE_ERROR_low	UNSUPPORTED	UNSUPPORTED_JOIN_high	UNSUPPORTED_JOIN_low	no_issue
+inversion breakpoint	10000	8	8	7	7	2	0	12	0	0	0	7	7	0	0	0	0	0	7	0	0	0	0	0	0	1
+inversion breakpoint	50000	8	8	8	8	1	0	30	0	0	0	8	8	0	0	0	0	0	8	0	0	0	0	0	0	0
+inversion breakpoint	200000	8	8	8	8	3.5	0	28.5	0	3	0	5	8	0	0	0	0	0	8	0	0	0	0	0	0	0
+deletion join	2000	8	7	5	5	3	46	22	0	2	0	3	0	5	0	0	0	0	0	0	1	1	0	0	0	6
+deletion join	5000	8	8	8	8	2	0	31.5	0	1	0	7	5	1	2	0	0	0	5	0	0	0	0	0	0	3
+deletion join	10000	8	8	7	7	2	0	22	0	0	0	7	7	0	0	0	0	0	7	0	0	0	0	0	0	1
+deletion join	50000	8	7	5	5	0	0	22	0	0	0	5	5	0	0	0	0	0	5	0	0	0	0	0	0	3
+deletion join	200000	4	4	4	4	3	0	24	0	0	0	4	4	0	0	0	0	0	4	0	0	0	0	0	0	0
+join through 100 N	50000	8	0	0	0				0	0	0	0	0	0	0	8	0	0	0	0	0	0	0	0	8	0
+junction of a tandem duplication	2000	8	8	0	0				0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	0	8
+junction of a tandem duplication	5000	8	8	1	1	22	51	3	0	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	7
+junction of a tandem duplication	10000	8	8	1	1	12	17	10	0	1	0	0	0	1	0	0	0	0	0	0	1	0	0	0	0	7
+junction of a tandem duplication	50000	8	8	3	3	0	0	20	0	0	0	3	3	0	0	0	0	0	3	0	0	0	0	0	0	5
+junction of a tandem duplication	200000	7	6	2	2	0	0	24.5	0	0	0	2	2	0	0	0	0	0	2	0	0	0	0	0	0	5

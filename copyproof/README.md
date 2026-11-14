@@ -84,6 +84,14 @@ edits of known kind, size and place in Q100, read with real short reads.
 
 Of 656 issues on the planted genome, 13 are neither at an edit nor present on the unedited genome.
 
+With long reads (real HiFi reads, fetched near the edits from a public alignment and aligned
+again to the planted genome with minimap2) the false adjacencies are reported: `FALSE_JOIN` at 23
+of the 24 inversion breakpoints and at 21 of 36 joins left by a deletion (16 of 20 from 10 kb, 5
+of 8 at 5 kb, 0 of 8 at 2 kb), all of high confidence and none away from an edit. The 8 joins of
+inversions closed with a run of N are `UNSUPPORTED_JOIN`, of low confidence. The calls rest on
+the aligner's secondary records: without them the same audit finds 8 of the 24 breakpoints and 3
+of the 36 deletion joins.
+
 **The truth genome itself**
 ([experiments/2026-11-13_hg002_q100_false_flags](experiments/2026-11-13_hg002_q100_false_flags/README.md)).
 With short reads alone: about 25 high-confidence issues per haplotype, and an issue within 5 kb of
@@ -154,7 +162,8 @@ copyproof run --out HG01943.copyproof \
 - `--parent NAME=READS` twice switches on the hapmer audit and labels missing k-mers by parent.
 - `--long-read-bam URL` (long reads aligned to the release, indexed; it can stay remote) adds the
   join audit and lets long reads settle what short reads cannot: whether assembly sequence that
-  no short read holds is real.
+  no short read holds is real. The file must keep the aligner's secondary records (minimap2
+  writes them unless told otherwise): the `FALSE_JOIN` call counts them.
 - `--sample 8` halves memory (about 12 GB instead of 20 GB) at the cost of resolution.
 
 Start with `issues.tsv`, `summary.json` and `cards/`. [docs/outputs.md](docs/outputs.md) explains
@@ -200,7 +209,10 @@ minutes (NOTEBOOK entry o).
   of 1 to 3 kb where one allele has no short reads at all look like a missing copy; without long
   reads they are low-confidence issues.
 - An inversion or a false join leaves no missing k-mers when the other haplotype is right. Its
-  unread assembly k-mers are reported only with long reads (`--long-read-bam`).
+  unread assembly k-mers are reported only with long reads (`--long-read-bam`), and then from
+  the secondary records of the alignment, because the reads that cross the join are placed on
+  the other haplotype. On planted joins, deletions of 2 kb were missed (0 of 8), and an
+  inversion closed with runs of N was reported like any unlinked scaffold gap.
 - A junction whose far side is a high-copy repeat is detected weakly (reads are not recruited
   from high-copy sequence).
 - One copy too many in the assembly and one copy too few in the reads' DNA are the same

@@ -1,0 +1,108 @@
+id	kind	adjacency	stratum	size	contig	start	end	unsupported_run	covered_flanks	run_unsupported	run_tracked	run_flank_copies	run_flank_kmers	audited	point	reads	long_reads_over	spanning	spanning_mapq	clipped	kmers	kmers_carried	by_alignment	by_content	join_verdict	join_linking_reads	join_depth_left	join_depth_right	join_clips_left	join_clips_right	issue	confidence	channel	all_issues
+plant005	del	deletion join	unique	2000	chr17_MATERNAL	64321534	64321536	False	False					False																	none			
+plant006	del	deletion join	unique	2000	chr3_PATERNAL	150867345	150867347	True	True	4	4	0.963	69	True	run1006	12	2	0	0	1	4	0	unclear	unclear							none			
+plant007	del	deletion join	unique	2000	chr20_PATERNAL	49438377	49438379	True	True	5	5	0.852	69	True	run563	24	7	3	0	2	5	0	spanned	not_carried							BASE_ERROR	low	S1+S4	BASE_ERROR/low/S1+S4
+plant008	del	deletion join	unique	2000	chr6_PATERNAL	167477518	167477520	True	False	6	6	0.704	75	False																	none			
+plant013	del	deletion join	SD	2000	chr3_PATERNAL	73849007	73849009	True	False	7	7	0.778	73	False																	none			
+plant014	del	deletion join	SD	2000	chr19_MATERNAL	55990629	55990631	True	True	7	7	0.963	57	True	run336	11	3	0	0	1	7	0	unclear	unclear							none			
+plant015	del	deletion join	SD	2000	chr10_MATERNAL	60340721	60340723	True	True	6	6	0.963	65	True	run426	14	7	0	0	3	6	0	broken	not_carried							FALSE_JOIN	high	S1+S4	FALSE_JOIN/high/S1+S4
+plant016	del	deletion join	SD	2000	chr11_PATERNAL	50221790	50221792	True	True	5	5	0.926	73	True	run753	13	0	0	0	0	5	0	unclear	unclear							none			
+plant021	del	deletion join	unique	5000	chr16_MATERNAL	27430412	27430414	True	True	12	12	1.185	82	True	run22	9	2	0	0	2	12	0	unclear	unclear							none			
+plant022	del	deletion join	unique	5000	chr12_MATERNAL	93450671	93450673	True	True	5	5	1.185	69	True	run589	16	3	0	0	1	5	0	unclear	unclear							none			
+plant023	del	deletion join	unique	5000	chr20_MATERNAL	17110402	17110404	True	True	5	5	1.074	70	True	run549	11	3	0	0	2	5	0	unclear	unclear							none			
+plant024	del	deletion join	unique	5000	chr14_PATERNAL	29164171	29164173	True	True	11	11	0.926	80	True	run47	10	5	0	0	4	11	0	broken	not_carried							FALSE_JOIN	high	S1+S4	FALSE_JOIN/high/S1+S4
+plant029	del	deletion join	SD	5000	chr10_MATERNAL	29839675	29839677	True	True	10	10	1.037	87	True	run88	14	1	0	0	1	10	0	unclear	unclear							none			
+plant030	del	deletion join	SD	5000	chr1_MATERNAL	229771831	229771833	True	True	7	7	1.134	78	True	run240	12	2	0	0	2	7	0	unclear	unclear							none			
+plant031	del	deletion join	SD	5000	chr13_MATERNAL	91052641	91052643	True	True	8	8	0.981	76	True	run177	12	0	0	0	0	8	0	unclear	unclear							none			
+plant032	del	deletion join	SD	5000	chr13_PATERNAL	58635582	58635584	True	True	8	8	0.883	72	True	run169	8	0	0	0	0	8	0	unclear	unclear							none			
+plant037	del	deletion join	unique	10000	chr14_MATERNAL	52105361	52105363	True	False	7	7	0.815	65	False																	none			
+plant038	del	deletion join	unique	10000	chr12_MATERNAL	102911404	102911406	True	True	9	9	1.111	85	True	run97	15	2	0	0	1	9	0	unclear	unclear							none			
+plant039	del	deletion join	unique	10000	chr22_MATERNAL	26644677	26644679	True	True	5	5	0.852	69	True	run703	10	0	0	0	0	5	0	unclear	unclear							none			
+plant040	del	deletion join	unique	10000	chr3_MATERNAL	23189489	23189491	True	True	7	7	1.074	79	True	run227	12	2	0	0	0	7	0	unclear	unclear							none			
+plant045	del	deletion join	SD	10000	chr15_PATERNAL	69835820	69835822	True	True	7	7	1.111	79	True	run256	8	0	0	0	0	7	0	unclear	unclear							none			
+plant046	del	deletion join	SD	10000	chr17_PATERNAL	16952250	16952252	True	True	8	8	1.054	72	True	run214	7	1	0	0	0	8	0	unclear	unclear							none			
+plant047	del	deletion join	SD	10000	chr21_MATERNAL	28606843	28606845	True	True	9	9	0.914	67	True	run122	12	3	0	0	1	9	0	unclear	unclear							none			
+plant048	del	deletion join	SD	10000	chr7_MATERNAL	55772389	55772391	True	True	10	10	1.074	69	True	run60	10	4	0	0	4	10	0	broken	unclear							FALSE_JOIN	low	S1+S4	FALSE_JOIN/low/S1+S4
+plant053	del	deletion join	unique	50000	chr18_MATERNAL	5889110	5889112	True	True	5	5	1.074	73	True	run662	10	2	0	0	0	5	0	unclear	unclear							none			
+plant054	del	deletion join	unique	50000	chr11_MATERNAL	11585218	11585220	True	True	7	7	0.889	64	True	run353	8	0	0	0	0	7	0	unclear	unclear							none			
+plant055	del	deletion join	unique	50000	chr6_MATERNAL	93843145	93843147	True	False	6	6	0.796	82	False																	none			
+plant056	del	deletion join	unique	50000	chr3_PATERNAL	127205392	127205394	True	True	7	7	1.037	86	True	run315	11	1	0	0	0	7	0	unclear	unclear							none			
+plant061	del	deletion join	SD	50000	chr1_PATERNAL	25559656	25559658	False	False					False																	none			
+plant062	del	deletion join	SD	50000	chr22_MATERNAL	46770895	46770897	True	True	5	5	1.185	55	True	run713	8	0	0	0	0	5	0	unclear	unclear							none			
+plant063	del	deletion join	SD	50000	chr17_PATERNAL	21415928	21415930	True	True	9	9	1.019	61	True	run109	6	0	0	0	0	9	0	unclear	unclear							none			
+plant064	del	deletion join	SD	50000	chr7_MATERNAL	144529362	144529364	True	False	9	9	0.833	81	False																	none			
+plant069	del	deletion join	unique	200000	chr10_MATERNAL	95849828	95849830	True	True	11	11	1.37	58	True	run52	16	3	0	0	2	11	0	unclear	unclear							none			
+plant070	del	deletion join	unique	200000	chr20_PATERNAL	60408455	60408457	True	True	6	6	1.0	77	True	run380	8	1	0	0	0	6	0	unclear	unclear							none			
+plant071	del	deletion join	unique	200000	chr8_PATERNAL	15333834	15333836	True	True	4	4	0.944	70	True	run1135	14	3	0	0	2	4	0	unclear	unclear							none			
+plant072	del	deletion join	unique	200000	chr13_PATERNAL	97767847	97767849	True	True	9	9	1.074	73	True	run115	9	3	0	0	1	9	0	unclear	unclear							none			
+plant088	inv	inversion breakpoint	unique	10000	chr12_MATERNAL	78594456	78594458	True	True	6	6	1.037	71	True	run409	6	2	0	0	2	6	0	unclear	unclear							none			
+plant088	inv	inversion breakpoint	unique	10000	chr12_MATERNAL	78604456	78604458	True	False	8	8	0.741	81	False																	none			
+plant089	inv	inversion breakpoint	unique	10000	chr1_MATERNAL	59504160	59504162	True	True	10	10	1.037	96	True	run70	7	0	0	0	2	10	0	unclear	unclear							none			
+plant089	inv	inversion breakpoint	unique	10000	chr1_MATERNAL	59514160	59514162	True	True	7	7	1.148	68	True	run295	7	3	0	0	2	7	0	unclear	unclear							none			
+plant090	inv	inversion breakpoint	unique	10000	chr15_MATERNAL	67717327	67717329	True	True	5	5	0.963	81	True	run588	5	2	0	0	2	5	0	unclear	unclear							none			
+plant090	inv	inversion breakpoint	unique	10000	chr15_MATERNAL	67727327	67727329	True	True	7	7	1.111	88	True	run255	5	0	0	0	0	7	0	unclear	unclear							none			
+plant091	inv	inversion breakpoint	unique	10000	chr12_PATERNAL	107995814	107995816	True	True	7	7	0.963	81	True	run269	4	2	0	0	1	7	0	unclear	unclear							none			
+plant091	inv	inversion breakpoint	unique	10000	chr12_PATERNAL	108005814	108005816	True	True	9	9	1.074	71	True	run100	4	0	0	0	0	9	0	unclear	unclear							none			
+plant096	inv	inversion breakpoint	unique	50000	chr8_PATERNAL	115908428	115908430	True	True	5	5	1.037	89	True	run716	11	0	0	0	0	5	0	unclear	unclear							none			
+plant096	inv	inversion breakpoint	unique	50000	chr8_PATERNAL	115958428	115958430	True	True	11	11	0.963	78	True	run32	9	0	0	0	0	11	0	unclear	unclear							none			
+plant097	inv	inversion breakpoint	unique	50000	chr17_PATERNAL	72304874	72304876	True	True	6	6	0.889	75	True	run400	8	1	0	0	0	6	0	unclear	unclear							none			
+plant097	inv	inversion breakpoint	unique	50000	chr17_PATERNAL	72354874	72354876	True	True	10	10	1.037	83	True	run64	10	1	0	0	0	10	0	unclear	unclear							none			
+plant098	inv	inversion breakpoint	unique	50000	chr18_PATERNAL	59731298	59731300	True	True	10	10	1.069	67	True	run85	14	2	0	0	4	10	0	broken	unclear							FALSE_JOIN	low	S1+S4	FALSE_JOIN/low/S1+S4
+plant098	inv	inversion breakpoint	unique	50000	chr18_PATERNAL	59781298	59781300	True	True	4	4	1.167	62	True	run799	12	4	0	0	3	4	0	broken	unclear							FALSE_JOIN	low	S1+S4	FALSE_JOIN/low/S1+S4
+plant099	inv	inversion breakpoint	unique	50000	chr13_MATERNAL	106622270	106622272	True	True	12	12	1.111	72	True	run23	13	4	0	0	5	12	0	broken	unclear							FALSE_JOIN	high	S1+S4	FALSE_JOIN/high/S1+S4
+plant099	inv	inversion breakpoint	unique	50000	chr13_MATERNAL	106672270	106672272	True	True	6	6	0.963	71	True	run537	8	1	0	0	2	6	0	unclear	unclear							none			
+plant104	inv	inversion breakpoint	unique	200000	chr21_PATERNAL	18059164	18059166	True	True	6	6	0.926	63	True	run423	13	3	0	0	5	6	0	broken	unclear							FALSE_JOIN	high	S1+S4	FALSE_JOIN/high/S1+S4
+plant104	inv	inversion breakpoint	unique	200000	chr21_PATERNAL	18259164	18259166	True	True	8	8	0.963	62	True	run173	15	5	0	0	7	8	0	broken	not_carried							FALSE_JOIN	high	S1+S4	FALSE_JOIN/high/S1+S4
+plant105	inv	inversion breakpoint	unique	200000	chr11_MATERNAL	96201822	96201824	True	True	9	9	1.0	79	True	run99	16	7	0	0	4	9	0	broken	not_carried							FALSE_JOIN	high	S1+S4	FALSE_JOIN/high/S1+S4
+plant105	inv	inversion breakpoint	unique	200000	chr11_MATERNAL	96401822	96401824	True	True	5	5	0.949	71	True	run712	12	1	0	0	3	5	0	broken	unclear							FALSE_JOIN	low	S1+S4	FALSE_JOIN/low/S1+S4
+plant106	inv	inversion breakpoint	unique	200000	chr6_PATERNAL	152645292	152645294	True	True	8	8	0.889	77	True	run190	16	5	0	0	3	8	0	broken	not_carried							FALSE_JOIN	high	S1+S4	FALSE_JOIN/high/S1+S4
+plant106	inv	inversion breakpoint	unique	200000	chr6_PATERNAL	152845292	152845294	True	True	4	4	0.889	74	True	run954	15	3	0	0	1	4	0	unclear	unclear							none			
+plant107	inv	inversion breakpoint	unique	200000	chr1_MATERNAL	225758041	225758043	True	True	7	7	1.222	64	True	run245	11	4	0	0	2	7	0	unclear	unclear							none			
+plant107	inv	inversion breakpoint	unique	200000	chr1_MATERNAL	225958041	225958043	True	True	10	10	0.981	60	True	run84	13	2	0	0	0	10	0	unclear	unclear							none			
+plant108	invgap	join through 100 N	unique	50000	chr10_MATERNAL	14225933	14226033	False	False					False											unsupported	0	13	10	0	0	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant108	invgap	join through 100 N	unique	50000	chr10_MATERNAL	14276033	14276133	False	False					False											unsupported	0	9	14	0	0	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant109	invgap	join through 100 N	unique	50000	chr1_PATERNAL	49052361	49052461	False	False					False											unsupported	0	17	12	0	0	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant109	invgap	join through 100 N	unique	50000	chr1_PATERNAL	49102461	49102561	False	False					False											unsupported	0	6	7	0	0	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant110	invgap	join through 100 N	unique	50000	chr3_PATERNAL	87204598	87204698	False	False					False											unsupported	0	13	11	2	0	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant110	invgap	join through 100 N	unique	50000	chr3_PATERNAL	87254698	87254798	False	False					False											unsupported	0	15	15	2	0	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant111	invgap	join through 100 N	unique	50000	chr5_PATERNAL	5913310	5913410	False	False					False											unsupported	0	10	11	1	1	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant111	invgap	join through 100 N	unique	50000	chr5_PATERNAL	5963410	5963510	False	False					False											unsupported	0	15	18	0	0	UNSUPPORTED_JOIN	low	S4	UNSUPPORTED_JOIN/low/S4
+plant001	dup	junction of a tandem duplication	unique	2000	chr3_PATERNAL	38239431	38239433	True	False	6	6	0.593	77	False																	none			
+plant002	dup	junction of a tandem duplication	unique	2000	chr22_PATERNAL	26563374	26563376	True	False	16	16	0.667	71	False																	none			
+plant003	dup	junction of a tandem duplication	unique	2000	chr6_PATERNAL	121735946	121735948	True	False	8	8	0.741	80	False																	none			
+plant004	dup	junction of a tandem duplication	unique	2000	chr14_PATERNAL	32996123	32996125	True	False	5	5	0.543	86	False																	none			
+plant009	dup	junction of a tandem duplication	SD	2000	chr16_PATERNAL	20883330	20883332	True	False	6	6	0.785	72	False																	none			
+plant010	dup	junction of a tandem duplication	SD	2000	chr13_PATERNAL	17676550	17676552	True	False	10	10	0.691	81	False																	none			
+plant011	dup	junction of a tandem duplication	SD	2000	chr1_PATERNAL	87618222	87618224	True	False	11	11	0.519	58	False																	none			
+plant012	dup	junction of a tandem duplication	SD	2000	chr20_MATERNAL	55322863	55322865	True	False	7	7	0.741	77	False																	none			
+plant017	dup	junction of a tandem duplication	unique	5000	chr2_MATERNAL	203544176	203544178	True	False	8	8	0.494	80	False																	none			
+plant018	dup	junction of a tandem duplication	unique	5000	chr12_MATERNAL	70793619	70793621	True	True	6	6	0.938	72	True	run381	36	22	22	1	0	6	0	spanned	not_carried							BASE_ERROR	high	S1+S4	BASE_ERROR/high/S1+S4
+plant019	dup	junction of a tandem duplication	unique	5000	chr7_MATERNAL	86917236	86917238	True	False	8	8	0.593	81	False																	none			
+plant020	dup	junction of a tandem duplication	unique	5000	chr8_PATERNAL	66930015	66930017	True	False	10	10	0.593	65	False																	none			
+plant025	dup	junction of a tandem duplication	SD	5000	chr5_MATERNAL	180506907	180506909	True	False	11	11	0.691	83	False																	none			
+plant026	dup	junction of a tandem duplication	SD	5000	chr9_MATERNAL	93118797	93118799	True	False	6	6	0.721	66	False																	none			
+plant027	dup	junction of a tandem duplication	SD	5000	chr1_PATERNAL	230586033	230586035	True	False	10	10	0.617	75	False																	none			
+plant028	dup	junction of a tandem duplication	SD	5000	chr10_MATERNAL	36205595	36205597	True	False	5	5	0.642	81	False																	none			
+plant033	dup	junction of a tandem duplication	unique	10000	chr7_PATERNAL	13992265	13992267	True	False	10	10	0.642	79	False																	none			
+plant034	dup	junction of a tandem duplication	unique	10000	chr3_MATERNAL	176018605	176018607	True	True	9	9	0.864	66	True	run114	17	12	12	0	0	9	0	spanned	not_carried							BASE_ERROR	high	S1+S4	BASE_ERROR/high/S1+S4
+plant035	dup	junction of a tandem duplication	unique	10000	chr17_PATERNAL	57016482	57016484	True	False	8	8	0.716	66	False																	none			
+plant036	dup	junction of a tandem duplication	unique	10000	chr14_PATERNAL	61154023	61154025	True	False	4	4	0.593	67	False																	none			
+plant041	dup	junction of a tandem duplication	SD	10000	chr5_PATERNAL	148100821	148100823	True	False	6	6	0.753	74	False																	none			
+plant042	dup	junction of a tandem duplication	SD	10000	chr2_PATERNAL	137740280	137740282	True	False	10	10	0.716	83	False																	none			
+plant043	dup	junction of a tandem duplication	SD	10000	chr1_PATERNAL	205398605	205398607	True	False	6	6	0.691	71	False																	none			
+plant044	dup	junction of a tandem duplication	SD	10000	chr17_MATERNAL	41945895	41945897	True	False	7	7	0.711	69	False																	none			
+plant049	dup	junction of a tandem duplication	unique	50000	chr14_MATERNAL	56705997	56705999	True	True	8	8	0.889	88	True	run160	5	0	0	0	0	8	0	unclear	unclear							none			
+plant050	dup	junction of a tandem duplication	unique	50000	chr2_MATERNAL	215007517	215007519	True	False	8	8	0.691	73	False																	none			
+plant051	dup	junction of a tandem duplication	unique	50000	chr13_PATERNAL	83010329	83010331	True	False	7	7	0.778	68	False																	none			
+plant052	dup	junction of a tandem duplication	unique	50000	chr13_PATERNAL	78625398	78625400	True	False	6	6	0.568	70	False																	none			
+plant057	dup	junction of a tandem duplication	SD	50000	chr11_PATERNAL	88468192	88468194	True	False	12	12	0.578	95	False																	none			
+plant058	dup	junction of a tandem duplication	SD	50000	chr7_MATERNAL	155832615	155832617	True	True	10	10	0.947	63	True	run57	5	0	0	0	0	10	0	unclear	unclear							none			
+plant059	dup	junction of a tandem duplication	SD	50000	chr16_MATERNAL	14961723	14961725	True	True	4	4	1.2	61	True	run1103	3	1	0	0	0	4	0	unclear	unclear							none			
+plant060	dup	junction of a tandem duplication	SD	50000	chr7_PATERNAL	36043574	36043576	True	False	8	8	0.58	68	False																	none			
+plant065	dup	junction of a tandem duplication	unique	200000	chr10_MATERNAL	10447935	10447937	True	False	11	11	0.691	92	False																	none			
+plant066	dup	junction of a tandem duplication	unique	200000	chr11_MATERNAL	69495904	69495906	True	True	7	7	0.889	61	True	run332	3	0	0	0	0	7	0	unclear	unclear							none			
+plant067	dup	junction of a tandem duplication	unique	200000	chr17_PATERNAL	53423167	53423169	True	False	5	5	0.543	71	False																	none			
+plant068	dup	junction of a tandem duplication	unique	200000	chr14_MATERNAL	89146921	89146923	True	False	9	9	0.593	65	False																	none			
+plant073	dup	junction of a tandem duplication	SD	200000	chr2_PATERNAL	111127481	111127483	False	False					False																	none			
+plant074	dup	junction of a tandem duplication	SD	200000	chr7_MATERNAL	74065867	74065869	True	True	4	4	0.889	62	True	run926	7	0	0	0	0	4	0	unclear	unclear							none			
+plant075	dup	junction of a tandem duplication	SD	200000	chr15_PATERNAL	18694772	18694774	True	False	4	4	0.481	61	False																	none			
