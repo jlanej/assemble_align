@@ -195,9 +195,12 @@ co-linear anchors are chained, and each read is classified by its flanks:
   of them on a truth genome), so those stay in the cluster table and are not issues; the others
   are low-confidence issues. A parent's reads holding the missing k-mers does not vouch for
   them: recurrent artefacts recur in the parents' reads, and on the truth genome a parent holds
-  the k-mers of 208 of 211 strong clusters. The parents help the other way round: missing k-mers
-  that are solid in the child and in neither parent are few (46 events in HG01943, 5 on the
-  truth genome), a de novo junction is among them, and weak clusters of that kind are kept;
+  the k-mers of 208 of 211 strong clusters. The parents help the other way round: one-sided
+  events whose k-mers are solid in the child and in neither parent are few (46 in HG01943, 5 on
+  the truth genome), a de novo junction is among them, and weak clusters of that kind are kept.
+  Alleles of that kind are not few (276 strong events in HG01943, 460 in NA19240, 18 on the
+  truth genome) and are reported like any other allele
+  (`experiments/2026-11-14_missing_alleles_by_parent`);
 - no flank: unplaced.
 
 Placements at one locus form a cluster (clustering by shared k-mers chains unrelated loci

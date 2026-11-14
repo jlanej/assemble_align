@@ -1,0 +1,7 @@
+run	mother_is_parent1_and_father_parent2	lowest_read_count_of_a_placement	allele_events_with_placements_on_both_sides_of_the_parent_cut	allele_events_with_a_strong_and_a_weak_placement	strong_allele_placements_with_some_but_not_all_kmers_in_a_parent	strong_allele_placements_with_a_parent_fraction_from_0.25_to_0.75	kmers_in_neither_parent_as_the_run_tallied	strong_allele_placements_held_in_part_by_an_assembly
+HG002_hprc_year2	True	7.0	0	0	4	0	True	42.0
+HG002_truth_genome	True	7.0	0	0	6	0	True	
+HG01943_release	True	7.0	0	6	7	4	True	
+NA19240_release	True	7.0	1	9	44	17	True	13.0
+HG002_truth_genome_planted	True	7.0	0	1	8	2		
+NA19240_release_planted	True	7.0	1	23	44	17		

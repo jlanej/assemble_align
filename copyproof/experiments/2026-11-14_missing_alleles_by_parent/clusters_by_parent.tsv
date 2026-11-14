@@ -1,0 +1,36 @@
+run	kind	strength	in_a_parents_reads	placements	share_of_kind_and_strength	events	read_count_quartile_1	read_count_median	read_count_quartile_3	median_read_count_over_depth_per_copy	no_kmer_in_either_parent	every_kmer_in_a_parent	same_length_as_the_release	tracked_kmers_quartile_1	tracked_kmers_median	tracked_kmers_quartile_3	reads_median	share_of_reads_on_the_rarer_strand_median	sequences	within_10_kb_of_another	most_in_one_megabase
+HG002_hprc_year2	MISSING_ALLELE	strong	yes	925	0.929	469	11.0	13.0	17.0	0.97	0	921	911	6.0	7.0	9.0	15.0	0.4	62	290	19
+HG002_hprc_year2	MISSING_ALLELE	strong	no	71	0.071	38	7.25	8.5	10.5	0.63	71	0	71	6.0	7.0	8.0	9.0	0.38	34	0	1
+HG002_hprc_year2	MISSING_ALLELE	weak	yes	256	0.938	136	9.0	12.0	16.0	0.9	0	245	224	3.0	4.0	5.0	8.0	0.36	64	18	4
+HG002_hprc_year2	MISSING_ALLELE	weak	no	17	0.062	10	8.0	8.0	11.0	0.6	15	0	15	3.0	4.0	4.0	8.0	0.38	11	0	1
+HG002_hprc_year2	MISSING_SEQUENCE	strong	yes	110	0.957	62	9.0	12.5	18.0	0.93	0	97		9.25	16.0	21.0	9.0	0.33	51	26	4
+HG002_hprc_year2	MISSING_SEQUENCE	strong	no	5	0.043	3	7.0	7.0	10.0	0.52	3	0		7.0	7.0	9.0	7.0	0.43	5	0	1
+HG002_hprc_year2	MISSING_SEQUENCE	weak	yes	987	0.977	639	10.0	14.0	20.75	1.05	0	918		6.0	9.0	12.0	3.0	0.33	86	113	13
+HG002_hprc_year2	MISSING_SEQUENCE	weak	no	23	0.023	12	7.25	8.0	15.0	0.6	9	0		4.0	5.0	7.0	4.0	0.33	17	0	1
+HG002_truth_genome	MISSING_ALLELE	strong	yes	40	0.541	26	7.0	7.0	8.0	0.52	0	34	36	5.0	6.0	7.0	7.5	0.33	15	10	7
+HG002_truth_genome	MISSING_ALLELE	strong	no	34	0.459	18	7.0	8.0	11.0	0.6	34	0	34	6.0	7.0	10.0	9.0	0.41	25	0	1
+HG002_truth_genome	MISSING_ALLELE	weak	yes	121	0.938	69	7.0	8.0	12.5	0.6	0	108	99	4.0	5.0	8.0	4.0	0.33	35	15	8
+HG002_truth_genome	MISSING_ALLELE	weak	no	8	0.062	4	8.0	8.0	8.75	0.6	6	0	6	3.75	4.0	4.0	8.0	0.39	4	0	1
+HG002_truth_genome	MISSING_JUNCTION	weak	yes	1	1.0	1	7.0	7.0	7.0	0.52	0	1		7.0	7.0	7.0	5.0	0.2	1	0	1
+HG002_truth_genome	MISSING_SEQUENCE	strong	yes	208	0.986	51	10.0	13.0	15.0	0.97	0	176		16.0	25.0	47.0	8.0	0.33	45	109	15
+HG002_truth_genome	MISSING_SEQUENCE	strong	no	3	0.014	2	8.5	10.0	10.0	0.75	3	0		7.5	9.0	9.0	10.0	0.5	3	0	1
+HG002_truth_genome	MISSING_SEQUENCE	weak	yes	975	0.982	613	9.5	13.0	19.5	0.97	0	901		7.0	9.0	12.0	3.0	0.33	46	159	13
+HG002_truth_genome	MISSING_SEQUENCE	weak	no	18	0.018	9	7.0	8.0	11.5	0.6	6	0		4.0	5.0	5.0	3.0	0.33	14	0	1
+HG01943_release	MISSING_ALLELE	strong	yes	1156	0.68	731	11.5	14.5	17.0	1.02	0	1149	1128	6.0	8.0	10.0	16.0	0.4	66	648	258
+HG01943_release	MISSING_ALLELE	strong	no	545	0.32	276	7.0	8.0	9.0	0.56	545	0	543	6.0	7.0	9.0	9.0	0.38	62	16	3
+HG01943_release	MISSING_ALLELE	weak	yes	298	0.602	168	9.0	12.5	15.5	0.88	0	287	222	3.0	4.0	5.75	9.0	0.33	65	80	29
+HG01943_release	MISSING_ALLELE	weak	no	197	0.398	100	7.0	7.0	8.0	0.49	194	0	193	3.0	4.0	4.0	7.0	0.38	55	0	2
+HG01943_release	MISSING_JUNCTION	strong	yes	1	1.0	1	8.0	8.0	8.0	0.56	0	1		10.0	10.0	10.0	6.0	0.33	1	0	1
+HG01943_release	MISSING_SEQUENCE	strong	yes	230	0.878	118	10.0	12.0	15.875	0.84	0	187		13.25	20.0	33.0	11.0	0.33	56	116	24
+HG01943_release	MISSING_SEQUENCE	strong	no	32	0.122	16	8.0	8.0	8.625	0.56	32	0		5.0	6.5	9.0	9.5	0.36	26	4	2
+HG01943_release	MISSING_SEQUENCE	weak	yes	815	0.926	466	9.0	12.0	16.0	0.84	0	726		6.0	8.0	11.0	3.0	0.33	78	163	18
+HG01943_release	MISSING_SEQUENCE	weak	no	65	0.074	35	7.0	8.0	9.5	0.56	57	0		3.0	4.0	7.0	4.0	0.33	40	0	4
+NA19240_release	MISSING_ALLELE	strong	yes	851	0.48	467	11.0	14.0	17.0	1.03	0	818	814	7.0	8.0	11.0	15.0	0.4	50	526	30
+NA19240_release	MISSING_ALLELE	strong	no	922	0.52	460	7.5	8.0	10.0	0.59	911	0	919	6.0	7.0	9.0	9.0	0.4	53	20	5
+NA19240_release	MISSING_ALLELE	weak	yes	339	0.532	191	8.0	10.0	14.0	0.73	0	323	274	3.0	4.0	5.0	6.0	0.33	52	84	9
+NA19240_release	MISSING_ALLELE	weak	no	298	0.468	150	7.0	8.0	9.0	0.59	295	0	296	3.0	3.0	4.0	8.0	0.4	51	0	2
+NA19240_release	MISSING_JUNCTION	weak	no	1	1.0	1	7.0	7.0	7.0	0.51	1	0		7.0	7.0	7.0	5.0	0.4	1	0	1
+NA19240_release	MISSING_SEQUENCE	strong	yes	345	0.922	187	10.0	13.0	16.0	0.95	0	278		11.0	18.0	36.0	10.0	0.33	55	210	32
+NA19240_release	MISSING_SEQUENCE	strong	no	29	0.078	16	7.5	8.0	9.0	0.59	25	0		6.0	8.0	17.0	10.0	0.4	23	0	3
+NA19240_release	MISSING_SEQUENCE	weak	yes	948	0.923	560	9.5	12.0	17.0	0.88	0	836		6.0	8.0	11.0	3.0	0.33	59	236	22
+NA19240_release	MISSING_SEQUENCE	weak	no	79	0.077	44	7.0	8.0	9.5	0.59	57	0		4.0	5.0	9.0	4.0	0.33	39	2	4

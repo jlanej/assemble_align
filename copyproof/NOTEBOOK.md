@@ -57,9 +57,52 @@ follow the result. Entries a to f and h to l were written in the evening of the 
 of the session, after the experiments they describe; their numbers were not all recomputed when they were written.
 Entries m, n and o were written within the hour of their experiments. Entry p, like g, was written before its
 experiment; what was added to it afterwards is marked with the time. Entry s, its result, was written within the
-hour of the runs.
+hour of the runs. Entry t was written within the hour of its tables, which were made from finished runs.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
+
+### 2026-11-14 (t): missing alleles that neither parent's reads carry, tabulated from finished runs
+
+Note:      written within the hour, from the tables of the record
+           (`experiments/2026-11-14_missing_alleles_by_parent`). Nothing was run again. No rule was made and no
+           code under `src/` or `engine/` changed. Made after the held-out test and from its runs: nothing
+           here is held out.
+Question:  entry s saw that 922 of NA19240's 1,773 strong missing-allele calls are in neither parent's reads
+           (HG002: 71 of 996) and did not act on it. Is that NA19240 alone, did the parents' reads miss
+           inherited sequence, and what do the finished runs say about these calls?
+Run:       `tables.py DATA OUT` of the record, 4 s. Six runs with the child's and both parents' reads: HG002's
+           `hprc_year2` and the truth genome, HPRC release 2 of HG01943 and of NA19240, and the truth genome
+           and NA19240's release with planted errors. The three runs of 13 November were not made again;
+           `src/copyproof/missing.py`, which writes the table read here, has one commit, older than every run.
+Seen:      strong missing-allele placements in neither parent's reads: 71 of 996 on `hprc_year2`, 34 of 74 on
+           the truth genome, 545 of 1,701 on HG01943, 922 of 1,773 on NA19240 (38, 18, 276 and 460 events).
+           The split is all or nothing: 1,561 of those 1,572 placements have no k-mer in either parent's
+           database.
+           The parents' reads did not miss them. Every read database keeps a k-mer from its second sighting.
+           The six parents have 108.5 to 141.0 Gb of reads and the three children 107.4 to 110.6 Gb. Planted
+           errors made 4,677 strong placements in the two planted runs and all are in a parent's reads (none
+           in neither: at most 0.064%, one-sided 95%).
+           Read counts: a median of 8 to 8.5 where the placements made by planted errors have 14; 798 of
+           NA19240's 922 lie below the lower quartile of those (11). The counts begin at the threshold of 7.
+           Shape: the same length as the release at all but 5 of the 1,572; a median of 7 tracked k-mers,
+           which is one changed base; both strands; 36 of the 1,572 within 10 kb of another, against 1,474
+           of the 2,972 placements in a parent's reads.
+           Held elsewhere: by the truth genome at 51 of 71 on `hprc_year2` (in a parent's reads: 906 of 925);
+           by one or both HGSVC3 assemblies at 621 of 922 on NA19240 (774 of 851). Those two assemblies,
+           built from the same reads, disagree on 259 of the 922 and on 61 of the 851.
+           On `hprc_year2` the read count marks the placements that the truth genome does not hold about as
+           well as the parents do: of the 39, 30 have fewer than 9 reads and 20 are in neither parent's reads.
+           In the issue lists: 906 of NA19240's 1,258 high-confidence `MISSING_ALLELE` issues, 539 of
+           HG01943's 1,085, 71 of 734 on `hprc_year2`, 34 of 62 on the truth genome.
+Decision:  none on the method. The tables fit sequence changes that are in part of the child's cells and in
+           neither parent, as changes arising in a cell line would be; no table shows that they are that.
+           Two sentences were made exact: the README's 96% for strong missing alleles now names HG002, and
+           `docs/method.md` says that "few in neither parent" counts one-sided events.
+Next:      for a review to decide: whether such calls get a wording or a role of their own when parents are
+           given, and whether a rule should use the parents, the read count or both. HG002, HG01943 and
+           NA19240 have all been looked at for this, so a rule needs another person to test it. What the
+           calls are could be read from the changed bases, from the long reads each release was built from,
+           or from a second library; none was looked at.
 
 ### 2026-11-14 (s): rung 6, the held-out test on NA19240
 

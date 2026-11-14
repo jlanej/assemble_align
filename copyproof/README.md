@@ -73,8 +73,12 @@ Thirteen HG002 assemblies, three of them earlier drafts of the truth genome, wer
   truth genome. Long reads hold the truth genome's count at the loci of 13 of the 18.
 - Of the surplus copies of 5 kb and more that lie in assessable sequence, 73% to 79% are found; of
   the collapsed copies, 25% to 54%; under 5 kb, 9% to 18%.
-- Strong missing-allele calls are true 96% of the time; one-sided missing sequence is not
-  (46% when strong), and is reported accordingly.
+- Strong missing-allele calls are true 96% of the time on HG002; one-sided missing sequence is
+  not (46% when strong), and is reported accordingly. On HG002, 7% of the strong missing-allele
+  calls have k-mers in neither parent's reads, and the truth genome holds 51 of those 71. In the
+  HPRC releases of HG01943 and NA19240, 32% and 52% do, at read counts below one copy. What
+  those calls are was not measured
+  ([experiments/2026-11-14_missing_alleles_by_parent](experiments/2026-11-14_missing_alleles_by_parent/README.md)).
 
 **Errors planted in the truth genome**
 ([experiments/2026-11-13_planted_errors](experiments/2026-11-13_planted_errors/README.md)). 111
