@@ -66,6 +66,11 @@ Thirteen HG002 assemblies, three of them earlier drafts of the truth genome, wer
 - The ones not confirmed number 1 to 10 per assembly, whether the confirmed ones number 0 or
   3,380, so the count says more than the share. The three drafts, which have almost no errors
   left, get 3 unconfirmed issues each beside 4, 3 and 0 confirmed.
+- Placed in the truth genome and sorted, the 69 unconfirmed issues are: 27 on Epstein-Barr virus
+  or mitochondrial sequence, which a cell holds in other numbers than a genome lists; 24 on real
+  differences from the truth genome that the scoring rule did not count; and 18 with only the
+  reads behind them, 15 of those on acrocentric short arms. None lies on a known issue of the
+  truth genome. Long reads hold the truth genome's count at the loci of 13 of the 18.
 - Of the surplus copies of 5 kb and more that lie in assessable sequence, 73% to 79% are found; of
   the collapsed copies, 25% to 54%; under 5 kb, 9% to 18%.
 - Strong missing-allele calls are true 96% of the time; one-sided missing sequence is not

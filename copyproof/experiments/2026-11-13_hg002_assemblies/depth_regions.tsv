@@ -1,0 +1,58 @@
+# Stretches of T2T-HG002 Q100 v1.1 for locus_depth.py, copied from unconfirmed_placements.tsv: for each locus the
+# placements of one of its calls (the first stretch is that call's best placement), and four stretches of ordinary
+# sequence (no segmental duplication, satellite or known issue) from which the depth of one copy is taken.
+#   chr1_start      locus L02: the two calls the truth genome's own run makes (run35/issues.tsv), and 20 kb on either side
+#   chr13_7.26Mb    locus L01: every placement of call u33 that holds a tenth of its k-mers
+#   chr13_10.04Mb   locus L17: every placement of call u44 that holds a tenth of its k-mers
+#   chr7_58.7Mb     locus L03: the principal placements of call u09
+#   chr9_42.4Mb     locus L13: the principal placements of call u31 (u38 is the same sequence)
+#   chr22_3.9Mb     locus L14: every placement of call u32 that holds four tenths of its k-mers
+locus	role	contig	start	end
+chr1_start	copy	chr1_MATERNAL	57000	63000
+chr1_start	copy	chr1_PATERNAL	58000	64000
+chr1_start	flank	chr1_MATERNAL	37000	57000
+chr1_start	flank	chr1_MATERNAL	63000	83000
+chr1_start	flank	chr1_PATERNAL	38000	58000
+chr1_start	flank	chr1_PATERNAL	64000	84000
+chr13_7.26Mb	copy	chr13_PATERNAL	7258767	7264797
+chr13_7.26Mb	copy	chr22_PATERNAL	9404332	9410347
+chr13_7.26Mb	copy	chr22_MATERNAL	13399140	13405155
+chr13_7.26Mb	copy	chr14_MATERNAL	11515665	11521586
+chr13_7.26Mb	copy	chr21_MATERNAL	12677517	12683282
+chr13_7.26Mb	copy	chr21_PATERNAL	9056398	9062163
+chr13_7.26Mb	copy	chr13_MATERNAL	14526032	14531949
+chr13_7.26Mb	copy	chr13_PATERNAL	10422997	10428971
+chr13_7.26Mb	copy	chr21_PATERNAL	6027202	6032908
+chr13_7.26Mb	copy	chr13_MATERNAL	11364161	11369881
+chr13_7.26Mb	copy	chr21_MATERNAL	9593526	9599244
+chr13_10.04Mb	copy	chr13_PATERNAL	10040061	10051081
+chr13_10.04Mb	copy	chr13_MATERNAL	14126060	14137080
+chr13_10.04Mb	copy	chr21_MATERNAL	12465257	12476272
+chr13_10.04Mb	copy	chr21_PATERNAL	8844559	8855574
+chr13_10.04Mb	copy	chr22_MATERNAL	19130872	19137023
+chr13_10.04Mb	copy	chr22_PATERNAL	15238263	15244407
+chr13_10.04Mb	copy	chr13_MATERNAL	18449114	18454504
+chr13_10.04Mb	copy	chr13_PATERNAL	14344715	14350105
+chr13_10.04Mb	copy	chrY_PATERNAL	27299769	27305802
+chr7_58.7Mb	copy	chr7_PATERNAL	58662000	58741013
+chr7_58.7Mb	copy	chr7_MATERNAL	58537751	58617390
+chr7_58.7Mb	copy	chr7_PATERNAL	59177605	59241694
+chr7_58.7Mb	copy	chr7_MATERNAL	59057410	59121513
+chr9_42.4Mb	copy	chr9_PATERNAL	42394057	42401084
+chr9_42.4Mb	copy	chr9_MATERNAL	44298604	44305631
+chr9_42.4Mb	copy	chr9_MATERNAL	40877572	40884596
+chr22_3.9Mb	copy	chr22_PATERNAL	3899668	3906693
+chr22_3.9Mb	copy	chr22_MATERNAL	8323437	8330416
+chr22_3.9Mb	copy	chr13_MATERNAL	9829516	9836537
+chr22_3.9Mb	copy	chr21_MATERNAL	8193298	8200308
+chr22_3.9Mb	copy	chr13_PATERNAL	2827567	2834639
+chr22_3.9Mb	copy	chr15_MATERNAL	5874368	5881439
+chr22_3.9Mb	copy	chr21_PATERNAL	5179869	5185710
+chr22_3.9Mb	copy	chr14_MATERNAL	8713366	8719201
+chr22_3.9Mb	copy	chr14_PATERNAL	5262477	5268320
+chr22_3.9Mb	copy	chr15_PATERNAL	5946419	5952241
+chr22_3.9Mb	copy	chrY_PATERNAL	11313873	11320837
+ordinary	control	chr1_MATERNAL	5000000	5200000
+ordinary	control	chr13_PATERNAL	25000000	25200000
+ordinary	control	chr21_MATERNAL	20000000	20200000
+ordinary	control	chr14_MATERNAL	25000000	25200000
