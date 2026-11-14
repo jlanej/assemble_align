@@ -1,0 +1,39 @@
+{
+ "test": "R2 assembly QC: HG01943 locus",
+ "n_calls_in_locus": 19,
+ "targets": {
+  "T1_unsupported_joins": {
+   "subtargets_hit": 4,
+   "subtargets": 4,
+   "hit": true
+  },
+  "T2_trio_inconsistent_piece_B": {
+   "subtargets_hit": 1,
+   "subtargets": 1,
+   "hit": true
+  },
+  "T3_missing_copy_collapse": {
+   "subtargets_hit": 2,
+   "subtargets": 2,
+   "hit": true
+  },
+  "T4_junction_absent_M_segment_ends": {
+   "subtargets_hit": 1,
+   "subtargets": 2,
+   "hit": true
+  },
+  "T5_false_duplications": {
+   "subtargets_hit": 2,
+   "subtargets": 2,
+   "hit": true
+  }
+ },
+ "targets_hit": 5,
+ "off_target_calls": 2,
+ "off_target_bp": 79,
+ "off_target_labels": {
+  "BASE_ERROR": 1,
+  "MISSING_SEQUENCE": 1
+ },
+ "verdict": "PASS"
+}

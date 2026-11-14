@@ -1,0 +1,17 @@
+# name	fasta (under DATA/hg002/gqc/NAME/)	groups (LABEL=REGEX;...; empty: one group)	what it is
+hprc_year2	HG002.polished.fasta.gz	hap1=^h1tg;hap2=^h2tg	HPRC year-2 pipeline, hifiasm trio, polished
+verkko_2023	hg002_verkko_hifi_ont_trio.fasta.gz		Verkko HiFi + ONT, trio (2023); names carry no haplotype
+hprc_year1	HG002.f1_assembly_v2_genbank.fa.gz	hap1=#1#;hap2=#2#	HPRC year-1 assembly (hifiasm trio, 2021 data)
+hifiasm_2021	NA24385.HiFi.hifiasm-0.12.fa.gz	hap1=^h1tg;hap2=^h2tg	hifiasm 0.12, HiFi only (2021)
+hifiasm_ontonly_2025	hifiasm_ontonly_2025.fasta.gz	hap1=^h1tg;hap2=^h2tg	hifiasm, ONT only (2025)
+hg002v0.7	v0.7.fasta.gz	mat=MATERNAL;pat=PATERNAL	Q100 draft v0.7
+hprc_year2_v2_thic	hprc_year2_v2_thic.fasta.gz	mat=^mat-;pat=^pat-;other=^unassigned	HPRC year-2 v2, trio + Hi-C
+verkko_asm_thic	verkko_asm_thic.fasta.gz	mat=^mat-;pat=^pat-;other=^unassigned	Verkko, trio + Hi-C
+# The next entry is the same file as verkko_asm_thic under another name in the benchmark folder (same size, same
+# MD5 987706f464a5d6307ab401b7e9a9b82f). It was run once before that was noticed; every output is identical.
+# hifi_q28_trio_hic	hifi_q28_trio_hic.assembly.fasta.gz	mat=^mat-;pat=^pat-;other=^unassigned	the same assembly as verkko_asm_thic
+lc24_nopolish	lc24_nopolish.fasta.gz	hap1=^haplotype1;hap2=^haplotype2;other=^unassigned	ONT-only (LC24), unpolished
+v2_trio	v2_trio.fasta.gz	mat=^mat-;pat=^pat-;other=^unassigned	Verkko v2, trio
+hprc_curated	hprc_hg002_curated.fasta.gz		HPRC curated HG002 (accession names; one group)
+hg002v0.9	v0.9.fasta.gz	mat=MATERNAL;pat=PATERNAL	Q100 draft v0.9
+hg002v1.0.1	v1.0.1.fasta.gz	mat=MATERNAL;pat=PATERNAL	Q100 v1.0.1
