@@ -2,7 +2,7 @@
 
 copyproof proofreads released genome assemblies for copies that are missing, doubled, joined to the wrong neighbour or placed on the wrong haplotype. It is the detection half of proposal F4 in the report ([`../report/assemble_align_review.md`](../report/assemble_align_review.md), section F4). The repair half, changing how an assembler walks its graph, is a separate and harder project that can start from copyproof's issue lists.
 
-**Status.** Design only; nothing is implemented. This guide describes what to build, why, with which public data, and how to tell whether it works. It is meant to be steered by results: the numbers in it are starting points, and §9 lists the decisions to take once data are in.
+**Status.** Implemented as a working prototype (2026-11-13). This guide is the design the work started from and is kept as written, except for this paragraph. What was built, where it departs from the design and why are in [docs/method.md](docs/method.md) and [NOTEBOOK.md](NOTEBOOK.md); the measurements are under [experiments/](experiments/). In short: S1, S2, S3 and the join audit of S4 exist; S5 (clip clusters) became the long-read check of unsupported k-mer runs; S6 was not built. Rungs 0 to 4 of the validation ladder (§8) were run, rung 1 on HG01943; rungs 5 and 6 are open. The decisions of §9 are recorded in the notebook's table.
 
 ## How to use this guide
 

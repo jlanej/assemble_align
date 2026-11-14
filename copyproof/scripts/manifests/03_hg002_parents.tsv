@@ -1,0 +1,7 @@
+# HG002's parents (30x NovaSeq PCR-free, same library type as the child) and the newer truth version
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/hg002v1.2.fasta.gz	hg002/asm/hg002v1.2.fasta.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/hg002v1.2.fasta.gz.fai	hg002/asm/hg002v1.2.fasta.gz.fai
+https://storage.googleapis.com/brain-genomics-public/research/sequencing/fastq/novaseq/wgs_pcr_free/30x/HG004.novaseq.pcr-free.30x.R1.fastq.gz	hg002/reads/HG004.novaseq.pcr-free.30x.R1.fastq.gz
+https://storage.googleapis.com/brain-genomics-public/research/sequencing/fastq/novaseq/wgs_pcr_free/30x/HG004.novaseq.pcr-free.30x.R2.fastq.gz	hg002/reads/HG004.novaseq.pcr-free.30x.R2.fastq.gz
+https://storage.googleapis.com/brain-genomics-public/research/sequencing/fastq/novaseq/wgs_pcr_free/30x/HG003.novaseq.pcr-free.30x.R1.fastq.gz	hg002/reads/HG003.novaseq.pcr-free.30x.R1.fastq.gz
+https://storage.googleapis.com/brain-genomics-public/research/sequencing/fastq/novaseq/wgs_pcr_free/30x/HG003.novaseq.pcr-free.30x.R2.fastq.gz	hg002/reads/HG003.novaseq.pcr-free.30x.R2.fastq.gz

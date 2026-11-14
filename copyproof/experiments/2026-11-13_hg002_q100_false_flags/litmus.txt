@@ -1,0 +1,6 @@
+anchored duplication boundaries: 20237
+flagged by any issue within 5000 bp: 23 (0.11%)
+flagged by a high-confidence issue: 18 (0.09%)
+issues
+MISSING_HAPLOTYPE    22
+EXPANSION             1

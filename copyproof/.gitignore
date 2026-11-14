@@ -1,0 +1,12 @@
+.venv/
+engine/target/
+*.egg-info/
+.pytest_cache/
+build/
+dist/
+# engine outputs (large; keep them on the data volume)
+*.cpkdb
+*.track.bin
+*.novel.bin
+*.u8
+__pycache__/
