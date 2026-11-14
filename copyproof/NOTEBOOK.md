@@ -559,6 +559,7 @@ Seen:      With the classifier of entries h and i: high-confidence calls about 8
            planted genome 147 signals found (119 high), 13 of 656 issues unexplained.
 Decision:  D4 and D6 as in `docs/method.md` §3. Thresholds were changed on rungs 2 to 4 together, so none of
            these rungs is a held-out test any more; rung 6 (a second sample, frozen thresholds) is the open one.
+           (That test was run the next day, on NA19240: entries p and s.)
 Next:      seven more assemblies are downloaded and listed; they wait for a disk that writes. (Six were run
            later the same evening, entry o; the numbers above are those of the first seven, and the scoreboard
            in the experiment folder holds all thirteen.)

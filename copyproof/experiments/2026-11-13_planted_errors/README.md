@@ -45,8 +45,9 @@ signals: lies within 200 bp).
 | Inversion rejoined through 100 N | `MISSING_JUNCTION` | | | | 0/8 | |
 
 Of the found signals, 119 of 147 are high-confidence (`COLLAPSE` 22 of 25, `EXPANSION` 36 of 49,
-partners 29 of 34, `MISSING_HAPLOTYPE` 32 of 39). The table is from the final classifier (the one
-that came out of rung 4, see `../2026-11-13_hg002_assemblies/`).
+partners 29 of 34, `MISSING_HAPLOTYPE` 32 of 39; `expected_scored.tsv` lists every expected signal
+with the issue that answers it and its confidence). The table above and that file are from the
+final classifier (the one that came out of rung 4, see `../2026-11-13_hg002_assemblies/`).
 
 **Nothing else changes.** The planted genome carries 656 issues. 237 belong to a planted edit:
 at the edit, at a place its event is also anchored (`twin_of`), or at another copy of its sequence
@@ -278,6 +279,9 @@ alignment, and none becomes an issue (`long_reads.elsewhere.tsv`). Four is a sma
 ## Files
 
 - `sensitivity.tsv`: found and planted per kind, signal, stratum and size.
+- `expected_scored.tsv`: the 266 expected signals one by one: found or not, the class and role of
+  the issue that answers it, and that issue's confidence (written by `scripts/eval_planted.py`,
+  as is `sensitivity.tsv`, which counts its rows).
 - `breakpoints.tsv`: per planted false adjacency, whether it shows as a run of unsupported
   assembly k-mers, and whether that run has normally covered flanks.
 - `edits.tsv`: every planted edit in original and edited coordinates.

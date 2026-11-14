@@ -80,6 +80,17 @@ extra copies and deletions with their homologous stretches). On the assembly, 64
    Both would be changes made on the very data the results are reported on, after several
    rounds of that already. They are recorded here as the first things to try on a second sample
    with thresholds frozen beforehand (rung 6).
+
+   Added 2026-11-14: that sample was NA19240, and the shipped values were the ones tested
+   ([`../2026-11-14_na19240_heldout`](../2026-11-14_na19240_heldout/README.md), "The two
+   candidate values"). The segments of that run were then classified again as in this record.
+   With both values changed there are 84 high-confidence issues where the shipped values give
+   78 (81 in the scored run itself, which also looks up other copies). A Verkko assembly of the
+   same person confirms 79 of them where it confirmed 72. Of the 76 surplus copies of 5 kb and
+   more on which both other assemblies agree, 67 are found where 64 were
+   (`alt_settings_na19240.tsv` in that folder). The direction is the one seen on HG002, on
+   smaller counts and without a truth genome. The shipped values were not changed, and whether
+   to change them is not decided.
 5. **`min_llr` trades small events for a quieter truth genome.** At 30 nats instead of 20 the
    truth genome's issues fall from 49 to 17 and the assembly keeps 110 of its 114 confirmed
    calls, but 11 planted signals are lost.
