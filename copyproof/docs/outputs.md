@@ -56,9 +56,10 @@ copy it repeats, and a `partner` on the other haplotype; `other_copies` ties the
   few usable k-mers, more than half of the k-mers above the multiplicity cap (satellites and other
   high-copy repeats), extreme GC, or mostly N. Its size is reported in `summary.json`.
 - **`depth_anomalies.tsv`**: segments whose depth departs from the release without fitting a whole
-  copy: `DEPTH` (every k-mer class scaled by one factor: uneven sequencing depth, or sequence
-  present in a fraction of cells) and `IRREGULAR` (no simple pattern). These are not issues. They
-  are worth a look when the reads and the assembly come from different DNA.
+  copy: `DEPTH` (every k-mer class scaled by one factor: uneven sequencing depth) and
+  `IRREGULAR` (no simple pattern). A change carried by a fraction of the cells has no class of
+  its own and is expected to land here. These are not issues. They are worth a look when the
+  reads and the assembly come from different DNA, or when the sample is a cell line.
 - In `hapmer_sequences.tsv`, sequences with fewer than 20 hapmer sites are `not_assessable`, never
   "consistent".
 

@@ -45,6 +45,7 @@ Every number in `../README.md`, with the table it is read from and what writes t
 | High-confidence copy-number issues confirmed by the truth genome; assessable discordances found, per assembly and summed | `2026-11-13_hg002_assemblies/scoreboard.tsv`; the sums as quoted are written out in `scoreboard.md` | `scripts/eval_truth.py` per assembly, then `scripts/scoreboard.py` |
 | Found and confirmed by size (surplus copies of 5 kb and more, collapses, under 5 kb) | `2026-11-13_hg002_assemblies/scoreboard.by_size.tsv` | the same |
 | The unconfirmed high-confidence issues, 1 to 10 per assembly, and where they lie | `2026-11-13_hg002_assemblies/unconfirmed_high.tsv` | `2026-11-13_hg002_assemblies/unconfirmed.py` |
+| The share confirmed before and after the method stopped changing (95.7% and 94.7%) | `2026-11-13_hg002_assemblies/precision_split.tsv` | `2026-11-13_hg002_assemblies/split.py` |
 | Strong missing-allele calls true 96% of the time, one-sided missing sequence 46% | `2026-11-13_hg002_assemblies/hprc_year2.missing_clusters.tsv` | `2026-11-13_hg002_assemblies/details.py` (the run needs `WITH_READS=1`) |
 | Of the collapses missed in one assembly, how many show no departure in the reads | `2026-11-13_hg002_assemblies/hprc_year2.collapses.tsv` | `details.py` |
 | Whole-copy calls under 5 windows are mostly not confirmed | `2026-11-13_hg002_assemblies/hprc_year2.whole_copy_by_length.tsv` | `details.py` |

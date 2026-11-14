@@ -62,16 +62,18 @@ reference where a number here and a number there differ.
 ### 2026-11-13 (o): six more assemblies; the disk measured while a scan waited on it
 
 Question:  does rung 4 hold on more assemblies, among them drafts of the truth genome, where almost nothing is
-           wrong? And, asked by the user a second time: is the disk slow now?
+           wrong? And a second question about the machine: is the data disk slow now?
 Run:       `scripts/run_hg002_assemblies.sh` for `hg002v0.9`, `hg002v1.0.1`, `hprc_curated`, `verkko_asm_thic`,
            `v2_trio`, `hifi_q28_trio_hic` and `lc24_nopolish`, one at a time; `scripts/scoreboard.py`, which
-           now also writes out the sums the record quotes; `experiments/2026-11-13_hg002_assemblies/unconfirmed.py`. For the disk:
-           cores used by the running `cpk scan`, growth of its track file and MB moved by the device, every
-           5 s; a stack sample of the process; write tests of random data flushed with F_FULLFSYNC.
+           now also writes out the sums the record quotes;
+           `experiments/2026-11-13_hg002_assemblies/unconfirmed.py`. For the disk: cores used by the running
+           `cpk scan`, growth of its track file and MB moved by the device, every 5 s; a stack sample of the
+           process; write tests of random data flushed with F_FULLFSYNC.
 Seen:      Assemblies, thirteen now, which is every one that was downloaded: 4,579 of 4,648
            high-confidence copy-number issues confirmed (99%; 1,199 of 1,258 without `verkko_2023`). Surplus
-           copies of 5 kb and more: 73% to 79% found. Collapses: 25% to 54%. Under 5 kb: 9% to 18%. The unconfirmed ones are 1 to 10 per assembly whether the confirmed ones
-           are 0 or 3,380. The three drafts have 3 unconfirmed each beside 4, 3 and 0 confirmed; two of the three
+           copies of 5 kb and more: 73% to 79% found. Collapses: 25% to 54%. Under 5 kb: 9% to 18%. The
+           unconfirmed ones are 1 to 10 per assembly whether the confirmed ones are 0 or 3,380. The three
+           drafts have 3 unconfirmed each beside 4, 3 and 0 confirmed; two of the three
            are the same in every draft: the pair of calls near the start of chromosome 1 that the truth genome's
            own run makes. QV by read k-mers saturates: 51.2, 51.8 and 52.0 for drafts that the truth's k-mers put
            at 56.9, 58.7 and 59.3. `hprc_curated`, which has accession names and no haplotype labels, scores
@@ -81,19 +83,19 @@ Seen:      Assemblies, thirteen now, which is every one that was downloaded: 4,5
            two names. It is counted once, and it is an unplanned repeat: the two runs, 43 minutes apart, wrote
            identical issue lists, segments, depth anomalies, models and scores.
            The disk: entry m says the evening's slow scans were not the disk. That was wrong, and it was a
-           guess: I had tested the disk with short writes, found them fast, and blamed memory bandwidth without
-           measuring it. Measured now. The track-writing step of six scans that evening took 95 s to 1,218 s for
+           guess: short write tests had been fast, and memory bandwidth was blamed without being measured.
+           Measured now. The track-writing step of six scans that evening took 95 s to 1,218 s for
            9 to 12 GB (95 MB/s down to 10). At 22:06 a 4-GB test wrote 690 MB/s for 2.3 GB, then 270 to 300. At
            22:10 the next scan began its track. For six and a half minutes it used 0.0 cores, all 1,766 stack
            samples of its main thread were inside `write`, the file grew by about 2 MB/s and the device moved 1
            to 3 MB/s; a new file of random data took 32 MB in 43 s. The same stalls are in the earlier logs:
            200 s to load a FASTA that otherwise loads in 28 to 48 s, and 288 s to write a table of hits.
-           Then a second wrong turn. I paused that scan for five minutes, and when it continued it wrote the
-           other 10.8 GB in 55 s (170 to 235 MB/s, 3.3 to 3.9 cores busy). I took the pause for the cure and
-           had a watchdog repeat it. On the next scan the track stalled after 5.7 GB; the watchdog paused it
-           twice for five minutes, and both times the drive was still at 1 to 2 MB/s afterwards. Left alone,
-           the stall ended by itself, 15 minutes after it began, and the other 6 GB went out at 215 MB/s. The
-           pause did nothing that waiting would not have done.
+           Then a second wrong turn. That scan was paused for five minutes, and when it continued it wrote
+           the other 10.8 GB in 55 s (170 to 235 MB/s, 3.3 to 3.9 cores busy). The pause was taken for the
+           cure and a watchdog was set to repeat it. On the next scan the track stalled after 5.7 GB; the
+           watchdog paused it twice for five minutes, and both times the drive was still at 1 to 2 MB/s
+           afterwards. Left alone, the stall ended by itself, 15 minutes after it began, and the other 6 GB
+           went out at 215 MB/s. The pause did nothing that waiting would not have done.
            What the numbers support: this drive takes writes at 200 to 700 MB/s for a while, then nearly stops
            for 10 to 20 minutes, reads included, and resumes by itself. Between the end of one stall and the
            start of the next, 17 to 18 GB were written. A scan writes 12 GB, so nearly every run meets one
@@ -138,12 +140,13 @@ Note:      the sentence below that later slowdowns "were not the disk either" is
            given for one scan; entry o has the measurement. The drive was fast in the short test at 20:30 and
            stalled under the scans' 10-GB writes.
 Question:  what does S3 flag on a genome whose phasing is right, and does it find planted haplotype swaps (D7)?
-           Asked after the user doubted that the disk was still slow.
+           Taken up after a doubt that the disk was still slow.
 Run:       `scripts/run_hg002_trio.sh` (parents HG004 and HG003, counted in 5 minutes each), then
            `experiments/2026-11-13_hg002_trio/tables.py`. Outputs: DATA/work/hg002_v1.1/run35_trio and
            DATA/work/plant/run35_trio.
-Seen:      The disk first: I had reported it slow from a test at 18:47 (2 MB/s) and repeated that an hour and a
-           half later without testing again. At 20:30 it wrote 545 MB/s. The cancelled runs were restarted.
+Seen:      The disk first: it had been reported slow from a test at 18:47 (2 MB/s), and that was repeated an
+           hour and a half later without testing again. At 20:30 it wrote 545 MB/s. The cancelled runs were
+           restarted.
            Later slowdowns that evening were not the disk either (still 400 to 650 MB/s): three scans at once
            compete for memory bandwidth and each ran ten times slower. One scan at a time takes 2 to 5 minutes.
            S3 on the truth genome: all 46 chromosomes on the right parent, no misplaced piece among 18, but 143
@@ -154,7 +157,7 @@ Seen:      The disk first: I had reported it slow from a test at 18:47 (2 MB/s) 
            14) spread over 0.7 to 1.4 Mb each.
            Planted swaps: S3 finds 1 of 4 at 10 kb, 2 of 4 at 50 kb, 4 of 4 at 200 kb; the missing-haplotype call
            of S2 finds 11 of the 12 without parents.
-           S2 with parents: a rule I had written without data made strong one-sided missing sequence
+           S2 with parents: a rule written without data made strong one-sided missing sequence
            high-confidence when a parent's reads held the k-mers. On the truth genome a parent holds the k-mers of
            208 of 211 strong clusters. Missing k-mers in neither parent: 5 events.
 Decision:  D7. Hapmer sites count only where both parents are readable, and a switch needs sites at a tenth of

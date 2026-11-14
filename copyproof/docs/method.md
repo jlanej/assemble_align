@@ -74,7 +74,16 @@ degrees of freedom.
   or only those the release holds at least 2, 3 or 5 times (the k-mers shared between copies).
   Which classes take part is a property of the event, so it is part of the hidden state.
 - *Multiplicative, factor 0, 0.25, 0.5, 0.75, 1.25, 1.5, 2.* Every class is scaled alike. This
-  is uneven sequencing depth, or sequence present in a fraction of cells.
+  is uneven sequencing depth.
+
+A change carried by a fraction of the cells is neither kind. If a share f of the cells has lost
+one haplotype's copy, that haplotype's own k-mers are read at 1 - f copies and the k-mers it
+shares with the other haplotype at 2 - f: no whole copy, and no single factor. There is no
+state and no class for this. By the rules below such a segment is mostly `IRREGULAR` and is not
+reported. That is a reading of the rules, not a result: HG01103, the guide's second case, is a
+loss in more than half of the cells and has not been run, and the pilot's regression test R5
+(`../../litmus/cases_HG01943_HG01103/regression_tests.md`) expects the label "reduced cell
+fraction" for it.
 
 A hidden Markov model over 1-kb windows (a concordant state plus the 19 above; an event starts
 with prior 10^-6 per window) gives the state path. A segment is a run of windows that *test*
@@ -230,6 +239,13 @@ swaps planted in that genome the channel finds 7 (all four of 200 kb, two of fou
 of four at 10 kb), filters or not: a 10-kb swap holds about 4 sites. The missing-haplotype call
 of S2 finds 11 of the 12 without any parent, so S3 earns its place with large pieces, not short
 switches.
+
+On an assembly that was phased with the parents' k-mers, this channel reads the same evidence as
+the assembler, and agreement is expected: it is not an independent test of phasing. What it can
+show there is an error made after phasing, as in HG01943, where a piece was scaffolded into the
+other haplotype. It tests phasing itself on an assembly phased another way (Hi-C, Strand-seq)
+whose parents are sequenced. Of the 121 HPRC release-2 samples with both parents in the NYGC
+set, 120 were assembled in trio mode (`../../data/sample_overlap.tsv`).
 
 ## 6. S4: long-read audit (optional)
 

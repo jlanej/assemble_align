@@ -56,11 +56,16 @@ Thirteen HG002 assemblies, three of them earlier drafts of the truth genome, wer
 
 ![Thirteen HG002 assemblies scored against the truth genome](experiments/2026-11-13_hg002_assemblies/scoreboard.png)
 
-- 4,579 of 4,648 high-confidence copy-number issues are confirmed by the truth genome (99%; 1,199
-  of 1,258 without the one assembly that holds 150 Mb of surplus sequence).
+- About 95% of high-confidence copy-number issues are confirmed by the truth genome: 1,199 of
+  1,258 in twelve assemblies. The thirteenth holds 150 Mb of surplus sequence and adds 3,380 of
+  3,390, which makes the sum 4,579 of 4,648 (99%).
+- The share is about the same before and after the method stopped changing: 737 of 770
+  (95.7%) in the six assemblies scored while its rules were still being revised, 462 of 488
+  (94.7%) in the six run afterwards. All are assemblies of one person read with one set of
+  reads, so this is not the held-out test.
 - The ones not confirmed number 1 to 10 per assembly, whether the confirmed ones number 0 or
-  3,380. The three drafts, which have almost no errors left, get 3 unconfirmed issues each
-  beside 4, 3 and 0 confirmed.
+  3,380, so the count says more than the share. The three drafts, which have almost no errors
+  left, get 3 unconfirmed issues each beside 4, 3 and 0 confirmed.
 - Of the surplus copies of 5 kb and more that lie in assessable sequence, 73% to 79% are found; of
   the collapsed copies, 25% to 54%; under 5 kb, 9% to 18%.
 - Strong missing-allele calls are true 96% of the time; one-sided missing sequence is not
@@ -201,6 +206,12 @@ minutes (NOTEBOOK entry o).
 - One copy too many in the assembly and one copy too few in the reads' DNA are the same
   observation. Cell lines rearrange (immunoglobulin loci in B-cell lines, sub-clonal losses), so
   an issue becomes an error only when the assembly's own long reads agree.
+- A change carried by a fraction of the cells has no class. The copy-number states are whole
+  copies, or one factor for every k-mer. A loss in 60% of the cells lowers a haplotype's own
+  k-mers to 0.4 of their depth and the shared ones to 0.7, which fits neither. By the
+  classifier's rules such a stretch lands among the depth anomalies and is not reported. That
+  is a reading of the rules, not a result: HG01103, the guide's second case and a sub-clonal
+  loss, has not been run.
 - Calls land on the copies that remain. When a duplicate is collapsed, the reads pile up on its
   twin; which haplotype lost the copy is decided by haplotype-specific k-mers when there are any,
   and an identical extra copy cannot be told from the copy it repeats.
@@ -208,6 +219,12 @@ minutes (NOTEBOOK entry o).
   scaffold pieces and weak for switches under 50 kb (the missing-haplotype call finds those
   without parents), and where the parents' samples are cell lines, a switch at an immunoglobulin
   locus says something about the parents' cells, not the assembly.
+- On an assembly that was phased with the parents' k-mers, the phase audit reads the evidence
+  the assembler used and is not an independent test of phasing. There it finds what went wrong
+  after phasing, such as HG01943's piece, scaffolded into the wrong haplotype. Of the 121 HPRC
+  release-2 samples with both parents sequenced, 120 were assembled in trio mode
+  (`../data/sample_overlap.tsv`). The audit tests phasing itself only on an assembly phased
+  another way whose parents are sequenced.
 
 ## Conventions
 

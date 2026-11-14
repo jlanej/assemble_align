@@ -62,6 +62,12 @@ call of the read channel, which needs no parents, finds 11 of the same 12.
    opposite use of the parents holds up: missing k-mers that are solid in the child and in
    neither parent are 9 placements (5 events) on the truth genome, against 46 events in HG01943
    where the known de novo junction is first among them.
+6. **None of this tests the truth genome's phasing.** Its haplotypes were assigned with parental
+   data (they carry the parents' names), so 46 chromosomes on the right parent is agreement
+   between two readings of the same kind of evidence. What this run measures is the channel's
+   false flags. The audit is an independent test of phasing only on an assembly phased without
+   the parents; on a trio-phased one it finds errors made after phasing, such as the HG01943
+   piece.
 
 ## Decisions
 

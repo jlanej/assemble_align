@@ -12,7 +12,8 @@ here; the same genome with its parents' reads is in `../2026-11-13_hg002_trio/`.
 
 **Run.** `scripts/run_hg002_truth.sh DATA`, then `analyse.py` here and
 `scripts/sd_boundary_litmus.py`. k = 31, 1 in 4 k-mers tracked, 1-kb windows. A second run adds
-`--long-read-bam` with the public alignment of HiFi reads to this assembly, read remotely.
+`--long-read-bam` with the public alignment of HiFi reads to this assembly, read remotely
+(`hg002_q100_hifi_bam` in `../../resources.tsv` gives its address).
 
 ## Result
 

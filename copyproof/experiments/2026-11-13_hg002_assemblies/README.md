@@ -60,9 +60,10 @@ Summed over the 13 assemblies, by size of the segment (`scoreboard.by_size.tsv`)
 
 ## What was learned
 
-1. **High-confidence copy-number issues are real, down to a floor of a few per genome.** 4,579 of
-   4,648 are confirmed (99%); without the one assembly that contributes most of them, 1,199 of
-   1,258 (95%). Among the ten assemblies with 20 such issues or more, 89% to 100% each. The
+1. **High-confidence copy-number issues are real, down to a floor of a few per genome.** About
+   95% are confirmed: 1,199 of 1,258 in the twelve assemblies other than `verkko_2023`, which
+   alone adds 3,380 of 3,390 and lifts the sum to 4,579 of 4,648 (99%). Among the ten
+   assemblies with 20 such issues or more, 89% to 100% each. The
    ones not confirmed number 1 to 10 per assembly (69 in all, `unconfirmed_high.tsv`) whether
    the confirmed ones number 0 or 3,380, so a share says little about an assembly with few
    errors. The three drafts of the truth genome show that floor alone: 3 unconfirmed issues
@@ -131,6 +132,20 @@ Summed over the 13 assemblies, by size of the segment (`scoreboard.by_size.tsv`)
    copy-number segments, the depth anomalies, the regions that cannot be assessed, the fitted
    model and the scored issues are identical file for file. It is the only repeat with
    unchanged code that was compared.
+11. **The share confirmed is about the same before and after the method stopped changing.**
+   Seven assemblies were scored while the classifier and the reporting rules were still being
+   revised, so their scores could shape the rules; six were first run after the last change.
+   Without `verkko_2023` the two groups give 95.7% and 94.7% (Fisher's exact test, p = 0.41).
+   All are assemblies of one person read with one set of reads, so this is the nearest thing
+   to a held-out number that these data hold, and no substitute for a new sample.
+
+| Assemblies (`precision_split.tsv`) | High-confidence issues | Confirmed | Share |
+|---|---|---|---|
+| Scored while the rules were still being revised (7) | 4,160 | 4,117 | 99.0% |
+| ... without `verkko_2023` (6) | 770 | 737 | 95.7% |
+| Run after the last change (6) | 488 | 462 | 94.7% |
+| ... without the two drafts (4) | 479 | 459 | 95.8% |
+| All without `verkko_2023` (12) | 1,258 | 1,199 | 95.3% |
 
 ## Files
 
@@ -140,6 +155,8 @@ Summed over the 13 assemblies, by size of the segment (`scoreboard.by_size.tsv`)
   length, and the clusters of read sequence the assembly lacks.
 - `unconfirmed.py` and `unconfirmed_high.tsv`: every high-confidence copy-number issue the truth
   does not confirm, with the share of it that a truth discordance covers.
+- `split.py` and `precision_split.tsv`: the share confirmed, by whether an assembly was scored
+  before or after the method stopped changing.
 - `scoreboard.tsv` (every number per assembly), `scoreboard.by_size.tsv`, `scoreboard.md` (the
   two tables above and the sums quoted in the text, as written by the script),
   `scoreboard.png` with its numbers in `scoreboard.json`.

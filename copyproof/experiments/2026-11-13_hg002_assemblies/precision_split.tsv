@@ -1,0 +1,7 @@
+group	assemblies	high	confirmed	not_confirmed	share
+scored while the rules were still being revised	7	4160	4117	43	0.9897
+... without verkko_2023	6	770	737	33	0.9571
+run after the last change	6	488	462	26	0.9467
+... without the two drafts	4	479	459	20	0.9582
+all without verkko_2023	12	1258	1199	59	0.9531
+all	13	4648	4579	69	0.9852

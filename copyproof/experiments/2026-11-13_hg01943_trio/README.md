@@ -102,6 +102,11 @@ not change (5 of 5, 2 off-target).
   the parents, the joins need long reads, the junction (as it turned out) needs the parents.
   With short reads of the child alone the locus would show the collapses and the first false
   duplication.
+- This assembly was phased with the parents' k-mers (`hifiasm/trio` in
+  `../../../data/sample_overlap.tsv`), so the hapmer channel is not an independent test of its
+  phasing. The misplaced piece is an error made after phasing, at scaffolding, which is the
+  kind the channel can show here. The 32 phase-switch segments cannot be read as phasing
+  errors without other evidence: the truth genome, run the same way, keeps 24.
 
 ## Files
 
