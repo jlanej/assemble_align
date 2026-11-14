@@ -97,7 +97,7 @@ Seen:      Assemblies, thirteen now, which is every one that was downloaded: 4,5
            What the numbers support: this drive takes writes at 200 to 700 MB/s for a while, then nearly stops
            for 10 to 20 minutes, reads included, and resumes by itself. Between the end of one stall and the
            start of the next, 17 to 18 GB were written. A scan writes 12 GB, so nearly every run meets one
-           stall, and an assembly with its scoring took 16 to 24 minutes, most of it the stall. A short
+           stall, and an assembly with its scoring took 16 to 26 minutes, most of it the stall. A short
            write test shows none of this, and what the drive does during a stall was not established.
 Decision:  no change to the method. The costs in the README hold when the disk keeps up, and it now says that
            a scan ends by writing a 10- to 13-GB file in one stream. Entry m and D9 are corrected.
