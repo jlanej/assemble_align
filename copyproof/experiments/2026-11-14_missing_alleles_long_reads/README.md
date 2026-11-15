@@ -335,8 +335,15 @@ gives. Cells were not counted.
   derived.
 - Where the change arose. Both kinds of reads come from DNA of a cell line. Whether the changed
   cells were already in the person or arose in culture is not in these tables.
-- What made the changes. T>G before A or T is described in the literature for a polymerase that
-  B cells use, and these cell lines are made from B cells; nothing here tests that.
+- What made the changes. A signature of T>G changes is described for B-cell cancers whose
+  immunoglobulin genes are hypermutated, and is put down, tentatively and in part, to polymerase
+  eta in the somatic hypermutation of lymphoid cells (signature 9 of Alexandrov et al., Nature
+  500:415-421, 2013, https://doi.org/10.1038/nature12477; SBS9 in COSMIC,
+  https://cancer.sanger.ac.uk/signatures/sbs/sbs9/). These cell lines are made from B cells.
+  Whether the changes here are of that signature was not tested. The paper names A or T before
+  the T; here A or T follows the T in 75 of 91 and 52 of 59 events and stands before it in 57 and
+  28 (`substitutions_with_neighbours.tsv`), and the changes were not compared with the
+  signature's 96 classes.
 - How many such changes the release itself holds. A placement exists only where the release kept
   the unchanged allele. Where it kept the changed one, the release holds sequence that neither
   parent has, and this channel does not see it.
@@ -344,6 +351,14 @@ gives. Cells were not counted.
   needs, from above by the release keeping the other allele.
 - Shares under about a quarter at single placements of NA19240, where a place has a median of 17
   reads. Three events in all have no long read with the allele, and 15 have too few reads.
+- How few long reads some events rest on (added after the record was checked a second time).
+  Where 10 reads or more hold the allele or the release's sequence, one read with the allele sorts
+  a placement as "a minority do". Of NA19240's 42 events in neither parent's reads that are sorted
+  so, 13 have one or two long reads with the allele at the place that has most of them (7 have
+  one, 6 two; counting all places of an event together, 12 have one or two). So 13 of NA19240's
+  441 events stand on one or two reads. Each of HG01943's 31 has three or more. These counts are
+  from the row-by-row tables that `tables.py` writes to the data root (`placements.tsv` and
+  `other_rows_of_the_events.tsv`); no table in this folder holds them.
 - Much about inherited alleles on NA19240: 474 of her 851 placements in a parent's reads have too
   few long reads.
 - The weak placements, of which 197 on HG01943 and 298 on NA19240 are in neither parent's reads
@@ -363,8 +378,9 @@ gives. Cells were not counted.
   `size` 0. By the reads, 522 and 869 of them have the same length, 18 and 39 another, and 3 and
   11 are not determined (`size_column.tsv`). The earlier record's bullet and its table column were
   corrected after this record was written, and entry t carries a note.
-- Not changed: `../../docs/method.md` says that a `MISSING_ALLELE` comes with the difference in
-  length. The cluster table gives one only from 31 bases.
+- `../../docs/method.md` said that a `MISSING_ALLELE` comes with the difference in length. The
+  cluster table gives one only from 31 bases, and that sentence was corrected after this record
+  was written.
 
 ## Files
 

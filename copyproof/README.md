@@ -80,8 +80,9 @@ Thirteen HG002 assemblies, three of them earlier drafts of the truth genome, wer
   ([experiments/2026-11-14_missing_alleles_by_parent](experiments/2026-11-14_missing_alleles_by_parent/README.md)).
   The long reads those two releases were built from hold these alleles as well, beside the
   release's sequence: at 275 of 276 and 441 of 460 events a part of the long reads at one place
-  hold the allele, as a change in part of the cells gives, and at 2 of the 736 nearly all do. By
-  its own reads the release is not in error at those places
+  hold the allele, as a change in part of the cells gives. By its own reads the release is not in
+  error at those 716 events. At 2 of the 736, nearly all long reads hold the allele, which is what
+  an error of the assembly gives
   ([experiments/2026-11-14_missing_alleles_long_reads](experiments/2026-11-14_missing_alleles_long_reads/README.md)).
 
 **Errors planted in the truth genome**

@@ -188,7 +188,9 @@ k-mers are mostly high-copy in the release (by multiplicity or by read depth) ar
 are hits next to a high-copy k-mer. The other k-mers of each read are located in the release,
 co-linear anchors are chained, and each read is classified by its flanks:
 
-- both flanks close together on one sequence: `MISSING_ALLELE`, with the difference in length;
+- both flanks close together on one sequence: `MISSING_ALLELE`. A difference in length is given
+  (`size`) only when it is more than 30 bases, which puts the two flanks in two chains; a changed
+  base or a smaller difference in length stays within one chain and has `size` 0;
 - flanks far apart or on different sequences: `MISSING_JUNCTION`, with both ends;
 - one flank only: `MISSING_SEQUENCE`. This is the weakest evidence of the channel. With fewer
   than 6 reads or 5 tracked k-mers about nine in ten are artefacts where truth is known (and all
