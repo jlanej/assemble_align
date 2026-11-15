@@ -76,9 +76,13 @@ Thirteen HG002 assemblies, three of them earlier drafts of the truth genome, wer
 - Strong missing-allele calls are true 96% of the time on HG002; one-sided missing sequence is
   not (46% when strong), and is reported accordingly. On HG002, 7% of the strong missing-allele
   calls have k-mers in neither parent's reads, and the truth genome holds 51 of those 71. In the
-  HPRC releases of HG01943 and NA19240, 32% and 52% do, at read counts below one copy. What
-  those calls are was not measured
+  HPRC releases of HG01943 and NA19240, 32% and 52% do, at read counts below one copy
   ([experiments/2026-11-14_missing_alleles_by_parent](experiments/2026-11-14_missing_alleles_by_parent/README.md)).
+  The long reads those two releases were built from hold these alleles as well, beside the
+  release's sequence: at 275 of 276 and 441 of 460 events a part of the long reads at one place
+  hold the allele, as a change in part of the cells gives, and at 2 of the 736 nearly all do. By
+  its own reads the release is not in error at those places
+  ([experiments/2026-11-14_missing_alleles_long_reads](experiments/2026-11-14_missing_alleles_long_reads/README.md)).
 
 **Errors planted in the truth genome**
 ([experiments/2026-11-13_planted_errors](experiments/2026-11-13_planted_errors/README.md)). 111

@@ -1,0 +1,5 @@
+run	class	events	events_with_20_long_reads_or_more	long_reads_of_those_events	of_them_hold_the_allele	share_summed	share_of_the_events_long_reads_quartile_1	share_of_the_events_long_reads_median	share_of_the_events_long_reads_quartile_3	short_read_count_over_two_copies_quartile_1	short_read_count_over_two_copies_median	short_read_count_over_two_copies_quartile_3	depth_per_copy_of_the_short_reads
+NA19240_release	in a parent's reads	467	208	7304	2341	0.321	0.25	0.373	0.444	0.403	0.504	0.587	13.64
+NA19240_release	in neither parent's reads	460	452	15901	3271	0.206	0.151	0.206	0.257	0.275	0.293	0.367	13.64
+HG01943_release	in a parent's reads	731	699	42990	19644	0.457	0.418	0.467	0.509	0.422	0.509	0.597	14.23
+HG01943_release	in neither parent's reads	276	276	17927	3387	0.189	0.156	0.19	0.226	0.259	0.281	0.316	14.23

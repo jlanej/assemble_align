@@ -1,0 +1,9 @@
+run	class	placements	size_is_0_in_the_cluster_table	of_them_one_changed_base	of_them_two_or_more_changed_bases	of_them_another_length	another_length_of_1_base	another_length_of_2_to_30_bases	another_length_of_more_than_30_bases	of_them_not_determined	size_is_not_0
+NA19240_release	in a parent's reads	851	814	354	56	256	186	70	0	148	37
+NA19240_release	in neither parent's reads	922	919	825	44	39	25	14	0	11	3
+HG01943_release	in a parent's reads	1156	1128	579	60	359	295	64	0	130	28
+HG01943_release	in neither parent's reads	545	543	506	16	18	14	4	0	3	2
+HG002_hprc_year2	in a parent's reads	925	911	399	48	415	264	151	0	49	14
+HG002_hprc_year2	in neither parent's reads	71	71	70	1	0	0	0	0	0	0
+HG002_truth_genome	in a parent's reads	40	36	23	5	0	0	0	0	8	4
+HG002_truth_genome	in neither parent's reads	34	34	32	0	2	0	2	0	0	0

@@ -58,8 +58,100 @@ of the session, after the experiments they describe; their numbers were not all 
 Entries m, n and o were written within the hour of their experiments. Entry p, like g, was written before its
 experiment; what was added to it afterwards is marked with the time. Entry s, its result, was written within the
 hour of the runs. Entry t was written within the hour of its tables, which were made from finished runs.
+Entry u fixed how its placements are sorted before any long read was searched and gives the time; the rest of
+it was written within the hour of its tables.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
+
+### 2026-11-14 (u): missing alleles in neither parent's reads: the release's own long reads, and the changed bases
+
+Note:      the block "Sorting" was written at 15:45 on 2026-11-14 and is unchanged since. By then the reads and
+           k-mers of every placement had been recovered from the runs' `missing/` folders and held against the
+           cluster tables, and one position of NA19240's long-read alignment had been fetched to measure time and
+           size; no long read had been searched for a k-mer. The times are this machine's: nothing was committed
+           or pushed, so the order rests on this log and on `fixed_beforehand.sha256` in the record.
+Question:  entry t left open what the strong missing-allele placements in neither parent's reads are. Do the
+           long reads each release was built from hold the allele, and which bases are changed?
+Sorting:   Long reads: HPRC's alignment of each release's HiFi reads to that release (the `BAM` address in
+           `scripts/run_na19240_heldout.sh` and in `scripts/run_hg01943.sh`), fetched at the placements only.
+           Secondary and supplementary records and records without sequence are left out.
+           A read covers a placement when its alignment covers the placement's interval, from the base before
+           `start` to `end`, and 100 bases on either side. Of each such read only the stretch aligned to that
+           window is searched.
+           The allele is the placement's tracked k-mers, recovered from the run's `missing/` folder. The
+           release's sequence there is the tracked k-mers of the release that overlap the interval and that
+           none of the placement's short reads holds. A read holds the allele, or the release's sequence, when
+           its stretch holds one or more of those k-mers on either strand.
+           The share of a placement is the reads that hold the allele over the reads that hold the allele or
+           the release's sequence. Reads that hold neither are counted and left out of the share.
+           Groups: too few reads to say (fewer than 10 reads that hold either); no long read holds the allele
+           (10 or more, none with the allele); a minority do (one or more with the allele, share under 0.25);
+           about half do (share from 0.25 to 0.75); nearly all do (share above 0.75). With 10 reads, none with
+           the allele is seen with a chance under 5% when the true share is 0.26 or more.
+           Events: an event is sorted from every row of the cluster table that carries its `twin_group`, of
+           any kind and strength. It takes the highest group among them in the order nearly all, about half,
+           a minority. It counts as "no long read holds the allele" only when each of its placements has 10
+           reads or more and none holds the allele; otherwise it has too few reads to say.
+           Tables: placements and events per group, by sample and by "in a parent's reads" or "in neither";
+           the same by read count (under 9, 9 to 12.5, 13 or more); for NA19240 by whether the HGSVC3
+           assemblies hold the allele (half or more of the k-mers: both, the Verkko assembly only, the hifiasm
+           assembly only, neither). The shares are also given in finer steps, so that the cuts can be judged.
+           How the three readings are told apart: "the release's own reads lack the allele" is the group with
+           no long read; "they hold both alleles" is a minority or about half, with reads that hold the
+           release's sequence beside them; "they hold the allele and the release does not" is nearly all.
+           Known beforehand to blur this: where the release holds a stretch once, or its two haplotypes are
+           alike over the length of a read, reads of both haplotypes lie at one place, and an inherited allele
+           gives about half there. The placements in a parent's reads show how often that happens.
+           A second count, not used for sorting: where the change is one base, the base that each covering
+           read has at that position by its alignment.
+Run:       `fetch_long_reads.py DATA` of the record, 15 and 16 minutes: 23,079 and 39,720 records at 1,744 and
+           1,603 stretches of NA19240 and HG01943 (434 and 777 Mb of read sequence), kept without base
+           qualities as 104 and 189 MB under DATA/work/missing_alleles_long_reads. Both public addresses
+           answered. Then `tables.py DATA OUT`, 3 minutes. The reads and k-mers of every placement were
+           collected again with `classify_reads` and the loop of `cluster_reads`: all 10,953 rows of the four
+           cluster tables come back the same. The changed bases were derived for HG002's two runs as well;
+           no long reads were fetched for HG002. Record: `experiments/2026-11-14_missing_alleles_long_reads`.
+Seen:      Events in neither parent's reads, sorted from all their rows. NA19240, of 460: 2 with no long read
+           holding the allele, 42 where a minority do, 399 where about half do, 2 where nearly all do, 15 with
+           too few reads. HG01943, of 276: 1, 31, 244, 0 and 0. Where about half hold the allele the others
+           hold the release's sequence: 3,077 of 7,086 long reads hold the allele on NA19240 and 3,120 of
+           7,967 on HG01943.
+           The second count agrees: by the aligned base, 816 of 826 and 500 of 506 placements of one changed
+           base fall in the same group.
+           Events in a parent's reads. NA19240, of 467: 24, 19, 68, 79 and 277 (her placements in a parent's
+           reads are covered by a median of 8 long reads, those in neither by 17). HG01943, of 731: 15, 3,
+           458, 227 and 28.
+           Seen after the counts, in tables not named beforehand: the two places of an event. In neither
+           parent's reads about half at one place and none at the other in 357 of 447 and 214 of 262 events
+           with two rows; among inherited alleles in 11 of 373 and 11 of 416, where the frequent patterns are
+           nearly all at one place (73, 199) and about half at both (29, 110) or at the only place (13, 290).
+           Of all long reads of an event a fifth hold the allele (medians 0.206 and 0.190), of an inherited
+           allele's a third to a half (0.373 and 0.467).
+           Neither the read count nor what the HGSVC3 assemblies hold sorts the events: a minority or about
+           half of the long reads hold the allele at 173 of 180 events that both assemblies hold and at 140
+           of 149 that neither holds.
+           Changed bases. One changed base at 826 of 922, 506 of 545, 70 of 71 and 32 of 34 placements in
+           neither parent's reads (NA19240, HG01943, `hprc_year2`, truth genome), and at 425 of 460, 261 of
+           276, 38 of 38 and 17 of 18 events when each is counted under its smallest difference. In a
+           parent's reads: 354 of 851, 583 of 1,156, 399 of 925 and 23 of 40 placements. The cluster table's
+           `size` of 0 covers length changes of up to 30 bases: 39 of 919 and 18 of 543 such placements in
+           neither parent's reads have another length, and 256 of 814, 359 of 1,128 and 415 of 911 in a
+           parent's reads.
+           Kinds, by events: T>G is 91 of 425 and 59 of 261 in neither parent's reads against 14 of 200 and
+           38 of 403 in a parent's; C>T or T>C is 202 of 425 and 144 of 261 against 122 of 200 and 259 of 403.
+           The T>G changes in neither parent's reads are followed by A or T in 75 of 91 and 52 of 59.
+Decision:  none on the method, and no rule. The tables separate the three readings: the release's own reads
+           lack the allele at 3 of 736 events, hold both alleles at 716, and hold the allele without the
+           release's sequence at 2; 15 have too few reads. That "both alleles" is a change in part of the
+           cells rests on tables made after the counts were seen. By its own reads the release is not in
+           error at these places: it holds the allele of the larger part of its reads. The README's sentence
+           that what these calls are was not measured now gives these counts. Entry t's "same length as the
+           release" was a count of `size` 0; the record says what the reads give, and entry t stands as
+           written.
+Next:      for the review of entry t's question: with long reads such a call can be told from an inherited
+           allele; without them the parents' reads and the read count are what is left. A rule needs another
+           person. Not looked at: HG002 with long reads, the weak placements, and the mirror image, changes
+           of this kind that a release took in.
 
 ### 2026-11-14 (t): missing alleles that neither parent's reads carry, tabulated from finished runs
 
@@ -67,6 +159,9 @@ Note:      written within the hour, from the tables of the record
            (`experiments/2026-11-14_missing_alleles_by_parent`). Nothing was run again. No rule was made and no
            code under `src/` or `engine/` changed. Made after the held-out test and from its runs: nothing
            here is held out.
+           Added at 16:55 on 2026-11-14, after entry u: "the same length as the release" under Seen is a
+           count of `size` 0, which a length difference of up to 30 bases gives as well. The record's
+           README and its table column say so now; the text below stands as written.
 Question:  entry s saw that 922 of NA19240's 1,773 strong missing-allele calls are in neither parent's reads
            (HG002: 71 of 996) and did not act on it. Is that NA19240 alone, did the parents' reads miss
            inherited sequence, and what do the finished runs say about these calls?

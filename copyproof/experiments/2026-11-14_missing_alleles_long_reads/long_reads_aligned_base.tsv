@@ -1,0 +1,13 @@
+run	class	placements	long_read	aligned_base_is_the reads' base	aligned_base_is_the release's base	aligned_base_is_another base	aligned_base_is_no base (deleted)
+NA19240_release	in a parent's reads	354	holds k-mers of the allele	1248	13	0	5
+NA19240_release	in a parent's reads	354	holds k-mers of the release only	0	2140	0	0
+NA19240_release	in a parent's reads	354	holds neither	12	23	0	3
+NA19240_release	in neither parent's reads	826	holds k-mers of the allele	2996	8	0	6
+NA19240_release	in neither parent's reads	826	holds k-mers of the release only	0	11098	0	1
+NA19240_release	in neither parent's reads	826	holds neither	22	125	2	12
+HG01943_release	in a parent's reads	583	holds k-mers of the allele	11163	41	1	29
+HG01943_release	in a parent's reads	583	holds k-mers of the release only	0	12459	0	3
+HG01943_release	in a parent's reads	583	holds neither	101	134	6	37
+HG01943_release	in neither parent's reads	506	holds k-mers of the allele	3186	7	0	10
+HG01943_release	in neither parent's reads	506	holds k-mers of the release only	0	13213	0	2
+HG01943_release	in neither parent's reads	506	holds neither	30	186	1	11

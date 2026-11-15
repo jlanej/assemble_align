@@ -251,7 +251,9 @@ for key, _, _, _, _ in MAIN:
             row.update({
                 "median_read_count_over_depth_per_copy": round(float(x["median_count"].median()) / lam, 2),
                 "no_kmer_in_either_parent": int((x["parent_max"] == 0).sum()), "every_kmer_in_a_parent": int((x["parent_max"] == 1).sum()),
-                "same_length_as_the_release": int((x["size"] == 0).sum()) if kind == "MISSING_ALLELE" else "",
+                # `size` is 0 whenever one chain of anchors spans the missing k-mers, and a chain takes in a
+                # length difference of up to `diag_tol` (30) bases: 0 is not "the same length"
+                "size_0_in_the_cluster_table": int((x["size"] == 0).sum()) if kind == "MISSING_ALLELE" else "",
             })
             row.update(quartiles(x["tracked_kmers"], "tracked_kmers"))
             row.update({
@@ -389,7 +391,7 @@ pd.set_option("display.width", 250)
 pd.set_option("display.max_columns", 40)
 sa = by_parent[(by_parent["kind"] == "MISSING_ALLELE") & (by_parent["strength"] == "strong")]
 print(sa[["run", "in_a_parents_reads", "placements", "share_of_kind_and_strength", "events", "read_count_median",
-          "no_kmer_in_either_parent", "same_length_as_the_release", "within_10_kb_of_another"]].to_string(index=False))
+          "no_kmer_in_either_parent", "size_0_in_the_cluster_table", "within_10_kb_of_another"]].to_string(index=False))
 print(pd.read_csv(out / "planted_control.tsv", sep="\t")[["run", "made_by_the_edits", "made_by_the_edits_in_a_parent", "made_by_the_edits_in_neither",
                                                               "unedited_placements_not_found_again", "share_in_neither_upper_95"]].to_string(index=False))
 print(issues[issues["role"] == "locus or twin"].to_string(index=False))

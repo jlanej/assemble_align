@@ -1,0 +1,5 @@
+run	rows_of_the_cluster_table	rows_recovered_under_the_same_cluster_number	same_sequence	same_kind_recovered	same_reads	same_strands	same_tracked_kmers	same_read_count	same_start	same_in_the_mother	same_in_the_father	strong_missing_allele_rows	strong_same_reads	strong_same_tracked_kmers	strong_same_read_count	kmer_list_of_the_missing_folder_is_the_scans	strong_allele_events_on_both_sides_of_the_parent_cut	one_changed_base_by_the_kmers	second_way_the_same_base_alone	second_way_the_same_base_beside_other_differences_between_the_anchors	second_way_another_length_between_the_anchors	second_way_another_base	second_way_no_sequence_anchored
+NA19240_release	3812	3812	3812	3812	3812	3812	3812	3812	3812	3812	3812	1773	1773	1773	1773	True	0	1180	1091	36	9	0	44
+HG01943_release	3339	3339	3339	3339	3339	3339	3339	3339	3339	3339	3339	1701	1701	1701	1701	True	0	1089	1040	19	4	0	26
+HG002_hprc_year2	2394	2394	2394	2394	2394	2394	2394	2394	2394	2394	2394	996	996	996	996	True	0	469	445	3	7	0	14
+HG002_truth_genome	1408	1408	1408	1408	1408	1408	1408	1408	1408	1408	1408	74	74	74	74	True	0	55	50	2	1	0	2

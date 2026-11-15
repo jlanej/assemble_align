@@ -1,0 +1,21 @@
+run	class	by_kmers	placements	by_aligned_base: no long read holds the allele	by_aligned_base: a minority do	by_aligned_base: about half do	by_aligned_base: nearly all do	by_aligned_base: too few reads to say
+NA19240_release	in a parent's reads	no long read holds the allele	57	57	0	0	0	0
+NA19240_release	in a parent's reads	a minority do	21	0	21	0	0	0
+NA19240_release	in a parent's reads	about half do	38	0	0	38	0	0
+NA19240_release	in a parent's reads	nearly all do	35	1	0	0	34	0
+NA19240_release	in a parent's reads	too few reads to say	203	0	0	0	1	202
+NA19240_release	in neither parent's reads	no long read holds the allele	366	366	0	0	0	0
+NA19240_release	in neither parent's reads	a minority do	59	4	54	1	0	0
+NA19240_release	in neither parent's reads	about half do	366	0	1	365	0	0
+NA19240_release	in neither parent's reads	nearly all do	1	0	0	0	1	0
+NA19240_release	in neither parent's reads	too few reads to say	34	2	0	2	0	30
+HG01943_release	in a parent's reads	no long read holds the allele	86	85	1	0	0	0
+HG01943_release	in a parent's reads	a minority do	42	0	42	0	0	0
+HG01943_release	in a parent's reads	about half do	335	1	1	333	0	0
+HG01943_release	in a parent's reads	nearly all do	110	0	0	1	109	0
+HG01943_release	in a parent's reads	too few reads to say	10	0	0	0	0	10
+HG01943_release	in neither parent's reads	no long read holds the allele	215	214	1	0	0	0
+HG01943_release	in neither parent's reads	a minority do	61	4	56	1	0	0
+HG01943_release	in neither parent's reads	about half do	230	0	0	230	0	0
+HG01943_release	in neither parent's reads	nearly all do	0	0	0	0	0	0
+HG01943_release	in neither parent's reads	too few reads to say	0	0	0	0	0	0

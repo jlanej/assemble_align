@@ -15,6 +15,7 @@ commands is the data root (`scripts/manifests/` lists what to download into it).
 | [`2026-11-13_threshold_sensitivity`](2026-11-13_threshold_sensitivity/README.md) | | Do the results move with the thresholds? What did the classifier's revision change? |
 | [`2026-11-14_na19240_heldout`](2026-11-14_na19240_heldout/README.md) | 5 on one person, with the thresholds frozen as the guide asks before rung 6 | With every threshold fixed beforehand, do the results hold on a second person? |
 | [`2026-11-14_missing_alleles_by_parent`](2026-11-14_missing_alleles_by_parent/README.md) | | Are the missing alleles that neither parent's reads carry NA19240's alone, and did the parents' reads miss them? A tabulation of finished runs. |
+| [`2026-11-14_missing_alleles_long_reads`](2026-11-14_missing_alleles_long_reads/README.md) | | What are the missing alleles that neither parent's reads carry? Read from the long reads each release was built from, and from the changed bases. |
 
 Rung 0 (a synthetic trio) is the test suite, `tests/`. Rung 5 (agreement between assemblies of
 one person, without a truth genome) was run for one of its four people, with every threshold
@@ -28,7 +29,8 @@ which is the guide's rung 6, was not run.
 3. The experiment records, in the order rung 3, trio, rung 2, rung 4, rung 1: that is the order
    in which the method was shaped. Then the sensitivity record, and last the held-out test,
    which was run after the method had stopped changing. The record on missing alleles by the
-   parents' reads came after that test and tabulates its runs and three older ones.
+   parents' reads came after that test and tabulates its runs and three older ones. The record
+   on what those alleles are followed it and adds the long reads of the two HPRC releases.
 4. [`../docs/method.md`](../docs/method.md) for the method as built and
    [`../docs/thresholds.md`](../docs/thresholds.md) for every numeric choice and its origin.
 5. [`../NOTEBOOK.md`](../NOTEBOOK.md) for the order of events. Its entries were written the same
@@ -56,6 +58,7 @@ Every number in `../README.md`, with the table it is read from and what writes t
 | The share confirmed before and after the method stopped changing (95.7% and 94.7%) | `2026-11-13_hg002_assemblies/precision_split.tsv` | `2026-11-13_hg002_assemblies/split.py` |
 | Strong missing-allele calls true 96% of the time, one-sided missing sequence 46% | `2026-11-13_hg002_assemblies/hprc_year2.missing_clusters.tsv` | `2026-11-13_hg002_assemblies/details.py` (the run needs `WITH_READS=1`) |
 | Strong missing-allele calls with k-mers in neither parent's reads: 7% on HG002, where the truth genome holds 51 of 71; 32% and 52% in the HPRC releases of HG01943 and NA19240, at read counts below one copy | `2026-11-14_missing_alleles_by_parent/clusters_by_parent.tsv`, `alleles_held.tsv`, `alleles_by_read_count.tsv` | `2026-11-14_missing_alleles_by_parent/tables.py` |
+| In the HPRC releases of HG01943 and NA19240 the long reads each was built from hold those alleles beside the release's sequence: a part of the long reads at one place at 275 of 276 and 441 of 460 events, nearly all at 2 of the 736 | `2026-11-14_missing_alleles_long_reads/long_reads_events.tsv`; how the two places of an event fall together in `long_reads_event_patterns.tsv`; the sorting was fixed in NOTEBOOK entry u before the reads were searched | `2026-11-14_missing_alleles_long_reads/fetch_long_reads.py` (fetches the reads at the placements from HPRC's public alignments), then `tables.py` in that folder |
 | Of the collapses missed in one assembly, how many show no departure in the reads | `2026-11-13_hg002_assemblies/hprc_year2.collapses.tsv` | `details.py` |
 | Whole-copy calls under 5 windows are mostly not confirmed | `2026-11-13_hg002_assemblies/hprc_year2.whole_copy_by_length.tsv` | `details.py` |
 | Planted errors found, by kind and size | `2026-11-13_planted_errors/sensitivity.tsv` | `scripts/eval_planted.py` |
@@ -98,6 +101,8 @@ Every number in `../README.md`, with the table it is read from and what writes t
   (`scripts/manifests/`). The k-mer databases (32 GB) and the run directories (about 315 GB as
   they stand, nearly all of it positional tracks of 9 to 18 GB per run) are rebuilt from those.
   The long reads of rung 2 are not in a manifest: `scripts/run_planted_hifi.sh` fetches them by
-  region from a public alignment (0.5 GB). The held-out test adds 56 GB of downloads, 72 GB of
-  k-mer databases in 11 files and 95 GB of run directories, as measured on the disk when it was
-  done.
+  region from a public alignment (0.5 GB). The long reads at the missing alleles of two releases
+  (0.3 GB) are fetched the same way by
+  `2026-11-14_missing_alleles_long_reads/fetch_long_reads.py`. The held-out test adds 56 GB of
+  downloads, 72 GB of k-mer databases in 11 files and 95 GB of run directories, as measured on
+  the disk when it was done.

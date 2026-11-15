@@ -1,0 +1,57 @@
+run	class	substitution	placements	events	read_count_median	share_of_reads_on_the_rarer_strand_median	events_held_by_another_assembly	share_held
+NA19240_release	in a parent's reads	C>A	28	17	12.5	0.4	13.0	0.765
+NA19240_release	in a parent's reads	C>G	51	29	14.0	0.41	29.0	1.0
+NA19240_release	in a parent's reads	C>T	101	61	13.5	0.4	59.0	0.967
+NA19240_release	in a parent's reads	T>A	34	24	13.0	0.4	23.0	0.958
+NA19240_release	in a parent's reads	T>C	112	68	13.0	0.39	64.0	0.941
+NA19240_release	in a parent's reads	T>G	28	15	12.0	0.31	11.0	0.733
+NA19240_release	in a parent's reads	all six	354	207	13.0	0.4	195.0	0.942
+NA19240_release	in neither parent's reads	C>A	136	70	8.5	0.4	43.0	0.614
+NA19240_release	in neither parent's reads	C>G	40	20	8.0	0.35	11.0	0.55
+NA19240_release	in neither parent's reads	C>T	203	104	8.5	0.4	73.0	0.702
+NA19240_release	in neither parent's reads	T>A	82	42	8.0	0.4	24.0	0.571
+NA19240_release	in neither parent's reads	T>C	188	98	8.0	0.4	74.0	0.755
+NA19240_release	in neither parent's reads	T>G	177	91	8.0	0.38	62.0	0.681
+NA19240_release	in neither parent's reads	all six	826	425	8.0	0.4	287.0	0.675
+HG01943_release	in a parent's reads	C>A	60	42	14.0	0.42		
+HG01943_release	in a parent's reads	C>G	62	46	15.0	0.41		
+HG01943_release	in a parent's reads	C>T	180	125	15.0	0.4		
+HG01943_release	in a parent's reads	T>A	30	22	13.0	0.37		
+HG01943_release	in a parent's reads	T>C	200	141	15.0	0.4		
+HG01943_release	in a parent's reads	T>G	51	39	13.0	0.38		
+HG01943_release	in a parent's reads	all six	583	409	14.5	0.4		
+HG01943_release	in neither parent's reads	C>A	50	27	9.0	0.41		
+HG01943_release	in neither parent's reads	C>G	23	12	8.5	0.4		
+HG01943_release	in neither parent's reads	C>T	166	85	8.0	0.36		
+HG01943_release	in neither parent's reads	T>A	38	19	8.0	0.38		
+HG01943_release	in neither parent's reads	T>C	114	59	8.0	0.38		
+HG01943_release	in neither parent's reads	T>G	115	59	8.0	0.4		
+HG01943_release	in neither parent's reads	all six	506	261	8.0	0.38		
+HG002_hprc_year2	in a parent's reads	C>A	27	15	15.0	0.38	15.0	1.0
+HG002_hprc_year2	in a parent's reads	C>G	29	16	14.0	0.41	16.0	1.0
+HG002_hprc_year2	in a parent's reads	C>T	156	80	14.0	0.43	79.0	0.988
+HG002_hprc_year2	in a parent's reads	T>A	36	19	15.0	0.39	18.0	0.947
+HG002_hprc_year2	in a parent's reads	T>C	113	58	13.0	0.4	58.0	1.0
+HG002_hprc_year2	in a parent's reads	T>G	38	20	11.75	0.42	17.0	0.85
+HG002_hprc_year2	in a parent's reads	all six	399	207	13.0	0.4	202.0	0.976
+HG002_hprc_year2	in neither parent's reads	C>A	16	9	8.0	0.43	6.0	0.667
+HG002_hprc_year2	in neither parent's reads	C>G	7	4	9.0	0.44	3.0	0.75
+HG002_hprc_year2	in neither parent's reads	C>T	23	12	9.0	0.36	10.0	0.833
+HG002_hprc_year2	in neither parent's reads	T>A	6	4	8.0	0.27	2.0	0.5
+HG002_hprc_year2	in neither parent's reads	T>C	14	7	8.0	0.38	5.0	0.714
+HG002_hprc_year2	in neither parent's reads	T>G	4	2	9.5	0.39	1.0	0.5
+HG002_hprc_year2	in neither parent's reads	all six	70	38	8.5	0.37	27.0	0.711
+HG002_truth_genome	in a parent's reads	C>A	0	0				
+HG002_truth_genome	in a parent's reads	C>G	3	2	8.0	0.38		
+HG002_truth_genome	in a parent's reads	C>T	4	3	7.5	0.31		
+HG002_truth_genome	in a parent's reads	T>A	1	1	10.0	0.3		
+HG002_truth_genome	in a parent's reads	T>C	8	5	7.0	0.43		
+HG002_truth_genome	in a parent's reads	T>G	7	4	7.0	0.29		
+HG002_truth_genome	in a parent's reads	all six	23	15	7.0	0.3		
+HG002_truth_genome	in neither parent's reads	C>A	7	4	8.0	0.47		
+HG002_truth_genome	in neither parent's reads	C>G	2	1	9.0	0.44		
+HG002_truth_genome	in neither parent's reads	C>T	12	6	9.5	0.38		
+HG002_truth_genome	in neither parent's reads	T>A	3	2	7.0	0.29		
+HG002_truth_genome	in neither parent's reads	T>C	6	3	8.0	0.38		
+HG002_truth_genome	in neither parent's reads	T>G	2	1	7.0	0.29		
+HG002_truth_genome	in neither parent's reads	all six	32	17	8.0	0.38		

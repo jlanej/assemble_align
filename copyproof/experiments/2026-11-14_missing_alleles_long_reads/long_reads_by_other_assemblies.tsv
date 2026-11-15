@@ -1,0 +1,41 @@
+run	class	held_by_the_hgsvc3_assemblies	long_reads	placements	of	share	events	of_events
+NA19240_release	in a parent's reads	both	no long read holds the allele	84	713	0.118	82	392
+NA19240_release	in a parent's reads	both	a minority do	44	713	0.062	44	392
+NA19240_release	in a parent's reads	both	about half do	65	713	0.091	43	392
+NA19240_release	in a parent's reads	both	nearly all do	62	713	0.087	62	392
+NA19240_release	in a parent's reads	both	too few reads to say	458	713	0.642	279	392
+NA19240_release	in a parent's reads	the Verkko assembly only	no long read holds the allele	9	50	0.18	9	29
+NA19240_release	in a parent's reads	the Verkko assembly only	a minority do	10	50	0.2	10	29
+NA19240_release	in a parent's reads	the Verkko assembly only	about half do	12	50	0.24	10	29
+NA19240_release	in a parent's reads	the Verkko assembly only	nearly all do	14	50	0.28	14	29
+NA19240_release	in a parent's reads	the Verkko assembly only	too few reads to say	5	50	0.1	4	29
+NA19240_release	in a parent's reads	the hifiasm assembly only	no long read holds the allele	2	11	0.182	2	6
+NA19240_release	in a parent's reads	the hifiasm assembly only	a minority do	1	11	0.091	1	6
+NA19240_release	in a parent's reads	the hifiasm assembly only	about half do	6	11	0.545	5	6
+NA19240_release	in a parent's reads	the hifiasm assembly only	nearly all do	1	11	0.091	1	6
+NA19240_release	in a parent's reads	the hifiasm assembly only	too few reads to say	1	11	0.091	1	6
+NA19240_release	in a parent's reads	neither	no long read holds the allele	46	77	0.597	28	40
+NA19240_release	in a parent's reads	neither	a minority do	4	77	0.052	3	40
+NA19240_release	in a parent's reads	neither	about half do	15	77	0.195	11	40
+NA19240_release	in a parent's reads	neither	nearly all do	2	77	0.026	2	40
+NA19240_release	in a parent's reads	neither	too few reads to say	10	77	0.13	7	40
+NA19240_release	in neither parent's reads	both	no long read holds the allele	168	362	0.464	162	180
+NA19240_release	in neither parent's reads	both	a minority do	28	362	0.077	26	180
+NA19240_release	in neither parent's reads	both	about half do	152	362	0.42	152	180
+NA19240_release	in neither parent's reads	both	nearly all do	0	362	0.0	0	180
+NA19240_release	in neither parent's reads	both	too few reads to say	14	362	0.039	14	180
+NA19240_release	in neither parent's reads	the Verkko assembly only	no long read holds the allele	60	134	0.448	60	68
+NA19240_release	in neither parent's reads	the Verkko assembly only	a minority do	8	134	0.06	8	68
+NA19240_release	in neither parent's reads	the Verkko assembly only	about half do	61	134	0.455	61	68
+NA19240_release	in neither parent's reads	the Verkko assembly only	nearly all do	0	134	0.0	0	68
+NA19240_release	in neither parent's reads	the Verkko assembly only	too few reads to say	5	134	0.037	4	68
+NA19240_release	in neither parent's reads	the hifiasm assembly only	no long read holds the allele	58	125	0.464	58	63
+NA19240_release	in neither parent's reads	the hifiasm assembly only	a minority do	5	125	0.04	3	63
+NA19240_release	in neither parent's reads	the hifiasm assembly only	about half do	58	125	0.464	58	63
+NA19240_release	in neither parent's reads	the hifiasm assembly only	nearly all do	0	125	0.0	0	63
+NA19240_release	in neither parent's reads	the hifiasm assembly only	too few reads to say	4	125	0.032	4	63
+NA19240_release	in neither parent's reads	neither	no long read holds the allele	134	301	0.445	129	149
+NA19240_release	in neither parent's reads	neither	a minority do	22	301	0.073	19	149
+NA19240_release	in neither parent's reads	neither	about half do	129	301	0.429	128	149
+NA19240_release	in neither parent's reads	neither	nearly all do	2	301	0.007	2	149
+NA19240_release	in neither parent's reads	neither	too few reads to say	14	301	0.047	12	149

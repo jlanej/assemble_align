@@ -1,0 +1,7 @@
+# The block "Sorting" of NOTEBOOK entry u: how a placement is sorted from its long reads, written
+# before any long read was searched for a k-mer. One line per time it was checked: local time,
+# SHA-256 of the block, what had been done by then. The block is what this prints:
+#   awk '/^Sorting:   Long reads: HPRC/{on=1} on; /by its alignment\.$/{if(on){print ""; exit}}' NOTEBOOK.md | shasum -a 256
+# Local times of one machine. Nothing was committed or pushed while this log was kept.
+2026-11-14 15:45:44 CST  6f38639d4deb6ffb5ef048422ba7fb854ee4c193fe0db9f6c8785d98a6e766fa  block written; placements recovered and checked against the cluster tables; one position of NA19240's alignment fetched for timing (not searched); no table of this record exists
+2026-11-14 16:37:37 CST  6f38639d4deb6ffb5ef048422ba7fb854ee4c193fe0db9f6c8785d98a6e766fa  block unchanged; reads fetched from 15:47 to 16:17; first long reads searched at 15:57 (40 trial stretches of NA19240); first tables, of NA19240 alone, at 16:03; tables of the record from 16:18; the rest of entry u written

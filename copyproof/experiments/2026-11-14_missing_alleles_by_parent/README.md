@@ -97,8 +97,14 @@ is its upper part.
 **They look like single changed bases, read from both strands and scattered**
 (`clusters_by_parent.tsv`).
 
-- The reads have the same length as the release between the flanks at 71 of 71, 34 of 34, 543 of
-  545 and 919 of 922.
+- The cluster table's `size` is 0 at 71 of 71, 34 of 34, 543 of 545 and 919 of 922: between the
+  flanks the reads' length differs from the release's by 30 bases or fewer. Corrected on 14
+  November 2026: this bullet first said "the same length as the release". `size` is 0 whenever one
+  chain of anchors spans the missing k-mers, and a chain takes in a length difference of up to 30
+  bases (`diag_tol` in `src/copyproof/missing.py`). The record that followed derives the change
+  from the reads: one changed base at 70 of 71, 32 of 34, 506 of 545 and 826 of 922 placements,
+  and another length at 0, 2, 18 and 39
+  (`../2026-11-14_missing_alleles_long_reads/changed_bases.tsv`).
 - The median is 7 tracked k-mers in every run. One changed base makes 31 k-mers that the release
   lacks, and a quarter of all k-mers are tracked.
 - The rarer strand carries a median of 38% to 41% of a placement's reads. For placements in a
