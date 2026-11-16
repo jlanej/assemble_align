@@ -240,12 +240,12 @@
   <h2><span class="n">7</span>What is open</h2>
   <p>Work paused on 16 November 2026 for review. The open items, in order of how much each limits the results:</p>
   <ol class="plain">
-    <li><b>Precision on new people.</b> Whether a call is true has been measured only on HG002, and NA19240 was judged against other assemblies. The next step is to run the same frozen commit on HG00733, HG02818 and NA19036, which also have HPRC and HGSVC3 assemblies. A second truth genome would be better still.</li>
-    <li><b>Collapses.</b> They are found less often than surplus copies (25–54% from 5 kb, against 73–79%), and collapses in sequence held 4 to 8 times are mostly missed.</li>
+    <li><b>Precision on new people.</b> Whether a call is true has been measured only on HG002, and NA19240 was judged against other assemblies. HG00733, HG02818 and NA19036 also have HPRC and HGSVC3 assemblies, and the next step runs them at the frozen commit as part of a pilot scan of 20 samples. No second truth genome of HG002's grade was found.</li>
+    <li><b>Collapses.</b> They are found less often than surplus copies (25–54% from 5 kb, against 73–79%), and collapses in sequence held 4 to 8 times are mostly missed. Long-read QC such as HMM-Flagger is better placed for them.</li>
     <li><b>Changes in part of the cells.</b> They have no class yet, though they make up a third to a half of the strong missing-allele calls on two releases. HG01103, the second case, has not been run.</li>
     <li><b>Phasing on trio-phased releases.</b> The parent-of-origin check is not independent on assemblies phased with the parents' k-mers, and 120 of the 121 HPRC release-2 samples with both parents sequenced were assembled that way. There it finds what went wrong after phasing, such as HG01943's misplaced piece.</li>
     <li><b>Decisions pending.</b> Two threshold values (<code>min_seg_class</code> 20 against 10, <code>margin</code> 3 against 2), the wording for missing alleles found in neither parent, and three changes to the long-read audit that the planted joins suggest.</li>
-    <li><b>Not started.</b> The scan of whole releases, which is where prevalence will be measured. Continuous integration is also missing: the 38 tests are run by hand.</li>
+    <li><b>Not started.</b> The scan of whole releases, which is where prevalence will be measured; a pilot of 20 HPRC release-2 samples comes first. Continuous integration is also missing: the 38 tests are run by hand.</li>
   </ol>
 </section>
 
