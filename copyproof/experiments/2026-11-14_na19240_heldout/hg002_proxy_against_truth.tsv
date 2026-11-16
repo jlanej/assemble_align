@@ -1,0 +1,27 @@
+what	labels	group	n	by_truth	by_proxy	by_both	proxy_only	truth_only	by_neither	found	found_and_by_truth
+issues	v2_trio	high	119	114	101	99	2	15.0	3.0		
+issues	v2_trio	low	74	31	31	31	0	0.0	43.0		
+issues	hprc_year1	high	119	114	82	82	0	32.0	5.0		
+issues	hprc_year1	low	74	31	33	31	2	0.0	41.0		
+issues	both	high	119	114	74	74	0	40.0	5.0		
+issues	both	low	74	31	30	30	0	1.0	43.0		
+issues	either	high	119	114	103	101	2	13.0	3.0		
+issues	either	low	74	31	33	31	2	0.0	41.0		
+assessable discordances	v2_trio	under 5 kb	29	17	29	17	12			5.0	5.0
+assessable discordances	v2_trio	5 to 20 kb	74	46	74	46	28			29.0	24.0
+assessable discordances	v2_trio	20 to 100 kb	133	110	133	110	23			100.0	100.0
+assessable discordances	v2_trio	over 100 kb	21	15	21	15	6			15.0	13.0
+assessable discordances	v2_trio	5 kb and more	228	171	228	171	57			144.0	137.0
+assessable discordances	v2_trio	all	257	188	257	188	69			149.0	142.0
+assessable discordances	hprc_year1	under 5 kb	136	16	136	16	120			10.0	10.0
+assessable discordances	hprc_year1	5 to 20 kb	244	35	244	35	209			21.0	21.0
+assessable discordances	hprc_year1	20 to 100 kb	310	93	310	93	217			89.0	89.0
+assessable discordances	hprc_year1	over 100 kb	61	8	61	8	53			6.0	6.0
+assessable discordances	hprc_year1	5 kb and more	615	136	615	136	479			116.0	116.0
+assessable discordances	hprc_year1	all	751	152	751	152	599			126.0	126.0
+assessable discordances	both	under 5 kb	16	14	16	14	2			5.0	5.0
+assessable discordances	both	5 to 20 kb	33	31	33	31	2			22.0	22.0
+assessable discordances	both	20 to 100 kb	94	94	94	94	0			93.0	93.0
+assessable discordances	both	over 100 kb	3	3	3	3	0			3.0	3.0
+assessable discordances	both	5 kb and more	130	128	130	128	2			118.0	118.0
+assessable discordances	both	all	146	142	146	142	4			123.0	123.0

@@ -1,0 +1,110 @@
+# Experiments: an index, and where each number comes from
+
+One folder per experiment. Each holds a `README.md` (question, inputs, commands, result, what was
+learned) and the small tables behind its numbers. Large files stay outside git; `DATA` in the
+commands is the data root (`scripts/manifests/` lists what to download into it).
+
+| Folder | Rung of the guide's ladder | Question |
+|---|---|---|
+| [`2026-11-13_engine_validation`](2026-11-13_engine_validation/README.md) | | Are the k-mer counts right, and what do they cost? |
+| [`2026-11-13_hg002_q100_false_flags`](2026-11-13_hg002_q100_false_flags/README.md) | 3 | What is flagged on a truth genome, with short reads and with long reads? |
+| [`2026-11-13_hg002_trio`](2026-11-13_hg002_trio/README.md) | 2 and 3, with parents | What does the hapmer channel flag on a truth genome, and does it find planted swaps? |
+| [`2026-11-13_planted_errors`](2026-11-13_planted_errors/README.md) | 2 | Are errors planted in the truth genome found, and does anything else change? With long reads: what does the audit say at the planted false joins? |
+| [`2026-11-13_hg002_assemblies`](2026-11-13_hg002_assemblies/README.md) | 4 | On real assemblies of the same person, are the issues real and how many are found? |
+| [`2026-11-13_hg01943_trio`](2026-11-13_hg01943_trio/README.md) | 1 | Is the case that motivated the tool flagged, and what else is in that genome? |
+| [`2026-11-13_threshold_sensitivity`](2026-11-13_threshold_sensitivity/README.md) | | Do the results move with the thresholds? What did the classifier's revision change? |
+| [`2026-11-14_na19240_heldout`](2026-11-14_na19240_heldout/README.md) | 5 on one person, with the thresholds frozen as the guide asks before rung 6 | With every threshold fixed beforehand, do the results hold on a second person? |
+| [`2026-11-14_missing_alleles_by_parent`](2026-11-14_missing_alleles_by_parent/README.md) | | Are the missing alleles that neither parent's reads carry NA19240's alone, and did the parents' reads miss them? A tabulation of finished runs. |
+| [`2026-11-14_missing_alleles_long_reads`](2026-11-14_missing_alleles_long_reads/README.md) | | What are the missing alleles that neither parent's reads carry? Read from the long reads each release was built from, and from the changed bases. |
+
+Rung 0 (a synthetic trio) is the test suite, `tests/`. Rung 5 (agreement between assemblies of
+one person, without a truth genome) was run for one of its four people, with every threshold
+frozen beforehand; the notebook and the records call that test rung 6. The scan of whole releases,
+which is the guide's rung 6, was not run.
+
+## Reading order for a reviewer
+
+1. [`../README.md`](../README.md), "What it finds": the claims.
+2. This page: where each claim's number comes from.
+3. The experiment records, in the order rung 3, trio, rung 2, rung 4, rung 1: that is the order
+   in which the method was shaped. Then the sensitivity record, and last the held-out test,
+   which was run after the method had stopped changing. The record on missing alleles by the
+   parents' reads came after that test and tabulates its runs and three older ones. The record
+   on what those alleles are followed it and adds the long reads of the two HPRC releases.
+4. [`../docs/method.md`](../docs/method.md) for the method as built and
+   [`../docs/thresholds.md`](../docs/thresholds.md) for every numeric choice and its origin.
+5. [`../NOTEBOOK.md`](../NOTEBOOK.md) for the order of events. Its entries were written the same
+   evening, not as each experiment ran, and three of them carry counts from before later changes;
+   each says so at its head. Where the notebook and a record differ, the record is regenerated
+   by a script and is the reference.
+6. [`../README.md`](../README.md), "What is open": what is known to need correcting, what is
+   left to decide and what was not run. Work stopped there on 2026-11-16 for a review.
+
+The code was written and changed in one day and arrives as one large commit, so the earlier
+versions of the method are not in the history. Two things stand in for that: the classifier as
+it was before its revision is kept in `scripts/dev/classifier_before_revision.py`, and the
+sensitivity record runs both on the same segments; the hapmer audit can be run with and without
+its two filters (`2026-11-13_hg002_trio/tables.py`).
+
+## Claims and their sources
+
+Every number in `../README.md`, with the table it is read from and what writes that table.
+
+| Claim | Table | Written by |
+|---|---|---|
+| High-confidence copy-number issues confirmed by the truth genome; assessable discordances found, per assembly and summed | `2026-11-13_hg002_assemblies/scoreboard.tsv`; the sums as quoted are written out in `scoreboard.md` | `scripts/eval_truth.py` per assembly, then `scripts/scoreboard.py` |
+| Found and confirmed by size (surplus copies of 5 kb and more, collapses, under 5 kb) | `2026-11-13_hg002_assemblies/scoreboard.by_size.tsv` | the same |
+| The unconfirmed high-confidence issues, 1 to 10 per assembly, and where they lie | `2026-11-13_hg002_assemblies/unconfirmed_high.tsv` | `2026-11-13_hg002_assemblies/unconfirmed.py` |
+| Those 69 sorted: 27 on virus or mitochondrial sequence, 24 on real differences that the scoring rule did not count, 18 with only the reads behind them; none on a known issue; 6 of 27 loci in two or more independent assemblies | `2026-11-13_hg002_assemblies/unconfirmed_summary.tsv` (every count with its denominator), `unconfirmed_by_sort.tsv`, `unconfirmed_by_assembly.tsv`, `unconfirmed_sorted.tsv`, `unconfirmed_loci.tsv`, `unconfirmed_placements.tsv` | `place_unconfirmed.py` (cuts the calls out and locates them in the truth genome), then `sort_unconfirmed.py`, both in that folder |
+| What the short reads of HG002 and its parents and the long reads hold at six of those loci (long reads hold the truth genome's count at four; at two they fall short as the short reads do) | `2026-11-13_hg002_assemblies/unconfirmed_depth.loci.tsv`, `unconfirmed_depth.tsv`, `unconfirmed_depth.stretches.tsv` | `locus_depth.py` on `depth_regions.tsv`, in that folder (the trio run of rung 3 and the public HiFi alignment) |
+| The share confirmed before and after the method stopped changing (95.7% and 94.7%) | `2026-11-13_hg002_assemblies/precision_split.tsv` | `2026-11-13_hg002_assemblies/split.py` |
+| Strong missing-allele calls true 96% of the time, one-sided missing sequence 46% | `2026-11-13_hg002_assemblies/hprc_year2.missing_clusters.tsv` | `2026-11-13_hg002_assemblies/details.py` (the run needs `WITH_READS=1`) |
+| Strong missing-allele calls with k-mers in neither parent's reads: 7% on HG002, where the truth genome holds 51 of 71; 32% and 52% in the HPRC releases of HG01943 and NA19240, at read counts below one copy | `2026-11-14_missing_alleles_by_parent/clusters_by_parent.tsv`, `alleles_held.tsv`, `alleles_by_read_count.tsv` | `2026-11-14_missing_alleles_by_parent/tables.py` |
+| In the HPRC releases of HG01943 and NA19240 the long reads each was built from hold those alleles beside the release's sequence: a part of the long reads at one place at 275 of 276 and 441 of 460 events, nearly all at 2 of the 736 | `2026-11-14_missing_alleles_long_reads/long_reads_events.tsv`; how the two places of an event fall together in `long_reads_event_patterns.tsv`; the sorting was fixed in NOTEBOOK entry u before the reads were searched | `2026-11-14_missing_alleles_long_reads/fetch_long_reads.py` (fetches the reads at the placements from HPRC's public alignments), then `tables.py` in that folder |
+| Of the collapses missed in one assembly, how many show no departure in the reads | `2026-11-13_hg002_assemblies/hprc_year2.collapses.tsv` | `details.py` |
+| Whole-copy calls under 5 windows are mostly not confirmed | `2026-11-13_hg002_assemblies/hprc_year2.whole_copy_by_length.tsv` | `details.py` |
+| Planted errors found, by kind and size | `2026-11-13_planted_errors/sensitivity.tsv` | `scripts/eval_planted.py` |
+| Planted false adjacencies show as unread assembly k-mers | `2026-11-13_planted_errors/breakpoints.tsv` | `scripts/eval_planted.py` |
+| Issues on the planted genome that are neither at an edit nor on the unedited genome | `2026-11-13_planted_errors/new_elsewhere.tsv` (the totals are printed) | `scripts/eval_planted.py` |
+| With long reads, planted false joins become `FALSE_JOIN` (23 of 24 inversion breakpoints, 21 of 36 deletion joins; by size of the edit) and joins through N become `UNSUPPORTED_JOIN` (8 of 8, low) | `2026-11-13_planted_errors/long_reads.summary.tsv`, `long_reads.by_size.tsv`; one row per planted adjacency in `long_reads.adjacencies.tsv` | `scripts/run_planted_hifi.sh` (fetches the reads, aligns them, runs the pipeline), then `2026-11-13_planted_errors/long_read_audit.py score` |
+| Nothing the long-read audit reports on the planted genome lies away from an edit | `2026-11-13_planted_errors/long_reads.audit_issues.tsv`, `long_reads.issue_changes.tsv`, `long_reads.elsewhere.tsv` (the totals at and away from edits are printed by `scripts/eval_planted.py`) | `long_read_audit.py score` |
+| Without the alignment's secondary records the same audit finds 8 of 24 breakpoints and 3 of 36 deletion joins | `2026-11-13_planted_errors/long_reads_no_secondary.summary.tsv` | the same, on the second run of `scripts/run_planted_hifi.sh` |
+| What lies at a planted false join in the alignment: alignments through it, records clipped at it, by type | `2026-11-13_planted_errors/long_reads.records_by_size.tsv`, `long_reads.records.tsv` | `long_read_audit.py records` |
+| The reads fetched for that test, and how the two aligners place them | `2026-11-13_planted_errors/long_reads.reads.tsv` | `long_read_audit.py reads` |
+| Issues on the truth genome by class and confidence (about 25 high-confidence per haplotype) | `2026-11-13_hg002_q100_false_flags/issues_by_class.tsv` | `2026-11-13_hg002_q100_false_flags/analyse.py` |
+| 0.11% of 20,237 duplication boundaries flagged | `2026-11-13_hg002_q100_false_flags/litmus.txt` | `scripts/sd_boundary_litmus.py` (the denominator was fixed in NOTEBOOK entry g before the run) |
+| No ambiguous segment on the truth genome is long and deep; 105 are short dips | `2026-11-13_hg002_q100_false_flags/ambiguous_by_length.tsv` | `analyse.py` |
+| Long reads hold the k-mers of 957 of 1,123 unsupported runs; 115 of the other 119 are known issues, 27 changed in v1.2 | `2026-11-13_hg002_q100_false_flags/unsupported_runs_hifi.tsv` | a run with `--long-read-bam`, then `annotate_runs.py` |
+| What the reads hold instead at those 119 (106 of 110 a different length) and at the four on no list | `not_carried_reads_allele.tsv`, `candidates_reads_allele.tsv` in the same folder | `reads_allele.py` |
+| Long reads hold the unread k-mers at 10 of 13 short copy-number losses | `2026-11-13_hg002_q100_false_flags/hifi_at_short_losses.tsv` | `hifi_at_short_losses.py` |
+| Hapmer channel on the truth genome: 0 of 18 pieces, 143 then 24 switch segments | `2026-11-13_hg002_trio/truth_filters.tsv`, `truth_switches.tsv` | `2026-11-13_hg002_trio/tables.py` |
+| Planted swaps found by the hapmer channel (7 of 12) | `2026-11-13_hg002_trio/planted_swaps.tsv` | `tables.py`; the 11 of 12 by the read channel are in the planted `sensitivity.tsv` |
+| HG01943: 5 of 5 targets, 2 off-target | `2026-11-13_hg01943_trio/score_R2.json` | `../../litmus/cases_HG01943_HG01103/score_flagged_cases.py` on the run's `issues.bed` |
+| HG01943: one misplaced piece; 34 unlinked joins, 11 beside another issue; none of the 7 outside the locus repeats sequence from another join | `2026-11-13_hg01943_trio/issues_by_class.tsv`, `joins.tsv`, `joins_evidence.tsv` | `2026-11-13_hg01943_trio/tables.py` |
+| HG01943: missing sequence in neither parent is 46 events, the known junction first | `2026-11-13_hg01943_trio/missing_in_neither_parent.tsv` | `tables.py` |
+| The engine's counts against jellyfish | `2026-11-13_engine_validation/compare_jellyfish.tsv` | `compare_jellyfish.py` |
+| The classifier before and after its revision; one threshold moved at a time | `2026-11-13_threshold_sensitivity/sensitivity.tsv` | `scripts/dev/cache_segments.py`, then `scripts/dev/sensitivity.py` |
+| Held-out test: the seven declared comparisons, each beside its prediction | `2026-11-14_na19240_heldout/verdicts.tsv`; the predictions in `predictions.tsv`, fixed before the run (`prereg.sha256`) | `2026-11-14_na19240_heldout/tables.py`, from the outputs of `scripts/eval_assemblies.py` and `scripts/eval_planted.py` |
+| Held-out test: 46 of 81 confirmed by both other assemblies, 75 by the Verkko assembly alone, 6 by neither | `2026-11-14_na19240_heldout/score1_counts.tsv`, `after_confirmed_by.tsv`; one row per unconfirmed issue in `unconfirmed_high.tsv` | `tables.py`; `after.py`, written after the result was seen |
+| The stand-in for a truth genome on HG002: 62% to 85% confirmed where the truth confirms 96% | `2026-11-14_na19240_heldout/score1_counts.tsv`, `hg002_proxy_against_truth.tsv` | `calibrate_hg002.sh`, then `tables.py` |
+| Held-out test: surplus copies found (64 of 76); where no collapse is called the reads agree with the release at 10 of 12 | `2026-11-14_na19240_heldout/na19240_short_cn_scores.tsv`, `after_missed_discordances.tsv` | `scripts/eval_assemblies.py`; `after.py` |
+| Held-out test: planted errors found | `2026-11-14_na19240_heldout/planted_sensitivity.tsv` | `plant.sh` (`scripts/plant_errors.py`, `scripts/eval_planted.py`) |
+| Hapmer audit on an assembly phased without the parents: 13 high-confidence switches, 7 confirmed, none contradicted | `2026-11-14_na19240_heldout/verkko_hapmers_summary.tsv`, `verkko_hapmers_calls.tsv` | `2026-11-14_na19240_heldout/hapmers_against_hprc.py` |
+| Costs (minutes, GB) | stated in `../README.md` and in the engine record | timings printed by the engine and in each run's `summary.json`; not collected into a table |
+
+## What cannot be regenerated from this repository
+
+- The intermediate states of the day. The notebook's entry j quotes results of pipeline runs made
+  between changes (for example "collapses found 8 of 64, then 17"); those runs were overwritten.
+  The sensitivity record gives the before and after of the classifier on cached segments, which
+  agrees with them (8 and 17 of 64) but leaves out two pipeline steps.
+- The first exploratory runs at half depth, which the notebook's entries d to f describe.
+- Anything at all without the downloads: about 220 GB of reads, assemblies and alignments
+  (`scripts/manifests/`). The k-mer databases (32 GB) and the run directories (about 315 GB as
+  they stand, nearly all of it positional tracks of 9 to 18 GB per run) are rebuilt from those.
+  The long reads of rung 2 are not in a manifest: `scripts/run_planted_hifi.sh` fetches them by
+  region from a public alignment (0.5 GB). The long reads at the missing alleles of two releases
+  (0.3 GB) are fetched the same way by
+  `2026-11-14_missing_alleles_long_reads/fetch_long_reads.py`. The held-out test adds 56 GB of
+  downloads, 72 GB of k-mer databases in 11 files and 95 GB of run directories, as measured on
+  the disk when it was done.

@@ -1,0 +1,15 @@
+adjacency	size	planted	sum_primary_over	sum_through	sum_through_primary	sum_through_secondary	sum_through_secondary_primary_on_homologue	sum_through_mapq20	sum_through_large_insertion	sum_through_large_deletion	sum_clipped	sum_clipped_primary	sum_clipped_secondary	sum_clipped_secondary_primary_on_homologue	sum_clipped_supplementary	median_primary_over	median_through	median_through_primary	median_through_secondary	median_through_secondary_primary_on_homologue	median_through_mapq20	median_through_large_insertion	median_through_large_deletion	median_clipped	median_clipped_primary	median_clipped_secondary	median_clipped_secondary_primary_on_homologue	median_clipped_supplementary
+deletion join	2000	8	25	3	3	0	0	0	3	0	13	13	0	0	0	3.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	1.5	1.5	0.0	0.0	0.0
+deletion join	5000	8	13	0	0	0	0	0	0	0	12	12	0	0	0	1.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	1.5	1.5	0.0	0.0	0.0
+deletion join	10000	8	12	0	0	0	0	0	0	0	6	6	0	0	0	1.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+deletion join	50000	8	11	0	0	0	0	0	0	0	6	5	0	0	1	0.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+deletion join	200000	4	9	0	0	0	0	0	0	0	5	5	0	0	0	2.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	1.5	1.5	0.0	0.0	0.0
+inversion breakpoint	10000	8	10	0	0	0	0	0	0	0	9	7	0	0	2	1.5	0.0	0.0	0.0	0.0	0.0	0.0	0.0	1.5	0.5	0.0	0.0	0.0
+inversion breakpoint	50000	8	13	0	0	0	0	0	0	0	14	10	0	0	4	1.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	1.0	0.5	0.0	0.0	0.0
+inversion breakpoint	200000	8	28	0	0	0	0	0	0	0	25	17	0	0	8	3.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	3.0	2.5	0.0	0.0	1.0
+join through 100 N	50000	8	0	0	0	0	0	0	0	0	8	6	0	0	2	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.5	0.5	0.0	0.0	0.0
+junction of a tandem duplication	2000	8	177	171	171	0	0	20	0	171	2	2	0	0	0	25.5	24.5	24.5	0.0	0.0	0.5	0.0	24.5	0.0	0.0	0.0	0.0	0.0
+junction of a tandem duplication	5000	8	177	162	162	0	0	58	0	162	10	10	0	0	0	23.0	20.5	20.5	0.0	0.0	4.5	0.0	20.5	1.0	1.0	0.0	0.0	0.0
+junction of a tandem duplication	10000	8	72	64	64	0	0	1	0	64	7	7	0	0	0	9.5	7.5	7.5	0.0	0.0	0.0	0.0	7.5	0.5	0.5	0.0	0.0	0.0
+junction of a tandem duplication	50000	8	0	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0
+junction of a tandem duplication	200000	7	1	0	0	0	0	0	0	0	0	0	0	0	0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0	0.0

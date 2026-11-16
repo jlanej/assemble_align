@@ -1,0 +1,133 @@
+run	in_a_parents_reads	read_count	held_by	placements	held	share
+HG002_hprc_year2	yes	all	truth	925	906	0.979
+HG002_hprc_year2	yes	all	v2_trio	925	836	0.904
+HG002_hprc_year2	yes	all	hprc_year1	925	681	0.736
+HG002_hprc_year2	yes	all	verkko_asm_thic	925	874	0.945
+HG002_hprc_year2	yes	all	hprc_year2_v2_thic	925	806	0.871
+HG002_hprc_year2	yes	all	v2_trio or hprc_year1	925	857	0.926
+HG002_hprc_year2	yes	all	v2_trio and hprc_year1	925	660	0.714
+HG002_hprc_year2	yes	under 9	truth	88	75	0.852
+HG002_hprc_year2	yes	under 9	v2_trio	88	69	0.784
+HG002_hprc_year2	yes	under 9	hprc_year1	88	64	0.727
+HG002_hprc_year2	yes	under 9	verkko_asm_thic	88	71	0.807
+HG002_hprc_year2	yes	under 9	hprc_year2_v2_thic	88	69	0.784
+HG002_hprc_year2	yes	under 9	v2_trio or hprc_year1	88	74	0.841
+HG002_hprc_year2	yes	under 9	v2_trio and hprc_year1	88	59	0.67
+HG002_hprc_year2	yes	9 to 12.5	truth	309	303	0.981
+HG002_hprc_year2	yes	9 to 12.5	v2_trio	309	289	0.935
+HG002_hprc_year2	yes	9 to 12.5	hprc_year1	309	215	0.696
+HG002_hprc_year2	yes	9 to 12.5	verkko_asm_thic	309	289	0.935
+HG002_hprc_year2	yes	9 to 12.5	hprc_year2_v2_thic	309	279	0.903
+HG002_hprc_year2	yes	9 to 12.5	v2_trio or hprc_year1	309	295	0.955
+HG002_hprc_year2	yes	9 to 12.5	v2_trio and hprc_year1	309	209	0.676
+HG002_hprc_year2	yes	13 or more	truth	528	528	1.0
+HG002_hprc_year2	yes	13 or more	v2_trio	528	478	0.905
+HG002_hprc_year2	yes	13 or more	hprc_year1	528	402	0.761
+HG002_hprc_year2	yes	13 or more	verkko_asm_thic	528	514	0.973
+HG002_hprc_year2	yes	13 or more	hprc_year2_v2_thic	528	458	0.867
+HG002_hprc_year2	yes	13 or more	v2_trio or hprc_year1	528	488	0.924
+HG002_hprc_year2	yes	13 or more	v2_trio and hprc_year1	528	392	0.742
+HG002_hprc_year2	no	all	truth	71	51	0.718
+HG002_hprc_year2	no	all	v2_trio	71	52	0.732
+HG002_hprc_year2	no	all	hprc_year1	71	50	0.704
+HG002_hprc_year2	no	all	verkko_asm_thic	71	58	0.817
+HG002_hprc_year2	no	all	hprc_year2_v2_thic	71	54	0.761
+HG002_hprc_year2	no	all	v2_trio or hprc_year1	71	56	0.789
+HG002_hprc_year2	no	all	v2_trio and hprc_year1	71	46	0.648
+HG002_hprc_year2	no	under 9	truth	38	21	0.553
+HG002_hprc_year2	no	under 9	v2_trio	38	23	0.605
+HG002_hprc_year2	no	under 9	hprc_year1	38	19	0.5
+HG002_hprc_year2	no	under 9	verkko_asm_thic	38	27	0.711
+HG002_hprc_year2	no	under 9	hprc_year2_v2_thic	38	23	0.605
+HG002_hprc_year2	no	under 9	v2_trio or hprc_year1	38	25	0.658
+HG002_hprc_year2	no	under 9	v2_trio and hprc_year1	38	17	0.447
+HG002_hprc_year2	no	9 to 12.5	truth	22	19	0.864
+HG002_hprc_year2	no	9 to 12.5	v2_trio	22	18	0.818
+HG002_hprc_year2	no	9 to 12.5	hprc_year1	22	20	0.909
+HG002_hprc_year2	no	9 to 12.5	verkko_asm_thic	22	20	0.909
+HG002_hprc_year2	no	9 to 12.5	hprc_year2_v2_thic	22	20	0.909
+HG002_hprc_year2	no	9 to 12.5	v2_trio or hprc_year1	22	20	0.909
+HG002_hprc_year2	no	9 to 12.5	v2_trio and hprc_year1	22	18	0.818
+HG002_hprc_year2	no	13 or more	truth	11	11	1.0
+HG002_hprc_year2	no	13 or more	v2_trio	11	11	1.0
+HG002_hprc_year2	no	13 or more	hprc_year1	11	11	1.0
+HG002_hprc_year2	no	13 or more	verkko_asm_thic	11	11	1.0
+HG002_hprc_year2	no	13 or more	hprc_year2_v2_thic	11	11	1.0
+HG002_hprc_year2	no	13 or more	v2_trio or hprc_year1	11	11	1.0
+HG002_hprc_year2	no	13 or more	v2_trio and hprc_year1	11	11	1.0
+HG002_hprc_year2	yes or no	all	truth	996	957	0.961
+HG002_hprc_year2	yes or no	all	v2_trio	996	888	0.892
+HG002_hprc_year2	yes or no	all	hprc_year1	996	731	0.734
+HG002_hprc_year2	yes or no	all	verkko_asm_thic	996	932	0.936
+HG002_hprc_year2	yes or no	all	hprc_year2_v2_thic	996	860	0.863
+HG002_hprc_year2	yes or no	all	v2_trio or hprc_year1	996	913	0.917
+HG002_hprc_year2	yes or no	all	v2_trio and hprc_year1	996	706	0.709
+HG002_hprc_year2	yes or no	under 9	truth	126	96	0.762
+HG002_hprc_year2	yes or no	under 9	v2_trio	126	92	0.73
+HG002_hprc_year2	yes or no	under 9	hprc_year1	126	83	0.659
+HG002_hprc_year2	yes or no	under 9	verkko_asm_thic	126	98	0.778
+HG002_hprc_year2	yes or no	under 9	hprc_year2_v2_thic	126	92	0.73
+HG002_hprc_year2	yes or no	under 9	v2_trio or hprc_year1	126	99	0.786
+HG002_hprc_year2	yes or no	under 9	v2_trio and hprc_year1	126	76	0.603
+HG002_hprc_year2	yes or no	9 to 12.5	truth	331	322	0.973
+HG002_hprc_year2	yes or no	9 to 12.5	v2_trio	331	307	0.927
+HG002_hprc_year2	yes or no	9 to 12.5	hprc_year1	331	235	0.71
+HG002_hprc_year2	yes or no	9 to 12.5	verkko_asm_thic	331	309	0.934
+HG002_hprc_year2	yes or no	9 to 12.5	hprc_year2_v2_thic	331	299	0.903
+HG002_hprc_year2	yes or no	9 to 12.5	v2_trio or hprc_year1	331	315	0.952
+HG002_hprc_year2	yes or no	9 to 12.5	v2_trio and hprc_year1	331	227	0.686
+HG002_hprc_year2	yes or no	13 or more	truth	539	539	1.0
+HG002_hprc_year2	yes or no	13 or more	v2_trio	539	489	0.907
+HG002_hprc_year2	yes or no	13 or more	hprc_year1	539	413	0.766
+HG002_hprc_year2	yes or no	13 or more	verkko_asm_thic	539	525	0.974
+HG002_hprc_year2	yes or no	13 or more	hprc_year2_v2_thic	539	469	0.87
+HG002_hprc_year2	yes or no	13 or more	v2_trio or hprc_year1	539	499	0.926
+HG002_hprc_year2	yes or no	13 or more	v2_trio and hprc_year1	539	403	0.748
+NA19240_release	yes	all	verkko	851	763	0.897
+NA19240_release	yes	all	hifiasm	851	724	0.851
+NA19240_release	yes	all	verkko or hifiasm	851	774	0.91
+NA19240_release	yes	all	verkko and hifiasm	851	713	0.838
+NA19240_release	yes	under 9	verkko	70	35	0.5
+NA19240_release	yes	under 9	hifiasm	70	36	0.514
+NA19240_release	yes	under 9	verkko or hifiasm	70	39	0.557
+NA19240_release	yes	under 9	verkko and hifiasm	70	32	0.457
+NA19240_release	yes	9 to 12.5	verkko	261	233	0.893
+NA19240_release	yes	9 to 12.5	hifiasm	261	221	0.847
+NA19240_release	yes	9 to 12.5	verkko or hifiasm	261	235	0.9
+NA19240_release	yes	9 to 12.5	verkko and hifiasm	261	219	0.839
+NA19240_release	yes	13 or more	verkko	520	495	0.952
+NA19240_release	yes	13 or more	hifiasm	520	467	0.898
+NA19240_release	yes	13 or more	verkko or hifiasm	520	500	0.962
+NA19240_release	yes	13 or more	verkko and hifiasm	520	462	0.888
+NA19240_release	no	all	verkko	922	496	0.538
+NA19240_release	no	all	hifiasm	922	487	0.528
+NA19240_release	no	all	verkko or hifiasm	922	621	0.674
+NA19240_release	no	all	verkko and hifiasm	922	362	0.393
+NA19240_release	no	under 9	verkko	489	300	0.613
+NA19240_release	no	under 9	hifiasm	489	265	0.542
+NA19240_release	no	under 9	verkko or hifiasm	489	357	0.73
+NA19240_release	no	under 9	verkko and hifiasm	489	208	0.425
+NA19240_release	no	9 to 12.5	verkko	409	184	0.45
+NA19240_release	no	9 to 12.5	hifiasm	409	208	0.509
+NA19240_release	no	9 to 12.5	verkko or hifiasm	409	248	0.606
+NA19240_release	no	9 to 12.5	verkko and hifiasm	409	144	0.352
+NA19240_release	no	13 or more	verkko	24	12	0.5
+NA19240_release	no	13 or more	hifiasm	24	14	0.583
+NA19240_release	no	13 or more	verkko or hifiasm	24	16	0.667
+NA19240_release	no	13 or more	verkko and hifiasm	24	10	0.417
+NA19240_release	yes or no	all	verkko	1773	1259	0.71
+NA19240_release	yes or no	all	hifiasm	1773	1211	0.683
+NA19240_release	yes or no	all	verkko or hifiasm	1773	1395	0.787
+NA19240_release	yes or no	all	verkko and hifiasm	1773	1075	0.606
+NA19240_release	yes or no	under 9	verkko	559	335	0.599
+NA19240_release	yes or no	under 9	hifiasm	559	301	0.538
+NA19240_release	yes or no	under 9	verkko or hifiasm	559	396	0.708
+NA19240_release	yes or no	under 9	verkko and hifiasm	559	240	0.429
+NA19240_release	yes or no	9 to 12.5	verkko	670	417	0.622
+NA19240_release	yes or no	9 to 12.5	hifiasm	670	429	0.64
+NA19240_release	yes or no	9 to 12.5	verkko or hifiasm	670	483	0.721
+NA19240_release	yes or no	9 to 12.5	verkko and hifiasm	670	363	0.542
+NA19240_release	yes or no	13 or more	verkko	544	507	0.932
+NA19240_release	yes or no	13 or more	hifiasm	544	481	0.884
+NA19240_release	yes or no	13 or more	verkko or hifiasm	544	516	0.949
+NA19240_release	yes or no	13 or more	verkko and hifiasm	544	472	0.868

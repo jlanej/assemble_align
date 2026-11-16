@@ -1,0 +1,5 @@
+run	depth_per_copy	in_a_parents_reads	calls	held_by_one_or_both	share_held	read_count_median	read_count_quartile_1	read_count_quartile_3
+NA19240	13.638	no	922	621	0.674	8.0	7.5	10.0
+NA19240	13.638	yes	851	774	0.91	14.0	11.0	17.0
+HG002 hprc_year2	13.392	no	71	56	0.789	8.5	7.25	10.5
+HG002 hprc_year2	13.392	yes	925	857	0.926	13.0	11.0	17.0

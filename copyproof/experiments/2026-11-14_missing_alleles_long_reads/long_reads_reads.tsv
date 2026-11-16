@@ -1,0 +1,5 @@
+run	class	placements	records	left_out_secondary_or_supplementary	not_covering	covering	hold_the_allele	hold_the_release	hold_both	hold_neither	allele_only_outside_the_window	hold_every_allele_kmer	hold_under_half_of_the_allele_kmers	covering_with_mapping_quality_under_20	allele_holders_with_mapping_quality_under_20	covering_per_placement_quartile_1	covering_per_placement_median	covering_per_placement_quartile_3	placements_without_a_release_kmer_there	placements_with_fewer_than_10_covering
+NA19240_release	in a parent's reads	851	8406	6	331	8069	2760	5168	8	149	8	2444	146	4310	1768	2.0	8.0	16.0	8	469
+NA19240_release	in neither parent's reads	922	16366	18	364	15984	3299	12509	19	195	0	3083	104	3320	657	14.0	17.0	20.0	2	33
+HG01943_release	in a parent's reads	1156	44108	67	976	43065	19734	22711	114	734	3	16864	870	16890	7616	27.75	33.0	45.0	8	42
+HG01943_release	in neither parent's reads	545	18380	46	391	17943	3387	14327	13	242	0	3160	108	6010	1129	29.0	32.0	37.0	0	0

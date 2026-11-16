@@ -1,0 +1,10 @@
+family	who	database	reads	bases_gb	kept_from_sighting	count_at_the_peak	half_of_it	depth_per_copy_of_the_run	chance_of_fewer_than_2_sightings
+HG002	child	DATA/kmerdb/HG002.novaseq.35x.cpkdb	711582514	107.4	2	26	13.0	13.392	3.2e-05
+HG002	mother	DATA/kmerdb/HG004.novaseq.cpkdb	720539122	108.8	2	26	13.0		3.2e-05
+HG002	father	DATA/kmerdb/HG003.novaseq.cpkdb	718619796	108.5	2	26	13.0		3.2e-05
+HG01943	child	DATA/work/hprc_r2/HG01943/reads.sample.cpkdb	737107244	110.6	2	28	14.0	14.225	1.2e-05
+HG01943	mother	DATA/work/hprc_r2/HG01943/reads.mother.cpkdb	775489180	116.3	2	28	14.0		1.2e-05
+HG01943	father	DATA/work/hprc_r2/HG01943/reads.father.cpkdb	794657308	119.2	2	30	15.0		4.9e-06
+NA19240	child	DATA/kmerdb/NA19240.nygc.cpkdb	727171320	109.1	2	26	13.0	13.638	3.2e-05
+NA19240	mother	DATA/kmerdb/NA19238.nygc.cpkdb	939885340	141.0	2	34	17.0		7.5e-07
+NA19240	father	DATA/kmerdb/NA19239.nygc.cpkdb	723690456	108.6	2	27	13.5		2.0e-05

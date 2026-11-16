@@ -1,0 +1,4 @@
+run	planted_run	edits	edits_by_kind	unedited_in_a_parent	planted_in_a_parent	made_by_the_edits_in_a_parent	unedited_in_neither	planted_in_neither	made_by_the_edits_in_neither	unedited_placements_not_found_again	made_by_the_edits	events_made_by_the_edits	share_in_neither_upper_95
+HG002_truth_genome	HG002_truth_genome_planted	111	del=36;dup=39;extra=8;inv=12;invgap=4;swap=12	40	2059	2019	34	34	0	0	2019	1422	0.00148
+NA19240_release	NA19240_release_planted	115	del=39;dup=40;extra=8;inv=12;invgap=4;swap=12	851	3509	2658	922	922	0	0	2658	1846	0.00113
+both		226		891	5568	4677	956	956	0	0	4677	3268	0.00064

@@ -1,0 +1,71 @@
+run	placements_are	of	read_count	placements	share	share_up_to_here
+HG002_hprc_year2	in a parent's reads	925	under 8	24	0.026	0.026
+HG002_hprc_year2	in a parent's reads	925	8 or 8.5	64	0.069	0.095
+HG002_hprc_year2	in a parent's reads	925	9 to 10.5	142	0.154	0.249
+HG002_hprc_year2	in a parent's reads	925	11 to 12.5	167	0.181	0.429
+HG002_hprc_year2	in a parent's reads	925	13 to 16.5	287	0.31	0.739
+HG002_hprc_year2	in a parent's reads	925	17 to 24.5	221	0.239	0.978
+HG002_hprc_year2	in a parent's reads	925	25 or more	20	0.022	1.0
+HG002_hprc_year2	in neither parent's reads	71	under 8	20	0.282	0.282
+HG002_hprc_year2	in neither parent's reads	71	8 or 8.5	18	0.254	0.535
+HG002_hprc_year2	in neither parent's reads	71	9 to 10.5	16	0.225	0.761
+HG002_hprc_year2	in neither parent's reads	71	11 to 12.5	6	0.085	0.845
+HG002_hprc_year2	in neither parent's reads	71	13 to 16.5	2	0.028	0.873
+HG002_hprc_year2	in neither parent's reads	71	17 to 24.5	9	0.127	1.0
+HG002_hprc_year2	in neither parent's reads	71	25 or more	0	0.0	1.0
+HG002_truth_genome	in a parent's reads	40	under 8	23	0.575	0.575
+HG002_truth_genome	in a parent's reads	40	8 or 8.5	9	0.225	0.8
+HG002_truth_genome	in a parent's reads	40	9 to 10.5	6	0.15	0.95
+HG002_truth_genome	in a parent's reads	40	11 to 12.5	1	0.025	0.975
+HG002_truth_genome	in a parent's reads	40	13 to 16.5	0	0.0	0.975
+HG002_truth_genome	in a parent's reads	40	17 to 24.5	1	0.025	1.0
+HG002_truth_genome	in a parent's reads	40	25 or more	0	0.0	1.0
+HG002_truth_genome	in neither parent's reads	34	under 8	11	0.324	0.324
+HG002_truth_genome	in neither parent's reads	34	8 or 8.5	10	0.294	0.618
+HG002_truth_genome	in neither parent's reads	34	9 to 10.5	3	0.088	0.706
+HG002_truth_genome	in neither parent's reads	34	11 to 12.5	6	0.176	0.882
+HG002_truth_genome	in neither parent's reads	34	13 to 16.5	4	0.118	1.0
+HG002_truth_genome	in neither parent's reads	34	17 to 24.5	0	0.0	1.0
+HG002_truth_genome	in neither parent's reads	34	25 or more	0	0.0	1.0
+HG002_truth_genome	made by planted errors	2019	under 8	32	0.016	0.016
+HG002_truth_genome	made by planted errors	2019	8 or 8.5	92	0.046	0.061
+HG002_truth_genome	made by planted errors	2019	9 to 10.5	278	0.138	0.199
+HG002_truth_genome	made by planted errors	2019	11 to 12.5	416	0.206	0.405
+HG002_truth_genome	made by planted errors	2019	13 to 16.5	676	0.335	0.74
+HG002_truth_genome	made by planted errors	2019	17 to 24.5	514	0.255	0.995
+HG002_truth_genome	made by planted errors	2019	25 or more	11	0.005	1.0
+HG01943_release	in a parent's reads	1156	under 8	25	0.022	0.022
+HG01943_release	in a parent's reads	1156	8 or 8.5	52	0.045	0.067
+HG01943_release	in a parent's reads	1156	9 to 10.5	127	0.11	0.176
+HG01943_release	in a parent's reads	1156	11 to 12.5	190	0.164	0.341
+HG01943_release	in a parent's reads	1156	13 to 16.5	411	0.356	0.696
+HG01943_release	in a parent's reads	1156	17 to 24.5	302	0.261	0.958
+HG01943_release	in a parent's reads	1156	25 or more	49	0.042	1.0
+HG01943_release	in neither parent's reads	545	under 8	155	0.284	0.284
+HG01943_release	in neither parent's reads	545	8 or 8.5	168	0.308	0.593
+HG01943_release	in neither parent's reads	545	9 to 10.5	150	0.275	0.868
+HG01943_release	in neither parent's reads	545	11 to 12.5	62	0.114	0.982
+HG01943_release	in neither parent's reads	545	13 to 16.5	10	0.018	1.0
+HG01943_release	in neither parent's reads	545	17 to 24.5	0	0.0	1.0
+HG01943_release	in neither parent's reads	545	25 or more	0	0.0	1.0
+NA19240_release	in a parent's reads	851	under 8	38	0.045	0.045
+NA19240_release	in a parent's reads	851	8 or 8.5	32	0.038	0.082
+NA19240_release	in a parent's reads	851	9 to 10.5	110	0.129	0.212
+NA19240_release	in a parent's reads	851	11 to 12.5	151	0.177	0.389
+NA19240_release	in a parent's reads	851	13 to 16.5	294	0.345	0.734
+NA19240_release	in a parent's reads	851	17 to 24.5	175	0.206	0.94
+NA19240_release	in a parent's reads	851	25 or more	51	0.06	1.0
+NA19240_release	in neither parent's reads	922	under 8	245	0.266	0.266
+NA19240_release	in neither parent's reads	922	8 or 8.5	244	0.265	0.53
+NA19240_release	in neither parent's reads	922	9 to 10.5	309	0.335	0.866
+NA19240_release	in neither parent's reads	922	11 to 12.5	100	0.108	0.974
+NA19240_release	in neither parent's reads	922	13 to 16.5	22	0.024	0.998
+NA19240_release	in neither parent's reads	922	17 to 24.5	2	0.002	1.0
+NA19240_release	in neither parent's reads	922	25 or more	0	0.0	1.0
+NA19240_release	made by planted errors	2658	under 8	40	0.015	0.015
+NA19240_release	made by planted errors	2658	8 or 8.5	96	0.036	0.051
+NA19240_release	made by planted errors	2658	9 to 10.5	368	0.138	0.19
+NA19240_release	made by planted errors	2658	11 to 12.5	469	0.176	0.366
+NA19240_release	made by planted errors	2658	13 to 16.5	1061	0.399	0.765
+NA19240_release	made by planted errors	2658	17 to 24.5	608	0.229	0.994
+NA19240_release	made by planted errors	2658	25 or more	16	0.006	1.0

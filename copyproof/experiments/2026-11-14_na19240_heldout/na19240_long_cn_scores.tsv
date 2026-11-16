@@ -1,0 +1,73 @@
+labels	direction	size	discordances	assessable	found	found_high	issues	issues_confirmed	high	high_confirmed	low	low_confirmed
+verkko	gain	under 5 kb	144	30	1	1	2	0	0	0	2	0
+verkko	gain	5 to 20 kb	178	64	7	7	9	8	9	8	0	0
+verkko	gain	20 to 100 kb	80	42	3	3	3	3	3	3	0	0
+verkko	gain	over 100 kb	24	23	0	0	0	0	0	0	0	0
+verkko	gain	5 kb and more	282	129	10	10	12	11	12	11	0	0
+verkko	gain	all	426	159	11	11	14	11	12	11	2	0
+verkko	loss	under 5 kb	194	30	4	2	23	2	0	0	23	2
+verkko	loss	5 to 20 kb	116	45	20	13	15	13	9	7	6	6
+verkko	loss	20 to 100 kb	93	88	63	52	52	49	44	42	8	7
+verkko	loss	over 100 kb	13	13	7	7	11	10	11	10	0	0
+verkko	loss	5 kb and more	222	146	90	72	78	72	64	59	14	13
+verkko	loss	all	416	176	94	74	101	74	64	59	37	15
+verkko	both directions	under 5 kb	338	60	5	3	25	2	0	0	25	2
+verkko	both directions	5 to 20 kb	294	109	27	20	24	21	18	15	6	6
+verkko	both directions	20 to 100 kb	173	130	66	55	55	52	47	45	8	7
+verkko	both directions	over 100 kb	37	36	7	7	11	10	11	10	0	0
+verkko	both directions	5 kb and more	504	275	100	82	90	83	76	70	14	13
+verkko	both directions	all	842	335	105	85	115	85	76	70	39	15
+hifiasm	gain	under 5 kb	2707	249	0	0	2	2	0	0	2	2
+hifiasm	gain	5 to 20 kb	1732	288	5	5	9	6	9	6	0	0
+hifiasm	gain	20 to 100 kb	1051	578	0	0	3	3	3	3	0	0
+hifiasm	gain	over 100 kb	2149	1952	0	0	0	0	0	0	0	0
+hifiasm	gain	5 kb and more	4932	2818	5	5	12	9	12	9	0	0
+hifiasm	gain	all	7639	3067	5	5	14	11	12	9	2	2
+hifiasm	loss	under 5 kb	123	31	5	3	23	2	0	0	23	2
+hifiasm	loss	5 to 20 kb	75	36	12	8	15	10	9	5	6	5
+hifiasm	loss	20 to 100 kb	52	51	38	36	52	30	44	29	8	1
+hifiasm	loss	over 100 kb	6	6	4	4	11	6	11	6	0	0
+hifiasm	loss	5 kb and more	133	93	54	48	78	46	64	40	14	6
+hifiasm	loss	all	256	124	59	51	101	48	64	40	37	8
+hifiasm	both directions	under 5 kb	2830	280	5	3	25	4	0	0	25	4
+hifiasm	both directions	5 to 20 kb	1807	324	17	13	24	16	18	11	6	5
+hifiasm	both directions	20 to 100 kb	1103	629	38	36	55	33	47	32	8	1
+hifiasm	both directions	over 100 kb	2155	1958	4	4	11	6	11	6	0	0
+hifiasm	both directions	5 kb and more	5065	2911	59	53	90	55	76	49	14	6
+hifiasm	both directions	all	7895	3191	64	56	115	59	76	49	39	10
+both	gain	under 5 kb	21	9	0	0	2	0	0	0	2	0
+both	gain	5 to 20 kb	18	10	2	2	9	2	9	2	0	0
+both	gain	20 to 100 kb	0	0	0	0	3	0	3	0	0	0
+both	gain	over 100 kb	4	4	0	0	0	0	0	0	0	0
+both	gain	5 kb and more	22	14	2	2	12	2	12	2	0	0
+both	gain	all	43	23	2	2	14	2	12	2	2	0
+both	loss	under 5 kb	101	22	4	2	23	2	0	0	23	2
+both	loss	5 to 20 kb	48	25	12	8	15	10	9	5	6	5
+both	loss	20 to 100 kb	46	45	38	36	52	30	44	29	8	1
+both	loss	over 100 kb	6	6	4	4	11	6	11	6	0	0
+both	loss	5 kb and more	100	76	54	48	78	46	64	40	14	6
+both	loss	all	201	98	58	50	101	48	64	40	37	8
+both	both directions	under 5 kb	122	31	4	2	25	2	0	0	25	2
+both	both directions	5 to 20 kb	66	35	14	10	24	12	18	7	6	5
+both	both directions	20 to 100 kb	46	45	38	36	55	30	47	29	8	1
+both	both directions	over 100 kb	10	10	4	4	11	6	11	6	0	0
+both	both directions	5 kb and more	122	90	56	50	90	48	76	42	14	6
+both	both directions	all	244	121	60	52	115	50	76	42	39	8
+either	gain	under 5 kb					2	2	0	0	2	2
+either	gain	5 to 20 kb					9	8	9	8	0	0
+either	gain	20 to 100 kb					3	3	3	3	0	0
+either	gain	over 100 kb					0	0	0	0	0	0
+either	gain	5 kb and more					12	11	12	11	0	0
+either	gain	all					14	13	12	11	2	2
+either	loss	under 5 kb					23	2	0	0	23	2
+either	loss	5 to 20 kb					15	13	9	7	6	6
+either	loss	20 to 100 kb					52	49	44	42	8	7
+either	loss	over 100 kb					11	10	11	10	0	0
+either	loss	5 kb and more					78	72	64	59	14	13
+either	loss	all					101	74	64	59	37	15
+either	both directions	under 5 kb					25	4	0	0	25	4
+either	both directions	5 to 20 kb					24	21	18	15	6	6
+either	both directions	20 to 100 kb					55	52	47	45	8	7
+either	both directions	over 100 kb					11	10	11	10	0	0
+either	both directions	5 kb and more					90	83	76	70	14	13
+either	both directions	all					115	87	76	70	39	17

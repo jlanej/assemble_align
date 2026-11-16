@@ -1,0 +1,21 @@
+run	class	events_with_one_placement_of_one_changed_base_and_one_of_a_larger_difference	long_reads_hold_the_allele	events
+NA19240_release	in a parent's reads	24	at the placement of one changed base only	3
+NA19240_release	in a parent's reads	24	at the other placement only	0
+NA19240_release	in a parent's reads	24	at both	1
+NA19240_release	in a parent's reads	24	at neither	0
+NA19240_release	in a parent's reads	24	too few reads at one of the two	20
+NA19240_release	in neither parent's reads	20	at the placement of one changed base only	16
+NA19240_release	in neither parent's reads	20	at the other placement only	1
+NA19240_release	in neither parent's reads	20	at both	0
+NA19240_release	in neither parent's reads	20	at neither	0
+NA19240_release	in neither parent's reads	20	too few reads at one of the two	3
+HG01943_release	in a parent's reads	6	at the placement of one changed base only	1
+HG01943_release	in a parent's reads	6	at the other placement only	1
+HG01943_release	in a parent's reads	6	at both	3
+HG01943_release	in a parent's reads	6	at neither	0
+HG01943_release	in a parent's reads	6	too few reads at one of the two	1
+HG01943_release	in neither parent's reads	7	at the placement of one changed base only	7
+HG01943_release	in neither parent's reads	7	at the other placement only	0
+HG01943_release	in neither parent's reads	7	at both	0
+HG01943_release	in neither parent's reads	7	at neither	0
+HG01943_release	in neither parent's reads	7	too few reads at one of the two	0

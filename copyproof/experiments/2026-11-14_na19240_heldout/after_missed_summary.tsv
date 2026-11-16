@@ -1,0 +1,10 @@
+direction	found	copy_number_channel_holds	discordances	bp	median_reads_over_release	median_others_over_release	at_flagger_call	at_nucflag_call
+gain	False	DEPTH	1	5000	0.717	1.544	0	1
+gain	False	no segment	11	851000	1.064	1.439	0	4
+gain	True	CN	2	11000	1.8515	1.7955	0	2
+loss	False	CN_OR_DEPTH	4	50000	0.8645	0.863	0	0
+loss	False	DEPTH	3	77000	0.653	0.674	0	1
+loss	False	IRREGULAR	3	15000	0.172	0.644	0	3
+loss	False	no segment	2	11000	1.0045	0.819	0	1
+loss	True	CN	57	2767377	0.674	0.677	22	32
+loss	True	CN_OR_DEPTH	7	110626	0.811	0.675	1	4

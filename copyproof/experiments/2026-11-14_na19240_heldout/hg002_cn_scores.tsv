@@ -1,0 +1,91 @@
+labels	direction	size	discordances	assessable	found	found_high	issues	issues_confirmed	high	high_confirmed	low	low_confirmed
+v2_trio	gain	under 5 kb	97	12	0	0	0	0	0	0	0	0
+v2_trio	gain	5 to 20 kb	95	39	9	9	5	2	5	2	0	0
+v2_trio	gain	20 to 100 kb	55	26	0	0	8	1	8	1	0	0
+v2_trio	gain	over 100 kb	10	10	6	6	11	6	11	6	0	0
+v2_trio	gain	5 kb and more	160	75	15	15	24	9	24	9	0	0
+v2_trio	gain	all	257	87	15	15	24	9	24	9	0	0
+v2_trio	loss	under 5 kb	208	17	5	4	42	1	0	0	42	1
+v2_trio	loss	5 to 20 kb	174	35	20	17	17	14	12	11	5	3
+v2_trio	loss	20 to 100 kb	121	107	100	73	98	98	71	71	27	27
+v2_trio	loss	over 100 kb	13	11	9	9	12	10	12	10	0	0
+v2_trio	loss	5 kb and more	308	153	129	99	127	122	95	92	32	30
+v2_trio	loss	all	516	170	134	103	169	123	95	92	74	31
+v2_trio	both directions	under 5 kb	305	29	5	4	42	1	0	0	42	1
+v2_trio	both directions	5 to 20 kb	269	74	29	26	22	16	17	13	5	3
+v2_trio	both directions	20 to 100 kb	176	133	100	73	106	99	79	72	27	27
+v2_trio	both directions	over 100 kb	23	21	15	15	23	16	23	16	0	0
+v2_trio	both directions	5 kb and more	468	228	144	114	151	131	119	101	32	30
+v2_trio	both directions	all	773	257	149	118	193	132	119	101	74	31
+hprc_year1	gain	under 5 kb	759	33	1	1	0	0	0	0	0	0
+hprc_year1	gain	5 to 20 kb	483	118	1	1	5	1	5	1	0	0
+hprc_year1	gain	20 to 100 kb	235	136	0	0	8	0	8	0	0	0
+hprc_year1	gain	over 100 kb	16	11	0	0	11	1	11	1	0	0
+hprc_year1	gain	5 kb and more	734	265	1	1	24	2	24	2	0	0
+hprc_year1	gain	all	1493	298	2	2	24	2	24	2	0	0
+hprc_year1	loss	under 5 kb	623	103	9	5	42	1	0	0	42	1
+hprc_year1	loss	5 to 20 kb	557	126	20	17	17	15	12	10	5	5
+hprc_year1	loss	20 to 100 kb	368	174	89	63	98	89	71	62	27	27
+hprc_year1	loss	over 100 kb	103	50	6	6	12	8	12	8	0	0
+hprc_year1	loss	5 kb and more	1028	350	115	86	127	112	95	80	32	32
+hprc_year1	loss	all	1651	453	124	91	169	113	95	80	74	33
+hprc_year1	both directions	under 5 kb	1382	136	10	6	42	1	0	0	42	1
+hprc_year1	both directions	5 to 20 kb	1040	244	21	18	22	16	17	11	5	5
+hprc_year1	both directions	20 to 100 kb	603	310	89	63	106	89	79	62	27	27
+hprc_year1	both directions	over 100 kb	119	61	6	6	23	9	23	9	0	0
+hprc_year1	both directions	5 kb and more	1762	615	116	87	151	114	119	82	32	32
+hprc_year1	both directions	all	3144	751	126	93	193	115	119	82	74	33
+both	gain	under 5 kb	16	3	1	1	0	0	0	0	0	0
+both	gain	5 to 20 kb	14	3	1	1	5	0	5	0	0	0
+both	gain	20 to 100 kb	0	0	0	0	8	0	8	0	0	0
+both	gain	over 100 kb	0	0	0	0	11	0	11	0	0	0
+both	gain	5 kb and more	14	3	1	1	24	0	24	0	0	0
+both	gain	all	30	6	2	2	24	0	24	0	0	0
+both	loss	under 5 kb	112	13	4	3	42	1	0	0	42	1
+both	loss	5 to 20 kb	111	30	21	18	17	12	12	9	5	3
+both	loss	20 to 100 kb	102	94	93	67	98	88	71	62	27	26
+both	loss	over 100 kb	3	3	3	3	12	3	12	3	0	0
+both	loss	5 kb and more	216	127	117	88	127	103	95	74	32	29
+both	loss	all	328	140	121	91	169	104	95	74	74	30
+both	both directions	under 5 kb	128	16	5	4	42	1	0	0	42	1
+both	both directions	5 to 20 kb	125	33	22	19	22	12	17	9	5	3
+both	both directions	20 to 100 kb	102	94	93	67	106	88	79	62	27	26
+both	both directions	over 100 kb	3	3	3	3	23	3	23	3	0	0
+both	both directions	5 kb and more	230	130	118	89	151	103	119	74	32	29
+both	both directions	all	358	146	123	93	193	104	119	74	74	30
+truth	gain	under 5 kb	146	10	0	0	0	0	0	0	0	0
+truth	gain	5 to 20 kb	114	20	4	4	5	5	5	5	0	0
+truth	gain	20 to 100 kb	87	24	9	9	8	8	8	8	0	0
+truth	gain	over 100 kb	23	10	4	4	11	9	11	9	0	0
+truth	gain	5 kb and more	224	54	17	17	24	22	24	22	0	0
+truth	gain	all	370	64	17	17	24	22	24	22	0	0
+truth	loss	under 5 kb	68	11	5	4	42	1	0	0	42	1
+truth	loss	5 to 20 kb	85	38	20	17	17	14	12	11	5	3
+truth	loss	20 to 100 kb	111	107	100	73	98	98	71	71	27	27
+truth	loss	over 100 kb	13	13	9	9	12	10	12	10	0	0
+truth	loss	5 kb and more	209	158	129	99	127	122	95	92	32	30
+truth	loss	all	277	169	134	103	169	123	95	92	74	31
+truth	both directions	under 5 kb	214	21	5	4	42	1	0	0	42	1
+truth	both directions	5 to 20 kb	199	58	24	21	22	19	17	16	5	3
+truth	both directions	20 to 100 kb	198	131	109	82	106	106	79	79	27	27
+truth	both directions	over 100 kb	36	23	13	13	23	19	23	19	0	0
+truth	both directions	5 kb and more	433	212	146	116	151	144	119	114	32	30
+truth	both directions	all	647	233	151	120	193	145	119	114	74	31
+either	gain	under 5 kb					0	0	0	0	0	0
+either	gain	5 to 20 kb					5	3	5	3	0	0
+either	gain	20 to 100 kb					8	1	8	1	0	0
+either	gain	over 100 kb					11	7	11	7	0	0
+either	gain	5 kb and more					24	11	24	11	0	0
+either	gain	all					24	11	24	11	0	0
+either	loss	under 5 kb					42	1	0	0	42	1
+either	loss	5 to 20 kb					17	16	12	11	5	5
+either	loss	20 to 100 kb					98	98	71	71	27	27
+either	loss	over 100 kb					12	10	12	10	0	0
+either	loss	5 kb and more					127	124	95	92	32	32
+either	loss	all					169	125	95	92	74	33
+either	both directions	under 5 kb					42	1	0	0	42	1
+either	both directions	5 to 20 kb					22	19	17	14	5	5
+either	both directions	20 to 100 kb					106	99	79	72	27	27
+either	both directions	over 100 kb					23	17	23	17	0	0
+either	both directions	5 kb and more					151	135	119	103	32	32
+either	both directions	all					193	136	119	103	74	33

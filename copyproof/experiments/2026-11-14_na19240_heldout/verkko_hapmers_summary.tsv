@@ -1,0 +1,32 @@
+what	n
+sequences	1120
+sequences assessed by the audit	177
+... bases in them	6072733046
+... parent agrees with the trio-phased haplotypes	127
+... parent disagrees	20
+... unclear by the trio-phased haplotypes	30
+PHASE_SWITCH calls	65
+... bases	27199000
+... confirmed	23
+... contradicted	8
+... unclear	34
+PHASE_SWITCH calls with 10 sites or more	13
+... bases with 10 sites or more	25847000
+... confirmed with 10 sites or more	7
+... contradicted with 10 sites or more	0
+... unclear with 10 sites or more	6
+PHASE_SWITCH calls with under 10 sites	52
+... bases with under 10 sites	1352000
+... confirmed with under 10 sites	16
+... contradicted with under 10 sites	8
+... unclear with under 10 sites	28
+MISPLACED_PIECE calls	0
+... bases	0
+... confirmed	0
+... contradicted	0
+... unclear	0
+50-kb bins of assessed sequences	121547
+bins that follow the other parent by the trio-phased haplotypes	660
+... of those, flagged by the audit	482
+bins flagged by the audit	542
+... of those, following the other parent by the trio-phased haplotypes	482

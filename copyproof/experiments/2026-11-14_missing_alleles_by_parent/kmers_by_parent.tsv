@@ -1,0 +1,5 @@
+run	threshold	kmers	in_both_parents	in_the_mother_only	in_the_father_only	in_neither_parent	share_in_neither
+HG002_hprc_year2	7	6332200	5715920	201604	348392	66284	0.0105
+HG002_truth_genome	7	6327052	5714928	200416	345996	65712	0.0104
+HG01943_release	7	4005364	3593676	130732	202224	78732	0.0197
+NA19240_release	7	4984052	4440428	311116	105040	127468	0.0256

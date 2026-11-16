@@ -1,0 +1,332 @@
+{
+ "copyproof": "0.1.0",
+ "k": 31,
+ "sample": 4,
+ "window": 1000,
+ "multiplicity_cap": 8,
+ "groups": [
+  {
+   "label": "pat",
+   "sequences": 117,
+   "bases": 2921296798,
+   "non_acgt": 3928230
+  },
+  {
+   "label": "mat",
+   "sequences": 127,
+   "bases": 3063349020,
+   "non_acgt": 3675080
+  }
+ ],
+ "read_sets": [
+  "sample",
+  "mother",
+  "father"
+ ],
+ "depth_per_copy": 14.225,
+ "depth_model": {
+  "omega": [
+   1.0,
+   1.4417,
+   1.4417,
+   2.0835,
+   1.7731,
+   3.0721,
+   1.9817,
+   4.2908,
+   2.5735
+  ],
+  "psi": 0.0732,
+  "ratio_sd_per_window": 0.10967043471082463,
+  "median_kmers_per_window": 228.0,
+  "median_expected_sum": 6453.513116136976,
+  "gc_bins": 61,
+  "omega_windows": {
+   "1": 1314251,
+   "3": 42979,
+   "4": 741347,
+   "5": 16654,
+   "6": 157657,
+   "7": 9464,
+   "8": 46938
+  },
+  "median_pair_weight_per_kmer": 27.75774923072172
+ },
+ "bases": 5984645818,
+ "assessable_fraction": 0.8893,
+ "cannot_assess_bp": 662345088,
+ "kmer_support": {
+  "distinct_kmers_estimated": 2573729144,
+  "unsupported_kmers_estimated": 500156,
+  "unsupported_fraction": 0.00019433124933367115,
+  "qv": 52.03
+ },
+ "read_kmer_completeness": 0.997362,
+ "cn_segments": {
+  "DEPTH": 2883,
+  "IRREGULAR": 572,
+  "CN_OR_DEPTH": 163,
+  "CN": 135
+ },
+ "cn_or_depth_not_reported": 124,
+ "cn_settled_by_other_copies": 9,
+ "unsupported_clusters": 12255,
+ "hapmers": {
+  "hapmer_sites": 2355996,
+  "sequences_assessed": 153,
+  "sequences_not_assessable": 91,
+  "switch_segments": 32,
+  "switched_bp": 2065000,
+  "pieces_other_parent": 1
+ },
+ "missing": {
+  "threshold": 7,
+  "tracked_kmers": 1695897,
+  "estimated_kmers": 6783588,
+  "low_complexity": 2487700,
+  "high_copy": 290524,
+  "candidates": 4005364,
+  "candidates_about_one_copy": 3530700,
+  "candidates_about_two_copies": 474664,
+  "candidates_in_both_parents": 3593676,
+  "candidates_in_parent1_only": 130732,
+  "candidates_in_parent2_only": 202224,
+  "candidates_in_neither_parent": 78732,
+  "recruited_reads": 312671,
+  "recruit_cap_reached": false,
+  "unplaced_reads": 138757,
+  "unplaced_tracked_kmers": 211621,
+  "loci_on_one_strand_only": 16894,
+  "clusters": 3339,
+  "clusters_MISSING_SEQUENCE": 1142,
+  "clusters_MISSING_ALLELE": 2196,
+  "clusters_MISSING_JUNCTION": 1
+ },
+ "joins": {
+  "unsupported": 34,
+  "not_assessable": 7,
+  "linked": 1,
+  "unsupported_runs": {
+   "carried": 1072,
+   "not_carried": 659,
+   "unclear": 452,
+   "fetch_failed": 1
+  },
+  "copy_number_losses": {
+   "carried": 26,
+   "unclear": 22,
+   "not_carried": 3
+  }
+ },
+ "issues": 2737,
+ "issues_by_class": [
+  {
+   "class": "BASE_ERROR",
+   "role": "locus",
+   "confidence": "high",
+   "n": 425
+  },
+  {
+   "class": "BASE_ERROR",
+   "role": "locus",
+   "confidence": "low",
+   "n": 284
+  },
+  {
+   "class": "COLLAPSE",
+   "role": "locus",
+   "confidence": "high",
+   "n": 14
+  },
+  {
+   "class": "COLLAPSE",
+   "role": "locus",
+   "confidence": "low",
+   "n": 1
+  },
+  {
+   "class": "COLLAPSE",
+   "role": "partner",
+   "confidence": "high",
+   "n": 8
+  },
+  {
+   "class": "COLLAPSE",
+   "role": "unresolved",
+   "confidence": "high",
+   "n": 14
+  },
+  {
+   "class": "COLLAPSE",
+   "role": "unresolved",
+   "confidence": "low",
+   "n": 3
+  },
+  {
+   "class": "EXPANSION",
+   "role": "locus",
+   "confidence": "high",
+   "n": 17
+  },
+  {
+   "class": "EXPANSION",
+   "role": "locus",
+   "confidence": "low",
+   "n": 27
+  },
+  {
+   "class": "EXPANSION",
+   "role": "partner",
+   "confidence": "high",
+   "n": 32
+  },
+  {
+   "class": "EXPANSION",
+   "role": "partner",
+   "confidence": "low",
+   "n": 4
+  },
+  {
+   "class": "EXPANSION",
+   "role": "unresolved",
+   "confidence": "high",
+   "n": 37
+  },
+  {
+   "class": "EXPANSION",
+   "role": "unresolved",
+   "confidence": "low",
+   "n": 10
+  },
+  {
+   "class": "FALSE_JOIN",
+   "role": "locus",
+   "confidence": "high",
+   "n": 5
+  },
+  {
+   "class": "FALSE_JOIN",
+   "role": "locus",
+   "confidence": "low",
+   "n": 3
+  },
+  {
+   "class": "MISPLACED_PIECE",
+   "role": "locus",
+   "confidence": "high",
+   "n": 1
+  },
+  {
+   "class": "MISSING_ALLELE",
+   "role": "locus",
+   "confidence": "high",
+   "n": 558
+  },
+  {
+   "class": "MISSING_ALLELE",
+   "role": "locus",
+   "confidence": "low",
+   "n": 198
+  },
+  {
+   "class": "MISSING_ALLELE",
+   "role": "twin",
+   "confidence": "high",
+   "n": 527
+  },
+  {
+   "class": "MISSING_ALLELE",
+   "role": "twin",
+   "confidence": "low",
+   "n": 189
+  },
+  {
+   "class": "MISSING_HAPLOTYPE",
+   "role": "locus",
+   "confidence": "high",
+   "n": 25
+  },
+  {
+   "class": "MISSING_HAPLOTYPE",
+   "role": "locus",
+   "confidence": "low",
+   "n": 21
+  },
+  {
+   "class": "MISSING_HAPLOTYPE",
+   "role": "twin",
+   "confidence": "high",
+   "n": 19
+  },
+  {
+   "class": "MISSING_HAPLOTYPE",
+   "role": "twin",
+   "confidence": "low",
+   "n": 21
+  },
+  {
+   "class": "MISSING_JUNCTION",
+   "role": "locus",
+   "confidence": "high",
+   "n": 1
+  },
+  {
+   "class": "MISSING_SEQUENCE",
+   "role": "locus",
+   "confidence": "low",
+   "n": 108
+  },
+  {
+   "class": "MISSING_SEQUENCE",
+   "role": "twin",
+   "confidence": "low",
+   "n": 116
+  },
+  {
+   "class": "PHASE_SWITCH",
+   "role": "locus",
+   "confidence": "high",
+   "n": 7
+  },
+  {
+   "class": "PHASE_SWITCH",
+   "role": "locus",
+   "confidence": "low",
+   "n": 25
+  },
+  {
+   "class": "UNSUPPORTED",
+   "role": "locus",
+   "confidence": "high",
+   "n": 1
+  },
+  {
+   "class": "UNSUPPORTED",
+   "role": "locus",
+   "confidence": "low",
+   "n": 2
+  },
+  {
+   "class": "UNSUPPORTED_JOIN",
+   "role": "locus",
+   "confidence": "high",
+   "n": 11
+  },
+  {
+   "class": "UNSUPPORTED_JOIN",
+   "role": "locus",
+   "confidence": "low",
+   "n": 23
+  }
+ ],
+ "timings": {
+  "count_s": 0.0,
+  "scan_s": 0.0,
+  "windows_s": 60.1,
+  "cn_s": 130.7,
+  "hapmers_s": 4.8,
+  "missing_s": 82.0,
+  "joins_s": 105.0,
+  "total_s": 739.9
+ }
+}

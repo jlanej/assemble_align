@@ -1,0 +1,12 @@
+what	tracked_kmers
+jellyfish k-mers with count >= 2	54140460
+of those, tracked (hash multiple of 4)	13534369
+present in the cpk database	13534369
+identical count	13534071
+cpk higher by 1 (Bloom false positive at first sighting)	297
+cpk higher by more than 1	0
+saturated at 65,535 in cpk	1
+cpk lower	0
+missing from cpk	0
+in cpk only	2199
+... of those with count 2 (singletons that hit a Bloom false positive)	2199

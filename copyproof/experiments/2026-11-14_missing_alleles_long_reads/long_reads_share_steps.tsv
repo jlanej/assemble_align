@@ -1,0 +1,45 @@
+run	class	share_of_long_reads_with_the_allele	placements_with_10_reads_or_more	of	placements_with_1_to_9_reads
+NA19240_release	in a parent's reads	none	141	377	179
+NA19240_release	in a parent's reads	under 0.05	3	377	0
+NA19240_release	in a parent's reads	0.05 to under 0.1	20	377	0
+NA19240_release	in a parent's reads	0.1 to under 0.25	36	377	8
+NA19240_release	in a parent's reads	0.25 to under 0.4	34	377	10
+NA19240_release	in a parent's reads	0.4 to under 0.6	37	377	30
+NA19240_release	in a parent's reads	0.6 to 0.75	27	377	12
+NA19240_release	in a parent's reads	over 0.75 to under 0.9	20	377	6
+NA19240_release	in a parent's reads	0.9 to under 1	14	377	0
+NA19240_release	in a parent's reads	all	45	377	128
+NA19240_release	in a parent's reads	no read holds either			93
+NA19240_release	in neither parent's reads	none	420	885	22
+NA19240_release	in neither parent's reads	under 0.05	5	885	0
+NA19240_release	in neither parent's reads	0.05 to under 0.1	15	885	0
+NA19240_release	in neither parent's reads	0.1 to under 0.25	43	885	2
+NA19240_release	in neither parent's reads	0.25 to under 0.4	158	885	5
+NA19240_release	in neither parent's reads	0.4 to under 0.6	209	885	6
+NA19240_release	in neither parent's reads	0.6 to 0.75	33	885	0
+NA19240_release	in neither parent's reads	over 0.75 to under 0.9	1	885	0
+NA19240_release	in neither parent's reads	0.9 to under 1	0	885	0
+NA19240_release	in neither parent's reads	all	1	885	0
+NA19240_release	in neither parent's reads	no read holds either			0
+HG01943_release	in a parent's reads	none	159	1106	17
+HG01943_release	in a parent's reads	under 0.05	21	1106	0
+HG01943_release	in a parent's reads	0.05 to under 0.1	34	1106	0
+HG01943_release	in a parent's reads	0.1 to under 0.25	75	1106	1
+HG01943_release	in a parent's reads	0.25 to under 0.4	147	1106	1
+HG01943_release	in a parent's reads	0.4 to under 0.6	338	1106	3
+HG01943_release	in a parent's reads	0.6 to 0.75	97	1106	2
+HG01943_release	in a parent's reads	over 0.75 to under 0.9	76	1106	1
+HG01943_release	in a parent's reads	0.9 to under 1	60	1106	0
+HG01943_release	in a parent's reads	all	99	1106	9
+HG01943_release	in a parent's reads	no read holds either			8
+HG01943_release	in neither parent's reads	none	237	545	0
+HG01943_release	in neither parent's reads	under 0.05	12	545	0
+HG01943_release	in neither parent's reads	0.05 to under 0.1	9	545	0
+HG01943_release	in neither parent's reads	0.1 to under 0.25	43	545	0
+HG01943_release	in neither parent's reads	0.25 to under 0.4	127	545	0
+HG01943_release	in neither parent's reads	0.4 to under 0.6	116	545	0
+HG01943_release	in neither parent's reads	0.6 to 0.75	1	545	0
+HG01943_release	in neither parent's reads	over 0.75 to under 0.9	0	545	0
+HG01943_release	in neither parent's reads	0.9 to under 1	0	545	0
+HG01943_release	in neither parent's reads	all	0	545	0
+HG01943_release	in neither parent's reads	no read holds either			0

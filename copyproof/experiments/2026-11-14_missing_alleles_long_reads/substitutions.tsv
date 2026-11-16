@@ -1,0 +1,65 @@
+run	class	substitution	placements	of	events	of_events	share_of_events	events_before_a_g
+NA19240_release	in a parent's reads	C>A	28	354	14	200	0.07	
+NA19240_release	in a parent's reads	C>G	51	354	28	200	0.14	
+NA19240_release	in a parent's reads	C>T	101	354	59	200	0.295	19.0
+NA19240_release	in a parent's reads	T>A	34	354	22	200	0.11	
+NA19240_release	in a parent's reads	T>C	112	354	63	200	0.315	
+NA19240_release	in a parent's reads	T>G	28	354	14	200	0.07	
+NA19240_release	in a parent's reads	transitions (C>T, T>C)	213	354	122	200	0.61	
+NA19240_release	in a parent's reads	events whose placements differ			7	207	0.034	
+NA19240_release	in neither parent's reads	C>A	136	826	70	425	0.165	
+NA19240_release	in neither parent's reads	C>G	40	826	20	425	0.047	
+NA19240_release	in neither parent's reads	C>T	203	826	104	425	0.245	41.0
+NA19240_release	in neither parent's reads	T>A	82	826	42	425	0.099	
+NA19240_release	in neither parent's reads	T>C	188	826	98	425	0.231	
+NA19240_release	in neither parent's reads	T>G	177	826	91	425	0.214	
+NA19240_release	in neither parent's reads	transitions (C>T, T>C)	391	826	202	425	0.475	
+NA19240_release	in neither parent's reads	events whose placements differ			0	425	0.0	
+HG01943_release	in a parent's reads	C>A	60	583	41	403	0.102	
+HG01943_release	in a parent's reads	C>G	62	583	44	403	0.109	
+HG01943_release	in a parent's reads	C>T	180	583	120	403	0.298	38.0
+HG01943_release	in a parent's reads	T>A	30	583	21	403	0.052	
+HG01943_release	in a parent's reads	T>C	200	583	139	403	0.345	
+HG01943_release	in a parent's reads	T>G	51	583	38	403	0.094	
+HG01943_release	in a parent's reads	transitions (C>T, T>C)	380	583	259	403	0.643	
+HG01943_release	in a parent's reads	events whose placements differ			6	409	0.015	
+HG01943_release	in neither parent's reads	C>A	50	506	27	261	0.103	
+HG01943_release	in neither parent's reads	C>G	23	506	12	261	0.046	
+HG01943_release	in neither parent's reads	C>T	166	506	85	261	0.326	11.0
+HG01943_release	in neither parent's reads	T>A	38	506	19	261	0.073	
+HG01943_release	in neither parent's reads	T>C	114	506	59	261	0.226	
+HG01943_release	in neither parent's reads	T>G	115	506	59	261	0.226	
+HG01943_release	in neither parent's reads	transitions (C>T, T>C)	280	506	144	261	0.552	
+HG01943_release	in neither parent's reads	events whose placements differ			0	261	0.0	
+HG002_hprc_year2	in a parent's reads	C>A	27	399	15	206	0.073	
+HG002_hprc_year2	in a parent's reads	C>G	29	399	15	206	0.073	
+HG002_hprc_year2	in a parent's reads	C>T	156	399	80	206	0.388	27.0
+HG002_hprc_year2	in a parent's reads	T>A	36	399	19	206	0.092	
+HG002_hprc_year2	in a parent's reads	T>C	113	399	57	206	0.277	
+HG002_hprc_year2	in a parent's reads	T>G	38	399	20	206	0.097	
+HG002_hprc_year2	in a parent's reads	transitions (C>T, T>C)	269	399	137	206	0.665	
+HG002_hprc_year2	in a parent's reads	events whose placements differ			1	207	0.005	
+HG002_hprc_year2	in neither parent's reads	C>A	16	70	9	38	0.237	
+HG002_hprc_year2	in neither parent's reads	C>G	7	70	4	38	0.105	
+HG002_hprc_year2	in neither parent's reads	C>T	23	70	12	38	0.316	2.0
+HG002_hprc_year2	in neither parent's reads	T>A	6	70	4	38	0.105	
+HG002_hprc_year2	in neither parent's reads	T>C	14	70	7	38	0.184	
+HG002_hprc_year2	in neither parent's reads	T>G	4	70	2	38	0.053	
+HG002_hprc_year2	in neither parent's reads	transitions (C>T, T>C)	37	70	19	38	0.5	
+HG002_hprc_year2	in neither parent's reads	events whose placements differ			0	38	0.0	
+HG002_truth_genome	in a parent's reads	C>A	0	23	0	15	0.0	
+HG002_truth_genome	in a parent's reads	C>G	3	23	2	15	0.133	
+HG002_truth_genome	in a parent's reads	C>T	4	23	3	15	0.2	0.0
+HG002_truth_genome	in a parent's reads	T>A	1	23	1	15	0.067	
+HG002_truth_genome	in a parent's reads	T>C	8	23	5	15	0.333	
+HG002_truth_genome	in a parent's reads	T>G	7	23	4	15	0.267	
+HG002_truth_genome	in a parent's reads	transitions (C>T, T>C)	12	23	8	15	0.533	
+HG002_truth_genome	in a parent's reads	events whose placements differ			0	15	0.0	
+HG002_truth_genome	in neither parent's reads	C>A	7	32	4	17	0.235	
+HG002_truth_genome	in neither parent's reads	C>G	2	32	1	17	0.059	
+HG002_truth_genome	in neither parent's reads	C>T	12	32	6	17	0.353	0.0
+HG002_truth_genome	in neither parent's reads	T>A	3	32	2	17	0.118	
+HG002_truth_genome	in neither parent's reads	T>C	6	32	3	17	0.176	
+HG002_truth_genome	in neither parent's reads	T>G	2	32	1	17	0.059	
+HG002_truth_genome	in neither parent's reads	transitions (C>T, T>C)	18	32	9	17	0.529	
+HG002_truth_genome	in neither parent's reads	events whose placements differ			0	17	0.0	

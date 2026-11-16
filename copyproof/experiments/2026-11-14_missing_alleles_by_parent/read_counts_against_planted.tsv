@@ -1,0 +1,22 @@
+run	reference	reference_placements	cut	read_count_at_the_cut	reference_below_the_cut	in_neither_parents_reads	of_them_below_the_cut	share
+HG002_hprc_year2	this run's placements in a parent's reads	925	its 5th percentile	8.0	24	71	20	0.282
+HG002_hprc_year2	this run's placements in a parent's reads	925	its lower quartile	11.0	230	71	54	0.761
+HG002_hprc_year2	this run's placements in a parent's reads	925	its median	13.0	397	71	60	0.845
+HG002_hprc_year2	placements made by planted errors (HG002_truth_genome_planted)	2019	its 5th percentile	8.0	32	71	20	0.282
+HG002_hprc_year2	placements made by planted errors (HG002_truth_genome_planted)	2019	its lower quartile	11.0	402	71	54	0.761
+HG002_hprc_year2	placements made by planted errors (HG002_truth_genome_planted)	2019	its median	14.0	994	71	60	0.845
+HG002_truth_genome	this run's placements in a parent's reads	40	its 5th percentile	7.0	0	34	0	0.0
+HG002_truth_genome	this run's placements in a parent's reads	40	its lower quartile	7.0	0	34	0	0.0
+HG002_truth_genome	this run's placements in a parent's reads	40	its median	7.0	0	34	0	0.0
+HG002_truth_genome	placements made by planted errors (HG002_truth_genome_planted)	2019	its 5th percentile	8.0	32	34	11	0.324
+HG002_truth_genome	placements made by planted errors (HG002_truth_genome_planted)	2019	its lower quartile	11.0	402	34	24	0.706
+HG002_truth_genome	placements made by planted errors (HG002_truth_genome_planted)	2019	its median	14.0	994	34	32	0.941
+HG01943_release	this run's placements in a parent's reads	1156	its 5th percentile	8.0	25	545	155	0.284
+HG01943_release	this run's placements in a parent's reads	1156	its lower quartile	11.5	286	545	509	0.934
+HG01943_release	this run's placements in a parent's reads	1156	its median	14.5	570	545	541	0.993
+NA19240_release	this run's placements in a parent's reads	851	its 5th percentile	8.0	38	922	245	0.266
+NA19240_release	this run's placements in a parent's reads	851	its lower quartile	11.0	180	922	798	0.866
+NA19240_release	this run's placements in a parent's reads	851	its median	14.0	414	922	910	0.987
+NA19240_release	placements made by planted errors (NA19240_release_planted)	2658	its 5th percentile	8.5	116	922	473	0.513
+NA19240_release	placements made by planted errors (NA19240_release_planted)	2658	its lower quartile	11.0	504	922	798	0.866
+NA19240_release	placements made by planted errors (NA19240_release_planted)	2658	its median	14.0	1242	922	910	0.987

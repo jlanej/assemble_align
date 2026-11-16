@@ -1,0 +1,17 @@
+tool	label	mostly_masked	calls	bp	at_any_issue	at_copy_number_issue
+flagger	Col	False	2	320570	2	1
+flagger	Col	True	40	1391330	0	0
+flagger	Dup	False	8	742209	4	4
+flagger	Dup	True	40	3103268	2	1
+flagger	Err	False	37	455030	31	29
+flagger	Err	True	22	233526	1	1
+flagger	NNN	False	12	1200	9	8
+flagger	NNN	True	43	3073607	17	17
+nucflag	COLLAPSE	True	8	162901	0	0
+nucflag	COLLAPSE_OTHER	False	29	297392	15	3
+nucflag	COLLAPSE_OTHER	True	139	1935254	2	1
+nucflag	COLLAPSE_VAR	True	22	817675	0	0
+nucflag	HET	False	281	7682143	13	5
+nucflag	HET	True	327	6812239	1	1
+nucflag	MISJOIN	False	958	34912247	232	89
+nucflag	MISJOIN	True	1050	25401302	16	7

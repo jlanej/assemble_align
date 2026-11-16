@@ -1,0 +1,61 @@
+run	class	read_count_group	long_reads	placements	of	share	events	of_events
+NA19240_release	in a parent's reads	under 9	no long read holds the allele	28	70	0.4	19	39
+NA19240_release	in a parent's reads	under 9	a minority do	6	70	0.086	5	39
+NA19240_release	in a parent's reads	under 9	about half do	6	70	0.086	5	39
+NA19240_release	in a parent's reads	under 9	nearly all do	7	70	0.1	7	39
+NA19240_release	in a parent's reads	under 9	too few reads to say	23	70	0.329	14	39
+NA19240_release	in a parent's reads	9 to 12.5	no long read holds the allele	40	261	0.153	34	147
+NA19240_release	in a parent's reads	9 to 12.5	a minority do	17	261	0.065	17	147
+NA19240_release	in a parent's reads	9 to 12.5	about half do	33	261	0.126	24	147
+NA19240_release	in a parent's reads	9 to 12.5	nearly all do	20	261	0.077	20	147
+NA19240_release	in a parent's reads	9 to 12.5	too few reads to say	151	261	0.579	94	147
+NA19240_release	in a parent's reads	13 or more	no long read holds the allele	73	520	0.14	69	284
+NA19240_release	in a parent's reads	13 or more	a minority do	36	520	0.069	36	284
+NA19240_release	in a parent's reads	13 or more	about half do	59	520	0.113	40	284
+NA19240_release	in a parent's reads	13 or more	nearly all do	52	520	0.1	52	284
+NA19240_release	in a parent's reads	13 or more	too few reads to say	300	520	0.577	185	284
+NA19240_release	in neither parent's reads	under 9	no long read holds the allele	224	489	0.458	219	245
+NA19240_release	in neither parent's reads	under 9	a minority do	40	489	0.082	36	245
+NA19240_release	in neither parent's reads	under 9	about half do	205	489	0.419	205	245
+NA19240_release	in neither parent's reads	under 9	nearly all do	1	489	0.002	1	245
+NA19240_release	in neither parent's reads	under 9	too few reads to say	19	489	0.039	17	245
+NA19240_release	in neither parent's reads	9 to 12.5	no long read holds the allele	186	409	0.455	180	203
+NA19240_release	in neither parent's reads	9 to 12.5	a minority do	21	409	0.051	19	203
+NA19240_release	in neither parent's reads	9 to 12.5	about half do	184	409	0.45	183	203
+NA19240_release	in neither parent's reads	9 to 12.5	nearly all do	1	409	0.002	1	203
+NA19240_release	in neither parent's reads	9 to 12.5	too few reads to say	17	409	0.042	16	203
+NA19240_release	in neither parent's reads	13 or more	no long read holds the allele	10	24	0.417	10	12
+NA19240_release	in neither parent's reads	13 or more	a minority do	2	24	0.083	1	12
+NA19240_release	in neither parent's reads	13 or more	about half do	11	24	0.458	11	12
+NA19240_release	in neither parent's reads	13 or more	nearly all do	0	24	0.0	0	12
+NA19240_release	in neither parent's reads	13 or more	too few reads to say	1	24	0.042	1	12
+HG01943_release	in a parent's reads	under 9	no long read holds the allele	25	77	0.325	17	49
+HG01943_release	in a parent's reads	under 9	a minority do	10	77	0.13	10	49
+HG01943_release	in a parent's reads	under 9	about half do	28	77	0.364	24	49
+HG01943_release	in a parent's reads	under 9	nearly all do	13	77	0.169	13	49
+HG01943_release	in a parent's reads	under 9	too few reads to say	1	77	0.013	1	49
+HG01943_release	in a parent's reads	9 to 12.5	no long read holds the allele	49	317	0.155	42	197
+HG01943_release	in a parent's reads	9 to 12.5	a minority do	36	317	0.114	36	197
+HG01943_release	in a parent's reads	9 to 12.5	about half do	169	317	0.533	135	197
+HG01943_release	in a parent's reads	9 to 12.5	nearly all do	51	317	0.161	51	197
+HG01943_release	in a parent's reads	9 to 12.5	too few reads to say	12	317	0.038	8	197
+HG01943_release	in a parent's reads	13 or more	no long read holds the allele	85	762	0.112	84	485
+HG01943_release	in a parent's reads	13 or more	a minority do	84	762	0.11	84	485
+HG01943_release	in a parent's reads	13 or more	about half do	385	762	0.505	311	485
+HG01943_release	in a parent's reads	13 or more	nearly all do	171	762	0.224	163	485
+HG01943_release	in a parent's reads	13 or more	too few reads to say	37	762	0.049	23	485
+HG01943_release	in neither parent's reads	under 9	no long read holds the allele	141	323	0.437	140	162
+HG01943_release	in neither parent's reads	under 9	a minority do	36	323	0.111	29	162
+HG01943_release	in neither parent's reads	under 9	about half do	146	323	0.452	146	162
+HG01943_release	in neither parent's reads	under 9	nearly all do	0	323	0.0	0	162
+HG01943_release	in neither parent's reads	under 9	too few reads to say	0	323	0.0	0	162
+HG01943_release	in neither parent's reads	9 to 12.5	no long read holds the allele	92	212	0.434	89	109
+HG01943_release	in neither parent's reads	9 to 12.5	a minority do	26	212	0.123	20	109
+HG01943_release	in neither parent's reads	9 to 12.5	about half do	94	212	0.443	94	109
+HG01943_release	in neither parent's reads	9 to 12.5	nearly all do	0	212	0.0	0	109
+HG01943_release	in neither parent's reads	9 to 12.5	too few reads to say	0	212	0.0	0	109
+HG01943_release	in neither parent's reads	13 or more	no long read holds the allele	4	10	0.4	4	5
+HG01943_release	in neither parent's reads	13 or more	a minority do	2	10	0.2	1	5
+HG01943_release	in neither parent's reads	13 or more	about half do	4	10	0.4	4	5
+HG01943_release	in neither parent's reads	13 or more	nearly all do	0	10	0.0	0	5
+HG01943_release	in neither parent's reads	13 or more	too few reads to say	0	10	0.0	0	5

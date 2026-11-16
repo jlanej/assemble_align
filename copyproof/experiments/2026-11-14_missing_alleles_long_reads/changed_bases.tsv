@@ -1,0 +1,49 @@
+run	class	change	placements	of	share	events_by_their_smallest_difference	of_events	share_of_events
+NA19240_release	in a parent's reads	one changed base	354	851	0.416	207	467	0.443
+NA19240_release	in a parent's reads	two or more changed bases less than 31 apart	58	851	0.068	33	467	0.071
+NA19240_release	in a parent's reads	another length: 1 base	186	851	0.219	95	467	0.203
+NA19240_release	in a parent's reads	another length: 2 to 30 bases	73	851	0.086	30	467	0.064
+NA19240_release	in a parent's reads	another length: more than 30 bases	2	851	0.002	1	467	0.002
+NA19240_release	in a parent's reads	not determined	178	851	0.209	101	467	0.216
+NA19240_release	in neither parent's reads	one changed base	826	922	0.896	425	460	0.924
+NA19240_release	in neither parent's reads	two or more changed bases less than 31 apart	44	922	0.048	12	460	0.026
+NA19240_release	in neither parent's reads	another length: 1 base	25	922	0.027	11	460	0.024
+NA19240_release	in neither parent's reads	another length: 2 to 30 bases	14	922	0.015	6	460	0.013
+NA19240_release	in neither parent's reads	another length: more than 30 bases	0	922	0.0	0	460	0.0
+NA19240_release	in neither parent's reads	not determined	13	922	0.014	6	460	0.013
+HG01943_release	in a parent's reads	one changed base	583	1156	0.504	409	731	0.56
+HG01943_release	in a parent's reads	two or more changed bases less than 31 apart	62	1156	0.054	39	731	0.053
+HG01943_release	in a parent's reads	another length: 1 base	295	1156	0.255	154	731	0.211
+HG01943_release	in a parent's reads	another length: 2 to 30 bases	64	1156	0.055	31	731	0.042
+HG01943_release	in a parent's reads	another length: more than 30 bases	4	1156	0.003	2	731	0.003
+HG01943_release	in a parent's reads	not determined	148	1156	0.128	96	731	0.131
+HG01943_release	in neither parent's reads	one changed base	506	545	0.928	261	276	0.946
+HG01943_release	in neither parent's reads	two or more changed bases less than 31 apart	16	545	0.029	4	276	0.014
+HG01943_release	in neither parent's reads	another length: 1 base	14	545	0.026	7	276	0.025
+HG01943_release	in neither parent's reads	another length: 2 to 30 bases	4	545	0.007	2	276	0.007
+HG01943_release	in neither parent's reads	another length: more than 30 bases	0	545	0.0	0	276	0.0
+HG01943_release	in neither parent's reads	not determined	5	545	0.009	2	276	0.007
+HG002_hprc_year2	in a parent's reads	one changed base	399	925	0.431	207	469	0.441
+HG002_hprc_year2	in a parent's reads	two or more changed bases less than 31 apart	48	925	0.052	22	469	0.047
+HG002_hprc_year2	in a parent's reads	another length: 1 base	264	925	0.285	141	469	0.301
+HG002_hprc_year2	in a parent's reads	another length: 2 to 30 bases	153	925	0.165	67	469	0.143
+HG002_hprc_year2	in a parent's reads	another length: more than 30 bases	6	925	0.006	3	469	0.006
+HG002_hprc_year2	in a parent's reads	not determined	55	925	0.059	29	469	0.062
+HG002_hprc_year2	in neither parent's reads	one changed base	70	71	0.986	38	38	1.0
+HG002_hprc_year2	in neither parent's reads	two or more changed bases less than 31 apart	1	71	0.014	0	38	0.0
+HG002_hprc_year2	in neither parent's reads	another length: 1 base	0	71	0.0	0	38	0.0
+HG002_hprc_year2	in neither parent's reads	another length: 2 to 30 bases	0	71	0.0	0	38	0.0
+HG002_hprc_year2	in neither parent's reads	another length: more than 30 bases	0	71	0.0	0	38	0.0
+HG002_hprc_year2	in neither parent's reads	not determined	0	71	0.0	0	38	0.0
+HG002_truth_genome	in a parent's reads	one changed base	23	40	0.575	15	26	0.577
+HG002_truth_genome	in a parent's reads	two or more changed bases less than 31 apart	5	40	0.125	3	26	0.115
+HG002_truth_genome	in a parent's reads	another length: 1 base	0	40	0.0	0	26	0.0
+HG002_truth_genome	in a parent's reads	another length: 2 to 30 bases	0	40	0.0	0	26	0.0
+HG002_truth_genome	in a parent's reads	another length: more than 30 bases	0	40	0.0	0	26	0.0
+HG002_truth_genome	in a parent's reads	not determined	12	40	0.3	8	26	0.308
+HG002_truth_genome	in neither parent's reads	one changed base	32	34	0.941	17	18	0.944
+HG002_truth_genome	in neither parent's reads	two or more changed bases less than 31 apart	0	34	0.0	0	18	0.0
+HG002_truth_genome	in neither parent's reads	another length: 1 base	0	34	0.0	0	18	0.0
+HG002_truth_genome	in neither parent's reads	another length: 2 to 30 bases	2	34	0.059	1	18	0.056
+HG002_truth_genome	in neither parent's reads	another length: more than 30 bases	0	34	0.0	0	18	0.0
+HG002_truth_genome	in neither parent's reads	not determined	0	34	0.0	0	18	0.0

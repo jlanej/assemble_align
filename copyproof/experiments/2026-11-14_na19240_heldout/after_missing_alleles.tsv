@@ -1,0 +1,13 @@
+run	depth_per_copy	held_by_the_other_assemblies	in_a_parents_reads	calls	read_count_median	read_count_quartile_1	read_count_quartile_3	held_by_truth
+NA19240	13.638	both	no	362	8.0	7.0	9.0	
+NA19240	13.638	both	yes	713	14.0	11.0	17.0	
+NA19240	13.638	neither	no	301	9.0	7.5	10.0	
+NA19240	13.638	neither	yes	77	9.0	7.5	13.0	
+NA19240	13.638	one	no	259	8.0	8.0	9.5	
+NA19240	13.638	one	yes	61	14.5	10.0	16.0	
+HG002 hprc_year2	13.392	both	no	46	9.5	8.0	12.0	45.0
+HG002 hprc_year2	13.392	both	yes	660	14.0	11.0	17.0	660.0
+HG002 hprc_year2	13.392	neither	no	15	7.0	7.0	8.0	0.0
+HG002 hprc_year2	13.392	neither	yes	68	13.5	10.0	16.0	52.0
+HG002 hprc_year2	13.392	one	no	10	8.0	7.5	8.5	6.0
+HG002 hprc_year2	13.392	one	yes	197	12.0	10.0	17.0	194.0

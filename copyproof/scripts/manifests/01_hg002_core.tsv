@@ -1,0 +1,20 @@
+# HG002 truth assembly, its known-issue annotation, and the child's 30x NovaSeq PCR-free reads
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/hg002v1.1.fasta.gz	hg002/asm/hg002v1.1.fasta.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/hg002v1.1.fasta.gz.fai	hg002/asm/hg002v1.1.fasta.gz.fai
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/hg002v1.1.fasta.gz.gzi	hg002/asm/hg002v1.1.fasta.gz.gzi
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/annotation/assemblyissues/hg002v1.1_issues.v4.bed	hg002/annot/hg002v1.1_issues.v4.bed
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/annotation/assemblyissues/hg002v1.1_issues_and_excluded_regions.merged.bed	hg002/annot/hg002v1.1_issues_and_excluded_regions.merged.bed
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/annotation/assemblyissues/hg002v1.1_submitted_issues.bed	hg002/annot/hg002v1.1_submitted_issues.bed
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/annotation/assemblyissues/v4_issue_breakdown/README.txt	hg002/annot/v4_issue_breakdown/README.txt
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/annotation/assemblyissues/v4_issue_breakdown/hg002v1.1.SDs.013025.merged.bed	hg002/annot/v4_issue_breakdown/hg002v1.1.SDs.013025.merged.bed
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/annotation/assemblyissues/v4_issue_breakdown/hg002v1.1.centromeres.bed	hg002/annot/v4_issue_breakdown/hg002v1.1.centromeres.bed
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/annotation/assemblyissues/v4_issue_breakdown/hg002v1.1.hsats.bed	hg002/annot/v4_issue_breakdown/hg002v1.1.hsats.bed
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/changes/README.txt	hg002/annot/changes/README.txt
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/changes/hg002v1.1_to_hg002v1.2.chain.gz	hg002/annot/changes/hg002v1.1_to_hg002v1.2.chain.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/changes/hg002v1.2_to_hg002v1.1.chain.gz	hg002/annot/changes/hg002v1.2_to_hg002v1.1.chain.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/changes/hg002v1.1_to_hg002v1.2.vcf.gz	hg002/annot/changes/hg002v1.1_to_hg002v1.2.vcf.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/changes/hg002v1.1_to_GRCh38.chain.gz	hg002/annot/changes/hg002v1.1_to_GRCh38.chain.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/changes/hg002v1.1_to_CHM13v2.0.chain.gz	hg002/annot/changes/hg002v1.1_to_CHM13v2.0.chain.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/T2T/HG002/assemblies/changes/hg002v1.1_to_other_haplotype.chain.gz	hg002/annot/changes/hg002v1.1_to_other_haplotype.chain.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC_PLUS/HG002/raw_data/Illumina/child/HG002.novaseq.pcr-free.30x.R1.fastq.gz	hg002/reads/HG002.novaseq.pcr-free.30x.R1.fastq.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC_PLUS/HG002/raw_data/Illumina/child/HG002.novaseq.pcr-free.30x.R2.fastq.gz	hg002/reads/HG002.novaseq.pcr-free.30x.R2.fastq.gz

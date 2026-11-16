@@ -1,0 +1,31 @@
+hg002_judged_by	judge	hg002_label	na19240_label	what	HG002	HG002_share	NA19240	NA19240_share	p_lower_one_sided
+declared pair	both	both	both	high-confidence copy-number issues confirmed	74 of 119	0.622	46 of 81	0.568	0.2682
+declared pair	first assembly alone	v2_trio	verkko	high-confidence copy-number issues confirmed	101 of 119	0.849	75 of 81	0.926	0.9722
+declared pair	second assembly alone	hprc_year1	hifiasm	high-confidence copy-number issues confirmed	82 of 119	0.689	53 of 81	0.654	0.3579
+declared pair	both	both	both	high-confidence collapse issues confirmed	0 of 24	0.0	2 of 12	0.167	1.0
+declared pair	first assembly alone	v2_trio	verkko	high-confidence collapse issues confirmed	9 of 24	0.375	11 of 12	0.917	0.9999
+declared pair	second assembly alone	hprc_year1	hifiasm	high-confidence collapse issues confirmed	2 of 24	0.083	9 of 12	0.75	1.0
+declared pair	both	both	both	high-confidence surplus-copy issues confirmed	74 of 95	0.779	44 of 69	0.638	0.0354
+declared pair	first assembly alone	v2_trio	verkko	high-confidence surplus-copy issues confirmed	92 of 95	0.968	64 of 69	0.928	0.2018
+declared pair	second assembly alone	hprc_year1	hifiasm	high-confidence surplus-copy issues confirmed	80 of 95	0.842	44 of 69	0.638	0.0024
+declared pair	both	both	both	discordances of 5 kb and more found, others hold more	1 of 3	0.333	2 of 14	0.143	0.4647
+declared pair	first assembly alone	v2_trio	verkko	discordances of 5 kb and more found, others hold more	15 of 75	0.2	10 of 129	0.078	0.0103
+declared pair	second assembly alone	hprc_year1	hifiasm	discordances of 5 kb and more found, others hold more	1 of 265	0.004	5 of 2818	0.002	0.4171
+declared pair	both	both	both	discordances of 5 kb and more found, others hold fewer	117 of 127	0.921	64 of 76	0.842	0.0656
+declared pair	first assembly alone	v2_trio	verkko	discordances of 5 kb and more found, others hold fewer	129 of 153	0.843	102 of 146	0.699	0.0022
+declared pair	second assembly alone	hprc_year1	hifiasm	discordances of 5 kb and more found, others hold fewer	115 of 350	0.329	64 of 93	0.688	1.0
+second pair	both	both	both	high-confidence copy-number issues confirmed	97 of 119	0.815	46 of 81	0.568	0.0001
+second pair	first assembly alone	verkko_asm_thic	verkko	high-confidence copy-number issues confirmed	98 of 119	0.824	75 of 81	0.926	0.991
+second pair	second assembly alone	hprc_year2_v2_thic	hifiasm	high-confidence copy-number issues confirmed	99 of 119	0.832	53 of 81	0.654	0.0035
+second pair	both	both	both	high-confidence collapse issues confirmed	5 of 24	0.208	2 of 12	0.167	0.571
+second pair	first assembly alone	verkko_asm_thic	verkko	high-confidence collapse issues confirmed	6 of 24	0.25	11 of 12	0.917	1.0
+second pair	second assembly alone	hprc_year2_v2_thic	hifiasm	high-confidence collapse issues confirmed	7 of 24	0.292	9 of 12	0.75	0.9987
+second pair	both	both	both	high-confidence surplus-copy issues confirmed	92 of 95	0.968	44 of 69	0.638	0.0
+second pair	first assembly alone	verkko_asm_thic	verkko	high-confidence surplus-copy issues confirmed	92 of 95	0.968	64 of 69	0.928	0.2018
+second pair	second assembly alone	hprc_year2_v2_thic	hifiasm	high-confidence surplus-copy issues confirmed	92 of 95	0.968	44 of 69	0.638	0.0
+second pair	both	both	both	discordances of 5 kb and more found, others hold more	4 of 14	0.286	2 of 14	0.143	0.3242
+second pair	first assembly alone	verkko_asm_thic	verkko	discordances of 5 kb and more found, others hold more	6 of 84	0.071	10 of 129	0.078	0.6611
+second pair	second assembly alone	hprc_year2_v2_thic	hifiasm	discordances of 5 kb and more found, others hold more	6 of 65	0.092	5 of 2818	0.002	0.0
+second pair	both	both	both	discordances of 5 kb and more found, others hold fewer	129 of 161	0.801	64 of 76	0.842	0.8244
+second pair	first assembly alone	verkko_asm_thic	verkko	discordances of 5 kb and more found, others hold fewer	129 of 163	0.791	102 of 146	0.699	0.0407
+second pair	second assembly alone	hprc_year2_v2_thic	hifiasm	discordances of 5 kb and more found, others hold fewer	129 of 166	0.777	64 of 93	0.688	0.0776

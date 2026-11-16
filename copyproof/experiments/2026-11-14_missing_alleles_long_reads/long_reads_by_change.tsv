@@ -1,0 +1,25 @@
+run	class	change	events	no long read holds the allele	a minority do	about half do	nearly all do	too few reads to say
+NA19240_release	in a parent's reads	one changed base	207	4	10	28	35	130
+NA19240_release	in a parent's reads	two or more changed bases less than 31 apart	33	2	2	2	2	25
+NA19240_release	in a parent's reads	another length: 1 base	95	0	0	30	33	32
+NA19240_release	in a parent's reads	another length: 2 to 30 bases	30	0	1	4	3	22
+NA19240_release	in a parent's reads	another length: more than 30 bases	1	1	0	0	0	0
+NA19240_release	in a parent's reads	not determined	101	17	6	4	6	68
+NA19240_release	in neither parent's reads	one changed base	425	1	41	367	1	15
+NA19240_release	in neither parent's reads	two or more changed bases less than 31 apart	12	0	0	12	0	0
+NA19240_release	in neither parent's reads	another length: 1 base	11	0	1	10	0	0
+NA19240_release	in neither parent's reads	another length: 2 to 30 bases	6	0	0	5	1	0
+NA19240_release	in neither parent's reads	another length: more than 30 bases	0	0	0	0	0	0
+NA19240_release	in neither parent's reads	not determined	6	1	0	5	0	0
+HG01943_release	in a parent's reads	one changed base	409	3	0	288	111	7
+HG01943_release	in a parent's reads	two or more changed bases less than 31 apart	39	3	1	23	11	1
+HG01943_release	in a parent's reads	another length: 1 base	154	0	0	79	69	6
+HG01943_release	in a parent's reads	another length: 2 to 30 bases	31	0	0	18	10	3
+HG01943_release	in a parent's reads	another length: more than 30 bases	2	0	1	1	0	0
+HG01943_release	in a parent's reads	not determined	96	9	1	49	26	11
+HG01943_release	in neither parent's reads	one changed base	261	1	30	230	0	0
+HG01943_release	in neither parent's reads	two or more changed bases less than 31 apart	4	0	0	4	0	0
+HG01943_release	in neither parent's reads	another length: 1 base	7	0	1	6	0	0
+HG01943_release	in neither parent's reads	another length: 2 to 30 bases	2	0	0	2	0	0
+HG01943_release	in neither parent's reads	another length: more than 30 bases	0	0	0	0	0	0
+HG01943_release	in neither parent's reads	not determined	2	0	0	2	0	0

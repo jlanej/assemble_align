@@ -1,0 +1,84 @@
+run	class	rows	pattern	events
+HG01943_release	in a parent's reads	1	about half do	290
+HG01943_release	in a parent's reads	2	about half do + about half do	110
+HG01943_release	in a parent's reads	2	no long read holds the allele + nearly all do	110
+HG01943_release	in a parent's reads	2	a minority do + nearly all do	89
+HG01943_release	in a parent's reads	2	a minority do + about half do	33
+HG01943_release	in a parent's reads	2	too few reads to say + too few reads to say	20
+HG01943_release	in a parent's reads	2	about half do + nearly all do	12
+HG01943_release	in a parent's reads	2	no long read holds the allele + no long read holds the allele	12
+HG01943_release	in a parent's reads	2	no long read holds the allele + about half do	11
+HG01943_release	in a parent's reads	2	nearly all do + nearly all do	8
+HG01943_release	in a parent's reads	2	about half do + too few reads to say	5
+HG01943_release	in a parent's reads	2	no long read holds the allele + too few reads to say	5
+HG01943_release	in a parent's reads	3	no long read holds the allele + no long read holds the allele + about half do	5
+HG01943_release	in a parent's reads	1	nearly all do	3
+HG01943_release	in a parent's reads	1	too few reads to say	3
+HG01943_release	in a parent's reads	1	a minority do	2
+HG01943_release	in a parent's reads	1	no long read holds the allele	2
+HG01943_release	in a parent's reads	3	no long read holds the allele + a minority do + nearly all do	2
+HG01943_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + about half do + about half do	2
+HG01943_release	in a parent's reads	2	no long read holds the allele + a minority do	1
+HG01943_release	in a parent's reads	3	no long read holds the allele + a minority do + about half do	1
+HG01943_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + a minority do + about half do	1
+HG01943_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + a minority do + nearly all do	1
+HG01943_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + nearly all do	1
+HG01943_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + no long read holds the allele	1
+HG01943_release	in a parent's reads	7	no long read holds the allele + no long read holds the allele + no long read holds the allele + no long read holds the allele + no long read holds the allele + no long read holds the allele + nearly all do	1
+HG01943_release	in neither parent's reads	2	no long read holds the allele + about half do	214
+HG01943_release	in neither parent's reads	2	a minority do + about half do	18
+HG01943_release	in neither parent's reads	2	no long read holds the allele + a minority do	16
+HG01943_release	in neither parent's reads	2	a minority do + a minority do	13
+HG01943_release	in neither parent's reads	1	about half do	8
+HG01943_release	in neither parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + about half do	2
+HG01943_release	in neither parent's reads	1	a minority do	1
+HG01943_release	in neither parent's reads	2	no long read holds the allele + no long read holds the allele	1
+HG01943_release	in neither parent's reads	3	no long read holds the allele + no long read holds the allele + about half do	1
+HG01943_release	in neither parent's reads	4	no long read holds the allele + no long read holds the allele + a minority do + a minority do	1
+HG01943_release	in neither parent's reads	4	no long read holds the allele + no long read holds the allele + a minority do + about half do	1
+NA19240_release	in a parent's reads	2	too few reads to say + too few reads to say	177
+NA19240_release	in a parent's reads	2	no long read holds the allele + nearly all do	47
+NA19240_release	in a parent's reads	1	too few reads to say	44
+NA19240_release	in a parent's reads	2	no long read holds the allele + too few reads to say	35
+NA19240_release	in a parent's reads	2	about half do + about half do	29
+NA19240_release	in a parent's reads	2	a minority do + nearly all do	26
+NA19240_release	in a parent's reads	2	no long read holds the allele + no long read holds the allele	19
+NA19240_release	in a parent's reads	1	about half do	13
+NA19240_release	in a parent's reads	2	a minority do + about half do	13
+NA19240_release	in a parent's reads	2	no long read holds the allele + about half do	11
+NA19240_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + too few reads to say + too few reads to say	9
+NA19240_release	in a parent's reads	1	a minority do	8
+NA19240_release	in a parent's reads	2	a minority do + too few reads to say	8
+NA19240_release	in a parent's reads	1	no long read holds the allele	4
+NA19240_release	in a parent's reads	2	nearly all do + too few reads to say	4
+NA19240_release	in a parent's reads	4	no long read holds the allele + too few reads to say + too few reads to say + too few reads to say	3
+NA19240_release	in a parent's reads	2	about half do + too few reads to say	2
+NA19240_release	in a parent's reads	3	no long read holds the allele + no long read holds the allele + too few reads to say	2
+NA19240_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + too few reads to say	2
+NA19240_release	in a parent's reads	6	no long read holds the allele + no long read holds the allele + no long read holds the allele + no long read holds the allele + too few reads to say + too few reads to say	2
+NA19240_release	in a parent's reads	2	a minority do + a minority do	1
+NA19240_release	in a parent's reads	2	no long read holds the allele + a minority do	1
+NA19240_release	in a parent's reads	3	a minority do + about half do + nearly all do	1
+NA19240_release	in a parent's reads	3	no long read holds the allele + too few reads to say + too few reads to say	1
+NA19240_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + a minority do + too few reads to say	1
+NA19240_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + nearly all do	1
+NA19240_release	in a parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + no long read holds the allele	1
+NA19240_release	in a parent's reads	4	too few reads to say + too few reads to say + too few reads to say + too few reads to say	1
+NA19240_release	in a parent's reads	6	no long read holds the allele + no long read holds the allele + no long read holds the allele + too few reads to say + too few reads to say + too few reads to say	1
+NA19240_release	in neither parent's reads	2	no long read holds the allele + about half do	357
+NA19240_release	in neither parent's reads	2	no long read holds the allele + a minority do	32
+NA19240_release	in neither parent's reads	2	about half do + too few reads to say	16
+NA19240_release	in neither parent's reads	2	a minority do + about half do	14
+NA19240_release	in neither parent's reads	2	no long read holds the allele + too few reads to say	11
+NA19240_release	in neither parent's reads	2	a minority do + a minority do	7
+NA19240_release	in neither parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + about half do	6
+NA19240_release	in neither parent's reads	1	about half do	3
+NA19240_release	in neither parent's reads	2	too few reads to say + too few reads to say	3
+NA19240_release	in neither parent's reads	2	a minority do + too few reads to say	2
+NA19240_release	in neither parent's reads	2	no long read holds the allele + nearly all do	2
+NA19240_release	in neither parent's reads	2	no long read holds the allele + no long read holds the allele	2
+NA19240_release	in neither parent's reads	1	too few reads to say	1
+NA19240_release	in neither parent's reads	2	about half do + about half do	1
+NA19240_release	in neither parent's reads	3	no long read holds the allele + no long read holds the allele + about half do	1
+NA19240_release	in neither parent's reads	4	no long read holds the allele + no long read holds the allele + about half do + too few reads to say	1
+NA19240_release	in neither parent's reads	4	no long read holds the allele + no long read holds the allele + no long read holds the allele + a minority do	1

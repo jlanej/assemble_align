@@ -1,0 +1,21 @@
+run	class	long_reads	placements	of	share	events	of_events	long_reads_that_hold_either	of_them_hold_the_allele	of_them_hold_the_release_only	share_of_those_reads_with_the_allele	median_reads_that_hold_either	placements_where_half_the_reads_or_more_have_mapping_quality_under_20
+NA19240_release	in a parent's reads	no long read holds the allele	141	851	0.166	121	467	2494	0	2494	0.0	17.0	37
+NA19240_release	in a parent's reads	a minority do	59	851	0.069	58	467	1015	129	886	0.127	17.0	45
+NA19240_release	in a parent's reads	about half do	98	851	0.115	69	467	1748	834	914	0.477	18.0	74
+NA19240_release	in a parent's reads	nearly all do	79	851	0.093	79	467	1273	1199	74	0.942	15.0	57
+NA19240_release	in a parent's reads	too few reads to say	474	851	0.557	291	467	1390	598	792	0.43	2.0	91
+NA19240_release	in neither parent's reads	no long read holds the allele	420	922	0.456	409	460	7323	0	7323	0.0	17.0	74
+NA19240_release	in neither parent's reads	a minority do	63	922	0.068	56	460	1069	155	914	0.145	16.0	32
+NA19240_release	in neither parent's reads	about half do	400	922	0.434	399	460	7086	3077	4009	0.434	17.0	75
+NA19240_release	in neither parent's reads	nearly all do	2	922	0.002	2	460	25	22	3	0.88	12.5	0
+NA19240_release	in neither parent's reads	too few reads to say	37	922	0.04	34	460	286	45	241	0.157	8.0	7
+HG01943_release	in a parent's reads	no long read holds the allele	159	1156	0.138	143	731	4822	0	4822	0.0	31.0	52
+HG01943_release	in a parent's reads	a minority do	130	1156	0.112	130	731	4109	519	3590	0.126	32.0	90
+HG01943_release	in a parent's reads	about half do	582	1156	0.503	470	731	26259	12609	13650	0.48	41.0	216
+HG01943_release	in a parent's reads	nearly all do	235	1156	0.203	227	731	6997	6509	488	0.93	30.0	119
+HG01943_release	in a parent's reads	too few reads to say	50	1156	0.043	32	731	144	97	47	0.674	1.0	27
+HG01943_release	in neither parent's reads	no long read holds the allele	237	545	0.435	233	276	7705	0	7705	0.0	32.0	59
+HG01943_release	in neither parent's reads	a minority do	64	545	0.117	50	276	2029	267	1762	0.132	30.5	45
+HG01943_release	in neither parent's reads	about half do	244	545	0.448	244	276	7967	3120	4847	0.392	32.0	71
+HG01943_release	in neither parent's reads	nearly all do	0	545	0.0	0	276	0	0	0			0
+HG01943_release	in neither parent's reads	too few reads to say	0	545	0.0	0	276	0	0	0			0

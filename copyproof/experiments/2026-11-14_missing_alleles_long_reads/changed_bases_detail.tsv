@@ -1,0 +1,52 @@
+run	class	change_group	change_as_worded_by_the_script	placements	events
+NA19240_release	in a parent's reads	one changed base	one changed base	354	207
+NA19240_release	in a parent's reads	not determined	no: the k-mers do not fit without gaps, and the reads give no sequence anchored in the release on both sides	142	88
+NA19240_release	in a parent's reads	another length: 1 base	no: the reads have N base more than the release	130	77
+NA19240_release	in a parent's reads	two or more changed bases less than 31 apart	no: N changed bases within N bases	58	38
+NA19240_release	in a parent's reads	another length: 1 base	no: the reads have N base fewer than the release	56	33
+NA19240_release	in a parent's reads	another length: 2 to 30 bases	no: the reads have N bases more than the release	43	31
+NA19240_release	in a parent's reads	another length: 2 to 30 bases	no: the reads have N bases fewer than the release	32	19
+NA19240_release	in a parent's reads	not determined	no: a k-mer fits the release at more than one place	21	13
+NA19240_release	in a parent's reads	not determined	no: N changed bases within N bases, more than N in one k-mer	10	7
+NA19240_release	in a parent's reads	not determined	no: the k-mers hold two different bases at one position	5	3
+NA19240_release	in neither parent's reads	one changed base	one changed base	826	425
+NA19240_release	in neither parent's reads	two or more changed bases less than 31 apart	no: N changed bases within N bases	44	31
+NA19240_release	in neither parent's reads	another length: 1 base	no: the reads have N base fewer than the release	21	11
+NA19240_release	in neither parent's reads	another length: 2 to 30 bases	no: the reads have N bases fewer than the release	14	6
+NA19240_release	in neither parent's reads	not determined	no: N changed bases within N bases, more than N in one k-mer	9	5
+NA19240_release	in neither parent's reads	not determined	no: the k-mers do not fit without gaps, and the reads give no sequence anchored in the release on both sides	4	2
+NA19240_release	in neither parent's reads	another length: 1 base	no: the reads have N base more than the release	4	3
+HG01943_release	in a parent's reads	one changed base	one changed base	583	409
+HG01943_release	in a parent's reads	another length: 1 base	no: the reads have N base more than the release	209	112
+HG01943_release	in a parent's reads	not determined	no: the k-mers do not fit without gaps, and the reads give no sequence anchored in the release on both sides	127	85
+HG01943_release	in a parent's reads	another length: 1 base	no: the reads have N base fewer than the release	86	46
+HG01943_release	in a parent's reads	two or more changed bases less than 31 apart	no: N changed bases within N bases	62	41
+HG01943_release	in a parent's reads	another length: 2 to 30 bases	no: the reads have N bases fewer than the release	41	24
+HG01943_release	in a parent's reads	another length: 2 to 30 bases	no: the reads have N bases more than the release	27	19
+HG01943_release	in a parent's reads	not determined	no: a k-mer fits the release at more than one place	11	6
+HG01943_release	in a parent's reads	not determined	no: N changed bases within N bases, more than N in one k-mer	10	7
+HG01943_release	in neither parent's reads	one changed base	one changed base	506	261
+HG01943_release	in neither parent's reads	two or more changed bases less than 31 apart	no: N changed bases within N bases	16	12
+HG01943_release	in neither parent's reads	another length: 1 base	no: the reads have N base fewer than the release	10	5
+HG01943_release	in neither parent's reads	another length: 1 base	no: the reads have N base more than the release	4	2
+HG01943_release	in neither parent's reads	another length: 2 to 30 bases	no: the reads have N bases fewer than the release	4	2
+HG01943_release	in neither parent's reads	not determined	no: the k-mers do not fit without gaps, and the reads give no sequence anchored in the release on both sides	3	2
+HG01943_release	in neither parent's reads	not determined	no: a k-mer fits the release at more than one place	2	1
+HG002_hprc_year2	in a parent's reads	one changed base	one changed base	399	207
+HG002_hprc_year2	in a parent's reads	another length: 1 base	no: the reads have N base more than the release	260	142
+HG002_hprc_year2	in a parent's reads	another length: 2 to 30 bases	no: the reads have N bases more than the release	147	84
+HG002_hprc_year2	in a parent's reads	two or more changed bases less than 31 apart	no: N changed bases within N bases	48	30
+HG002_hprc_year2	in a parent's reads	not determined	no: the k-mers do not fit without gaps, and the reads give no sequence anchored in the release on both sides	45	25
+HG002_hprc_year2	in a parent's reads	another length: 2 to 30 bases	no: the reads have N bases fewer than the release	12	7
+HG002_hprc_year2	in a parent's reads	not determined	no: a k-mer fits the release at more than one place	5	4
+HG002_hprc_year2	in a parent's reads	another length: 1 base	no: the reads have N base fewer than the release	4	2
+HG002_hprc_year2	in a parent's reads	not determined	no: N changed bases within N bases, more than N in one k-mer	3	2
+HG002_hprc_year2	in a parent's reads	not determined	no: the k-mers hold two different bases at one position	2	1
+HG002_hprc_year2	in neither parent's reads	one changed base	one changed base	70	38
+HG002_hprc_year2	in neither parent's reads	two or more changed bases less than 31 apart	no: N changed bases within N bases	1	1
+HG002_truth_genome	in a parent's reads	one changed base	one changed base	23	15
+HG002_truth_genome	in a parent's reads	not determined	no: the k-mers do not fit without gaps, and the reads give no sequence anchored in the release on both sides	7	5
+HG002_truth_genome	in a parent's reads	two or more changed bases less than 31 apart	no: N changed bases within N bases	5	3
+HG002_truth_genome	in a parent's reads	not determined	no: a k-mer fits the release at more than one place	5	3
+HG002_truth_genome	in neither parent's reads	one changed base	one changed base	32	17
+HG002_truth_genome	in neither parent's reads	another length: 2 to 30 bases	no: the reads have N bases fewer than the release	2	1

@@ -1,0 +1,21 @@
+run	class	events_by	value	events	no long read holds the allele	a minority do	about half do	nearly all do	too few reads to say
+NA19240_release	in a parent's reads	read count of the short reads	under 9	39	12	2	4	7	14
+NA19240_release	in a parent's reads	read count of the short reads	9 to 12.5	147	8	5	24	20	90
+NA19240_release	in a parent's reads	read count of the short reads	13 or more	281	4	12	40	52	173
+NA19240_release	in neither parent's reads	read count of the short reads	under 9	245	1	29	205	1	9
+NA19240_release	in neither parent's reads	read count of the short reads	9 to 12.5	203	1	12	183	1	6
+NA19240_release	in neither parent's reads	read count of the short reads	13 or more	12	0	1	11	0	0
+HG01943_release	in a parent's reads	read count of the short reads	under 9	49	10	1	24	13	1
+HG01943_release	in a parent's reads	read count of the short reads	9 to 12.5	197	5	1	134	51	6
+HG01943_release	in a parent's reads	read count of the short reads	13 or more	485	0	1	300	163	21
+HG01943_release	in neither parent's reads	read count of the short reads	under 9	162	0	16	146	0	0
+HG01943_release	in neither parent's reads	read count of the short reads	9 to 12.5	109	1	14	94	0	0
+HG01943_release	in neither parent's reads	read count of the short reads	13 or more	5	0	1	4	0	0
+NA19240_release	in a parent's reads	the HGSVC3 assemblies that hold the allele	both	392	5	15	43	62	267
+NA19240_release	in a parent's reads	the HGSVC3 assemblies that hold the allele	the Verkko assembly only	29	1	2	10	14	2
+NA19240_release	in a parent's reads	the HGSVC3 assemblies that hold the allele	the hifiasm assembly only	6	0	0	4	1	1
+NA19240_release	in a parent's reads	the HGSVC3 assemblies that hold the allele	neither	40	18	2	11	2	7
+NA19240_release	in neither parent's reads	the HGSVC3 assemblies that hold the allele	both	180	1	21	152	0	6
+NA19240_release	in neither parent's reads	the HGSVC3 assemblies that hold the allele	the Verkko assembly only	68	0	6	61	0	1
+NA19240_release	in neither parent's reads	the HGSVC3 assemblies that hold the allele	the hifiasm assembly only	63	0	3	58	0	2
+NA19240_release	in neither parent's reads	the HGSVC3 assemblies that hold the allele	neither	149	1	12	128	2	6

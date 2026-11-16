@@ -1,0 +1,13 @@
+class	direction	confirmed_by	issues	bp	at_flagger_call	at_nucflag_call
+COLLAPSE	gain	both, with the same number of copies	2	11000	0	2
+COLLAPSE	gain	neither	1	6000	0	0
+COLLAPSE	gain	verkko and hifiasm, with different numbers of copies	7	129000	0	2
+COLLAPSE	gain	verkko only	2	22570	1	0
+EXPANSION	loss	both, with the same number of copies	43	3077504	13	21
+EXPANSION	loss	neither	5	623000	2	2
+EXPANSION	loss	verkko only	20	1259000	3	10
+UNSUPPORTED	loss	both, with the same number of copies	1	7000	0	1
+all	both directions	both, with the same number of copies	46	3095504	13	24
+all	both directions	neither	6	629000	2	2
+all	both directions	verkko and hifiasm, with different numbers of copies	7	129000	0	2
+all	both directions	verkko only	22	1281570	4	10

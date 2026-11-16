@@ -1,0 +1,15 @@
+# HG01943 (rung 1): HPRC release-2 haplotypes, NYGC 30x CRAMs of the trio, and the reference that decodes them
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC/HG01943/assemblies/release2/HG01943_pat_hprc_r2_v1.0.1.fa.gz	hprc_r2/HG01943/HG01943_pat_hprc_r2_v1.0.1.fa.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC/HG01943/assemblies/release2/HG01943_pat_hprc_r2_v1.0.1.fa.gz.fai	hprc_r2/HG01943/HG01943_pat_hprc_r2_v1.0.1.fa.gz.fai
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC/HG01943/assemblies/release2/HG01943_pat_hprc_r2_v1.0.1.fa.gz.md5	hprc_r2/HG01943/HG01943_pat_hprc_r2_v1.0.1.fa.gz.md5
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC/HG01943/assemblies/release2/HG01943_mat_hprc_r2_v1.0.1.fa.gz	hprc_r2/HG01943/HG01943_mat_hprc_r2_v1.0.1.fa.gz
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC/HG01943/assemblies/release2/HG01943_mat_hprc_r2_v1.0.1.fa.gz.fai	hprc_r2/HG01943/HG01943_mat_hprc_r2_v1.0.1.fa.gz.fai
+https://s3-us-west-2.amazonaws.com/human-pangenomics/working/HPRC/HG01943/assemblies/release2/HG01943_mat_hprc_r2_v1.0.1.fa.gz.md5	hprc_r2/HG01943/HG01943_mat_hprc_r2_v1.0.1.fa.gz.md5
+https://1000genomes.s3.amazonaws.com/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa	ref/GRCh38_full_analysis_set_plus_decoy_hla.fa
+https://1000genomes.s3.amazonaws.com/technical/reference/GRCh38_reference_genome/GRCh38_full_analysis_set_plus_decoy_hla.fa.fai	ref/GRCh38_full_analysis_set_plus_decoy_hla.fa.fai
+https://1000genomes.s3.amazonaws.com/1000G_2504_high_coverage/additional_698_related/data/ERR3988955/HG01943.final.cram	nygc/HG01943.final.cram
+https://1000genomes.s3.amazonaws.com/1000G_2504_high_coverage/additional_698_related/data/ERR3988955/HG01943.final.cram.crai	nygc/HG01943.final.cram.crai
+https://1000genomes.s3.amazonaws.com/1000G_2504_high_coverage/data/ERR3242007/HG01942.final.cram	nygc/HG01942.final.cram
+https://1000genomes.s3.amazonaws.com/1000G_2504_high_coverage/data/ERR3242007/HG01942.final.cram.crai	nygc/HG01942.final.cram.crai
+https://1000genomes.s3.amazonaws.com/1000G_2504_high_coverage/data/ERR3242006/HG01941.final.cram	nygc/HG01941.final.cram
+https://1000genomes.s3.amazonaws.com/1000G_2504_high_coverage/data/ERR3242006/HG01941.final.cram.crai	nygc/HG01941.final.cram.crai

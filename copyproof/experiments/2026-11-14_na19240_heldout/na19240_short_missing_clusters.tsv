@@ -1,0 +1,6 @@
+kind	strength	clusters	held_by_verkko	held_by_hifiasm	held_by_both	held_by_either
+MISSING_ALLELE	strong	1773	1259	1211	1075	1395
+MISSING_ALLELE	weak	637	380	345	311	414
+MISSING_JUNCTION	weak	1	0	0	0	0
+MISSING_SEQUENCE	strong	374	183	173	172	184
+MISSING_SEQUENCE	weak	1027	196	190	177	209

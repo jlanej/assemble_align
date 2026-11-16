@@ -1,0 +1,17 @@
+setting	labels	whole_copy_segments	ambiguous_segments	high	high_confirmed	low	low_confirmed	collapses_5kb	collapses_5kb_found	surplus_5kb	surplus_5kb_found
+as shipped (20, 3)	v2_trio	135	199	119	101	75	32	75	15	153	130
+as shipped (20, 3)	hprc_year1	135	199	119	82	75	34	265	1	350	116
+as shipped (20, 3)	both	135	199	119	74	75	31	3	1	127	118
+as shipped (20, 3)	truth	135	199	119	114	75	32	54	17	158	130
+min_seg_class = 10	v2_trio	136	106	124	105	54	27	75	15	153	130
+min_seg_class = 10	hprc_year1	136	106	124	86	54	29	265	1	350	116
+min_seg_class = 10	both	136	106	124	77	54	27	3	1	127	118
+min_seg_class = 10	truth	136	106	124	119	54	27	54	18	158	130
+margin = 2	v2_trio	151	152	134	110	63	23	75	15	153	130
+margin = 2	hprc_year1	151	152	134	94	63	25	265	1	350	116
+margin = 2	both	151	152	134	83	63	22	3	1	127	118
+margin = 2	truth	151	152	134	127	63	24	54	19	158	130
+min_seg_class = 10 and margin = 2	v2_trio	156	71	141	116	44	16	75	15	153	130
+min_seg_class = 10 and margin = 2	hprc_year1	156	71	141	101	44	19	265	1	350	116
+min_seg_class = 10 and margin = 2	both	156	71	141	88	44	16	3	1	127	118
+min_seg_class = 10 and margin = 2	truth	156	71	141	134	44	18	54	20	158	130

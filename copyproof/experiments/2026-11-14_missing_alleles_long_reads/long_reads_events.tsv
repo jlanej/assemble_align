@@ -1,0 +1,21 @@
+run	class	long_reads	events	of	share
+NA19240_release	in a parent's reads	no long read holds the allele	24	467	0.051
+NA19240_release	in a parent's reads	a minority do	19	467	0.041
+NA19240_release	in a parent's reads	about half do	68	467	0.146
+NA19240_release	in a parent's reads	nearly all do	79	467	0.169
+NA19240_release	in a parent's reads	too few reads to say	277	467	0.593
+NA19240_release	in neither parent's reads	no long read holds the allele	2	460	0.004
+NA19240_release	in neither parent's reads	a minority do	42	460	0.091
+NA19240_release	in neither parent's reads	about half do	399	460	0.867
+NA19240_release	in neither parent's reads	nearly all do	2	460	0.004
+NA19240_release	in neither parent's reads	too few reads to say	15	460	0.033
+HG01943_release	in a parent's reads	no long read holds the allele	15	731	0.021
+HG01943_release	in a parent's reads	a minority do	3	731	0.004
+HG01943_release	in a parent's reads	about half do	458	731	0.627
+HG01943_release	in a parent's reads	nearly all do	227	731	0.311
+HG01943_release	in a parent's reads	too few reads to say	28	731	0.038
+HG01943_release	in neither parent's reads	no long read holds the allele	1	276	0.004
+HG01943_release	in neither parent's reads	a minority do	31	276	0.112
+HG01943_release	in neither parent's reads	about half do	244	276	0.884
+HG01943_release	in neither parent's reads	nearly all do	0	276	0.0
+HG01943_release	in neither parent's reads	too few reads to say	0	276	0.0

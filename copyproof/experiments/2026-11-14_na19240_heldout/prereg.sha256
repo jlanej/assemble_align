@@ -1,0 +1,65 @@
+# sha256 of the scoring script, drivers and manifest as they stood when NOTEBOOK entry p was written (2026-11-14 07:34:51 CST), before the HG002 calibration and before any NA19240 run
+8f83ba4c1ba9c4097aa21ca0125a66bfb8a0342f5c2e1479ec1a4ab8e4c05188  scripts/eval_assemblies.py
+de2850dbbc9042fc5745e09e0892025a50152549834959f6208530030ad66eef  tests/test_eval_assemblies.py
+5e5e840dce0c324e1822f89424590e5b6af3a824afbb7ff4c64d928f98a3e80e  scripts/run_na19240_heldout.sh
+ef2e15d16990c72309db1b9c96b240d8bda5c88944cfa991793544c48b9d41bd  experiments/2026-11-14_na19240_heldout/calibrate_hg002.sh
+5f13f40c6e723ed70331255f1ae968463af382bea3c34e7db21d44582583e890  experiments/2026-11-14_na19240_heldout/FROZEN_COMMIT
+a206f1b0347119f20e88f3700ae273958546488047ee8c8c089d82c3467b0e77  scripts/manifests/05_na19240_heldout.tsv
+cf9e8823799162ab77c40e836249bbb84497050cdde19afdd46cc3143ac8fee3  scripts/eval_planted.py
+aeed6b8f7b2db6b81b11d9dc44ef0423226b7fc53839e47f72523d17770888e5  scripts/run_sample.py
+# the notebook entry itself (the text between its heading and the next heading)
+b0716d279a7758099e46fd11aa8414cc0dc93922f90ff6168f5e143155217cc4  NOTEBOOK.md entry p
+# added 2026-11-14 07:53:15 CST, after the HG002 calibration and before the first NA19240 run: the predictions, the calibration tables, the tools written since, and the drivers as they now stand
+a6f56407f92b02986fb8c4ad57f42beb45ebbde23c3333bb6ccbffdea65746ec  experiments/2026-11-14_na19240_heldout/predictions.tsv
+f7362d5336ef66473253fa8f7b4c3b95a2a4a54ae1b506f412acaa10a48cf4e4  experiments/2026-11-14_na19240_heldout/hg002_cn_scores.tsv
+3a9c1587083895b61a372bc89d247d52ab2d0da17a8d50275dd1340bfe711539  experiments/2026-11-14_na19240_heldout/hg002_proxy_against_truth.tsv
+d11542e606bd0cbe3979e30cdee2dbec9d5996bfe74ce403c86a21c79bc0847d  experiments/2026-11-14_na19240_heldout/hg002_pair2_cn_scores.tsv
+87a65206a98881d3132b40bd7c1e1e01975f05a08020d54163f83f2011769091  experiments/2026-11-14_na19240_heldout/hg002_pair2_proxy_against_truth.tsv
+1cbf0d34534fbab22650bb9529a869d9418fe758e99f06be623d3d41ff18d578  experiments/2026-11-14_na19240_heldout/hg002_missing_clusters.tsv
+110c90621ed85f9801955cdb447dbf861045694e7091fb6a7a87fdd28d5fdadd  experiments/2026-11-14_na19240_heldout/hg002_unread_kmers.tsv
+2848b7e7efd275ef2b819a692c9032d56e3490c500c70ac19b12eae20f84b1ae  experiments/2026-11-14_na19240_heldout/hg002_planted_with_parents.sensitivity.tsv
+db0f0713a219e711ecf36f474494f63a9d50e9b5c458d5ad2a38a793581d1179  experiments/2026-11-14_na19240_heldout/tables.py
+cc28a4021a47f771e24de3e9379e3bb0833fad2ebdbb1aa27ed2a8197e649547  experiments/2026-11-14_na19240_heldout/alt_settings.py
+b3f8e2336eca7162319879579187b458660e25eaad25ad6fc15f04a79e9e7848  experiments/2026-11-14_na19240_heldout/plant.sh
+fb468aa9d4535700c733f10bb55975f58cc3ffcd73b6fdb08713f9d6f6dfd981  scripts/paf_to_chain.py
+9c0c8b452c0cd4f455e78ea35df80531e50d213d442c1b28b1231f7b4baf906d  scripts/plant_errors.py
+707f44230b4a6949d462eaf9afe5a17d0bc009fa15750ddfc2df195cc71eecd7  scripts/run_na19240_heldout.sh
+36481272cb460932c37264c35027f513218bb0ca0efd594cfec26339f0ed39db  tests/test_eval_assemblies.py
+8f83ba4c1ba9c4097aa21ca0125a66bfb8a0342f5c2e1479ec1a4ab8e4c05188  scripts/eval_assemblies.py
+fb0ce9b05fbf3158de7803afe074604c12f180b1357682184e4a7f0374262b51  NOTEBOOK.md entry p, with the prediction
+# added 2026-11-14 07:59:57 CST, before any read of NA19240 was counted: entry p with the two points from the review
+7a142c6a5ffc6f8d5a722a00e86535d2813d9828fbc930dc32cbf4ecba17d643  NOTEBOOK.md entry p, with the two points from the review
+# added 2026-11-14 08:05:29 CST, before any read of NA19240 was counted: the run the user added (hapmer audit on the Verkko assembly), its script, and the driver with its three stages
+7d26c84830eca4d7dea2238c79dcd580ea9b7528def5e11f04062d796bb868be  experiments/2026-11-14_na19240_heldout/hapmers_against_hprc.py
+52e35e449f23e89bf2a595e37d55d95ffd2063a21543ba48e42eae49652871a8  scripts/run_na19240_heldout.sh
+819adbb6c938b9de9ae9eae3cae2ebae1155d38de7b4f4e3597ca0bbd8da9e0d  experiments/2026-11-14_na19240_heldout/tables.py
+0f17bf4c9ccf9b9b1c65ca3751b9bdc27c2d8513731c88fdc8e8f5f4373e06a6  NOTEBOOK.md entry p, with the added run
+# added 2026-11-14 08:25:56 CST, while the child's reads were being counted and before any run of NA19240: four lines of entry p reworded into the notebook's neutral voice (the sample "was chosen"; commits "on request only"; a run "added on request"); no rule, number or time changed. The earlier wordings are kept under DATA/work/rung6/prereg.entry_p.*.txt
+ab10937f7504ad65749e285d7531f7a35b1efd84a03f2229e81d67c60d733558  NOTEBOOK.md entry p, reworded
+d79a65ef34085649eb9d9dc62c7bce3c0aa2bd9d3fd8d4348851311e2ca7ad36  experiments/2026-11-14_na19240_heldout/inputs.md5
+fe9a78c2cf3073a0b9dfa28a4c9ddbfb102c782202deb39d040e78f2f63bffc7  experiments/2026-11-14_na19240_heldout/check_inputs.sh
+# added 2026-11-14 10:21:53 CST, while the father's reads were being counted and before any run of NA19240: tables.py after its half that reads the runs of NA19240 was first run, on the HG002 calibration run as a stand-in (a BED reader that does not trip on a track line or on the letters of a contig name; empty hapmer tables; the names of the label sets read from the score file; the tables of the added run and of the k-mer databases; the format of runs.tsv). The parts that write predictions.tsv, score1_counts.tsv and the hg002 tables give the same bytes as before. Also named here for the first time: two tables of the calibration, and the text that states what the folder held at this time
+6b759d08f76f478007e4671f84fb951edd21b945c98c00f3596cb6c3930ff6a8  experiments/2026-11-14_na19240_heldout/tables.py
+a6f56407f92b02986fb8c4ad57f42beb45ebbde23c3333bb6ccbffdea65746ec  experiments/2026-11-14_na19240_heldout/predictions.tsv
+0aa103172eb7919617061223f8f75e4c7b33171916d22f901e121f6d12b52c71  experiments/2026-11-14_na19240_heldout/score1_counts.tsv
+8a96aaacd96d13f10d44927d6b1d25c1f70ab7089c1f32574baa296075810d9c  experiments/2026-11-14_na19240_heldout/alt_settings_hg002.tsv
+606a69deb7fa2faefc88dcaff24594158c12b88fd8232e9b4027d38e91548070  experiments/2026-11-14_na19240_heldout/kmer_databases.tsv
+1fc9ddd78a723ef8b395a7fd982a4bbd7b3a5028f4dacb9ea5de90f3dcd69e13  experiments/2026-11-14_na19240_heldout/README.md
+# added 2026-11-14 10:22:04 CST, same state: README.md with one sentence made exact (two faults and one generalisation, not three faults)
+d017543eba4121b5a191439df6799e00b64eb41dcb45543946adf508c86aff8e  experiments/2026-11-14_na19240_heldout/README.md
+# added 2026-11-14 10:31:41 CST, after the push (a82fdbe, merged as 8f5b972; GitHub records it at 2026-11-14T16:29:27Z) and after the scored run had started (10:30:45), before any output of it was read: entry p with six lines that say it was committed and pushed before the run. No rule, number or earlier line changed
+86ea685112b2ba93559056a2aa219e2f7532d075fdd35131f08595b127d02e4e  NOTEBOOK.md entry p, with the note on the push
+# added 2026-11-14 11:45:18 CST, after every run of the test had finished (the last at 11:41): one comment line in each of two scripts now quotes entry p as it has read since 08:25 ("A run added on request"). No code changed; git diff a82fdbe shows the one line in each. Every run of NA19240 was made with the scripts as hashed above
+d696ec39749a6aefe002eff4ba3c7c589ba55c3b542b5c416ddfe71985be315b  scripts/run_na19240_heldout.sh
+98680e4c8410f159ff13861544f423f809fd1a62044a42a17bfed734fa2b7cbc  experiments/2026-11-14_na19240_heldout/hapmers_against_hprc.py
+# added 2026-11-14 11:45:18 CST: after.py, written after the scored run had been seen. It writes the after_* tables, which describe what the scores leave open, and decides nothing; tables.py, which writes the verdicts, is as hashed at 10:21:53
+2ecd51b306c073c00c581c58153c141487f78747c6b7ce03457f08a3e7c7304c  experiments/2026-11-14_na19240_heldout/after.py
+6b759d08f76f478007e4671f84fb951edd21b945c98c00f3596cb6c3930ff6a8  experiments/2026-11-14_na19240_heldout/tables.py
+# added 2026-11-14 11:56:52 CST, with the record written: after.py as it stands. Since the line above it gained the tables on the run with long reads, on both HG002 pairs, on the read depth as referee, on the planted totals and on the homologous stretches; all of it after every result had been seen
+14703a904166845d785cd3d202490813a753efdbb65dde7fd8fa37840c444279  experiments/2026-11-14_na19240_heldout/after.py
+6b759d08f76f478007e4671f84fb951edd21b945c98c00f3596cb6c3930ff6a8  experiments/2026-11-14_na19240_heldout/tables.py
+8e58bc2ff70f084c90bbb7058e3ad812de0501d26d5689b582c90aff6212dd3e  experiments/2026-11-14_na19240_heldout/verdicts.tsv
+a6f56407f92b02986fb8c4ad57f42beb45ebbde23c3333bb6ccbffdea65746ec  experiments/2026-11-14_na19240_heldout/predictions.tsv
+# added 2026-11-14 11:57:39 CST: after.py once more (it now names the inputs under DATA in the copied run_*.json, so that no path of the machine goes into the repository) and the record
+ae43b5a16c42bfb256b8ad1acccfc03c7f190f394b9a8fa1cca9842586dc11b4  experiments/2026-11-14_na19240_heldout/after.py
+f9b1bfebff3254bba0271d921a39e26bb9c2a1056798c9ea969f644c1bbdf972  experiments/2026-11-14_na19240_heldout/README.md
