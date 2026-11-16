@@ -59,9 +59,26 @@ Entries m, n and o were written within the hour of their experiments. Entry p, l
 experiment; what was added to it afterwards is marked with the time. Entry s, its result, was written within the
 hour of the runs. Entry t was written within the hour of its tables, which were made from finished runs.
 Entry u fixed how its placements are sorted before any long read was searched and gives the time; the rest of
-it was written within the hour of its tables.
+it was written within the hour of its tables. Entry v reports no experiment: it lists what was open when work
+stopped for a review.
 The experiment folders are regenerated from the run directories by the scripts named in each, and are the
 reference where a number here and a number there differ.
+
+### 2026-11-16 (v): work stopped for a review; what is open
+
+Question:  what is left to do, written down before the branch is merged and before anyone goes on.
+Run:       nothing was run. The list was put together from the "Next" lines of entries q to u, from what each
+           record says it does not show, and from two points that came up after the last commit.
+Seen:      both of those points are in the record of entry u. Its remark on what made the changes names one
+           published description of the T>G signature of B cells, with A or T before the T. A later paper, found
+           after the remark was written and not yet checked for the record, appears to describe the signature
+           from the other strand, which puts the A or T after the T, where that record's table has the excess.
+           And its count of events that rest on one or two long reads (13 of NA19240's 441) has no table in the
+           record's folder. Beside these two the list holds five things to decide, six groups of runs that were
+           not made, and two points of housekeeping.
+Decision:  on request, checking and new work stop here until a reviewer has looked over what exists, and the
+           branch is to be merged into main as it stands. No code, table or threshold changes with this entry.
+Next:      the list is in `README.md`, "What is open". Nothing on it is started before the review.
 
 ### 2026-11-14 (u): missing alleles in neither parent's reads: the release's own long reads, and the changed bases
 

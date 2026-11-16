@@ -5,9 +5,10 @@ doubled or unsupported, sequence on the wrong haplotype, and read sequence the a
 
 **Status: working prototype (0.1.0).** The tool runs end to end on a laptop and has been tested on
 synthetic genomes, on the T2T-HG002 Q100 truth genome with and without planted errors, on other
-HG002 assemblies scored against that truth, and on the HPRC release-2 assembly of HG01943. What
-was measured, and what was not, is in [NOTEBOOK.md](NOTEBOOK.md) and under
-[experiments/](experiments/).
+HG002 assemblies scored against that truth, on the HPRC release-2 assembly of HG01943 and, with
+every threshold fixed beforehand, on that of NA19240. What was measured, and what was not, is in
+[NOTEBOOK.md](NOTEBOOK.md) and under [experiments/](experiments/). What is left to do is listed
+under [What is open](#what-is-open).
 
 | File | What it is |
 |---|---|
@@ -272,6 +273,71 @@ minutes (NOTEBOOK entry o).
   release-2 samples with both parents sequenced, 120 were assembled in trio mode
   (`../data/sample_overlap.tsv`). The audit tests phasing itself only on an assembly phased
   another way whose parents are sequenced.
+
+## What is open
+
+Work stopped here on 2026-11-16 for a review. Nothing on this list has been started, and each
+item names the record that says more.
+
+**To correct**
+
+- The remark on what made the changes that part of the cells carry
+  ([experiments/2026-11-14_missing_alleles_long_reads](experiments/2026-11-14_missing_alleles_long_reads/README.md),
+  "What this does not show") names one published description of the T>G signature of B cells,
+  with A or T before the T (Alexandrov et al. 2013). A later paper, found after the remark was
+  written and not yet checked for that record, appears to describe the same signature from the
+  other strand, as A>C at an A that follows A or T (Kasar et al. 2015, Nature Communications
+  6:8866, https://pmc.ncbi.nlm.nih.gov/articles/PMC4686820/). Written from the T, that puts the A
+  or T after it, where the excess lies in that record's table. Neither description settles it;
+  comparing the events' 96 classes with the published profile of the signature would.
+- The same record says that 13 of NA19240's 441 events rest on one or two long reads. No table
+  in its folder holds that count; its `tables.py` should write one.
+
+**To decide**
+
+- The two threshold values that are not the best on the data they were chosen on
+  (`min_seg_class` 20 against 10, `margin` 3 against 2). On NA19240 the alternatives were no
+  worse. The shipped values are unchanged ([docs/thresholds.md](docs/thresholds.md);
+  [experiments/2026-11-14_na19240_heldout](experiments/2026-11-14_na19240_heldout/README.md),
+  "The two candidate values").
+- Missing alleles in neither parent's reads. They are a third to a half of the strong
+  missing-allele calls on two HPRC releases, the long reads show nearly all of them to be changes
+  that part of the cells carry, and they are reported like any other missing allele. Whether
+  they get a wording or a rule of their own, from the parents' reads, the read count or long
+  reads, is open. Every sample so far has been looked at for this question, so a rule needs
+  another person to test it (NOTEBOOK entries t and u).
+- `scripts/eval_assemblies.py` scores the copy-number issues whose channel is exactly `S1`, and
+  so leaves out those that the long-read audit has marked `S1+S4`. The script was frozen for the
+  held-out test; the complete counts are in that record's `after_*` tables.
+- On NA19240 the long-read audit lowered the confidence of surplus copies that another assembly
+  confirms, at 3 of the 5 it looked at. The long reads there are the ones the release was built
+  from. The counts are small, and nothing was changed.
+- Three changes to the long-read audit that the planted joins suggest, none of them tried: take
+  a read's sequence from its primary record; do not count an alignment as running through a run
+  when it holds a long insertion or deletion there or has a mapping quality under 20; let the
+  two unlinked joins of one inversion vouch for each other. Each needs the truth genome's count
+  of false flags again. `--long-read-bam` is also not yet written into `run.json` (NOTEBOOK
+  entry q).
+
+**Not run**
+
+- The guide's rung 5 on its other three people (HG00733, HG02818, NA19036), and any second
+  person with a truth genome. Without one, whether a call on a new person is true stays
+  unmeasured (NOTEBOOK entry s).
+- The guide's rung 6, the scan of whole releases.
+- HG01103, the guide's second case, a loss in part of the cells. S6 of the guide was not built.
+- For the missing alleles that part of the cells carry: HG002 with long reads, the weak
+  placements, and changes of this kind that a release took in (NOTEBOOK entry u).
+- The planted-join test on a Winnowmap alignment and with ONT reads, and a count of false flags
+  for the minimap2 alignment on unedited sequence (NOTEBOOK entry q).
+- Reads of a third kind at the two loci where long and short reads both fall short of the truth
+  genome's count, and a score that also counts k-mers above multiplicity 8 (NOTEBOOK entry r).
+
+**Housekeeping**
+
+- The repository has no CI. The tests are run by hand.
+- The landing page, `../docs/index.html`, still describes the design, except for its status
+  line.
 
 ## Conventions
 

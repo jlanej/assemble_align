@@ -37,6 +37,8 @@ which is the guide's rung 6, was not run.
    evening, not as each experiment ran, and three of them carry counts from before later changes;
    each says so at its head. Where the notebook and a record differ, the record is regenerated
    by a script and is the reference.
+6. [`../README.md`](../README.md), "What is open": what is known to need correcting, what is
+   left to decide and what was not run. Work stopped there on 2026-11-16 for a review.
 
 The code was written and changed in one day and arrives as one large commit, so the earlier
 versions of the method are not in the history. Two things stand in for that: the classifier as
