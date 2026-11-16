@@ -4,7 +4,7 @@
 
 The main deliverable is the report: [`report/assemble_align_review.pdf`](report/assemble_align_review.pdf). Its markdown source is [`report/assemble_align_review.md`](report/assemble_align_review.md).
 
-A one-page summary of the main findings is in [`docs/index.html`](docs/index.html), served at <https://jlanej.github.io/assemble_align/> once GitHub Pages is enabled for the `docs/` folder.
+The landing page, [`docs/index.html`](docs/index.html), presents copyproof and its results; a one-page summary of the review is in [`docs/review.html`](docs/review.html). Both are served at <https://jlanej.github.io/assemble_align/> once GitHub Pages is enabled for the `docs/` folder.
 
 ## Bottom line
 
@@ -14,15 +14,28 @@ The recommended order of work:
 
 1. An open placement-truth benchmark on 1kG genomes (F1).
 2. Calibrated MAPQ with paralog posteriors (F2).
-3. Placement-aware assembly QC (F4).
+3. Placement-aware assembly QC (F4). Its detection half is now a working prototype, copyproof (next section).
 4. A minimap2 sketching patch (F6).
 5. Then structural population-aware references (F3), assembler repairs (F4, F5) and population-scale ONT assembly (F7).
+
+## copyproof: where it stands (2026-11-16)
+
+[copyproof](copyproof/) audits released assemblies with the sample's own short reads, and optionally the parents' reads and long reads. It looks for copies that are missing, doubled or unsupported, sequence on the wrong haplotype, and read sequence the assembly lacks. It is a working prototype (0.1.0): a k-mer engine in Rust, a Python package and 38 tests. Measured on public data:
+
+- **Truth genome.** On T2T-HG002 Q100, 0.11% of 20,237 duplication boundaries draw a flag; the target was at most 2%.
+- **Real assemblies.** On 13 HG002 assemblies scored against the truth, about 95% of high-confidence copy-number calls are confirmed (1,199 of 1,258 in twelve). Surplus copies of 5 kb and more are found 73–79% of the time, collapses 25–54%.
+- **Planted errors.** From 5 kb, it finds 46 of 47 false duplications, 25 of 28 deletions and 34 of 40 lost haplotypes. With long reads, it reports false joins at 23 of 24 inversion breakpoints.
+- **A second person.** With every threshold frozen and seven comparisons pushed beforehand, all seven hold on NA19240.
+- **HG01943.** All five defects are flagged, where the release's QC tracks flag 0 to 2. Two rules were added after a first run found 3 of 5.
+- **Open.** Precision has been measured on one person, and collapses are found less often than surplus copies. Changes carried by part of the cells have no class, and no release has been scanned.
+
+Details are in [`copyproof/README.md`](copyproof/README.md), the [progress update](copyproof/UPDATE_2026-11-16.md) and the [landing page](docs/index.html).
 
 ## Layout
 
 | Path | Contents |
 |---|---|
-| `docs/` | Landing page for copyproof (`index.html`), with six figures drawn from the case tables (`assets/fig_cp_*.svg`); the one-page summary of the review (`review.html`, five figures in `assets/`) |
+| `docs/` | Landing page for copyproof (`index.html`), with ten figures drawn from the case and experiment tables (`assets/fig_cp_*`), one of them an evidence card drawn by the tool; the one-page summary of the review (`review.html`, five figures in `assets/`) |
 | `report/` | Report PDF and markdown, figures, `ranked_proposals.tsv`, and the build script (`build_pdf.sh`: pandoc → HTML → weasyprint) |
 | `references/` | `references.bib` (369 cited works) and `references.json` (452 verified records, with a `cited_in_report` flag); `tracks/` holds each review track's own bibliography |
 | `reviews/` | Full literature reviews: alignment, assembly, transferable ideas (`ideas_matrix.tsv`); verified tool versions as of 2026-11-11; the HPRC release-2 QC baseline script and tables |
@@ -33,7 +46,7 @@ The recommended order of work:
 | `litmus/L4_assembly/` | Assembly pilot on real reads: chr20 coverage and read-type titration with hifiasm 0.25.0 (HG01258; HiFi, R10 ONT, HiFi + R10 as `--ul`) and four read-recruitment rules at 13 hard loci (NA19240); scripts 01-14, tables, figures |
 | `factcheck/` | Independent fact-check of the draft: report, 52 findings, how each was resolved, and spot-check scripts |
 | `litmus/cases_HG01943_HG01103/` | Re-test of the two flagged 1kG cases, five scored regression tests, drivers and scorer |
-| `copyproof/` | copyproof, a placement-aware assembly auditor (the detection half of F4): a working prototype (k-mer engine in Rust, Python package, tests), the implementation guide it started from, the method as built, a running notebook, and one record per experiment on public data |
+| `copyproof/` | copyproof, a placement-aware assembly auditor (the detection half of F4): a working prototype (k-mer engine in Rust, Python package, tests), the implementation guide it started from, the method as built, a running notebook, one record per experiment on public data, and a progress update (`UPDATE_2026-11-16.md`) |
 
 ## Headline litmus results
 
@@ -62,8 +75,8 @@ To rebuild the PDF: `cd report && ./build_pdf.sh assemble_align_review.md assemb
 
 ## License
 
-- **Code** (all `*.py`, `*.sh`, `*.c` and `*.lua` files, `report/style.css` and `report/build_pdf.sh`, and `litmus/L1_seed_sampling/minimap2_sampling.patch`): MIT License, see [`LICENSE`](LICENSE). The patch modifies minimap2, which is MIT-licensed by its authors; the minimap2 portions keep their original copyright notice.
+- **Code** (all `*.py`, `*.rs`, `*.sh`, `*.c` and `*.lua` files, copyproof's build files `copyproof/pyproject.toml` and `copyproof/engine/Cargo.toml`, `report/style.css` and `report/build_pdf.sh`, and `litmus/L1_seed_sampling/minimap2_sampling.patch`): MIT License, see [`LICENSE`](LICENSE). The patch modifies minimap2, which is MIT-licensed by its authors; the minimap2 portions keep their original copyright notice.
 - **Report, reviews, figures, write-ups and result tables**: Creative Commons Attribution 4.0 International, see [`LICENSE-CC-BY-4.0.md`](LICENSE-CC-BY-4.0.md).
 - **Third-party data.** Tables derived from public 1000 Genomes, HPRC, HGSVC, GIAB and 1kGP-LRSC data remain subject to those projects' data-use and citation terms. Cite the original data releases (listed in `references/`) when reusing them.
 
-The report was prepared on 2026-11-11/12 from public data only.
+The report was prepared on 2026-11-11/12 from public data only. copyproof was built and tested on 2026-11-13/16, also from public data only.

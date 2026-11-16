@@ -14,6 +14,7 @@ under [What is open](#what-is-open).
 |---|---|
 | [GUIDE.md](GUIDE.md) | The original design: why, with which data, and how to tell whether it works |
 | [NOTEBOOK.md](NOTEBOOK.md) | Running log of experiments and decisions, newest first |
+| [UPDATE_2026-11-16.md](UPDATE_2026-11-16.md) | Progress update: what was built and measured, what changed since the review of 14 November, and suggested next steps |
 | [docs/method.md](docs/method.md) | How each channel works, as built |
 | [docs/outputs.md](docs/outputs.md) | Every output file and column |
 | [docs/thresholds.md](docs/thresholds.md) | Every numeric threshold: its value, where it came from, what was checked |
@@ -336,8 +337,6 @@ item names the record that says more.
 **Housekeeping**
 
 - The repository has no CI. The tests are run by hand.
-- The landing page, `../docs/index.html`, still describes the design, except for its status
-  line.
 
 ## Conventions
 
